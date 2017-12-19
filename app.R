@@ -1,0 +1,172 @@
+#
+# This is a Shiny web application. You can run the application by clicking
+# the 'Run App' button above.
+#
+# Find out more about building applications with Shiny here:
+#
+#    http://shiny.rstudio.com/
+#
+
+## TO DO
+## reactive taxon list based on https://stackoverflow.com/a/30399721
+
+args = commandArgs(trailingOnly=TRUE)
+
+## Load libraries
+library(shiny)
+library(tidyverse)
+library(gridExtra)
+
+## Load our data directory and extract sample and taxon list
+#input_dir <- args[1]
+input_dir <- "/home/fellows/Documents/Scripts/shiny_web_apps/MALT-Extract_iViewer_2/NS_170817_malt_extract"
+default_runsum <- read_tsv(paste(input_dir, "/default/RunSummary.txt", sep = "")) %>%
+  filter(Node != "Total_Count")
+list_sample <- colnames(default_runsum)[2:ncol(default_runsum)]
+first_taxon <- colnames(default_runsum)[2]
+list_taxon <- select(default_runsum, Node) %>%
+  distinct()
+
+## Load damage data
+
+dir_damage <- paste(input_dir, "/default/damageMismatch", sep="")
+files_damage <- dir(dir_damage, pattern = "*_damageMismatch.txt") # get file names
+data_damage <- data_frame(filename = files_damage) %>%
+                                  mutate(file_contents = map(filename, ~ read_tsv(file.path(dir_damage, .))))
+data_damage <- unnest(data_damage)
+colnames(data_damage)[3:11] <- c("C>T_01",
+                                 "C>T_02",
+                                 "C>T_03",
+                                 "C>T_04",
+                                 "C>T_05",
+                                 "C>T_06",
+                                 "C>T_07",
+                                 "C>T_08",
+                                 "C>T_09")
+
+
+## Load edit distance data
+dir_edit <- paste(input_dir, "/default/editDistance", sep="")
+files_edit <- dir(dir_edit, pattern = "*_editDistance.txt") # get file names
+
+data_edit <- data_frame(filename = files_edit) %>%
+  mutate(file_contents = map(filename, ~ read_tsv(file.path(dir_edit, .))))
+data_edit <- unnest(data_edit)
+
+## Load read distribution data
+dir_lngt <- paste(input_dir, "/default/readDist", sep="")
+files_lngt <- dir(dir_lngt, pattern = "*_readLengthDist.txt") # get file names
+
+data_lngt <- data_frame(filename = files_lngt) %>%
+  mutate(file_contents = map(filename, ~ read_tsv(file.path(dir_lngt, .))))
+data_lngt <- unnest(data_lngt)
+
+# Define UI for application that draws a histogram
+ui <- fluidPage(
+
+   # Application title
+   titlePanel("MALT-Extract iViewer"),
+
+   # Sidebar with a slider input for number of bins
+   sidebarLayout(
+      sidebarPanel(
+        h2("Input"),
+        selectInput("sample", label = "Sample", list_sample),
+        selectInput("taxon", label = "Taxon", list_taxon)
+      ),
+
+      # Show a plot of the generated distribution
+      mainPanel(
+        h2("Plot"),
+        p("\n"),
+        textOutput("text1"),
+        p("\n"),
+        textOutput("text2"),
+        p("\n"),
+        plotOutput("my_plot"),
+        plotOutput("distance_plot"),
+        plotOutput("length_plot")
+
+      )
+   )
+)
+
+# Define server logic required to draw a histogram
+server <- function(input, output) {
+
+  output$text1 <- renderText({paste("You have selected sample",
+                                    input$sample)
+  })
+
+  output$text2 <- renderText({paste("You have selected taxon",
+                                    input$taxon)
+  })
+
+  output$my_plot <- renderPlot({
+    ### Damage
+    #### Sample and taxon filtering
+    final_damage <- data_damage %>%
+      filter(filename == paste(input$sample, "_damageMismatch.txt", sep="")) %>%
+      filter(Node == input$taxon)
+    damage_reads <- final_damage$considered_Matches
+    final_damage <- gather(final_damage, Position, Frequency, 3:ncol(final_damage))
+    final_damage <- as.tibble(final_damage[1:20,]) %>% separate(Position, c("Modification", "Position"), "_")
+
+    ### Edit Distance
+    #### Sample and taxon filtering
+    final_edit <- data_edit %>%
+      filter(filename == paste(input$sample, "_editDistance.txt", sep="")) %>%
+      filter(Node == input$taxon)
+    final_edit <- gather(final_edit, Distance, Reads, 3:ncol(final_edit))
+    edit_reads <- final_edit %>% summarise(sum = sum(Reads))
+
+    ### Read Length
+    #### Sample and taxon filtering
+    sample_lngt <- data_lngt %>%
+      filter(filename == paste(input$sample, "_readLengthDist.txt", sep="")) %>%
+      filter(Median != 0)
+    no_lngt_species <- nrow(sample_lngt)
+    final_lgnt <- data_lngt %>%
+      filter(filename == paste(input$sample, "_readLengthDist.txt", sep="")) %>%
+      filter(Node == input$taxon)
+
+    ## Plot Data
+    damage_plot <- ggplot(final_damage, aes(x=Position, y=Frequency, group=Modification, colour=Modification)) +
+      geom_line(size=1.2) +
+      theme_bw() +
+      scale_color_manual(values=c("red", "blue", "light grey", "light grey")) +
+      scale_x_discrete(labels=c("01", "02", "03", "04", "05", "06", "07", "08", "09", "10",
+                                "-10", "-09", "-08", "-07", "-06", "-05", "-04", "-03", "-02", "-01")) +
+      theme(axis.text.x = element_text(angle = 45, hjust= 1),
+            panel.grid.major = element_blank(),
+            panel.grid.minor = element_blank(),
+            plot.title = element_text(size = 12, face="bold"),
+            legend.position = "bottom") +
+      ggtitle("Damage plot", subtitle = paste(damage_reads, " reads considered"))
+
+    edit_plot <- ggplot(final_edit, aes(Distance, Reads)) +
+      geom_bar(stat="identity", fill="light grey") +
+      theme_bw() +
+      theme(panel.grid.major = element_blank(),
+            panel.grid.minor = element_blank(),
+            plot.title = element_text(size = 12, face="bold")) +
+      ggtitle("Edit Distance", subtitle = paste(edit_reads, "reads considered"))
+
+    lngt_plot <- ggplot(sample_lngt, aes(x=Median)) +
+      geom_histogram(fill="light grey") +
+      geom_vline(aes(xintercept=final_lgnt$Median),
+                 linetype="dashed", colour="dark orange", size=1.2) +
+      theme_bw() +
+      theme(panel.grid.major = element_blank(),
+            panel.grid.minor = element_blank(),
+            plot.title = element_text(size = 12, face="bold")) +
+      ggtitle("Read Distibution", subtitle = paste("No. species total:", nrow(sample_lngt), "\nMedian:", final_lgnt$Median, "SD:", final_lgnt$StandardDev))
+
+    grid.arrange(damage_plot, edit_plot, lngt_plot, nrow=2)
+
+  })
+}
+
+# Run the application
+shinyApp(ui = ui, server = server)
+
