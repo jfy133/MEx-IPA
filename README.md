@@ -4,7 +4,7 @@ Interactive viewer of MALT-Extract results. Currently allows you to see damage p
 
 Requires the R packages tidyverse and gridExtra.
 
-To run on your own data, change the directory in the script (where indicated) before running in either Rstudio or 
+To run on your own data, **change the directory in the app.R file (where indicated)** before running in either Rstudio or 
 
 ```
 R -e "shiny::runApp('/<path>/<to>/MALT-Extract_iViewer')"
