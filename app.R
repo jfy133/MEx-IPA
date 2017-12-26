@@ -10,7 +10,6 @@
 ## TO DO
 ## Close button - completed 2017-12-26
 ## Download SVG plot - completed 2017-12-26
-## make data import function - pending
 ## make description box on how to use - completed 2017-12-26
 ## display general sample statistics (e.g. % of species != 0 in sample) - pending
 ## directory selection(?) - pending
@@ -25,7 +24,7 @@ library(gridExtra)
 ## Load our data directory and extract sample and taxon list
 
 ############ SELECT YOUR DIRECTORY HERE ########################################
-input_dir <- "../NS_170817_malt_extract"
+input_dir <- "../test_data/NS_170817_malt_extract"
 ################################################################################
 
 
@@ -104,6 +103,7 @@ ui <- fluidPage(
                   tabPanel("Info",
     h2("Usage"),
      p("\n"),
+     p("THIS CURRENTLY ONLY WORKS WITH OUTPUT FROM MALT-Extract v0.9"),
      tags$ol(
        tags$li("To use, firstly modify the directory path at the beginning
        of this app file before loading to your own MALT-Extract results directory
