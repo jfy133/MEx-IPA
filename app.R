@@ -8,7 +8,10 @@
 #
 
 ## TO DO
-## reactive taxon list based on https://stackoverflow.com/a/30399721
+## Close button - completed 2017-12-26
+## make data import function - pending
+## make description box on how to use - pending
+## display general sample statistics (e.g. % of species != 0 in sample) - pending
 
 args = commandArgs(trailingOnly=TRUE)
 
@@ -36,7 +39,7 @@ list_taxon <- select(default_runsum, Node) %>%
 dir_damage <- paste(input_dir, "/default/damageMismatch", sep="")
 files_damage <- dir(dir_damage, pattern = "*_damageMismatch.txt") # get file names
 data_damage <- data_frame(filename = files_damage) %>%
-                                  mutate(file_contents = map(filename, ~ read_tsv(file.path(dir_damage, .))))
+  mutate(file_contents = map(filename, ~ read_tsv(file.path(dir_damage, .))))
 data_damage <- unnest(data_damage)
 colnames(data_damage)[3:11] <- c("C>T_01",
                                  "C>T_02",
@@ -68,31 +71,40 @@ data_lngt <- unnest(data_lngt)
 # Define UI for application that draws a histogram
 ui <- fluidPage(
 
-   # Application title
-   titlePanel("MALT-Extract iViewer"),
+  # Application title
+  titlePanel("MALT-Extract iViewer"),
 
-   # Sidebar with a slider input for number of bins
-   sidebarLayout(
-      sidebarPanel(
-        h2("Input"),
-        selectInput("sample", label = "Sample", list_sample),
-        selectInput("taxon", label = "Taxon", list_taxon)
-      ),
-
-      # Show a plot of the generated distribution
-      mainPanel(
-        h2("Plot"),
-        p("\n"),
-        textOutput("text1"),
-        p("\n"),
-        textOutput("text2"),
-        p("\n"),
-        plotOutput("my_plot"),
-        plotOutput("distance_plot"),
-        plotOutput("length_plot")
-
+  # Sidebar with a slider input for number of bins
+  sidebarLayout(
+    sidebarPanel(
+      h2("Input"),
+      selectInput("sample", label = "Sample", list_sample),
+      selectInput("taxon", label = "Taxon", list_taxon),
+      p("\n"),
+      p("\n"),
+      tags$button(
+        id = 'close',
+        type = "button",
+        class = "btn action-button",
+        onclick = "setTimeout(function(){window.close();},500);",  # close browser
+        "Close app"
       )
-   )
+    ),
+
+    # Show a plot of the generated distribution
+    mainPanel(
+      h2("Plots"),
+      p("\n"),
+      textOutput("text1"),
+      p("\n"),
+      textOutput("text2"),
+      p("\n"),
+      plotOutput("my_plot"),
+      plotOutput("distance_plot"),
+      plotOutput("length_plot")
+
+    )
+  )
 )
 
 # Define server logic required to draw a histogram
@@ -135,7 +147,7 @@ server <- function(input, output) {
       filter(Node == input$taxon)
 
     if(nrow(final_lgnt) == 0){
-      text = paste("\n   This taxon had 0 hits")
+      text = paste("\n   This taxon has 0 hits in this sample")
       ggplot() +
         annotate("text", x = 4, y = 25, size=8, label = text) +
         theme_minimal() +
@@ -147,42 +159,45 @@ server <- function(input, output) {
               axis.title.x =element_blank(),
               axis.title.y =element_blank())
     } else {
-    damage_plot <- ggplot(final_damage, aes(x=Position, y=Frequency, group=Modification, colour=Modification)) +
-      geom_line(size=1.2) +
-      theme_bw() +
-      scale_color_manual(values=c("red", "blue", "light grey", "light grey")) +
-      scale_x_discrete(labels=c("01", "02", "03", "04", "05", "06", "07", "08", "09", "10",
-                                "-10", "-09", "-08", "-07", "-06", "-05", "-04", "-03", "-02", "-01")) +
-      theme(axis.text.x = element_text(angle = 45, hjust= 1),
-            panel.grid.major = element_blank(),
-            panel.grid.minor = element_blank(),
-            plot.title = element_text(size = 12, face="bold"),
-            legend.position = "nonw") +
-      ggtitle("Damage plot", subtitle = paste(damage_reads, "reads considered C to T (Red), G to A (Blue)"))
+      damage_plot <- ggplot(final_damage, aes(x=Position, y=Frequency, group=Modification, colour=Modification)) +
+        geom_line(size=1.2) +
+        theme_bw() +
+        scale_color_manual(values=c("red", "blue", "light grey", "light grey")) +
+        scale_x_discrete(labels=c("01", "02", "03", "04", "05", "06", "07", "08", "09", "10",
+                                  "-10", "-09", "-08", "-07", "-06", "-05", "-04", "-03", "-02", "-01")) +
+        theme(axis.text.x = element_text(angle = 45, hjust= 1),
+              panel.grid.major = element_blank(),
+              panel.grid.minor = element_blank(),
+              plot.title = element_text(size = 12, face="bold"),
+              legend.position = "nonw") +
+        ggtitle("Damage plot", subtitle = paste(damage_reads, "reads considered C to T (Red), G to A (Blue)"))
 
-    edit_plot <- ggplot(final_edit, aes(Distance, Reads)) +
-      geom_bar(stat="identity", fill="light grey") +
-      theme_bw() +
-      theme(panel.grid.major = element_blank(),
-            panel.grid.minor = element_blank(),
-            plot.title = element_text(size = 12, face="bold")) +
-      ggtitle("Edit Distance", subtitle = paste(edit_reads, "reads considered"))
+      edit_plot <- ggplot(final_edit, aes(Distance, Reads)) +
+        geom_bar(stat="identity", fill="light grey") +
+        theme_bw() +
+        theme(panel.grid.major = element_blank(),
+              panel.grid.minor = element_blank(),
+              plot.title = element_text(size = 12, face="bold")) +
+        ggtitle("Edit Distance", subtitle = paste(edit_reads, "reads considered"))
 
-    lngt_plot <- ggplot(sample_lngt, aes(x=Median)) +
-      geom_histogram(fill="light grey") +
-      geom_vline(aes(xintercept=final_lgnt$Median),
-                 linetype="dashed", colour="dark orange", size=1.2) +
-      theme_bw() +
-      theme(panel.grid.major = element_blank(),
-            panel.grid.minor = element_blank(),
-            plot.title = element_text(size = 12, face="bold")) +
-      ggtitle("Read Distribution", subtitle = paste("No. species total:", nrow(sample_lngt), "\nMedian:", final_lgnt$Median, "SD:", final_lgnt$StandardDev))
+      lngt_plot <- ggplot(sample_lngt, aes(x=Median)) +
+        geom_histogram(fill="light grey") +
+        geom_vline(aes(xintercept=final_lgnt$Median),
+                   linetype="dashed", colour="dark orange", size=1.2) +
+        theme_bw() +
+        theme(panel.grid.major = element_blank(),
+              panel.grid.minor = element_blank(),
+              plot.title = element_text(size = 12, face="bold")) +
+        ggtitle("Read Distribution", subtitle = paste("No. species total:", nrow(sample_lngt), "\nMedian:", final_lgnt$Median, "SD:", final_lgnt$StandardDev))
 
-    grid.arrange(damage_plot, edit_plot, lngt_plot, nrow=2)
+      grid.arrange(damage_plot, edit_plot, lngt_plot, nrow=2)
+
+      observe({
+        if (input$close > 0) stopApp()                             # stop shiny
+      })
     }
   })
 }
 
 # Run the application
 shinyApp(ui = ui, server = server)
-
