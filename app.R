@@ -9,9 +9,9 @@
 
 ## TO DO
 ## Close button - completed 2017-12-26
-## Download SVG plot - pending
+## Download SVG plot - completed 2017-12-26
 ## make data import function - pending
-## make description box on how to use - pending
+## make description box on how to use - completed 2017-12-26
 ## display general sample statistics (e.g. % of species != 0 in sample) - pending
 ## directory selection(?) - pending
 
@@ -29,7 +29,9 @@ input_dir <- "../NS_170817_malt_extract"
 ################################################################################
 
 
-default_runsum <- read_tsv(paste(input_dir, "/default/RunSummary.txt", sep = "")) %>%
+default_runsum <- read_tsv(paste(input_dir,
+                                 "/default/RunSummary.txt",
+                                 sep = "")) %>%
   filter(Node != "Total_Count")
 list_sample <- colnames(default_runsum)[2:ncol(default_runsum)]
 first_taxon <- colnames(default_runsum)[2]
@@ -98,51 +100,54 @@ ui <- fluidPage(
 
     # Show a plot of the generated distribution
     mainPanel(
-      h2("Usage"),
-      p("\n"),
-      tags$ol(
-        tags$li("To use, firstly modify the directory path at the beginning
-      of this app file before loading to your own MALT-Extract results directory
+      tabsetPanel(type = "tabs",
+                  tabPanel("Info",
+    h2("Usage"),
+     p("\n"),
+     tags$ol(
+       tags$li("To use, firstly modify the directory path at the beginning
+       of this app file before loading to your own MALT-Extract results directory
       and save."),
-        tags$li("Run the app by pressing 'Run' in the top right of code box in
-                Rstudio."),
-        tags$li("Select a sample and taxon of interest in the dropdown menus."),
-        tags$li("To search for a particular sample or taxon, click on the
-        corresponding dropdown menu and start typing the name to search."),
-        tags$li(" To quickly switch samples and/or species, click on the
-        dropdown menu to switch, then use your keyboard's arrow keys to up or
-                down, and press enter to select the next taxon.")
+      tags$li("Run the app by pressing 'Run' in the top right of code box in
+      Rstudio."),
+      tags$li("Select a sample and taxon of interest in the dropdown menus."),
+      tags$li("To search for a particular sample or taxon, click on the
+      corresponding dropdown menu and start typing the name to search."),
+      tags$li("To quickly switch samples and/or species, click on the
+      dropdown menu to switch, then use your keyboard's arrow keys to up or
+      down, and press enter to select the next taxon.")
       ),
       p("\n"),
-      h2("Plots"),
-      p("\n"),
-      plotOutput("my_plot"),
       h2("Reading the plots"),
       h3("Damage \n"),
-      p("The number of C to T and G to A nucleotides at the 5'
-              end of the strand and the complementary strand, respectively.
-              Fragmentation of ancient molecules leads to single stranded
-              overhangs that increase the risk of demamination of cytosines,
-              which are 'read' by polymerases as Thymines."),
+      p("Describes the number of C to T and G to A nucleotides at the 5'
+      end of the strand and the complementary strand, respectively.
+      Fragmentation of ancient molecules leads to single stranded
+      overhangs that increase the risk of demamination of cytosines,
+      which are 'read' by polymerases as Thymines."),
       p("Authentic ancient
-              DNA should display an exponential decrease of C to T and
-              complementary G to A miscoding lesions from position 1 onwards
-              into the middle of the strand."),
+      DNA should display an exponential decrease of C to T and
+      complementary G to A miscoding lesions from position 1 onwards
+      into the middle of the strand."),
       h3("Edit Distance \n"),
-      p("Edit Distance: the number of reads with X (1->5) number of
-              nucleotide differences to the aligned reference bases. A
-              decreasing number of reads from 1 to 5 edit distance values
-              indicates the taxon is closely related to the reference. An
-              increasing number of reads from 1 to 5 edit distance values
-              indicates a taxon that is not closeely related to the reference"),
+      p("Shows the number of reads with X (1->5) number of
+      nucleotide differences to the aligned reference bases. A
+      decreasing number of reads from 1 to 5 edit distance values
+      indicates the taxon is closely related to the reference. An
+      increasing number of reads from 1 to 5 edit distance values
+      indicates a taxon that is not closeely related to the reference"),
       h3("Read length"),
-      p("The median fragment lengths of all taxa in a sample, with the orange
-        line indicating the median of the selected taxon.
-        Due to hydrolytic damage over time, we expect ancient DNA molecules
-        to have broken into smaller and smaller fragments, around 30-200 bp.
-        Any taxon that seem unusually long outside the main distribution,
-        and has low damage (see above), this could indicate possible modern
-        contamination.")
+      p("Shows the median fragment lengths of all taxa in a sample, with the
+      orange line indicating the median of the selected taxon.
+      Due to hydrolytic damage over time, we expect ancient DNA molecules
+      to have broken into smaller and smaller fragments, around 30-200 bp.
+      Any taxon that seem unusually long outside the main distribution,
+      and has low damage (see above), this could indicate possible modern
+      contamination."),
+      p("\n")
+      ),
+      tabPanel("Plots", plotOutput("my_plot"))
+      )
     )
   )
 )
@@ -153,11 +158,16 @@ server <- function(input, output) {
     ### Damage
     #### Sample and taxon filtering
     final_damage <- data_damage %>%
-      filter(filename == paste(input$sample, "_damageMismatch.txt", sep="")) %>%
+      filter(filename == paste(input$sample,
+                               "_damageMismatch.txt", sep="")) %>%
       filter(Node == input$taxon)
     damage_reads <- final_damage$considered_Matches
-    final_damage <- gather(final_damage, Position, Frequency, 3:ncol(final_damage))
-    final_damage <- as.tibble(final_damage[1:20,]) %>% separate(Position, c("Modification", "Position"), "_")
+    final_damage <- gather(final_damage,
+                           Position,
+                           Frequency,
+                           3:ncol(final_damage))
+    final_damage <- as.tibble(final_damage[1:20,]) %>%
+      separate(Position, c("Modification", "Position"), "_")
 
     ### Edit Distance
     #### Sample and taxon filtering
@@ -179,7 +189,7 @@ server <- function(input, output) {
 
     if(nrow(final_lgnt) == 0){
       text <- paste("\n   This taxon has 0 hits in this sample")
-      ggplot() +
+      outputPlot <- ggplot() +
         annotate("text", x = 4, y = 25, size=8, label = text) +
         theme_minimal() +
         theme(panel.grid.major=element_blank(),
@@ -189,13 +199,22 @@ server <- function(input, output) {
               axis.text.y=element_blank(),
               axis.title.x =element_blank(),
               axis.title.y =element_blank())
+
+      outputPlot
+
     } else {
-      damage_plot <- ggplot(final_damage, aes(x=Position, y=Frequency, group=Modification, colour=Modification)) +
+      damage_plot <- ggplot(final_damage, aes(x=Position, y=Frequency,
+                                              group=Modification,
+                                              colour=Modification)) +
         geom_line(size=1.2) +
         theme_bw() +
-        scale_color_manual(values=c("red", "blue", "light grey", "light grey")) +
-        scale_x_discrete(labels=c("01", "02", "03", "04", "05", "06", "07", "08", "09", "10",
-                                  "-10", "-09", "-08", "-07", "-06", "-05", "-04", "-03", "-02", "-01")) +
+        scale_color_manual(values=c("red",
+                                    "blue",
+                                    "light grey",
+                                    "light grey")) +
+        scale_x_discrete(labels=c("01", "02", "03", "04", "05", "06", "07",
+                                  "08", "09", "10", "-10", "-09", "-08", "-07",
+                                  "-06", "-05", "-04", "-03", "-02", "-01")) +
         theme(axis.text.x = element_text(angle = 45, hjust= 1),
               panel.grid.major = element_blank(),
               panel.grid.minor = element_blank(),
@@ -211,7 +230,8 @@ server <- function(input, output) {
         theme(panel.grid.major = element_blank(),
               panel.grid.minor = element_blank(),
               plot.title = element_text(size = 12, face="bold")) +
-        ggtitle("Edit Distance", subtitle = paste(edit_reads, "reads considered"))
+        ggtitle("Edit Distance", subtitle = paste(edit_reads,
+                                                  "reads considered"))
 
       lngt_plot <- ggplot(sample_lngt, aes(x=Median)) +
         geom_histogram(fill="light grey") +
@@ -245,28 +265,29 @@ server <- function(input, output) {
               axis.title.x =element_blank(),
               axis.title.y =element_blank())
 
-      grid.arrange(damage_plot, edit_plot, lngt_plot, info_plot, nrow=2)
+      outputPlot <- grid.arrange(damage_plot, edit_plot, lngt_plot, info_plot, nrow=2)
 
+      outputPlot
 
+      output$down <- downloadHandler(
+        filename =  function() {
+          paste("malt-extract_iviewer", input$sample, "-", input$taxon,".svg")
+        },
+        # content is a function with argument file. content writes the plot to
+        ## the device
+        content = function(file) {
+          svg(file)
+          # draw the plot
+          grid.arrange(damage_plot, edit_plot, lngt_plot, info_plot, nrow=2)
+          # turn the device off
+          dev.off()
+        }
+      )
 
       observe({
         if (input$close > 0) stopApp()                             # stop shiny
       })
     }
-
-    output$down <- downloadHandler(
-      filename =  function() {
-        paste("malt-extract_iviewer", input$sample, "-", input$taxon,".svg")
-      },
-      # content is a function with argument file. content writes the plot to the device
-      content = function(file) {
-        svg(file)
-        grid.arrange(damage_plot, edit_plot, lngt_plot, info_plot, nrow=2) # draw the plot
-        dev.off()  # turn the device off
-
-      }
-    )
-
   })
 }
 
