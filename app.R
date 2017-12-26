@@ -18,8 +18,12 @@ library(tidyverse)
 library(gridExtra)
 
 ## Load our data directory and extract sample and taxon list
-#input_dir <- args[1]
-input_dir <- "/home/fellows/Documents/Scripts/shiny_web_apps/MALT-Extract_iViewer_2/NS_170817_malt_extract"
+
+############ SELECT YOUR DIRECTORY HERE ########################################
+input_dir <- "../NS_170817_malt_extract"
+################################################################################
+
+
 default_runsum <- read_tsv(paste(input_dir, "/default/RunSummary.txt", sep = "")) %>%
   filter(Node != "Total_Count")
 list_sample <- colnames(default_runsum)[2:ncol(default_runsum)]
@@ -130,7 +134,19 @@ server <- function(input, output) {
       filter(filename == paste(input$sample, "_readLengthDist.txt", sep="")) %>%
       filter(Node == input$taxon)
 
-    ## Plot Data
+    if(nrow(final_lgnt) == 0){
+      text = paste("\n   This taxon had 0 hits")
+      ggplot() +
+        annotate("text", x = 4, y = 25, size=8, label = text) +
+        theme_minimal() +
+        theme(panel.grid.major=element_blank(),
+              panel.grid.minor=element_blank(),
+              axis.line=element_blank(),
+              axis.text.x=element_blank(),
+              axis.text.y=element_blank(),
+              axis.title.x =element_blank(),
+              axis.title.y =element_blank())
+    } else {
     damage_plot <- ggplot(final_damage, aes(x=Position, y=Frequency, group=Modification, colour=Modification)) +
       geom_line(size=1.2) +
       theme_bw() +
@@ -141,8 +157,8 @@ server <- function(input, output) {
             panel.grid.major = element_blank(),
             panel.grid.minor = element_blank(),
             plot.title = element_text(size = 12, face="bold"),
-            legend.position = "bottom") +
-      ggtitle("Damage plot", subtitle = paste(damage_reads, " reads considered"))
+            legend.position = "nonw") +
+      ggtitle("Damage plot", subtitle = paste(damage_reads, "reads considered C to T (Red), G to A (Blue)"))
 
     edit_plot <- ggplot(final_edit, aes(Distance, Reads)) +
       geom_bar(stat="identity", fill="light grey") +
@@ -160,10 +176,10 @@ server <- function(input, output) {
       theme(panel.grid.major = element_blank(),
             panel.grid.minor = element_blank(),
             plot.title = element_text(size = 12, face="bold")) +
-      ggtitle("Read Distibution", subtitle = paste("No. species total:", nrow(sample_lngt), "\nMedian:", final_lgnt$Median, "SD:", final_lgnt$StandardDev))
+      ggtitle("Read Distribution", subtitle = paste("No. species total:", nrow(sample_lngt), "\nMedian:", final_lgnt$Median, "SD:", final_lgnt$StandardDev))
 
     grid.arrange(damage_plot, edit_plot, lngt_plot, nrow=2)
-
+    }
   })
 }
 
