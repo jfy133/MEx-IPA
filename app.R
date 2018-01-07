@@ -11,7 +11,9 @@
 ### display general sample statistics (e.g. % of species != 0 in sample) - pending
 ### directory selection(?) - pending
 ###     Note: maybe upload a zipped file?
-
+###     out <- unzip("90.zip")
+###     read_tsv(out[932])
+###     USE EAGER VIEWER AS TEMPLATE AND START FROM SCRATCH
 
 ## Change log
 ### Close button - completed 2017-12-26
@@ -22,6 +24,7 @@
 #### fix incorrect ordering of sample names in table view - complete 2018-01-07
 
 args = commandArgs(trailingOnly=TRUE)
+options(shiny.maxRequestSize = 50*1024^2)
 
 ## Load libraries
 library(shiny)
@@ -89,6 +92,9 @@ ui <- fluidPage(
   sidebarLayout(
     sidebarPanel(
       h2("Input"),
+      fileInput("datafile", "Upload ZIP File",
+                multiple = FALSE,
+                accept = c("application/zip")),
       selectInput("sample", label = "Sample", list_sample),
       selectizeInput("taxon", label = "Taxon", list_taxon, options = list(maxOptions = 99999)),
       p("\n"),
@@ -164,7 +170,18 @@ ui <- fluidPage(
 
 # Define server logic required to draw a histogram
 server <- function(input, output) {
-  output$my_table <- renderDataTable({
+  # upload data
+  filedata <- reactive({
+    infile <- input$datafile
+    if (is.null(infile)) {
+      # User has not uploaded a file yet
+      return(NULL)
+    }
+    zip_list <- unzip(infile$datapath)
+  })
+
+  ## Table
+    output$my_table <- renderDataTable({
     default_runsum %>% select(Node, sort(colnames(.)[2:ncol(.)]))
   },
   filter = 'top',
