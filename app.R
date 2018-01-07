@@ -8,11 +8,18 @@
 #
 
 ## TO DO
-## Close button - completed 2017-12-26
-## Download SVG plot - completed 2017-12-26
-## make description box on how to use - completed 2017-12-26
-## display general sample statistics (e.g. % of species != 0 in sample) - pending
-## directory selection(?) - pending
+### display general sample statistics (e.g. % of species != 0 in sample) - pending
+### directory selection(?) - pending
+###     Note: maybe upload a zipped file?
+
+
+## Change log
+### Close button - completed 2017-12-26
+### Download SVG plot - completed 2017-12-26
+### make description box on how to use - completed 2017-12-26
+### update to latest version of MALT-Extract - completed 2018-01-07
+### add table view - completed 2018-01-07
+#### fix incorrect ordering of sample names in table view - complete 2018-01-07
 
 args = commandArgs(trailingOnly=TRUE)
 
@@ -20,11 +27,12 @@ args = commandArgs(trailingOnly=TRUE)
 library(shiny)
 library(tidyverse)
 library(gridExtra)
+library(DT)
 
 ## Load our data directory and extract sample and taxon list
 
 ############ SELECT YOUR DIRECTORY HERE ########################################
-input_dir <- "../test_data/NS_170817_malt_extract"
+input_dir <- "../test_data/90"
 ################################################################################
 
 
@@ -32,7 +40,7 @@ default_runsum <- read_tsv(paste(input_dir,
                                  "/default/RunSummary.txt",
                                  sep = "")) %>%
   filter(Node != "Total_Count")
-list_sample <- colnames(default_runsum)[2:ncol(default_runsum)]
+list_sample <- colnames(default_runsum)[2:ncol(default_runsum)] %>% sort
 first_taxon <- colnames(default_runsum)[2]
 list_taxon <- select(default_runsum, Node) %>%
   distinct()
@@ -82,7 +90,7 @@ ui <- fluidPage(
     sidebarPanel(
       h2("Input"),
       selectInput("sample", label = "Sample", list_sample),
-      selectInput("taxon", label = "Taxon", list_taxon),
+      selectizeInput("taxon", label = "Taxon", list_taxon, options = list(maxOptions = 99999)),
       p("\n"),
       p("\n"),
       h2("Output"),
@@ -103,7 +111,7 @@ ui <- fluidPage(
                   tabPanel("Info",
     h2("Usage"),
      p("\n"),
-     p("THIS CURRENTLY ONLY WORKS WITH OUTPUT FROM MALT-Extract v0.9"),
+     p("THIS CURRENTLY ONLY WORKS WITH OUTPUT FROM MALT-Extract v1.1+"),
      tags$ol(
        tags$li("To use, firstly modify the directory path at the beginning
        of this app file before loading to your own MALT-Extract results directory
@@ -115,7 +123,9 @@ ui <- fluidPage(
       corresponding dropdown menu and start typing the name to search."),
       tags$li("To quickly switch samples and/or species, click on the
       dropdown menu to switch, then use your keyboard's arrow keys to up or
-      down, and press enter to select the next taxon.")
+      down, and press enter to select the next taxon."),
+      p(),
+      p("NOTE: the table tab might be slow to load.")
       ),
       p("\n"),
       h2("Reading the plots"),
@@ -137,15 +147,15 @@ ui <- fluidPage(
       increasing number of reads from 1 to 5 edit distance values
       indicates a taxon that is not closeely related to the reference"),
       h3("Read length"),
-      p("Shows the median fragment lengths of all taxa in a sample, with the
-      orange line indicating the median of the selected taxon.
-      Due to hydrolytic damage over time, we expect ancient DNA molecules
-      to have broken into smaller and smaller fragments, around 30-200 bp.
-      Any taxon that seem unusually long outside the main distribution,
-      and has low damage (see above), this could indicate possible modern
-      contamination."),
+      p("Shows the fragment lengths of all read matching a taxa in a
+      sample. Due to hydrolytic damage over time, we expect ancient DNA
+      molecules to have broken into smaller and smaller fragments, around
+      30-200 bp. Any taxon that has a distribution skewed towards longer
+      fragments and/or has bimodal distributions in addition to having low
+      damage (see above), could indicate possible modern contamination."),
       p("\n")
       ),
+      tabPanel("Table", dataTableOutput("my_table")),
       tabPanel("Plots", plotOutput("my_plot"))
       )
     )
@@ -154,6 +164,14 @@ ui <- fluidPage(
 
 # Define server logic required to draw a histogram
 server <- function(input, output) {
+  output$my_table <- renderDataTable({
+    default_runsum %>% select(Node, sort(colnames(.)[2:ncol(.)]))
+  },
+  filter = 'top',
+  rownames = FALSE,
+  selection = list(target = 'column')
+  )
+
   output$my_plot <- renderPlot({
     ### Damage
     #### Sample and taxon filtering
@@ -173,36 +191,25 @@ server <- function(input, output) {
     #### Sample and taxon filtering
     final_edit <- data_edit %>%
       filter(filename == paste(input$sample, "_editDistance.txt", sep="")) %>%
-      filter(Node == input$taxon)
+      filter(Taxon == input$taxon)
     final_edit <- gather(final_edit, Distance, Reads, 3:ncol(final_edit))
     edit_reads <- final_edit %>% summarise(sum = sum(Reads))
 
+    distance_levels <- c("0", "1", "2", "3", "4", "5", "6",
+                         "7", "8", "9", "10", "higher")
+
     ### Read Length
     #### Sample and taxon filtering
-    sample_lngt <- data_lngt %>%
+    final_lngt <- data_lngt %>%
       filter(filename == paste(input$sample, "_readLengthDist.txt", sep="")) %>%
-      filter(Median != 0)
-    no_lngt_species <- nrow(sample_lngt)
-    final_lgnt <- data_lngt %>%
-      filter(filename == paste(input$sample, "_readLengthDist.txt", sep="")) %>%
-      filter(Node == input$taxon)
+      filter(Taxon == input$taxon) %>%
+      gather(length, reads, 3:ncol(.)) %>%
+      mutate(length = str_replace(length, "bp", "")) %>%
+      mutate(length = as.numeric(length))
 
-    if(nrow(final_lgnt) == 0){
-      text <- paste("\n   This taxon has 0 hits in this sample")
-      outputPlot <- ggplot() +
-        annotate("text", x = 4, y = 25, size=8, label = text) +
-        theme_minimal() +
-        theme(panel.grid.major=element_blank(),
-              panel.grid.minor=element_blank(),
-              axis.line=element_blank(),
-              axis.text.x=element_blank(),
-              axis.text.y=element_blank(),
-              axis.title.x =element_blank(),
-              axis.title.y =element_blank())
+    lngt_reads <- final_lngt %>% summarise(sum = sum(reads))
 
-      outputPlot
-
-    } else {
+          ## Plot damage
       damage_plot <- ggplot(final_damage, aes(x=Position, y=Frequency,
                                               group=Modification,
                                               colour=Modification)) +
@@ -215,7 +222,9 @@ server <- function(input, output) {
         scale_x_discrete(labels=c("01", "02", "03", "04", "05", "06", "07",
                                   "08", "09", "10", "-10", "-09", "-08", "-07",
                                   "-06", "-05", "-04", "-03", "-02", "-01")) +
-        theme(axis.text.x = element_text(angle = 45, hjust= 1),
+        xlab("position") +
+        ylab("frequency") +
+        theme(axis.text.x = element_text(angle = 90, hjust= 1),
               panel.grid.major = element_blank(),
               panel.grid.minor = element_blank(),
               plot.title = element_text(size = 12, face="bold"),
@@ -223,9 +232,13 @@ server <- function(input, output) {
         ggtitle("Damage plot",
                 subtitle = paste(damage_reads,
                                  "reads considered C to T (Red), G to A (Blue)"))
-
-      edit_plot <- ggplot(final_edit, aes(Distance, Reads)) +
+      ## Plot edit distnace
+      edit_plot <- ggplot(final_edit,
+                          aes(factor(Distance, levels = distance_levels),
+                              Reads)) +
         geom_bar(stat="identity", fill="light grey") +
+        xlab("edit distance") +
+        ylab("reads") +
         theme_bw() +
         theme(panel.grid.major = element_blank(),
               panel.grid.minor = element_blank(),
@@ -233,21 +246,18 @@ server <- function(input, output) {
         ggtitle("Edit Distance", subtitle = paste(edit_reads,
                                                   "reads considered"))
 
-      lngt_plot <- ggplot(sample_lngt, aes(x=Median)) +
-        geom_histogram(fill="light grey") +
-        geom_vline(aes(xintercept=final_lgnt$Median),
-                   linetype="dashed", colour="dark orange", size=1.2) +
+      ## Plot fragment lengths
+      lngt_plot <- ggplot(final_lngt, aes(factor(length), reads)) +
+        geom_histogram(fill="light grey", stat="identity") +
+        xlab("length (bp)") +
         theme_bw() +
         theme(panel.grid.major = element_blank(),
               panel.grid.minor = element_blank(),
-              plot.title = element_text(size = 12, face="bold")) +
-        ggtitle("Read Distribution", subtitle = paste("No. species total:",
-                                                      nrow(sample_lngt),
-                                                      "\nMedian:",
-                                                      final_lgnt$Median,
-                                                      "SD:",
-                                                      final_lgnt$StandardDev))
-
+              plot.title = element_text(size = 12, face="bold"),
+              axis.text.x = element_text(angle = 90, hjust= 1, size = 8)) +
+        ggtitle("Read Distribution", subtitle = paste(lngt_reads$sum,
+                                                      "reads considered"))
+      ## Plot info box
       info_text <- paste("Sample:",
                          input$sample,
                          "\n\n Displayed taxon:",
@@ -265,10 +275,12 @@ server <- function(input, output) {
               axis.title.x =element_blank(),
               axis.title.y =element_blank())
 
+      ## Combine plots and display
       outputPlot <- grid.arrange(damage_plot, edit_plot, lngt_plot, info_plot, nrow=2)
 
       outputPlot
 
+      ## Download button
       output$down <- downloadHandler(
         filename =  function() {
           paste("malt-extract_iviewer", input$sample, "-", input$taxon,".svg")
@@ -284,10 +296,10 @@ server <- function(input, output) {
         }
       )
 
+      ## Close button
       observe({
         if (input$close > 0) stopApp()                             # stop shiny
       })
-    }
   })
 }
 
