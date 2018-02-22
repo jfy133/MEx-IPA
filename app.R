@@ -28,6 +28,7 @@ ui <- fluidPage(
                  accept = c("application/zip")),
        uiOutput("choose_columns1"),
        uiOutput("choose_columns2"),
+       uiOutput("choose_columns3"),
        p("\n"),
        p("\n"),
        h2("Output"),
@@ -63,7 +64,8 @@ server <- function(input, output) {
 
     file_prefix <- paste(str_split(zip_list[1], "/")[[1]][1:2], collapse="/")
 
-
+    filter_list <- append("all", unique(str_split_fixed(zip_list, "/", 4)[,3]))
+    
     default_runsum <- suppressWarnings(
       suppressMessages(
         read_tsv(zip_list[grepl("*/default/RunSummary.txt", zip_list)])
@@ -102,7 +104,8 @@ server <- function(input, output) {
                 data_damage=data_damage,
                 data_edit=data_edit,
                 data_lngt=data_lngt,
-                file_prefix=file_prefix
+                file_prefix=file_prefix,
+                filter_list=filter_list
                 ))
 
   })
@@ -155,6 +158,23 @@ server <- function(input, output) {
                    selected = list_taxon, options = list(maxOptions = 99999))
   })
 
+  output$choose_columns3 <- renderUI({
+    
+    # If missing input, return to avoid error later in function
+    df <- filedata()
+    
+    if(is.null(df)){
+      filter_list <- ""
+    } else {
+      filter_list <- df$filter_list 
+    }
+    
+    # Create the checkboxes and select them all by default
+    
+    selectizeInput("filter", label = "Select Filter", choices  = filter_list,
+                   selected = "all", options = list(maxOptions = 99999))
+  })
+  
   output$my_plot <- renderPlot({
     if(is.null(input$taxon)){
       NULL
@@ -164,44 +184,70 @@ server <- function(input, output) {
       df <- filedata()
 
       ## Damage final data prep
+      if(input$filter == "all"){
       final_damage <- df$data_damage %>%
         filter(grepl(input$sample, filename)) %>%
         filter(Node == input$taxon)
+      } else {
+      final_damage <- df$data_damage %>%
+        filter(grepl(input$sample, filename)) %>%
+        filter(grepl(input$filter, filename)) %>%
+        filter(Node == input$taxon)
+      }
 
-      damage_reads <- filter(final_damage, grepl("default", filename))$considered_Matches
+      damage_reads <- 0
+      #damage_reads <- filter(final_damage, grepl("default", filename))$considered_Matches
 
-
+    if(input$filter == "all"){
       final_damage <- gather(final_damage,
                              Position,
                              Frequency,
                              3:ncol(final_damage)) %>%
         rowwise() %>%
         mutate(dataset = unlist(str_split(filename, "/"))[3]) %>%
-        filter(dataset == "default")
+        filter(dataset == "default") 
+      } else {
+      final_damage <- gather(final_damage,
+                             Position,
+                             Frequency,
+                             3:ncol(final_damage)) %>%
+        rowwise() %>%
+        mutate(dataset = unlist(str_split(filename, "/"))[3]) %>%
+        filter(dataset == input$filter)
+     }
 
       final_damage <- as.tibble(final_damage[1:20,]) %>%
         separate(Position, c("Modification", "Position"), "_")
 
       ### Edit Distance
       #### Sample and taxon filtering
+      if(input$filter == "all"){
       final_edit <- df$data_edit %>%
         filter(grepl(input$sample, filename)) %>%
         filter(Taxon == input$taxon)
+      } else {
+      final_edit <- df$data_edit %>%
+        filter(grepl(input$filter, filename)) %>%
+        filter(grepl(input$sample, filename)) %>%
+        filter(Taxon == input$taxon)
+      }
 
       final_edit <- gather(final_edit, Distance, Reads, 3:ncol(final_edit)) %>%
         rowwise() %>%
         mutate(dataset = unlist(str_split(filename, "/"))[3])
 
-      edit_reads <- final_edit %>%
-        filter(dataset == "default") %>%
-        summarise(sum = sum(Reads)) %>%
-        sum
+      # edit_reads <- final_edit %>%
+      #   filter(dataset == "default") %>%
+      #   summarise(sum = sum(Reads)) %>%
+      #   sum
+      edit_reads <- 0
 
       distance_levels <- c("0", "1", "2", "3", "4", "5", "6",
                            "7", "8", "9", "10", "higher")
 
       ### Read Length
       #### Sample and taxon filtering
+      if(input$filter == "all"){
       final_lngt <- df$data_lngt %>%
         filter(grepl(input$sample, filename)) %>%
         filter(Taxon == input$taxon) %>%
@@ -210,11 +256,23 @@ server <- function(input, output) {
         mutate(length = as.numeric(length))%>%
         rowwise() %>%
         mutate(dataset = unlist(str_split(filename, "/"))[3])
+      } else {
+      final_lngt <- df$data_lngt %>%
+        filter(grepl(input$filter, filename)) %>%
+        filter(grepl(input$sample, filename)) %>%
+        filter(Taxon == input$taxon) %>%
+        gather(length, reads, 3:ncol(.)) %>%
+        mutate(length = str_replace(length, "bp", "")) %>%
+        mutate(length = as.numeric(length))%>%
+        rowwise() %>%
+        mutate(dataset = unlist(str_split(filename, "/"))[3])
+      }
 
-      lngt_reads <- final_lngt %>%
-        filter(dataset == "default") %>%
-        summarise(sum = sum(reads)) %>%
-        sum
+      lngt_reads <- 0
+      # lngt_reads <- final_lngt %>%
+      #   filter(dataset == "default") %>%
+      #   summarise(sum = sum(reads)) %>%
+      #   sum
 
       ## Plot damage
       damage_plot <- ggplot(final_damage, aes(x=Position, y=Frequency,
