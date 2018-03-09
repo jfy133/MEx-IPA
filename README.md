@@ -2,17 +2,34 @@
 
 Interactive viewer of MALT-Extract results. Currently allows you to see damage patterns, edit distance and a read length distribution.
 
-Requires the R packages shiny, tidyverse, and gridExtra.
+## Preparation
+This shiny app requires the R packages shiny, tidyverse, and gridExtra.
 
-Input is a zipped MALT-Extract Beta v1.2 results directory. The largest file size is 50MB, but can be increased in the 'options' on line 10 of the `app.R` file. 
+To install these packages in R:
+
+```R
+install.packages(c("shiny", "tidyverse", "gridExtra")
+```
+
+Prior to running the app, you must generate your input file. This is in the form of a zipped MALT-Extract Beta v1.2 results directory.
+
+```bash
+zip -r <zip_archive_name>.zip <malt_extract_results_directory/
+```
+
+The default file size that can be used in the tool is 50MB. If your zip archive is larger than this, you can increased the maximum file size by modifying the 'options' on line 10 of the `app.R` file.
+
+## Running
 
 To run, either:
 
-Load the app in Rstudio and press 'Run' in the top right of the code pane
+1) Load the app in Rstudio and press 'Run' in the top right of the code pane
+
+![How to run in Rstudio](images/01-rstudio_instructions.png)
 
 OR
 
-run the following from your terminal:
+2) run the following from your terminal:
 
 ```
 R -e "shiny::runApp('/<path>/<to>/MALT-Extract_iViewer')"
