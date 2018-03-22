@@ -61,10 +61,11 @@ server <- function(input, output) {
       return(NULL)
     }
     zip_list <- unzip(infile$datapath)
-
+    zip_filter_dirs <- grep("RunSummary.txt", zip_list, value=T)
+    
     file_prefix <- paste(str_split(zip_list[1], "/")[[1]][1:2], collapse="/")
 
-    filter_list <- append("all", unique(str_split_fixed(zip_list, "/", 4)[,3]))
+    filter_list <- append("all", unique(str_split_fixed(zip_filter_dirs, "/", 4)[,3]))
     
     default_runsum <- suppressWarnings(
       suppressMessages(
