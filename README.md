@@ -8,10 +8,10 @@ This shiny app requires the R packages shiny, tidyverse, and gridExtra.
 To install these packages in R:
 
 ```R
-install.packages(c("shiny", "tidyverse", "gridExtra")
+install.packages(c("shiny", "tidyverse", "gridExtra"))
 ```
 
-Prior to running the app, you must generate your input file. This is in the form of a zipped MALT-Extract Beta v1.2 results directory.
+Prior to running the app, you must generate your input file. This is in the form of a zipped MALT-Extract Beta v1.3 results directory.
 
 ```bash
 zip -r <zip_archive_name>.zip <malt_extract_results_directory/
@@ -35,4 +35,4 @@ OR
 R -e "shiny::runApp('/<path>/<to>/MALT-Extract_iViewer')"
 ```
 
-and then go to the IP address given once loaded in your internet browser.
+and then go to the IP address given once loaded in your internet browser. 

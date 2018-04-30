@@ -67,7 +67,7 @@ server <- function(input, output) {
 
     filter_list <- append("all", unique(str_split_fixed(zip_filter_dirs, "/", 4)[,3]))
     
-    default_runsum <- suppressWarnings(
+    default_runsum <- suppressWarnings( ## !! NOTGATHRED??
       suppressMessages(
         read_tsv(zip_list[grepl("*/default/RunSummary.txt", zip_list)])
         )
@@ -101,20 +101,26 @@ server <- function(input, output) {
     data_edit <- data_extractor(zip_list, "*_editDistance.txt")
     data_lngt <- data_extractor(zip_list, "*_readLengthDist.txt")
 
-    return(list(default_runsum=default_runsum,
-                data_damage=data_damage,
-                data_edit=data_edit,
-                data_lngt=data_lngt,
-                file_prefix=file_prefix,
-                filter_list=filter_list
-                ))
+    read_numbers <- data_extractor(zip_list, "*RunSummary.txt")
+    read_numbers <- gather(read_numbers, sample, count, 3:ncol(read_numbers)) %>% 
+      rowwise %>% 
+      mutate(filename = str_split_fixed(filename, "/", n = 4)[3])
+
+    return(
+      list(default_runsum = default_runsum,
+                data_damage = data_damage,
+                data_edit = data_edit,
+                data_lngt = data_lngt,
+                file_prefix = file_prefix,
+                filter_list = filter_list,
+                read_numbers = read_numbers
+           ))
 
   })
-
+  
   output$choose_columns1 <- renderUI({
     # If missing input, return to avoid error later in function
     df <- filedata()
-
     if(is.null(df)){
       list_sample <- ""
     } else {
@@ -196,9 +202,6 @@ server <- function(input, output) {
         filter(Node == input$taxon)
       }
 
-      damage_reads <- 0
-      #damage_reads <- filter(final_damage, grepl("default", filename))$considered_Matches
-
     if(input$filter == "all"){
       final_damage <- gather(final_damage,
                              Position,
@@ -237,12 +240,6 @@ server <- function(input, output) {
         rowwise() %>%
         mutate(dataset = unlist(str_split(filename, "/"))[3])
 
-      # edit_reads <- final_edit %>%
-      #   filter(dataset == "default") %>%
-      #   summarise(sum = sum(Reads)) %>%
-      #   sum
-      edit_reads <- 0
-
       distance_levels <- c("0", "1", "2", "3", "4", "5", "6",
                            "7", "8", "9", "10", "higher")
 
@@ -269,12 +266,6 @@ server <- function(input, output) {
         mutate(dataset = unlist(str_split(filename, "/"))[3])
       }
 
-      lngt_reads <- 0
-      # lngt_reads <- final_lngt %>%
-      #   filter(dataset == "default") %>%
-      #   summarise(sum = sum(reads)) %>%
-      #   sum
-
       ## Plot damage
       damage_plot <- ggplot(final_damage, aes(x=Position, y=Frequency,
                                               group=Modification,
@@ -296,8 +287,7 @@ server <- function(input, output) {
               plot.title = element_text(size = 12, face="bold"),
               legend.position = "nonw") +
         ggtitle("Damage plot",
-                subtitle = paste(damage_reads,
-                                 "default reads considered. C to T (Red), G to A (Blue)"))
+                subtitle = paste("C to T (Red), G to A (Blue)"))
       ## Plot edit distnace
       edit_plot <- ggplot() +
         geom_bar(data=filter(final_edit, dataset == "default"), aes(factor(Distance, levels = distance_levels), Reads, colour=dataset, fill=dataset), stat="identity", alpha=0.5) +
@@ -308,8 +298,7 @@ server <- function(input, output) {
         theme(panel.grid.major = element_blank(),
               panel.grid.minor = element_blank(),
               plot.title = element_text(size = 12, face="bold")) +
-        ggtitle("Edit Distance", subtitle = paste(edit_reads,
-                                                  "default reads considered"))
+        ggtitle("Edit Distance")
 
       ## Plot fragment lengths
       lngt_plot <- ggplot() +
@@ -321,14 +310,32 @@ server <- function(input, output) {
               panel.grid.minor = element_blank(),
               plot.title = element_text(size = 12, face="bold"),
               axis.text.x = element_text(angle = 90, hjust= 1, size = 8)) +
-        ggtitle("Read Distribution", subtitle = paste(lngt_reads,
-                                                      "default reads considered"))
+        ggtitle("Read Distribution")
+      
       ## Plot info box
-      info_text <- paste("Sample:",
-                         input$sample,
-                         "\n\n Displayed taxon:",
-                         input$taxon,
-                         sep=" " )
+      
+      read_count_no <- df$read_numbers %>%
+        filter(grepl(input$sample, sample)) %>%
+        filter(Node == input$taxon)
+      
+      final_numbers <- c()
+      
+      for( i in 1:nrow(read_count_no)){
+        final_numbers <- append(final_numbers, 
+                                paste(read_count_no[i,]$filename, 
+                                      " reads : ", 
+                                      read_count_no[i,]$count, 
+                                      sep = ""))
+      }
+      
+      final_numbers <- paste(final_numbers, ", ", collapse = "", sep="")
+        
+
+      info_sample <- paste("Displayed sample:", input$sample)
+      info_taxon <- paste("Displayed Taxon:", input$taxon)
+      info_numbers <- paste("Read counts per filter:", final_numbers)
+      
+      info_text <- paste(info_sample, info_taxon, info_numbers, sep = "\n")
 
       info_plot <- ggplot() +
         annotate("text", x = 4, y = 25, size=3, label = info_text) +
