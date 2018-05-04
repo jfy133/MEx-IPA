@@ -15,7 +15,9 @@ To install these packages in R:
 install.packages(c("shiny", "tidyverse", "gridExtra"))
 ```
 
-Prior to running the app, you must generate your input file. This is in the form of a zipped MALT-Extract results directory from AMPs v0.1. Note that you need to zip from the parent directory of your MALT-Extract results, _do not_ give the full path.
+Prior to running the app, you must generate your input file. This is in the form of a zipped MALT-Extract results directory from AMPs v0.1. 
+
+**Note**: that you need to zip from the parent directory of your MALT-Extract results, _do not_ give the full path.
 
 ```bash
 zip -r <zip_archive_name>.zip <malt_extract_results_directory/
@@ -36,7 +38,7 @@ OR
 2) run the following from your terminal:
 
 ```
-R -e "shiny::runApp('/<path>/<to>/MALT-Extract_iViewer')"
+R -e "shiny::runApp('/<path>/<to>/MEx-IPA')"
 ```
 
 and then go to the IP address given once loaded in your internet browser.
