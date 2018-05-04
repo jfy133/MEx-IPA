@@ -1,6 +1,10 @@
-# MALT-Extract_iViewer
+# MEx-IPA
 
-Interactive viewer of MALT-Extract results. Currently allows you to see damage patterns, edit distance and a read length distribution.
+M(alt)Ex(tract)-I(nteractive)P(lotting)A(pp)
+
+Interactive viewer of MALT-Extract results. Interactive implementation of the post-processing visualiation scripts of the AMPs pipeline, that MALT-Extract is apart of.
+
+Currently allows you to see damage patterns, edit distance and a read length distribution for each taxa in your MALT-Extract results. The benefit of this tool is that you can quickly scroll through your taxa and samples, as well as looking more closely at the results from specific filters - rather than opening lots of PDF files.
 
 ## Preparation
 This shiny app requires the R packages shiny, tidyverse, and gridExtra.
