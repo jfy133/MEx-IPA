@@ -88,15 +88,13 @@ server <- function(input, output) {
 
     data_damage <- data_extractor(zip_list, "*_damageMismatch")
 
-    colnames(data_damage)[3:11] <- c("C>T_01",
-                                     "C>T_02",
-                                     "C>T_03",
-                                     "C>T_04",
-                                     "C>T_05",
-                                     "C>T_06",
-                                     "C>T_07",
-                                     "C>T_08",
+    colnames(data_damage) <- gsub("\\(11Substitution\\)", "", colnames(data_damage))
+    colnames(data_damage)[3:11] <- c("C>T_01", "C>T_02", "C>T_03", "C>T_04", 
+                                     "C>T_05", "C>T_06", "C>T_07", "C>T_08",
                                      "C>T_09")
+    colnames(data_damage)[23:31] <- c("D>V_01", "D>V_02", "D>V_03", "D>V_04", 
+                                      "D>V_05", "D>V_06", "D>V_07", "D>V_08",
+                                      "D>V_09")
 
     data_edit <- data_extractor(zip_list, "*_editDistance.txt")
     data_lngt <- data_extractor(zip_list, "*_readLengthDist.txt")
@@ -220,8 +218,9 @@ server <- function(input, output) {
         filter(dataset == input$filter)
      }
 
-      final_damage <- as.tibble(final_damage[1:20,]) %>%
-        separate(Position, c("Modification", "Position"), "_")
+      final_damage <- final_damage %>%
+        separate(Position, c("Modification", "Position"), "_") %>%
+        filter(Modification != "considered")
 
       ### Edit Distance
       #### Sample and taxon filtering
@@ -273,8 +272,8 @@ server <- function(input, output) {
         geom_line(size=1.2) +
         theme_bw() +
         scale_color_manual(values=c("red",
-                                    "blue",
                                     "light grey",
+                                    "blue",
                                     "light grey")) +
         scale_x_discrete(labels=c("01", "02", "03", "04", "05", "06", "07",
                                   "08", "09", "10", "-10", "-09", "-08", "-07",
