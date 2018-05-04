@@ -275,7 +275,7 @@ server <- function(input, output) {
                                               group=Modification,
                                               colour=Modification)) +
         geom_line(size=1.2) +
-        theme_bw() +
+        theme_minimal() +
         scale_color_manual(values=c("red",
                                     "light grey",
                                     "blue",
@@ -304,7 +304,7 @@ server <- function(input, output) {
         scale_colour_manual(values=std_colours) +
         xlab("edit distance") +
         ylab("reads") +
-        theme_bw() +
+        theme_minimal() +
         theme(panel.grid.major = element_blank(),
               panel.grid.minor = element_blank(),
               plot.title = element_text(size = 12, face="bold")) +
@@ -322,7 +322,7 @@ server <- function(input, output) {
         scale_fill_manual(values=std_colours) +
         scale_colour_manual(values=std_colours) +
         xlab("length (bp)") +
-        theme_bw() +
+        theme_minimal() +
         theme(panel.grid.major = element_blank(),
               panel.grid.minor = element_blank(),
               plot.title = element_text(size = 12, face="bold"),
@@ -340,7 +340,7 @@ server <- function(input, output) {
       for( i in 1:nrow(read_count_no)){
         final_numbers <- append(final_numbers, 
                                 paste(read_count_no[i,]$filename, 
-                                      " reads : ", 
+                                      " reads: ", 
                                       read_count_no[i,]$count, 
                                       sep = ""))
       }
@@ -348,9 +348,9 @@ server <- function(input, output) {
       final_numbers <- paste(final_numbers, ", ", collapse = "", sep="")
         
 
-      info_sample <- paste("Displayed sample:", input$sample)
-      info_taxon <- paste("Displayed Taxon:", input$taxon)
-      info_numbers <- paste("Read counts per filter:", final_numbers)
+      info_sample <- paste("Displayed sample:\n", input$sample, "\n")
+      info_taxon <- paste("Displayed Taxon:\n", input$taxon, "\n")
+      info_numbers <- paste("Read counts per filter:\n", final_numbers, "\n")
       
       info_text <- paste(info_sample, info_taxon, info_numbers, sep = "\n")
 
