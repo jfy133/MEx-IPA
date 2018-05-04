@@ -265,6 +265,11 @@ server <- function(input, output) {
         mutate(dataset = unlist(str_split(filename, "/"))[3])
       }
 
+      
+      ## Standard plotting info for each filter
+      std_colours <- c("#F8766D", "#00B6EB")
+      names(std_colours) <- c("ancient", "default")
+      
       ## Plot damage
       damage_plot <- ggplot(final_damage, aes(x=Position, y=Frequency,
                                               group=Modification,
@@ -289,8 +294,14 @@ server <- function(input, output) {
                 subtitle = paste("C to T (Red), G to A (Blue)"))
       ## Plot edit distnace
       edit_plot <- ggplot() +
-        geom_bar(data=filter(final_edit, dataset == "default"), aes(factor(Distance, levels = distance_levels), Reads, colour=dataset, fill=dataset), stat="identity", alpha=0.5) +
-        geom_bar(data=filter(final_edit, dataset == "ancient"), aes(factor(Distance, levels = distance_levels), Reads, colour=dataset, fill=dataset), stat="identity", alpha=0.5) +
+        geom_bar(data=filter(final_edit, dataset == "default"), 
+                 aes(factor(Distance, levels = distance_levels), Reads, colour=dataset, fill=dataset), 
+                 stat="identity", alpha=0.5) +
+        geom_bar(data=filter(final_edit, dataset == "ancient"), 
+                 aes(factor(Distance, levels = distance_levels), Reads, colour=dataset, fill=dataset), 
+                 stat="identity", alpha=0.5) +
+        scale_fill_manual(values=std_colours) +
+        scale_colour_manual(values=std_colours) +
         xlab("edit distance") +
         ylab("reads") +
         theme_bw() +
@@ -301,8 +312,15 @@ server <- function(input, output) {
 
       ## Plot fragment lengths
       lngt_plot <- ggplot() +
-        geom_bar(data=filter(final_lngt, dataset == "default"), aes(factor(length), reads, colour=dataset, fill=dataset), stat="identity", alpha=0.5) +
-        geom_bar(data=filter(final_lngt, dataset == "ancient"), aes(factor(length), reads, colour=dataset, fill=dataset), stat="identity", alpha=0.5) +
+        geom_bar(data=filter(final_lngt, dataset == "default"), 
+                 aes(factor(length), reads, colour=dataset, fill=dataset), 
+                 stat="identity", 
+                 alpha=0.5) +
+        geom_bar(data=filter(final_lngt, dataset == "ancient"), 
+                 aes(factor(length), reads, colour=dataset, fill=dataset), 
+                 stat="identity", alpha=0.5) +
+        scale_fill_manual(values=std_colours) +
+        scale_colour_manual(values=std_colours) +
         xlab("length (bp)") +
         theme_bw() +
         theme(panel.grid.major = element_blank(),
