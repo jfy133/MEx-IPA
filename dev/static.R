@@ -153,8 +153,8 @@ infile <- datafile ## infile <- input$datafile
 
 ## MAKE SELECTIONS HERE ##########
 input <- c()
-input$sample <- "CHIMP_S0_L001_R1_000.fastq.combined.fq.extractunmapped.bam.rma6"
-input$taxon <- "Tannerella_forsythia_KS16"
+input$sample <- "R32A_S0_L002_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6"
+input$taxon <- "Tannerella_forsythia"
 input$filter <- "all"
 ################################
   
@@ -249,10 +249,34 @@ input$filter <- "all"
     names(std_colours) <- c("ancient", "default")
     
     ## Plot damage
+    
+    fitting_data <- final_damage %>% 
+      select(Modification, Position, Frequency) %>% 
+      spread(Modification, Frequency) %>% 
+      select(Position, `C>T`) %>% 
+      filter(Position <= 10) %>% 
+      mutate(Position = as.numeric(Position))
+    
+    fit <- nls(`C>T` ~ N * exp( - rate * Position), data = fitting_data, start = list(rate = 0.000001, N = 1), control = list(maxiter = 500))
+    t <- summary(fit)$coefficients["rate",3]
+    df_fit <- df.residual(fit)
+    pval <- pt(t, df_fit, lower.tail = F)
+    
+    fit_data <- tibble(fitting_data$Position, predict(fit))
+    colnames(fit_data) <- c("Position", "Fitted_point") 
+    fit_data <- fit_data %>% mutate(Modification = "Predicted")
+    
+    print(final_damage)
+    
     damage_plot <- ggplot(final_damage, aes(x=Position, y=Frequency,
                                             group=Modification,
                                             colour=Modification)) +
       geom_line(size=1.2) +
+      geom_line(data = fit_data, aes(Position, Fitted_point), 
+                size = 0.5,
+                alpha = 0.3,
+                linetype = 2,
+                colour = "black") +
       theme_minimal() +
       scale_color_manual(values=c("red",
                                   "light grey",
@@ -267,7 +291,7 @@ input$filter <- "all"
             panel.grid.major = element_blank(),
             panel.grid.minor = element_blank(),
             plot.title = element_text(size = 12, face="bold"),
-            legend.position = "nonw") +
+            legend.position = "none") +
       ggtitle("Damage plot",
               subtitle = paste("C to T (Red), G to A (Blue)"))
     
@@ -321,8 +345,9 @@ input$filter <- "all"
     info_sample <- paste("Displayed sample:\n", input$sample, "\n")
     info_taxon <- paste("Displayed Taxon:\n", input$taxon, "\n")
     info_numbers <- paste("Read counts per filter:\n", final_numbers, "\n")
+    info_pval <- paste("Damage Exponential Fitting P-Value:\n", format(pval, scientific = FALSE), "\n")
     
-    info_text <- paste(info_sample, info_taxon, info_numbers, sep = "\n")
+    info_text <- paste(info_sample, info_taxon, info_numbers, info_pval, sep = "\n")
     
     info_plot <- ggplot() +
       annotate("text", x = 4, y = 25, size=3, label = info_text) +
@@ -364,4 +389,4 @@ input$filter <- "all"
 #   }
 # ##})
 
-}
+  }

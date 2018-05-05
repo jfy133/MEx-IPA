@@ -180,6 +180,8 @@ server <- function(input, output) {
                    selected = "all", options = list(maxOptions = 99999))
   })
   
+  
+  
   output$my_plot <- renderPlot({
     if(is.null(input$taxon)){
       NULL
@@ -187,7 +189,7 @@ server <- function(input, output) {
       NULL
     } else {
       df <- filedata()
-
+      
       ## Damage final data prep
       if(input$filter == "all"){
       final_damage <- df$data_damage %>%
@@ -271,10 +273,39 @@ server <- function(input, output) {
       names(std_colours) <- c("ancient", "default")
       
       ## Plot damage
+      
+      ### Taken from Clemens Weiß, from Weiß et al. (2016) eLife
+      ### Extract just the 5' C>T modification frequency
+      fitting_data <- final_damage %>% 
+        select(Modification, Position, Frequency) %>% 
+        spread(Modification, Frequency) %>% 
+        select(Position, `C>T`) %>% 
+        filter(Position <= 10) %>% 
+        mutate(Position = as.numeric(Position))
+      
+      ### Fit the 5' C>T damage information to an exponential model
+      fit <- nls(`C>T` ~ N * exp( - rate * Position), data = fitting_data, start = list(rate = 0.000001, N = 1), control = list(maxiter = 500))
+      
+      ### Get residuals and calculate p-value based on one-sided t test
+      t <- summary(fit)$coefficients["rate",3]
+      df_fit <- df.residual(fit)
+      pval <- pt(t, df_fit, lower.tail = F)
+      
+      ### Make a frequency prediction based on position, and convert to tibble
+      ## for plotting
+      fit_data <- tibble(fitting_data$Position, predict(fit))
+      colnames(fit_data) <- c("Position", "Fitted_point") 
+      fit_data <- fit_data %>% mutate(Modification = "Predicted")
+      
       damage_plot <- ggplot(final_damage, aes(x=Position, y=Frequency,
                                               group=Modification,
                                               colour=Modification)) +
         geom_line(size=1.2) +
+        geom_line(data = fit_data, aes(Position, Fitted_point), 
+                  size = 0.5,
+                  alpha = 0.3,
+                  linetype = 2,
+                  colour = "black") +
         theme_minimal() +
         scale_color_manual(values=c("red",
                                     "light grey",
@@ -290,9 +321,10 @@ server <- function(input, output) {
               panel.grid.minor = element_blank(),
               plot.title = element_text(size = 12, face="bold"),
               legend.position = "nonw") +
-        ggtitle("Damage plot",
+        ggtitle("Damage Plot",
                 subtitle = paste("C to T (Red), G to A (Blue)"))
-      ## Plot edit distnace
+
+      ## Plot edit distance
       edit_plot <- ggplot() +
         geom_bar(data=filter(final_edit, dataset == "default"), 
                  aes(factor(Distance, levels = distance_levels), Reads, colour=dataset, fill=dataset), 
@@ -351,8 +383,9 @@ server <- function(input, output) {
       info_sample <- paste("Displayed sample:\n", input$sample, "\n")
       info_taxon <- paste("Displayed Taxon:\n", input$taxon, "\n")
       info_numbers <- paste("Read counts per filter:\n", final_numbers, "\n")
-      
-      info_text <- paste(info_sample, info_taxon, info_numbers, sep = "\n")
+      info_pval <- paste("Damage Exponential Fitting P-Value:\n", format(pval, scientific = FALSE), "\n")
+    
+      info_text <- paste(info_sample, info_taxon, info_numbers, info_pval, sep = "\n")
 
       info_plot <- ggplot() +
         annotate("text", x = 4, y = 25, size=3, label = info_text) +
@@ -363,12 +396,14 @@ server <- function(input, output) {
               axis.text.x=element_blank(),
               axis.text.y=element_blank(),
               axis.title.x =element_blank(),
-              axis.title.y =element_blank())
+              axis.title.y =element_blank(),
+              plot.title = element_text(size = 12, face="bold")) +
+        ggtitle("MALT-Extract Information")
 
       ## Combine plots and display
       outputPlot <- grid.arrange(damage_plot, edit_plot, lngt_plot, info_plot, nrow=2)
 
-      outputPlot
+        outputPlot
 
       output$down <- downloadHandler(
         filename =  function() {
