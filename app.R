@@ -412,7 +412,7 @@ server <- function(input, output) {
         # content is a function with argument file. content writes the plot to
         ## the device
         content = function(file) {
-          svg(file)
+          svg(file, width = 8, height = 5)
           # draw the plot
           grid.arrange(damage_plot, edit_plot, lngt_plot, info_plot, nrow=2)
           # turn the device off
