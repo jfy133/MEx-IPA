@@ -17,7 +17,7 @@ library(gridExtra)
 ui <- fluidPage(
 
    # Application title
-   titlePanel("MALT-Extract_iViewer"),
+   titlePanel("MEx-IPA"),
 
    # Sidebar with a slider input for number of bins
    sidebarLayout(
@@ -335,19 +335,19 @@ server <- function(input, output) {
                                     "light grey",
                                     "blue",
                                     "light grey")) +
-        scale_x_discrete(labels=c("01", "02", "03", "04", "05", "06", "07",
-                                  "08", "09", "10", "-10", "-09", "-08", "-07",
-                                  "-06", "-05", "-04", "-03", "-02", "-01")) +
+        scale_x_discrete(labels=c("01", "  ", "03", "  ", "05", "  ", "07",
+                                  "  ", "09", "  ", "   ", "-09", "   ", "-07",
+                                  "   ", "-05", "   ", "-03", "   ", "-01")) +
         xlab("position") +
         ylab("frequency") +
-        theme(axis.text.x = element_text(angle = 90, hjust= 1),
-              panel.grid.major = element_blank(),
+        theme(panel.grid.major = element_blank(),
               panel.grid.minor = element_blank(),
               plot.title = element_text(size = 12, face="bold"),
-              legend.position = "nonw") +
-        ggtitle("Damage Plot",
-                subtitle = paste("C to T (Red), G to A (Blue)"))
-
+              legend.position = "bottom", 
+              axis.text.x = element_text(angle = 45, hjust= 1, size = 12),
+              axis.text.y = element_text(size = 12)) +
+        ggtitle("Damage Plot")
+      
       ## Plot edit distance
       edit_plot <- ggplot() +
         geom_bar(data=filter(final_edit, dataset == "default"), 
@@ -359,31 +359,38 @@ server <- function(input, output) {
         scale_fill_manual(values=std_colours) +
         scale_colour_manual(values=std_colours) +
         xlab("edit distance") +
-        ylab("reads") +
+        ylab("alignments") +
         theme_minimal() +
         theme(panel.grid.major = element_blank(),
               panel.grid.minor = element_blank(),
-              plot.title = element_text(size = 12, face="bold")) +
+              plot.title = element_text(size = 14, face="bold"),
+              axis.text.x = element_text(angle = 45, hjust= 1, size = 12),
+              axis.text.y = element_text(size = 12),
+              legend.position = "bottom") +
         ggtitle("Edit Distance")
-
+      
       ## Plot fragment lengths
       lngt_plot <- ggplot() +
         geom_bar(data=filter(final_lngt, dataset == "default"), 
-                 aes(factor(length), reads, colour=dataset, fill=dataset), 
+                 aes(length, reads, colour=dataset, fill=dataset), 
                  stat="identity", 
                  alpha=0.5) +
         geom_bar(data=filter(final_lngt, dataset == "ancient"), 
-                 aes(factor(length), reads, colour=dataset, fill=dataset), 
+                 aes(length, reads, colour=dataset, fill=dataset), 
                  stat="identity", alpha=0.5) +
         scale_fill_manual(values=std_colours) +
         scale_colour_manual(values=std_colours) +
+        scale_x_continuous(breaks=seq(0,200,20)) +
         xlab("length (bp)") +
+        ylab("alignments") +
         theme_minimal() +
         theme(panel.grid.major = element_blank(),
               panel.grid.minor = element_blank(),
-              plot.title = element_text(size = 12, face="bold"),
-              axis.text.x = element_text(angle = 90, hjust= 1, size = 8)) +
-        ggtitle("Read Distribution")
+              plot.title = element_text(size = 14, face="bold"),
+              axis.text.x = element_text(angle = 45, hjust= 1, size = 12),
+              axis.text.y = element_text(size = 12),
+              legend.position = "bottom") +
+        ggtitle("Fragment Length Distribution")
       
       ## Plot info box
       
@@ -393,24 +400,24 @@ server <- function(input, output) {
       
       final_numbers <- c()
       
-      for( i in 1:nrow(read_count_no)){
+      for(i in 1:nrow(read_count_no)){
         final_numbers <- append(final_numbers, 
                                 paste(read_count_no[i,]$filename, 
-                                      " reads: ", 
+                                      " reads - ", 
                                       read_count_no[i,]$count, 
                                       sep = ""))
       }
       
-      final_numbers <- paste(final_numbers, ", ", collapse = "", sep="")
-        
-
+      final_numbers <- paste(final_numbers, "\n", collapse = "", sep="")
+      
+      
       info_sample <- paste("Displayed sample:\n", input$sample, "\n")
       info_taxon <- paste("Displayed Taxon:\n", input$taxon, "\n")
       info_numbers <- paste("Read counts per filter:\n", final_numbers, "\n")
       info_pval <- paste("Damage Exponential Fitting P-Value:\n", format(pval, scientific = FALSE), "\n")
-    
+      
       info_text <- paste(info_sample, info_taxon, info_numbers, info_pval, sep = "\n")
-
+      
       info_plot <- ggplot() +
         annotate("text", x = 4, y = 25, size=3, label = info_text) +
         theme_minimal() +
