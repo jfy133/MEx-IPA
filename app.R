@@ -32,7 +32,7 @@ ui <- fluidPage(
        p("\n"),
        p("\n"),
        h2("Output"),
-       downloadButton("down", label = "Download Plot as SVG"),
+       downloadButton("down", label = "Download Plot as PDF"),
        p("\n"),
        tags$button(
          id = 'close',
@@ -189,6 +189,30 @@ server <- function(input, output) {
       NULL
     } else {
       df <- filedata()
+      
+      zero_test <- df$default_runsum %>%
+        gather(Sample, Count, 2:ncol(df$default_runsum)) %>%
+        filter(Node == input$taxon) %>%
+        filter(Sample == input$sample)
+      
+      if(zero_test[1,3] == 0){
+        info_text <- paste("This combination has no alignments!")
+        info_plot <- ggplot() +
+          annotate("text", x = 0, y = 0, size=6, label = info_text) +
+          theme_minimal() +
+          theme(panel.grid.major=element_blank(),
+                panel.grid.minor=element_blank(),
+                axis.line=element_blank(),
+                axis.text.x=element_blank(),
+                axis.text.y=element_blank(),
+                axis.title.x =element_blank(),
+                axis.title.y =element_blank(),
+                plot.title = element_text(size = 18, face="bold")) +
+          ggtitle("Error")
+      outputPlot <- grid.arrange(info_plot)
+        
+      outputPlot
+      } else {
       
       ## Damage final data prep
       if(input$filter == "all"){
@@ -403,7 +427,8 @@ server <- function(input, output) {
       ## Combine plots and display
       outputPlot <- grid.arrange(damage_plot, edit_plot, lngt_plot, info_plot, nrow=2)
 
-        outputPlot
+      outputPlot
+      }
 
       output$down <- downloadHandler(
         filename =  function() {
@@ -412,7 +437,7 @@ server <- function(input, output) {
         # content is a function with argument file. content writes the plot to
         ## the device
         content = function(file) {
-          svg(file, width = 8, height = 5)
+          pdf(file, width = 6, height = 4)
           # draw the plot
           grid.arrange(damage_plot, edit_plot, lngt_plot, info_plot, nrow=2)
           # turn the device off

@@ -266,8 +266,6 @@ input$filter <- "all"
     colnames(fit_data) <- c("Position", "Fitted_point") 
     fit_data <- fit_data %>% mutate(Modification = "Predicted")
     
-    print(final_damage)
-    
     damage_plot <- ggplot(final_damage, aes(x=Position, y=Frequency,
                                             group=Modification,
                                             colour=Modification)) +
@@ -358,7 +356,9 @@ input$filter <- "all"
             axis.text.x=element_blank(),
             axis.text.y=element_blank(),
             axis.title.x =element_blank(),
-            axis.title.y =element_blank())
+            axis.title.y =element_blank(),
+            plot.title = element_text(size = 12, face="bold")) +
+      ggtitle("MALT-Extract Information")
     
     ## Combine plots and display
     outputPlot <- grid.arrange(damage_plot, edit_plot, lngt_plot, info_plot, nrow=2)
