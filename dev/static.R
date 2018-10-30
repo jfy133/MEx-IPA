@@ -4,7 +4,7 @@
 
 ## INPUT FILE HERE
 
-
+setwd(dirname(rstudioapi::getSourceEditorContext()$path))
 
 library(tidyverse)
 library(gridExtra)
@@ -14,8 +14,8 @@ library(gridExtra)
 ## filedata == includes ziplist, zip_filter_dirs, file_prefix, filter_list, default_runsum, last_sample, first_taxon, list_taxon_, data_damage, data_edit, data_lngt
 
 ## MAKE SELECTION HERE #############################################################
-datafile <- "/home/fellows/Data/MALT-Extract_data/RII_all_off.zip"
-datapath <- "/home/fellows/Data/MALT-Extract_data/RII_all_off.zip"
+datafile <- ""
+datapath <- "../dev/test_data/Weyrich_maltExtract.zip"
 ###################################################################################
 
 ## EDIT ##
@@ -153,8 +153,8 @@ infile <- datafile ## infile <- input$datafile
 
 ## MAKE SELECTIONS HERE ##########
 input <- c()
-input$sample <- "R32A_S0_L002_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6"
-input$taxon <- "Tannerella_forsythia"
+input$sample <- "SPYOLD.rma6"
+input$taxon <- "Ceratotherium_simum_simum"
 input$filter <- "all"
 ################################
   
@@ -250,6 +250,8 @@ input$filter <- "all"
     
     ## Plot damage
     
+    ### Taken from Clemens Weiß, from Weiß et al. (2016) eLife
+    ### Extract just the 5' C>T modification frequency
     fitting_data <- final_damage %>% 
       select(Modification, Position, Frequency) %>% 
       spread(Modification, Frequency) %>% 
@@ -257,11 +259,16 @@ input$filter <- "all"
       filter(Position <= 10) %>% 
       mutate(Position = as.numeric(Position))
     
+    ### Fit the 5' C>T damage information to an exponential model
     fit <- nls(`C>T` ~ N * exp( - rate * Position), data = fitting_data, start = list(rate = 0.000001, N = 1), control = list(maxiter = 500))
+    
+    ### Get residuals and calculate p-value based on one-sided t test
     t <- summary(fit)$coefficients["rate",3]
     df_fit <- df.residual(fit)
     pval <- pt(t, df_fit, lower.tail = F)
     
+    ### Make a frequency prediction based on position, and convert to tibble
+    ## for plotting
     fit_data <- tibble(fitting_data$Position, predict(fit))
     colnames(fit_data) <- c("Position", "Fitted_point") 
     fit_data <- fit_data %>% mutate(Modification = "Predicted")
@@ -280,46 +287,62 @@ input$filter <- "all"
                                   "light grey",
                                   "blue",
                                   "light grey")) +
-      scale_x_discrete(labels=c("01", "02", "03", "04", "05", "06", "07",
-                                "08", "09", "10", "-10", "-09", "-08", "-07",
-                                "-06", "-05", "-04", "-03", "-02", "-01")) +
+      scale_x_discrete(labels=c("01", "  ", "03", "  ", "05", "  ", "07",
+                                "  ", "09", "  ", "   ", "-09", "   ", "-07",
+                                "   ", "-05", "   ", "-03", "   ", "-01")) +
       xlab("position") +
       ylab("frequency") +
-      theme(axis.text.x = element_text(angle = 90, hjust= 1),
-            panel.grid.major = element_blank(),
+      theme(panel.grid.major = element_blank(),
             panel.grid.minor = element_blank(),
             plot.title = element_text(size = 12, face="bold"),
-            legend.position = "none") +
-      ggtitle("Damage plot",
-              subtitle = paste("C to T (Red), G to A (Blue)"))
+            legend.position = "bottom", 
+            axis.text.x = element_text(angle = 45, hjust= 1, size = 12),
+            axis.text.y = element_text(size = 12)) +
+      ggtitle("Damage Plot")
     
     ## Plot edit distance
     edit_plot <- ggplot() +
-      geom_bar(data=filter(final_edit, dataset == "default"), aes(factor(Distance, levels = distance_levels), Reads, colour=dataset, fill=dataset), stat="identity", alpha=0.5) +
-      geom_bar(data=filter(final_edit, dataset == "ancient"), aes(factor(Distance, levels = distance_levels), Reads, colour=dataset, fill=dataset), stat="identity", alpha=0.5) +
+      geom_bar(data=filter(final_edit, dataset == "default"), 
+               aes(factor(Distance, levels = distance_levels), Reads, colour=dataset, fill=dataset), 
+               stat="identity", alpha=0.5) +
+      geom_bar(data=filter(final_edit, dataset == "ancient"), 
+               aes(factor(Distance, levels = distance_levels), Reads, colour=dataset, fill=dataset), 
+               stat="identity", alpha=0.5) +
       scale_fill_manual(values=std_colours) +
       scale_colour_manual(values=std_colours) +
       xlab("edit distance") +
-      ylab("reads") +
+      ylab("alignments") +
       theme_minimal() +
       theme(panel.grid.major = element_blank(),
             panel.grid.minor = element_blank(),
-            plot.title = element_text(size = 12, face="bold")) +
+            plot.title = element_text(size = 14, face="bold"),
+            axis.text.x = element_text(angle = 45, hjust= 1, size = 12),
+            axis.text.y = element_text(size = 12),
+            legend.position = "bottom") +
       ggtitle("Edit Distance")
     
     ## Plot fragment lengths
     lngt_plot <- ggplot() +
-      geom_bar(data=filter(final_lngt, dataset == "default"), aes(factor(length), reads, colour=dataset, fill=dataset), stat="identity", alpha=0.5) +
-      geom_bar(data=filter(final_lngt, dataset == "ancient"), aes(factor(length), reads, colour=dataset, fill=dataset), stat="identity", alpha=0.5) +
+      geom_bar(data=filter(final_lngt, dataset == "default"), 
+               aes(length, reads, colour=dataset, fill=dataset), 
+               stat="identity", 
+               alpha=0.5) +
+      geom_bar(data=filter(final_lngt, dataset == "ancient"), 
+               aes(length, reads, colour=dataset, fill=dataset), 
+               stat="identity", alpha=0.5) +
       scale_fill_manual(values=std_colours) +
       scale_colour_manual(values=std_colours) +
+      scale_x_continuous(breaks=seq(0,200,20)) +
       xlab("length (bp)") +
+      ylab("alignments") +
       theme_minimal() +
       theme(panel.grid.major = element_blank(),
             panel.grid.minor = element_blank(),
-            plot.title = element_text(size = 12, face="bold"),
-            axis.text.x = element_text(angle = 90, hjust= 1, size = 8)) +
-      ggtitle("Read Distribution")
+            plot.title = element_text(size = 14, face="bold"),
+            axis.text.x = element_text(angle = 45, hjust= 1, size = 12),
+            axis.text.y = element_text(size = 12),
+            legend.position = "bottom") +
+      ggtitle("Fragment Length Distribution")
     
     ## Plot info box
     
@@ -329,15 +352,15 @@ input$filter <- "all"
     
     final_numbers <- c()
     
-    for( i in 1:nrow(read_count_no)){
+    for(i in 1:nrow(read_count_no)){
       final_numbers <- append(final_numbers, 
                               paste(read_count_no[i,]$filename, 
-                                    " reads: ", 
+                                    " reads - ", 
                                     read_count_no[i,]$count, 
                                     sep = ""))
     }
     
-    final_numbers <- paste(final_numbers, ", ", collapse = "", sep="")
+    final_numbers <- paste(final_numbers, "\n", collapse = "", sep="")
     
     
     info_sample <- paste("Displayed sample:\n", input$sample, "\n")
@@ -348,7 +371,7 @@ input$filter <- "all"
     info_text <- paste(info_sample, info_taxon, info_numbers, info_pval, sep = "\n")
     
     info_plot <- ggplot() +
-      annotate("text", x = 4, y = 25, size=3, label = info_text) +
+      annotate("text", x = 1, y = 1, size=3, label = info_text) +
       theme_minimal() +
       theme(panel.grid.major=element_blank(),
             panel.grid.minor=element_blank(),

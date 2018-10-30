@@ -7,7 +7,7 @@
 #    http://shiny.rstudio.com/
 #
 
-options(shiny.maxRequestSize=50*1024^2)
+options(shiny.maxRequestSize = 50 * 1024 ^ 2)
 
 library(shiny)
 library(tidyverse)
@@ -35,10 +35,10 @@ ui <- fluidPage(
        downloadButton("down", label = "Download Plot as PDF"),
        p("\n"),
        tags$button(
-         id = 'close',
+         id = "close",
          type = "button",
          class = "btn action-button",
-         onclick = "setTimeout(function(){window.close();},500);",  # close browser
+         onclick = "setTimeout(function(){window.close();},500);", #CloseBrowser
          "Close app")
 
       ),
@@ -53,7 +53,7 @@ ui <- fluidPage(
 # Define server logic required to draw a histogram
 server <- function(input, output) {
 
-  ## Load Zipped MALT-Extract output directory and extract relevant data
+  ## Load Zipped MALT Extract output directory and extract relevant data
   filedata <- reactive({
     infile <- input$datafile
     if (is.null(infile)) {
@@ -61,38 +61,46 @@ server <- function(input, output) {
       return(NULL)
     }
     zip_list <- unzip(infile$datapath)
-    zip_filter_dirs <- grep("RunSummary.txt", zip_list, value=T)
-    
-    file_prefix <- paste(str_split(zip_list[1], "/")[[1]][1:2], collapse="/")
+    zip_filter_dirs <- grep("RunSummary.txt", zip_list, value = T)
+    file_prefix <- paste(str_split(zip_list[1], "/")[[1]][1:2], collapse = "/")
 
-    filter_list <- append("all", unique(str_split_fixed(zip_filter_dirs, "/", 4)[,3]))
-    
-    default_runsum <- suppressWarnings( ## !! NOTGATHRED??
+    filter_list <- append("all",
+                          unique(str_split_fixed(zip_filter_dirs, "/", 4)[, 3]))
+
+        default_runsum <- suppressWarnings( ## !! NOTGATHRED??
       suppressMessages(
         read_tsv(zip_list[grepl("*/default/RunSummary.txt", zip_list)])
         )
       ) %>%
       filter(Node != "Total_Count")
     list_sample <- colnames(default_runsum)[2:ncol(default_runsum)] %>% sort
-    first_taxon <- colnames(default_runsum)[2]
+
     list_taxon <- select(default_runsum, Node) %>%
       distinct()
 
     data_extractor <- function(input, search_key){
       files_out <- zip_list[grepl(search_key, input)]
       data_out <- data_frame(filename = files_out) %>%
-        mutate(file_contents = map(filename, ~ suppressWarnings(suppressMessages(read_tsv(.)))))
+        mutate(file_contents = map(filename,
+                                   ~ suppressWarnings(
+                                      suppressMessages(
+                                        read_tsv(.))
+                                      )
+                                   )
+               )
       data_out <- unnest(data_out)
       return(data_out)
     }
 
     data_damage <- data_extractor(zip_list, "*_damageMismatch")
 
-    colnames(data_damage) <- gsub("\\(11Substitution\\)", "", colnames(data_damage))
-    colnames(data_damage)[3:11] <- c("C>T_01", "C>T_02", "C>T_03", "C>T_04", 
+    colnames(data_damage) <- gsub("\\(11Substitution\\)",
+                                  "",
+                                  colnames(data_damage))
+    colnames(data_damage)[3:11] <- c("C>T_01", "C>T_02", "C>T_03", "C>T_04",
                                      "C>T_05", "C>T_06", "C>T_07", "C>T_08",
                                      "C>T_09")
-    colnames(data_damage)[23:31] <- c("D>V_01", "D>V_02", "D>V_03", "D>V_04", 
+    colnames(data_damage)[23:31] <- c("D>V_01", "D>V_02", "D>V_03", "D>V_04",
                                       "D>V_05", "D>V_06", "D>V_07", "D>V_08",
                                       "D>V_09")
 
@@ -100,8 +108,11 @@ server <- function(input, output) {
     data_lngt <- data_extractor(zip_list, "*_readLengthDist.txt")
 
     read_numbers <- data_extractor(zip_list, "*RunSummary.txt")
-    read_numbers <- gather(read_numbers, sample, count, 3:ncol(read_numbers)) %>% 
-      rowwise %>% 
+    read_numbers <- gather(read_numbers,
+                           sample,
+                           count,
+                           3:ncol(read_numbers)) %>%
+      rowwise %>%
       mutate(filename = str_split_fixed(filename, "/", n = 4)[3])
 
     return(
@@ -115,11 +126,10 @@ server <- function(input, output) {
            ))
 
   })
-  
   output$choose_columns1 <- renderUI({
     # If missing input, return to avoid error later in function
     df <- filedata()
-    if(is.null(df)){
+    if (is.null(df)){
       list_sample <- ""
     } else {
     # Get the data set with the appropriate name
@@ -135,7 +145,7 @@ server <- function(input, output) {
     # Create the checkboxes and select them all by default
     selectInput("sample", "Select Sample",
                 choices  = list_sample,
-                selected =list_sample)
+                selected = list_sample)
   })
 
   output$choose_columns2 <- renderUI({
@@ -143,7 +153,7 @@ server <- function(input, output) {
     # If missing input, return to avoid error later in function
     df <- filedata()
 
-    if(is.null(df)){
+    if (is.null(df)){
     list_taxon <- ""
     } else {
 
@@ -164,58 +174,54 @@ server <- function(input, output) {
   })
 
   output$choose_columns3 <- renderUI({
-    
     # If missing input, return to avoid error later in function
     df <- filedata()
-    
-    if(is.null(df)){
+
+        if (is.null(df)){
       filter_list <- ""
     } else {
-      filter_list <- df$filter_list 
+      filter_list <- df$filter_list
     }
-    
-    # Create the checkboxes and select them all by default
-    
+
+        # Create the checkboxes and select them all by default
     selectizeInput("filter", label = "Select Filter", choices  = filter_list,
                    selected = "all", options = list(maxOptions = 99999))
   })
-  
-  
-  
+
   output$my_plot <- renderPlot({
-    if(is.null(input$taxon)){
+    if (is.null(input$taxon)){
       NULL
-    } else if(input$taxon == "") {
+    } else if (input$taxon == "") {
       NULL
     } else {
       df <- filedata()
-      
+
       zero_test <- df$default_runsum %>%
         gather(Sample, Count, 2:ncol(df$default_runsum)) %>%
         filter(Node == input$taxon) %>%
         filter(Sample == input$sample)
-      
-      if(zero_test[1,3] == 0){
+
+      if (zero_test[1, 3] == 0){
         info_text <- paste("This combination has no alignments!")
         info_plot <- ggplot() +
-          annotate("text", x = 0, y = 0, size=6, label = info_text) +
+          annotate("text", x = 0, y = 0, size = 6, label = info_text) +
           theme_minimal() +
-          theme(panel.grid.major=element_blank(),
-                panel.grid.minor=element_blank(),
-                axis.line=element_blank(),
-                axis.text.x=element_blank(),
-                axis.text.y=element_blank(),
-                axis.title.x =element_blank(),
-                axis.title.y =element_blank(),
-                plot.title = element_text(size = 18, face="bold")) +
+          theme(panel.grid.major = element_blank(),
+                panel.grid.minor = element_blank(),
+                axis.line = element_blank(),
+                axis.text.x = element_blank(),
+                axis.text.y = element_blank(),
+                axis.title.x = element_blank(),
+                axis.title.y = element_blank(),
+                plot.title = element_text(size = 18, face = "bold")) +
           ggtitle("Error")
       outputPlot <- grid.arrange(info_plot)
-        
+
       outputPlot
       } else {
-      
+
       ## Damage final data prep
-      if(input$filter == "all"){
+      if (input$filter == "all"){
       final_damage <- df$data_damage %>%
         filter(grepl(input$sample, filename)) %>%
         filter(Node == input$taxon)
@@ -226,14 +232,14 @@ server <- function(input, output) {
         filter(Node == input$taxon)
       }
 
-    if(input$filter == "all"){
+    if (input$filter == "all"){
       final_damage <- gather(final_damage,
                              Position,
                              Frequency,
                              3:ncol(final_damage)) %>%
         rowwise() %>%
         mutate(dataset = unlist(str_split(filename, "/"))[3]) %>%
-        filter(dataset == "default") 
+        filter(dataset == "default")
       } else {
       final_damage <- gather(final_damage,
                              Position,
@@ -250,7 +256,7 @@ server <- function(input, output) {
 
       ### Edit Distance
       #### Sample and taxon filtering
-      if(input$filter == "all"){
+      if (input$filter == "all"){
       final_edit <- df$data_edit %>%
         filter(grepl(input$sample, filename)) %>%
         filter(Taxon == input$taxon)
@@ -270,13 +276,13 @@ server <- function(input, output) {
 
       ### Read Length
       #### Sample and taxon filtering
-      if(input$filter == "all"){
+      if (input$filter == "all"){
       final_lngt <- df$data_lngt %>%
         filter(grepl(input$sample, filename)) %>%
         filter(Taxon == input$taxon) %>%
         gather(length, reads, 3:ncol(.)) %>%
         mutate(length = str_replace(length, "bp", "")) %>%
-        mutate(length = as.numeric(length))%>%
+        mutate(length = as.numeric(length)) %>%
         rowwise() %>%
         mutate(dataset = unlist(str_split(filename, "/"))[3])
       } else {
@@ -286,108 +292,115 @@ server <- function(input, output) {
         filter(Taxon == input$taxon) %>%
         gather(length, reads, 3:ncol(.)) %>%
         mutate(length = str_replace(length, "bp", "")) %>%
-        mutate(length = as.numeric(length))%>%
+        mutate(length = as.numeric(length)) %>%
         rowwise() %>%
         mutate(dataset = unlist(str_split(filename, "/"))[3])
       }
 
-      
       ## Standard plotting info for each filter
       std_colours <- c("#F8766D", "#00B6EB")
       names(std_colours) <- c("ancient", "default")
-      
+
       ## Plot damage
-      
       ### Taken from Clemens Weiß, from Weiß et al. (2016) eLife
-      ### Extract just the 5' C>T modification frequency
-      fitting_data <- final_damage %>% 
-        select(Modification, Position, Frequency) %>% 
-        spread(Modification, Frequency) %>% 
-        select(Position, `C>T`) %>% 
-        filter(Position <= 10) %>% 
+      ### Extract just the 5 prime C to T modification frequency
+      fitting_data <- final_damage %>%
+        select(Modification, Position, Frequency) %>%
+        spread(Modification, Frequency) %>%
+        select(Position, `C>T`) %>%
+        filter(Position <= 10) %>%
         mutate(Position = as.numeric(Position))
-      
-      ### Fit the 5' C>T damage information to an exponential model
-      fit <- nls(`C>T` ~ N * exp( - rate * Position), data = fitting_data, start = list(rate = 0.000001, N = 1), control = list(maxiter = 500))
-      
-      ### Get residuals and calculate p-value based on one-sided t test
-      t <- summary(fit)$coefficients["rate",3]
+
+      ### Fit the 5 prime C to T damage information to an exponential model
+      fit <- nls(`C>T` ~ N * exp( - rate * Position),
+                 data = fitting_data,
+                 start = list(rate = 0.000001, N = 1),
+                 control = list(maxiter = 500))
+
+      ### Get residuals and calculate p value based on one-sided t test
+      t <- summary(fit)$coefficients["rate", 3]
       df_fit <- df.residual(fit)
       pval <- pt(t, df_fit, lower.tail = F)
-      
+
       ### Make a frequency prediction based on position, and convert to tibble
       ## for plotting
       fit_data <- tibble(fitting_data$Position, predict(fit))
-      colnames(fit_data) <- c("Position", "Fitted_point") 
+      colnames(fit_data) <- c("Position", "Fitted_point")
       fit_data <- fit_data %>% mutate(Modification = "Predicted")
-      
-      damage_plot <- ggplot(final_damage, aes(x=Position, y=Frequency,
-                                              group=Modification,
-                                              colour=Modification)) +
-        geom_line(size=1.2) +
-        geom_line(data = fit_data, aes(Position, Fitted_point), 
+
+      damage_plot <- ggplot(final_damage, aes(x = Position, y = Frequency,
+                                              group = Modification,
+                                              colour = Modification)) +
+        geom_line(size = 1.2) +
+        geom_line(data = fit_data, aes(Position, Fitted_point),
                   size = 0.5,
                   alpha = 0.3,
                   linetype = 2,
                   colour = "black") +
         theme_minimal() +
-        scale_color_manual(values=c("red",
+        scale_color_manual(values = c("red",
                                     "light grey",
                                     "blue",
                                     "light grey")) +
-        scale_x_discrete(labels=c("01", "  ", "03", "  ", "05", "  ", "07",
+        scale_x_discrete(labels = c("01", "  ", "03", "  ", "05", "  ", "07",
                                   "  ", "09", "  ", "   ", "-09", "   ", "-07",
                                   "   ", "-05", "   ", "-03", "   ", "-01")) +
         xlab("position") +
         ylab("frequency") +
         theme(panel.grid.major = element_blank(),
               panel.grid.minor = element_blank(),
-              plot.title = element_text(size = 12, face="bold"),
-              legend.position = "bottom", 
-              axis.text.x = element_text(angle = 45, hjust= 1, size = 12),
+              plot.title = element_text(size = 12, face = "bold"),
+              legend.position = "bottom",
+              axis.text.x = element_text(angle = 45, hjust = 1, size = 12),
               axis.text.y = element_text(size = 12)) +
         ggtitle("Damage Plot")
-      
+
       ## Plot edit distance
       edit_plot <- ggplot() +
-        geom_bar(data=filter(final_edit, dataset == "default"), 
-                 aes(factor(Distance, levels = distance_levels), Reads, colour=dataset, fill=dataset), 
-                 stat="identity", alpha=0.5) +
-        geom_bar(data=filter(final_edit, dataset == "ancient"), 
-                 aes(factor(Distance, levels = distance_levels), Reads, colour=dataset, fill=dataset), 
-                 stat="identity", alpha=0.5) +
-        scale_fill_manual(values=std_colours) +
-        scale_colour_manual(values=std_colours) +
+        geom_bar(data = filter(final_edit, dataset == "default"),
+                 aes(factor(Distance, levels = distance_levels),
+                     Reads,
+                     colour = dataset,
+                     fill = dataset),
+                 stat = "identity", alpha = 0.5) +
+        geom_bar(data = filter(final_edit, dataset == "ancient"),
+                 aes(factor(Distance, levels = distance_levels),
+                     Reads,
+                     colour = dataset,
+                     fill = dataset),
+                 stat = "identity", alpha = 0.5) +
+        scale_fill_manual(values = std_colours) +
+        scale_colour_manual(values = std_colours) +
         xlab("edit distance") +
         ylab("alignments") +
         theme_minimal() +
         theme(panel.grid.major = element_blank(),
               panel.grid.minor = element_blank(),
-              plot.title = element_text(size = 14, face="bold"),
-              axis.text.x = element_text(angle = 45, hjust= 1, size = 12),
+              plot.title = element_text(size = 14, face = "bold"),
+              axis.text.x = element_text(angle = 45, hjust = 1, size = 12),
               axis.text.y = element_text(size = 12),
               legend.position = "bottom") +
         ggtitle("Edit Distance")
-      
+
       ## Plot fragment lengths
       lngt_plot <- ggplot() +
-        geom_bar(data=filter(final_lngt, dataset == "default"), 
-                 aes(length, reads, colour=dataset, fill=dataset), 
-                 stat="identity", 
-                 alpha=0.5) +
-        geom_bar(data=filter(final_lngt, dataset == "ancient"), 
-                 aes(length, reads, colour=dataset, fill=dataset), 
-                 stat="identity", alpha=0.5) +
-        scale_fill_manual(values=std_colours) +
-        scale_colour_manual(values=std_colours) +
-        scale_x_continuous(breaks=seq(0,200,20)) +
+        geom_bar(data = filter(final_lngt, dataset == "default"),
+                 aes(length, reads, colour = dataset, fill=dataset),
+                 stat = "identity", 
+                 alpha = 0.5) +
+        geom_bar(data = filter(final_lngt, dataset == "ancient"),
+                 aes(length, reads, colour = dataset, fill = dataset),
+                 stat = "identity", alpha = 0.5) +
+        scale_fill_manual(values = std_colours) +
+        scale_colour_manual(values = std_colours) +
+        scale_x_continuous(breaks = seq(0, 200, 20)) +
         xlab("length (bp)") +
         ylab("alignments") +
         theme_minimal() +
         theme(panel.grid.major = element_blank(),
               panel.grid.minor = element_blank(),
               plot.title = element_text(size = 14, face="bold"),
-              axis.text.x = element_text(angle = 45, hjust= 1, size = 12),
+              axis.text.x = element_text(angle = 45, hjust = 1, size = 12),
               axis.text.y = element_text(size = 12),
               legend.position = "bottom") +
         ggtitle("Fragment Length Distribution")
