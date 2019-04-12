@@ -126,6 +126,7 @@ server <- function(input, output) {
            ))
 
   })
+  
   output$choose_columns1 <- renderUI({
     # If missing input, return to avoid error later in function
     df <- filedata()
