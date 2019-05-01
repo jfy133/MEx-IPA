@@ -75,7 +75,8 @@ filterstats_info <- c(`Reference Length` =  "ReferenceLength",
                       `Median Read Length (bp)` = "Median")
 
 ## Load data and get input selection options
-input_dir <- "/home/fellows/Downloads/output_dairymicrobes/"
+select_input <- "~/Documents/Scripts/shiny_web_apps/MEx-IPA/dev/test_data/v2/output_dairymicrobes_archive/"
+input_dir <- paste0(select_input,"/")
 
 default_runsummary <- load_runsummary(input_dir, "default/")
 damageMismatch <- load_module_files(input_dir, "_damageMismatch.txt")
@@ -96,11 +97,12 @@ filter_names <- list(all = c("default", "ancient"),
                      default = c("default"), 
                      ancient = c("ancient"))
 
-## User options selection
+## User options selection ######################################################
 selected_node <- node_names[37]
 selected_file <- file_names[1]
 selected_filter <- filter_names[1]  %>% unlist %>% unname
 selected_interactive <- T
+################################################################################
 
 ## Data processing
 damage_data <- filter_module_files(damageMismatch, 
