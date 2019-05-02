@@ -14,21 +14,23 @@ load_runsummary <- function(in_dir, result_path) {
 
 
 load_module_files <- function(in_dir, file_ext) {
-  list.files(input_dir, 
+  list.files(in_dir, 
              pattern = file_ext, 
              recursive = T,
              full.names = T) %>% 
     enframe("Index", "File") %>%
     mutate(data = purrr::map(File, function(x) fread(x, header = T) %>% as_tibble),
-           File = str_remove_all(File,
-                                     paste(c(in_dir, 
-                                             file_ext, "^/"), 
-                                                     collapse = "|"))) %>% 
+           File = map(File, function(file_name) {str_split(file_name, "/") %>% 
+               unlist %>% 
+               tail(n = 3) %>% 
+               paste(collapse = "/") %>% 
+               str_remove_all(file_ext)})) %>% 
     separate(File, 
-             c("empty", "Mode", "Module", "File"), 
+             c("Mode", "Module", "File"), 
              sep =  "/") %>% 
-    select(-empty) %>%
     unnest %>%
+    rename_at(vars(matches("Taxon")), 
+              function(x) str_replace_all(x, "Taxon", "Node")) %>%
     rename_at(vars(matches("Taxon")), 
               function(x) str_replace_all(x, "Taxon", "Node")) %>%
     mutate(Mode = factor(Mode, levels = c("default", "ancient")))
@@ -256,6 +258,7 @@ filterstats_plot <- ggplot(filterstats_data,
   geom_tile(colour = "darkgrey", fill = NA, size = 0.3) +
   geom_text() +
   scale_x_discrete(position = "top") +
+  labs(title = "Alignment Statistics") +
   theme_minimal() +
   theme(panel.grid = element_blank())
 
@@ -275,7 +278,7 @@ if (!isTRUE(selected_interactive)) {
   ggplotly(edit_plot)
   ggplotly(length_plot)
   ggplotly(percentidentity_plot)
-  filterstats_plot
+  ggplotly(filterstats_plot)
 }
 
 
