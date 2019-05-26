@@ -1,0 +1,720 @@
+Apr 08, 2019 11:29:06 AM RMAExtractor.RMAExtractor main
+INFO: MaltTExtract 1.5
+--input /projects1/potomics/04-analysis/maltExtract/input/CTW001.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6/projects1/potomics/04-analysis/maltExtract/input/CTW002.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6/projects1/potomics/04-analysis/maltExtract/input/CTW002.B0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6/projects1/potomics/04-analysis/maltExtract/input/CTW003.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6/projects1/potomics/04-analysis/maltExtract/input/CTW004.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6/projects1/potomics/04-analysis/maltExtract/input/CTW005.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6/projects1/potomics/04-analysis/maltExtract/input/CTW006.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6/projects1/potomics/04-analysis/maltExtract/input/CTW006.B0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+--taxa Clostridia beijerinckiiClostridia butyricumClostridia sporongenesClostridia tyrobutyricumEnterococcus casseliflavusEnterococcus duransEnterococcus faecalisEnterococcus faeciumEnterococcus gallinarumEnterococcus hiraeEscherichia coliLactobacillus acetotoleranceLactobacillus acidophilusLactobacillus amylovorusLactobacillus arabinosusLactobacillus brevisLactobacillus buchneriLactobacillus caseiLactobacillus coryniformisLactobacillus crispatusLactobacillus delbrueckiiLactobacillus delbrueckii bulgaricusLactobacillus delbrueckii delbrueckiiLactobacillus delbrueckii lactisLactobacillus farciminisLactobacillus fermentumLactobacillus gallinarumLactobacillus gasseriLactobacillus helveticusLactobacillus johnsoniiLactobacillus kefiranofaciensLactobacillus kefiriLactobacillus paracaseiLactobacillus paraplantarumLactobacillus pentosusLactobacillus plantarumLactobacillus rahmnosusLactobacillus reuteriLactobacillus ruminisLactobacillus gasseriLactobacillus hilgardiiLactobacillus homohiechillLactobacillus sanfranciscensisLactococcus garvieaeLactococcus lactis cremorisLactococcus lactis lactisLactococcus lactis lactis diacetylactisLactococcus lactis tructaeLactococcus plantarumLactococcus raffinolactisLeclercia adecarboxylataLeuconostoc carnosumLeuconostoc citriumLeuconostoc fallaxLeuconostoc garlicumLeuconostoc lactisLeuconostoc mesenteroidesLeuconostoc mesenteroides cremorisLeuconostoc mesenteroides dextranicumLeuconostoc mesenteroides meseneroidesLeuconostoc pseudomesenteroidesPediococcus acidilacticiPediococcus peentosaceusPediococcus urinaeequiPropionibacterium acidipropioniciPropionibacterium freundenreichiiPropionibacterium jenseniiPropionibacterium thoeniiStaphylococcus aureusStaphylococcus caseolyticusStaphylococcus epidermidisStaphylococcus equorumStaphylococcus haemolyticusStaphylococcus hyicusStaphylococcus lentusStaphylococcus saprophyticusStaphylococcus xylosusStreptococcus thermophilusStreptococcus bovisWeissella kandleriWeissella paramesenteroidesDebaryomyces hanseniiGeotrichum candidumKluyveromyces marxianusSaccharomyces cerevisiaeYarrowia lipolytica
+--output /projects1/potomics/04-analysis/maltExtract/output_dairymicrobes/
+--filter NON_ANCIENT
+--top 0.01
+--maxLength 0
+--minPI 0.0
+--resources /projects1/clusterhomes/huebler/RMASifter/RMA_Extractor_Resources
+--threads 32
+--verbose
+--destackingOff 
+
+Apr 08, 2019 11:29:06 AM RMAExtractor.RMAExtractor main
+INFO: Setting up Taxon Name and Taxon ID maps
+Apr 08, 2019 11:29:15 AM RMAExtractor.RMAExtractor main
+INFO: Setting up Phylogenetic Tree
+Apr 08, 2019 11:29:21 AM RMAExtractor.RMAExtractor main
+INFO: 37734 added to analysis
+Apr 08, 2019 11:29:21 AM RMAExtractor.RMAExtractor main
+INFO: 53345 added to analysis
+Apr 08, 2019 11:29:21 AM RMAExtractor.RMAExtractor main
+INFO: 1351 added to analysis
+Apr 08, 2019 11:29:21 AM RMAExtractor.RMAExtractor main
+INFO: 1352 added to analysis
+Apr 08, 2019 11:29:21 AM RMAExtractor.RMAExtractor main
+INFO: 1353 added to analysis
+Apr 08, 2019 11:29:21 AM RMAExtractor.RMAExtractor main
+INFO: 1354 added to analysis
+Apr 08, 2019 11:29:21 AM RMAExtractor.RMAExtractor main
+INFO: 562 added to analysis
+Apr 08, 2019 11:29:21 AM RMAExtractor.RMAExtractor main
+INFO: 1579 added to analysis
+Apr 08, 2019 11:29:21 AM RMAExtractor.RMAExtractor main
+INFO: 1604 added to analysis
+Apr 08, 2019 11:29:21 AM RMAExtractor.RMAExtractor main
+INFO: 1580 added to analysis
+Apr 08, 2019 11:29:21 AM RMAExtractor.RMAExtractor main
+INFO: 1581 added to analysis
+Apr 08, 2019 11:29:21 AM RMAExtractor.RMAExtractor main
+INFO: 1582 added to analysis
+Apr 08, 2019 11:29:21 AM RMAExtractor.RMAExtractor main
+INFO: 1610 added to analysis
+Apr 08, 2019 11:29:21 AM RMAExtractor.RMAExtractor main
+INFO: 47770 added to analysis
+Apr 08, 2019 11:29:21 AM RMAExtractor.RMAExtractor main
+INFO: 1584 added to analysis
+Apr 08, 2019 11:29:21 AM RMAExtractor.RMAExtractor main
+INFO: 1612 added to analysis
+Apr 08, 2019 11:29:21 AM RMAExtractor.RMAExtractor main
+INFO: 1613 added to analysis
+Apr 08, 2019 11:29:21 AM RMAExtractor.RMAExtractor main
+INFO: 52242 added to analysis
+Apr 08, 2019 11:29:21 AM RMAExtractor.RMAExtractor main
+INFO: 1596 added to analysis
+Apr 08, 2019 11:29:21 AM RMAExtractor.RMAExtractor main
+INFO: 1587 added to analysis
+Apr 08, 2019 11:29:21 AM RMAExtractor.RMAExtractor main
+INFO: 33959 added to analysis
+Apr 08, 2019 11:29:21 AM RMAExtractor.RMAExtractor main
+INFO: 267818 added to analysis
+Apr 08, 2019 11:29:21 AM RMAExtractor.RMAExtractor main
+INFO: 33962 added to analysis
+Apr 08, 2019 11:29:21 AM RMAExtractor.RMAExtractor main
+INFO: 1597 added to analysis
+Apr 08, 2019 11:29:21 AM RMAExtractor.RMAExtractor main
+INFO: 60520 added to analysis
+Apr 08, 2019 11:29:21 AM RMAExtractor.RMAExtractor main
+INFO: 1589 added to analysis
+Apr 08, 2019 11:29:21 AM RMAExtractor.RMAExtractor main
+INFO: 1590 added to analysis
+Apr 08, 2019 11:29:21 AM RMAExtractor.RMAExtractor main
+INFO: 1598 added to analysis
+Apr 08, 2019 11:29:21 AM RMAExtractor.RMAExtractor main
+INFO: 1623 added to analysis
+Apr 08, 2019 11:29:21 AM RMAExtractor.RMAExtractor main
+INFO: 1596 added to analysis
+Apr 08, 2019 11:29:21 AM RMAExtractor.RMAExtractor main
+INFO: 1588 added to analysis
+Apr 08, 2019 11:29:21 AM RMAExtractor.RMAExtractor main
+INFO: 1625 added to analysis
+Apr 08, 2019 11:29:21 AM RMAExtractor.RMAExtractor main
+INFO: 1363 added to analysis
+Apr 08, 2019 11:29:21 AM RMAExtractor.RMAExtractor main
+INFO: 1365 added to analysis
+Apr 08, 2019 11:29:21 AM RMAExtractor.RMAExtractor main
+INFO: 1366 added to analysis
+Apr 08, 2019 11:29:21 AM RMAExtractor.RMAExtractor main
+INFO: 83655 added to analysis
+Apr 08, 2019 11:29:21 AM RMAExtractor.RMAExtractor main
+INFO: 1252 added to analysis
+Apr 08, 2019 11:29:21 AM RMAExtractor.RMAExtractor main
+INFO: 1251 added to analysis
+Apr 08, 2019 11:29:21 AM RMAExtractor.RMAExtractor main
+INFO: 255248 added to analysis
+Apr 08, 2019 11:29:21 AM RMAExtractor.RMAExtractor main
+INFO: 1246 added to analysis
+Apr 08, 2019 11:29:21 AM RMAExtractor.RMAExtractor main
+INFO: 1245 added to analysis
+Apr 08, 2019 11:29:21 AM RMAExtractor.RMAExtractor main
+INFO: 33968 added to analysis
+Apr 08, 2019 11:29:21 AM RMAExtractor.RMAExtractor main
+INFO: 1254 added to analysis
+Apr 08, 2019 11:29:21 AM RMAExtractor.RMAExtractor main
+INFO: 1280 added to analysis
+Apr 08, 2019 11:29:21 AM RMAExtractor.RMAExtractor main
+INFO: 1282 added to analysis
+Apr 08, 2019 11:29:21 AM RMAExtractor.RMAExtractor main
+INFO: 246432 added to analysis
+Apr 08, 2019 11:29:21 AM RMAExtractor.RMAExtractor main
+INFO: 1283 added to analysis
+Apr 08, 2019 11:29:21 AM RMAExtractor.RMAExtractor main
+INFO: 1284 added to analysis
+Apr 08, 2019 11:29:21 AM RMAExtractor.RMAExtractor main
+INFO: 42858 added to analysis
+Apr 08, 2019 11:29:21 AM RMAExtractor.RMAExtractor main
+INFO: 29385 added to analysis
+Apr 08, 2019 11:29:21 AM RMAExtractor.RMAExtractor main
+INFO: 1288 added to analysis
+Apr 08, 2019 11:29:21 AM RMAExtractor.RMAExtractor main
+INFO: 1308 added to analysis
+Apr 08, 2019 11:29:21 AM RMAExtractor.RMAExtractor main
+INFO: 1616 added to analysis
+Apr 08, 2019 11:29:21 AM RMAExtractor.RMAExtractor main
+INFO: 1249 added to analysis
+Apr 08, 2019 11:29:21 AM RMAExtractor.RMAExtractor main
+INFO: 4959 added to analysis
+Apr 08, 2019 11:29:21 AM RMAExtractor.RMAExtractor main
+INFO: 2282360 added to analysis
+Apr 08, 2019 11:29:21 AM RMAExtractor.RMAExtractor main
+INFO: 4911 added to analysis
+Apr 08, 2019 11:29:21 AM RMAExtractor.RMAExtractor main
+INFO: 4932 added to analysis
+Apr 08, 2019 11:29:21 AM RMAExtractor.RMAExtractor main
+INFO: 4952 added to analysis
+Apr 08, 2019 11:29:21 AM RMAExtractor.RMAExtractor main
+INFO: Using 32cores
+Apr 08, 2019 11:29:21 AM RMA6Processor.RMA6Processor process
+INFO: Reading File: /projects1/potomics/04-analysis/maltExtract/input/CTW001.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+Apr 08, 2019 11:29:21 AM RMAExtractor.RMAExtractor main
+INFO: Finished Processing RMA6 files
+Apr 08, 2019 11:29:21 AM RMA6Processor.RMA6Processor process
+INFO: Reading File: /projects1/potomics/04-analysis/maltExtract/input/CTW006.B0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+Apr 08, 2019 11:29:21 AM RMA6Processor.RMA6Processor process
+INFO: Reading File: /projects1/potomics/04-analysis/maltExtract/input/CTW003.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+Apr 08, 2019 11:29:21 AM RMA6Processor.RMA6Processor process
+INFO: Reading File: /projects1/potomics/04-analysis/maltExtract/input/CTW006.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+Apr 08, 2019 11:29:21 AM RMA6Processor.RMA6Processor process
+INFO: Reading File: /projects1/potomics/04-analysis/maltExtract/input/CTW002.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+Apr 08, 2019 11:29:21 AM RMA6Processor.RMA6Processor process
+INFO: Reading File: /projects1/potomics/04-analysis/maltExtract/input/CTW002.B0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+Apr 08, 2019 11:29:21 AM RMA6Processor.RMA6Processor process
+INFO: Reading File: /projects1/potomics/04-analysis/maltExtract/input/CTW004.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+Apr 08, 2019 11:29:21 AM RMA6Processor.RMA6Processor process
+INFO: Reading File: /projects1/potomics/04-analysis/maltExtract/input/CTW005.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+Apr 08, 2019 11:29:38 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Staphylococcus_aureus in File CTW005.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 4810
+Apr 08, 2019 11:29:38 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Staphylococcus_aureus in File CTW002.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 4078
+Apr 08, 2019 11:29:38 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Staphylococcus_aureus in File CTW003.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 323
+Apr 08, 2019 11:29:39 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Staphylococcus_aureus in File CTW001.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 6787
+Apr 08, 2019 11:29:39 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Staphylococcus_aureus in File CTW004.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 25297
+Apr 08, 2019 11:29:39 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Staphylococcus_aureus in File CTW002.B0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 427
+Apr 08, 2019 11:29:39 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Staphylococcus_aureus in File CTW006.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 3414
+Apr 08, 2019 11:29:39 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Escherichia_coli in File CTW006.B0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 2082
+Apr 08, 2019 11:29:51 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Escherichia_coli in File CTW003.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 386
+Apr 08, 2019 11:29:54 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Staphylococcus_epidermidis in File CTW002.B0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 849
+Apr 08, 2019 11:30:03 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Enterococcus_faecalis in File CTW003.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 241
+Apr 08, 2019 11:30:10 AM RMA6Processor.RMA6Processor process
+INFO: Finished File: CTW003.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+Apr 08, 2019 11:30:12 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Streptococcus_thermophilus in File CTW002.B0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 366
+Apr 08, 2019 11:30:20 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Escherichia_coli in File CTW002.B0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 669
+Apr 08, 2019 11:30:39 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Staphylococcus_epidermidis in File CTW006.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 3012
+Apr 08, 2019 11:30:40 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Staphylococcus_epidermidis in File CTW005.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 7722
+Apr 08, 2019 11:30:42 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Lactobacillus_plantarum in File CTW002.B0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 697
+Apr 08, 2019 11:30:43 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Staphylococcus_epidermidis in File CTW002.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 11356
+Apr 08, 2019 11:30:57 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Saccharomyces_cerevisiae in File CTW002.B0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 380
+Apr 08, 2019 11:30:59 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Staphylococcus_haemolyticus in File CTW006.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 1358
+Apr 08, 2019 11:31:01 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Staphylococcus_haemolyticus in File CTW005.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 2012
+Apr 08, 2019 11:31:01 AM RMA6Processor.RMA6Processor process
+INFO: Finished File: CTW006.B0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+Apr 08, 2019 11:31:02 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Staphylococcus_epidermidis in File CTW001.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 2460
+Apr 08, 2019 11:31:03 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Staphylococcus_hyicus in File CTW005.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 389
+Apr 08, 2019 11:31:04 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Staphylococcus_xylosus in File CTW005.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 20322
+Apr 08, 2019 11:31:04 AM RMA6Processor.RMA6Processor process
+INFO: Finished File: CTW002.B0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+Apr 08, 2019 11:31:07 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Staphylococcus_xylosus in File CTW006.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 1698
+Apr 08, 2019 11:31:09 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Staphylococcus_haemolyticus in File CTW002.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 2434
+Apr 08, 2019 11:31:14 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Staphylococcus_xylosus in File CTW002.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 4498
+Apr 08, 2019 11:31:15 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Streptococcus_thermophilus in File CTW006.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 410
+Apr 08, 2019 11:31:16 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Enterococcus_faecalis_V583 in File CTW005.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 319
+Apr 08, 2019 11:31:17 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Staphylococcus_haemolyticus in File CTW001.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 986
+Apr 08, 2019 11:31:17 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Streptococcus_thermophilus in File CTW005.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 1324
+Apr 08, 2019 11:31:17 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Staphylococcus_equorum in File CTW006.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 1364
+Apr 08, 2019 11:31:21 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Staphylococcus_hyicus in File CTW001.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 657
+Apr 08, 2019 11:31:21 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Staphylococcus_equorum in File CTW002.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 5367
+Apr 08, 2019 11:31:22 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Lactobacillus_johnsonii in File CTW006.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 457
+Apr 08, 2019 11:31:23 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Staphylococcus_xylosus in File CTW001.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 2718
+Apr 08, 2019 11:31:24 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Staphylococcus_equorum in File CTW005.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 12495
+Apr 08, 2019 11:31:24 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Lactobacillus_brevis in File CTW006.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 2548
+Apr 08, 2019 11:31:26 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Lactobacillus_brevis in File CTW002.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 6232
+Apr 08, 2019 11:31:31 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Enterococcus_faecalis_V583 in File CTW001.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 370
+Apr 08, 2019 11:31:32 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Staphylococcus_aureus_subsp._aureus_ST398 in File CTW001.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 1382
+Apr 08, 2019 11:31:33 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Lactobacillus_johnsonii in File CTW005.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 647
+Apr 08, 2019 11:31:33 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Lactobacillus_acidophilus in File CTW005.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 537
+Apr 08, 2019 11:31:34 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Lactobacillus_brevis in File CTW005.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 4440
+Apr 08, 2019 11:31:35 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Streptococcus_thermophilus in File CTW001.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 510
+Apr 08, 2019 11:31:35 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Lactobacillus_buchneri in File CTW006.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 442
+Apr 08, 2019 11:31:36 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Lactobacillus_buchneri in File CTW002.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 820
+Apr 08, 2019 11:31:37 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Lactobacillus_delbrueckii in File CTW006.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 390
+Apr 08, 2019 11:31:37 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Staphylococcus_equorum in File CTW001.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 2918
+Apr 08, 2019 11:31:37 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Escherichia_coli in File CTW002.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 2534
+Apr 08, 2019 11:31:39 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Lactobacillus_helveticus in File CTW006.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 369
+Apr 08, 2019 11:31:41 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Lactobacillus_plantarum in File CTW006.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 8766
+Apr 08, 2019 11:31:42 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Lactobacillus_johnsonii in File CTW001.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 557
+Apr 08, 2019 11:31:43 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Lactobacillus_acidophilus in File CTW001.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 340
+Apr 08, 2019 11:31:43 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Lactobacillus_buchneri in File CTW005.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 376
+Apr 08, 2019 11:31:44 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Lactobacillus_casei in File CTW005.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 360
+Apr 08, 2019 11:31:44 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Lactobacillus_brevis in File CTW001.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 2615
+Apr 08, 2019 11:31:44 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Leuconostoc_mesenteroides_subsp._mesenteroides in File CTW005.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 999
+Apr 08, 2019 11:31:45 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Lactobacillus_delbrueckii in File CTW005.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 669
+Apr 08, 2019 11:31:47 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Escherichia_coli in File CTW005.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 434
+Apr 08, 2019 11:31:51 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Lactobacillus_buchneri in File CTW001.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 446
+Apr 08, 2019 11:31:51 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Lactobacillus_helveticus in File CTW005.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 454
+Apr 08, 2019 11:31:51 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Lactobacillus_delbrueckii in File CTW001.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 421
+Apr 08, 2019 11:31:52 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Lactobacillus_pentosus in File CTW005.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 1620
+Apr 08, 2019 11:31:53 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Escherichia_coli in File CTW001.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 384
+Apr 08, 2019 11:31:54 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Lactobacillus_plantarum in File CTW005.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 15403
+Apr 08, 2019 11:31:57 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Lactobacillus_helveticus in File CTW001.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 380
+Apr 08, 2019 11:31:58 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Lactobacillus_plantarum in File CTW001.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 10904
+Apr 08, 2019 11:32:00 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Staphylococcus_epidermidis in File CTW004.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 4479
+Apr 08, 2019 11:32:04 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Lactobacillus_plantarum in File CTW002.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 22420
+Apr 08, 2019 11:32:23 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Staphylococcus_haemolyticus in File CTW004.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 6486
+Apr 08, 2019 11:32:29 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Lactobacillus_gasseri in File CTW006.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 364
+Apr 08, 2019 11:32:29 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Lactobacillus_reuteri in File CTW006.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 683
+Apr 08, 2019 11:32:31 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Enterococcus_faecalis in File CTW006.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 5844
+Apr 08, 2019 11:32:36 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Staphylococcus_haemolyticus_JCSC1435 in File CTW004.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 545
+Apr 08, 2019 11:32:36 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Staphylococcus_hyicus in File CTW004.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 480
+Apr 08, 2019 11:32:37 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Staphylococcus_xylosus in File CTW004.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 1159
+Apr 08, 2019 11:32:39 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Leuconostoc_garlicum in File CTW004.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 4038
+Apr 08, 2019 11:32:40 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Enterococcus_faecium in File CTW006.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 3048
+Apr 08, 2019 11:32:41 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Staphylococcus_aureus_subsp._aureus_ST398 in File CTW004.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 675
+Apr 08, 2019 11:32:41 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Streptococcus_thermophilus in File CTW004.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 1014
+Apr 08, 2019 11:32:44 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Enterococcus_casseliflavus_EC20 in File CTW004.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 1200
+Apr 08, 2019 11:32:45 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Lactococcus_garvieae_ATCC_49156 in File CTW004.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 386
+Apr 08, 2019 11:32:45 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Lactobacillus_gasseri in File CTW001.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 562
+Apr 08, 2019 11:32:45 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Staphylococcus_equorum in File CTW004.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 489
+Apr 08, 2019 11:32:46 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Lactobacillus_paracasei in File CTW001.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 487
+Apr 08, 2019 11:32:46 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Lactobacillus_johnsonii in File CTW004.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 699
+Apr 08, 2019 11:32:46 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Enterococcus_faecium_T110 in File CTW001.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 371
+Apr 08, 2019 11:32:46 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Lactobacillus_acidophilus in File CTW004.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 506
+Apr 08, 2019 11:32:47 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Lactobacillus_reuteri in File CTW001.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 971
+Apr 08, 2019 11:32:47 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Lactobacillus_gasseri in File CTW005.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 618
+Apr 08, 2019 11:32:48 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Lactobacillus_brevis in File CTW004.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 968
+Apr 08, 2019 11:32:48 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Lactobacillus_paracasei in File CTW005.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 377
+Apr 08, 2019 11:32:48 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Enterococcus_faecium_T110 in File CTW005.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 378
+Apr 08, 2019 11:32:49 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Lactobacillus_reuteri in File CTW005.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 1132
+Apr 08, 2019 11:32:49 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Lactobacillus_sanfranciscensis_TMW_1.1304 in File CTW001.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 542
+Apr 08, 2019 11:32:50 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Saccharomyces_cerevisiae in File CTW001.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 4156
+Apr 08, 2019 11:32:50 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Enterococcus_gallinarum in File CTW006.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 525
+Apr 08, 2019 11:32:50 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Staphylococcus_saprophyticus in File CTW006.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 878
+Apr 08, 2019 11:32:51 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Lactobacillus_sanfranciscensis_TMW_1.1304 in File CTW005.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 338
+Apr 08, 2019 11:32:51 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Leuconostoc_carnosum_JB16 in File CTW004.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 545
+Apr 08, 2019 11:32:51 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Saccharomyces_cerevisiae in File CTW005.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 7066
+Apr 08, 2019 11:32:51 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Lactobacillus_casei in File CTW004.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 373
+Apr 08, 2019 11:32:52 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Enterococcus_hirae in File CTW006.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 914
+Apr 08, 2019 11:32:52 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Leuconostoc_mesenteroides_subsp._mesenteroides in File CTW004.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 1242
+Apr 08, 2019 11:32:53 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Lactobacillus_farciminis in File CTW006.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 382
+Apr 08, 2019 11:32:53 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Lactobacillus_delbrueckii in File CTW004.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 681
+Apr 08, 2019 11:32:53 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Lactococcus_garvieae in File CTW006.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 1167
+Apr 08, 2019 11:32:54 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Lactococcus_raffinolactis in File CTW006.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 708
+Apr 08, 2019 11:32:55 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Staphylococcus_aureus_subsp._aureus in File CTW006.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 509
+Apr 08, 2019 11:32:56 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Escherichia_coli in File CTW004.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 760
+Apr 08, 2019 11:32:56 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Leuconostoc_mesenteroides in File CTW006.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 2114
+Apr 08, 2019 11:32:56 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Lactobacillus_paracasei in File CTW002.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 888
+Apr 08, 2019 11:32:57 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Lactobacillus_reuteri in File CTW002.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 544
+Apr 08, 2019 11:32:58 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Saccharomyces_cerevisiae in File CTW002.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 2469
+Apr 08, 2019 11:33:00 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Enterococcus_durans in File CTW006.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 1349
+Apr 08, 2019 11:33:01 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Lactobacillus_helveticus in File CTW004.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 490
+Apr 08, 2019 11:33:02 AM RMA6Processor.RMA6Processor process
+INFO: Finished File: CTW006.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+Apr 08, 2019 11:33:02 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Lactobacillus_plantarum in File CTW004.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 6559
+Apr 08, 2019 11:33:26 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Lactobacillus_gasseri in File CTW004.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 616
+Apr 08, 2019 11:33:26 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Lactobacillus_paracasei in File CTW004.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 372
+Apr 08, 2019 11:33:27 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Enterococcus_faecium_T110 in File CTW004.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 584
+Apr 08, 2019 11:33:27 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Lactobacillus_reuteri in File CTW004.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 1079
+Apr 08, 2019 11:33:29 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Lactobacillus_sanfranciscensis_TMW_1.1304 in File CTW004.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 379
+Apr 08, 2019 11:33:29 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Saccharomyces_cerevisiae in File CTW004.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 2397
+Apr 08, 2019 11:33:30 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Enterococcus_faecalis in File CTW002.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 2666
+Apr 08, 2019 11:33:35 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Enterococcus_faecium in File CTW002.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 1841
+Apr 08, 2019 11:33:41 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Staphylococcus_saprophyticus in File CTW002.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 1584
+Apr 08, 2019 11:33:43 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Enterococcus_hirae in File CTW002.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 578
+Apr 08, 2019 11:33:43 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Lactobacillus_farciminis in File CTW002.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 918
+Apr 08, 2019 11:33:44 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Lactococcus_garvieae in File CTW002.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 567
+Apr 08, 2019 11:33:45 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Staphylococcus_aureus_subsp._aureus in File CTW002.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 429
+Apr 08, 2019 11:33:45 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Leuconostoc_mesenteroides in File CTW002.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 969
+Apr 08, 2019 11:33:46 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Enterococcus_faecalis in File CTW001.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 7672
+Apr 08, 2019 11:33:47 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Enterococcus_durans in File CTW002.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 483
+Apr 08, 2019 11:33:48 AM RMA6Processor.RMA6Processor process
+INFO: Finished File: CTW002.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+Apr 08, 2019 11:33:56 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Enterococcus_faecium in File CTW001.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 3617
+Apr 08, 2019 11:34:00 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Enterococcus_faecalis in File CTW004.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 12831
+Apr 08, 2019 11:34:07 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Enterococcus_gallinarum in File CTW001.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 643
+Apr 08, 2019 11:34:08 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Staphylococcus_saprophyticus in File CTW001.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 1095
+Apr 08, 2019 11:34:09 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Enterococcus_hirae in File CTW001.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 1122
+Apr 08, 2019 11:34:10 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Lactobacillus_farciminis in File CTW001.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 436
+Apr 08, 2019 11:34:11 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Lactobacillus_ruminis_ATCC_27782 in File CTW001.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 1181
+Apr 08, 2019 11:34:12 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Lactococcus_garvieae in File CTW001.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 714
+Apr 08, 2019 11:34:13 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Lactococcus_raffinolactis in File CTW001.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 2772
+Apr 08, 2019 11:34:14 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Lactobacillus_ruminis in File CTW001.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 8
+Apr 08, 2019 11:34:14 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Lactobacillus_sanfranciscensis in File CTW001.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 53
+Apr 08, 2019 11:34:14 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Staphylococcus_aureus_subsp._aureus in File CTW001.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 347
+Apr 08, 2019 11:34:15 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Leuconostoc_mesenteroides in File CTW001.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 1235
+Apr 08, 2019 11:34:17 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Enterococcus_durans in File CTW001.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 988
+Apr 08, 2019 11:34:18 AM RMA6Processor.RMA6Processor process
+INFO: Finished File: CTW001.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+Apr 08, 2019 11:34:19 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Enterococcus_faecium in File CTW004.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 9270
+Apr 08, 2019 11:34:25 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Enterococcus_faecalis in File CTW005.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 6478
+Apr 08, 2019 11:34:37 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Enterococcus_faecium in File CTW005.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 3890
+Apr 08, 2019 11:34:50 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Enterococcus_gallinarum in File CTW005.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 750
+Apr 08, 2019 11:34:50 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Staphylococcus_saprophyticus in File CTW005.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 1977
+Apr 08, 2019 11:34:52 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Enterococcus_gallinarum in File CTW004.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 4241
+Apr 08, 2019 11:34:53 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Enterococcus_hirae in File CTW005.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 1545
+Apr 08, 2019 11:34:54 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Lactobacillus_farciminis in File CTW005.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 603
+Apr 08, 2019 11:34:55 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Lactobacillus_ruminis_ATCC_27782 in File CTW005.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 839
+Apr 08, 2019 11:34:55 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Staphylococcus_saprophyticus in File CTW004.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 1105
+Apr 08, 2019 11:34:55 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Lactococcus_garvieae in File CTW005.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 1567
+Apr 08, 2019 11:34:56 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Lactococcus_raffinolactis in File CTW005.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 1124
+Apr 08, 2019 11:34:56 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Enterococcus_hirae in File CTW004.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 2003
+Apr 08, 2019 11:34:57 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Lactobacillus_ruminis in File CTW005.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 4
+Apr 08, 2019 11:34:57 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Lactobacillus_sanfranciscensis in File CTW005.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 60
+Apr 08, 2019 11:34:57 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Staphylococcus_aureus_subsp._aureus in File CTW005.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 493
+Apr 08, 2019 11:34:58 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Leuconostoc_mesenteroides in File CTW005.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 5523
+Apr 08, 2019 11:34:58 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Lactobacillus_farciminis in File CTW004.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 494
+Apr 08, 2019 11:34:58 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Lactobacillus_fermentum in File CTW004.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 342
+Apr 08, 2019 11:34:59 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Lactococcus_garvieae in File CTW004.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 10537
+Apr 08, 2019 11:35:06 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Lactococcus_raffinolactis in File CTW004.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 970
+Apr 08, 2019 11:35:07 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Lactobacillus_sanfranciscensis in File CTW004.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 89
+Apr 08, 2019 11:35:07 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Staphylococcus_aureus_subsp._aureus in File CTW004.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 868
+Apr 08, 2019 11:35:08 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Leuconostoc_mesenteroides in File CTW004.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 3194
+Apr 08, 2019 11:35:10 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Enterococcus_durans in File CTW005.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 1251
+Apr 08, 2019 11:35:11 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Leuconostoc_carnosum in File CTW005.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 379
+Apr 08, 2019 11:35:11 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Pediococcus_acidilactici in File CTW005.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 666
+Apr 08, 2019 11:35:12 AM RMA6Processor.RMA6Processor process
+INFO: Finished File: CTW005.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+Apr 08, 2019 11:35:14 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Leuconostoc_lactis in File CTW004.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 4446
+Apr 08, 2019 11:35:16 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Enterococcus_durans in File CTW004.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 11635
+Apr 08, 2019 11:35:23 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Weissella_paramesenteroides in File CTW004.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 533
+Apr 08, 2019 11:35:24 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Leuconostoc_carnosum in File CTW004.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 59
+Apr 08, 2019 11:35:24 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Enterococcus_casseliflavus in File CTW004.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 66
+Apr 08, 2019 11:35:24 AM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Pediococcus_acidilactici in File CTW004.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+ Number of Reads 607
+Apr 08, 2019 11:35:25 AM RMA6Processor.RMA6Processor process
+INFO: Finished File: CTW004.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6
+Apr 08, 2019 11:35:25 AM RMAExtractor.RMAExtractor main
+INFO: Writing Summary File
+Apr 08, 2019 11:35:25 AM RMAExtractor.RMAExtractor main
+INFO: Runtime: 6 Minutes
+Apr 08, 2019 11:35:25 AM RMAExtractor.RMAExtractor main
+INFO: Peak memory: 20.5 of 30.0G
+Apr 08, 2019 11:35:25 AM RMAExtractor.RMAExtractor main
+INFO: Shutdown
