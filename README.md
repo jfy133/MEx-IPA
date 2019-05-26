@@ -39,7 +39,7 @@ To run, either:
 
 1a) Load the app in Rstudio and press 'Run' in the top right of the code pane
 
-![How to run in Rstudio](images/01-rstudio_instructions.png)
+![How to run in Rstudio](assets/images/01-rstudio_instructions.png)
 
 OR
 
