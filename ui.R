@@ -10,6 +10,7 @@
 library(shiny)
 library(shinyFiles)
 library(plotly)
+library(shinycustomloader)
 
 # Define UI for application that draws a histogram
 shinyUI(fluidPage("MEx-IPA",
@@ -42,25 +43,25 @@ shinyUI(fluidPage("MEx-IPA",
                             h2("Plots"),
                             fluidRow(
                                 splitLayout(cellWidths = c("33%", "33%", "33%"), 
-                                            plotlyOutput("damage_plot"), 
-                                            plotlyOutput("length_plot"), 
-                                            plotlyOutput("edit_plot")
+                                            withLoader(plotlyOutput("damage_plot"), type = "html", loader = "dnaspin"),
+                                            withLoader(plotlyOutput("length_plot"), type = "html", loader = "dnaspin"), 
+                                            withLoader(plotlyOutput("edit_plot"), type = "html", loader = "dnaspin")
                             ),
                             fluidRow(
                                 splitLayout(cellWidths = c("33%", "33%", "33%"), 
-                                            plotlyOutput("percentidentity_plot"), 
-                                            plotlyOutput("positionscovered_plot"), 
-                                            plotlyOutput("coveragehist_plot"))
+                                            withLoader(plotlyOutput("percentidentity_plot"), type = "html", loader = "dnaspin"), 
+                                            withLoader(plotlyOutput("positionscovered_plot"), type = "html", loader = "dnaspin"), 
+                                            withLoader(plotlyOutput("coveragehist_plot"), type = "html", loader = "dnaspin"))
                             ),
                             br(),
                             h2("Statistics"),
                             
-                            plotOutput("filterstats_plot")
+                            withLoader(plotOutput("filterstats_plot"), type = "html", loader = "dnaspin")
                             )
                         ),
                         tabPanel("Multiple Samples",
                                  h2("Plots"),
-                                 plotOutput("comparison_plots")
+                                 withLoader(plotOutput("comparison_plots"), type = "html", loader = "dnaspin")
                         )
                                  
                   )
