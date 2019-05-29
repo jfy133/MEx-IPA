@@ -47,7 +47,7 @@ filter_module_files <- function(in_dat, filt, File, taxon) {
     sample <- enquo(File)
     taxon <- enquo(taxon)
     in_dat %>% 
-        filter(File == !! sample,
+        filter(File %in% !! sample,
                Node == !! taxon,
                Mode %in% filt)
 }
@@ -83,6 +83,7 @@ filterstats_info <- c(`Reference Length` =  "ReferenceLength",
                       `Geometric Mean Read Length (bp)` = "GeometricMean", 
                       `Median Read Length (bp)` = "Median")
 
+max_plots <- 4
 
 # Define server logic required to draw a histogram
 shinyServer(function(input, output) {
@@ -127,7 +128,7 @@ shinyServer(function(input, output) {
         
         })
     
-    output$report_dir <- renderText({
+    output$report_dir <- output$report_dir_2 <- renderText({
 
         input_dir <- paste0(input$select_dir,"/")
         
@@ -180,7 +181,7 @@ shinyServer(function(input, output) {
 
         damage_data <- filter_module_files(dat$damageMismatch, 
                                            selected_filter, 
-                                           input$selected_file, 
+                                           input$selected_file,
                                            input$selected_node) %>%
             gather(Mismatch, Frequency, 6:(ncol(.) - 1)) %>%
             separate(Mismatch, c("Mismatch", "Position"), "_") %>%
@@ -451,5 +452,60 @@ shinyServer(function(input, output) {
         
         filterstats_plot
     })
-        
-})
+    
+        output$comparison_plots <- renderPlot({
+            
+            req(maltExtract_data())
+            
+            dat <- maltExtract_data()
+            
+            if (input$selected_filter == "all") {
+                selected_filter <- c("default", "ancient")
+            } else {
+                selected_filter <- input$selected_filter
+            }
+            
+            damage_data_comparison <- filter_module_files(dat$damageMismatch, 
+                                               selected_filter, 
+                                               dat$file_name,
+                                               input$selected_node) %>%
+                gather(Mismatch, Frequency, 6:(ncol(.) - 1)) %>%
+                separate(Mismatch, c("Mismatch", "Position"), "_") %>%
+                mutate(Strand = if_else(Mismatch %in% c("C>T", 
+                                                        "D>V(11Substitution)"),
+                                        "5 prime", 
+                                        "3 prime"),
+                       Strand = factor(Strand, levels = c("5 prime", "3 prime")),
+                       Position = if_else(Position %in% names(damage_xaxis), 
+                                          damage_xaxis[Position], 
+                                          Position),
+                       Position = as_factor(Position)
+                )
+            
+            plot_damage <- function(x){
+                ggplot(x, aes(Position, 
+                              Frequency,
+                              colour = Mismatch,
+                              group = Mismatch)) +
+                    geom_line() + 
+                    labs(title = "Misincorporation (Damage) Plot") +
+                    xlab("Position (bp)") +
+                    ylab("Alignments (n)") +
+                    facet_wrap(File ~ Strand, scales = "free_x", ncol = 4)  + 
+                    scale_colour_manual(values = mismatch_colours) +
+                    theme_minimal()
+            }
+            
+            
+            if (any(selected_filter %in% "default")) {
+                damage_plot <- plot_damage(damage_data_comparison %>% 
+                                               filter(Mode == "default"))
+            } else {
+                damage_plot <- plot_damage(damage_dat_comparison)
+            }
+            
+            damage_plot
+            
+        })
+    }
+)

@@ -77,7 +77,7 @@ filterstats_info <- c(`Reference Length` =  "ReferenceLength",
                       `Median Read Length (bp)` = "Median")
 
 ## Load data and get input selection options
-select_input <- "~/Documents/Scripts/shiny_web_apps/MEx-IPA/dev/test_data/v2/output_dairymicrobes_archive/"
+select_input <- "~/Documents/Scripts/shiny_web_apps/MEx-IPA/dev/test_data/output_dairymicrobes_archive/"
 input_dir <- paste0(select_input,"/")
 
 default_runsummary <- load_runsummary(input_dir, "default/")
