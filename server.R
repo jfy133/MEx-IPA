@@ -145,7 +145,7 @@ shinyServer(function(input, output) {
         if (!file.exists(paste0(input_dir, "default/RunSummary.txt"))) {
             paste("maltExtract data is not detected. Please check your input directory.")
         } else {
-            paste("maltExtract data is detected! Press 'Run visualisation' to view.")
+            paste("maltExtract data is detected! Press 'Load data' to view.")
         }
         
         })
@@ -157,7 +157,7 @@ shinyServer(function(input, output) {
         if (!file.exists(paste0(input_dir, "default/RunSummary.txt"))) {
             return(NULL)
         } else {
-            return(actionButton("submit", "Run Visualisation"))
+            return(actionButton("submit", "Load data"))
         }
     })
     
@@ -229,7 +229,6 @@ shinyServer(function(input, output) {
                           colour = Mismatch,
                           group = Mismatch)) +
                 geom_line() + 
-                labs(title = "Misincorporation (Damage) Plot") +
                 xlab("Position (bp)") +
                 ylab("Alignments (n)") +
                 facet_wrap(File ~ Strand, scales = "free_x")  + 
@@ -275,7 +274,6 @@ shinyServer(function(input, output) {
                                                Alignment_Count, 
                                                fill = Mode)) +
             geom_col() +
-            labs(title = "Read Length Distribution") +
             xlab("Read Length Bins (bp)") +
             ylab("Alignments (n)") +
             facet_wrap(File ~ Node, scales = "free_x")  + 
@@ -310,7 +308,6 @@ shinyServer(function(input, output) {
         edit_plot <- ggplot(edit_data, 
                             aes(Edit_Distance, Alignment_Count, fill = Mode)) +
             geom_col() +
-            labs(title = "Edit Distance Distribution") +
             xlab("Edit Distance") +
             ylab("Alignments (n)") +
             facet_wrap(File ~ Node, scales = "free_x")  + 
@@ -347,7 +344,6 @@ shinyServer(function(input, output) {
                                            Alignment_Count, 
                                            fill = Mode)) + 
             geom_col() +
-            labs(title = "Percent Identity Distribution") +
             xlab("Sequence Identity (%)") +
             ylab("Alignments (n)") +
             scale_fill_manual(values = mode_colours) + 
@@ -384,7 +380,6 @@ shinyServer(function(input, output) {
                                         aes(Breadth, Percentage, 
                                             fill = Mode)) +
             geom_col() +
-            labs(title = "Reference Covered") +
             xlab("Fold Coverage (X)") +
             ylab("Percentage of Reference (%)") +
             scale_fill_manual(values = mode_colours) + 
@@ -422,7 +417,6 @@ shinyServer(function(input, output) {
                                         Base_Pairs, 
                                         fill = Mode)) +
             geom_col() +
-            labs(title = "Fold Coverage") +
             xlab("Fold Coverage (X)") +
             ylab("Base Pairs (n)") +
             facet_wrap(File ~ Node, scales = "free_x")  + 
@@ -483,7 +477,6 @@ shinyServer(function(input, output) {
             geom_tile(colour = "darkgrey", fill = NA, size = 0.3) +
             geom_text() +
             scale_x_discrete(position = "top") +
-            labs(title = "Alignment Statistics") +
             theme_minimal() +
             theme(panel.grid = element_blank())
         
@@ -509,8 +502,6 @@ shinyServer(function(input, output) {
                     str_remove(., input$remove_string)
             }
 
-            print(file_names)
-            
             damage_data_comparison <- filter_module_files(dat$damageMismatch, 
                                                selected_filter, 
                                                input$remove_string,
@@ -537,7 +528,6 @@ shinyServer(function(input, output) {
                               colour = Mismatch,
                               group = Mismatch)) +
                     geom_line() + 
-                    labs(title = "Misincorporation (Damage) Plot") +
                     xlab("Position (bp)") +
                     ylab("Alignments (n)") +
                     facet_wrap(File ~ Strand, scales = "free_x", ncol = 4)  + 
