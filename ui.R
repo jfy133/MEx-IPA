@@ -30,7 +30,11 @@ shinyUI(fluidPage("MEx-IPA",
             br(),
             uiOutput("file_options"),
             uiOutput("node_options"),
-            uiOutput("filter_options")
+            uiOutput("filter_options"),
+            br(),
+            textInput("remove_string", 
+                      strong("Remove from filename"), 
+                      value = NULL)
         ),
 
         # Show a plots

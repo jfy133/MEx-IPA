@@ -43,13 +43,23 @@ load_module_files <- function(in_dir, file_ext) {
         mutate(Mode = factor(Mode, levels = c("default", "ancient")))
 }
 
-filter_module_files <- function(in_dat, filt, File, taxon) {
+filter_module_files <- function(in_dat, filt, remove_string, File, taxon) {
     sample <- enquo(File)
     taxon <- enquo(taxon)
-    in_dat %>% 
-        filter(File %in% !! sample,
-               Node == !! taxon,
-               Mode %in% filt)
+    
+    if (remove_string == "") {
+        in_dat %>% 
+            filter(File %in% !! sample,
+                   Node == !! taxon,
+                   Mode %in% filt)
+    } else {
+        in_dat %>% 
+            mutate(File = str_remove(File, remove_string)) %>%
+            filter(File %in% !! sample,
+                   Node == !! taxon,
+                   Mode %in% filt)
+    }
+    
 }
 
 ## default aesthetics
@@ -153,14 +163,30 @@ shinyServer(function(input, output) {
     
     output$file_options <- renderUI({
         dat <- maltExtract_data()
-        selectInput("selected_file", "Choose Sample:", as.list(dat$file_names), 
-                    selectize =  T) 
+        
+        if (input$remove_string == "") {
+            selectInput("selected_file", 
+                        "Choose Sample:", 
+                        as.list(dat$file_names), 
+                        selectize =  T) 
+        } else {
+            selectInput("selected_file", 
+                        "Choose Sample:", 
+                        as.list(dat$file_names) %>% 
+                            str_remove(., input$remove_string), 
+                        selectize =  T) 
+        }
     })
+    
     output$node_options <- renderUI({
         dat <- maltExtract_data()
-        selectInput("selected_node", "Choose Taxon:", as.list(dat$node_names), 
-                    selectize =  T) 
+
+            selectInput("selected_node", 
+                        "Choose Taxon:", 
+                        as.list(dat$node_names),
+                        selectize = T)
     })
+    
     output$filter_options <- renderUI({
         dat <- maltExtract_data()
         selectInput("selected_filter", "Choose Filter:", as.list(dat$filter_names), 
@@ -181,6 +207,7 @@ shinyServer(function(input, output) {
 
         damage_data <- filter_module_files(dat$damageMismatch, 
                                            selected_filter, 
+                                           input$remove_string,
                                            input$selected_file,
                                            input$selected_node) %>%
             gather(Mismatch, Frequency, 6:(ncol(.) - 1)) %>%
@@ -205,7 +232,7 @@ shinyServer(function(input, output) {
                 labs(title = "Misincorporation (Damage) Plot") +
                 xlab("Position (bp)") +
                 ylab("Alignments (n)") +
-                facet_wrap(~ Strand, scales = "free_x")  + 
+                facet_wrap(File ~ Strand, scales = "free_x")  + 
                 scale_colour_manual(values = mismatch_colours) +
                 theme_minimal()
         }
@@ -228,7 +255,6 @@ shinyServer(function(input, output) {
         
         dat <- maltExtract_data()
         
-        
         if (input$selected_filter == "all") {
             selected_filter <- c("default", "ancient")
         } else {
@@ -237,9 +263,10 @@ shinyServer(function(input, output) {
         
         
         length_data <- filter_module_files(dat$readLengthDist, 
-                            selected_filter, 
-                            input$selected_file, 
-                            input$selected_node) %>%
+                                           selected_filter, 
+                                           input$remove_string,
+                                           input$selected_file,
+                                           input$selected_node) %>%
             gather(Length_Bin, Alignment_Count, 6:ncol(.)) %>%
             mutate(Length_Bin = str_replace_all(Length_Bin, "bp", ""),
                    Length_Bin = as.numeric(Length_Bin))
@@ -251,6 +278,7 @@ shinyServer(function(input, output) {
             labs(title = "Read Length Distribution") +
             xlab("Read Length Bins (bp)") +
             ylab("Alignments (n)") +
+            facet_wrap(File ~ Node, scales = "free_x")  + 
             scale_fill_manual(values = mode_colours) + 
             theme_minimal()
         
@@ -272,6 +300,7 @@ shinyServer(function(input, output) {
         
         edit_data <- filter_module_files(dat$editDistance, 
                                          selected_filter, 
+                                         input$remove_string,
                                          input$selected_file, 
                                          input$selected_node) %>%
             gather(Edit_Distance, Alignment_Count, 6:ncol(.)) %>%
@@ -284,6 +313,7 @@ shinyServer(function(input, output) {
             labs(title = "Edit Distance Distribution") +
             xlab("Edit Distance") +
             ylab("Alignments (n)") +
+            facet_wrap(File ~ Node, scales = "free_x")  + 
             scale_fill_manual(values = mode_colours) + 
             theme_minimal()
         
@@ -305,6 +335,7 @@ shinyServer(function(input, output) {
         
        percentidentity_data <- filter_module_files(dat$percentIdentity, 
                             selected_filter, 
+                            input$remove_string,
                             input$selected_file, 
                             input$selected_node) %>%
             gather(Percent_Identity, Alignment_Count, 6:ncol(.)) %>%
@@ -320,6 +351,7 @@ shinyServer(function(input, output) {
             xlab("Sequence Identity (%)") +
             ylab("Alignments (n)") +
             scale_fill_manual(values = mode_colours) + 
+            facet_wrap(File ~ Node, scales = "free_x")  + 
             theme_minimal()
         
         percentidentity_plot
@@ -340,6 +372,7 @@ shinyServer(function(input, output) {
         
         positionscovered_data <- filter_module_files(dat$positionsCovered,
                                                      selected_filter, 
+                                                     input$remove_string,
                                                      input$selected_file, 
                                                      input$selected_node) %>%
             select(-contains("Average"), -contains("_"), -Reference) %>%
@@ -355,6 +388,7 @@ shinyServer(function(input, output) {
             xlab("Fold Coverage (X)") +
             ylab("Percentage of Reference (%)") +
             scale_fill_manual(values = mode_colours) + 
+            facet_wrap(File ~ Node, scales = "free_x")  + 
             theme_minimal()
         
         positionscovered_plot
@@ -376,6 +410,7 @@ shinyServer(function(input, output) {
         
         coveragehist_data <- filter_module_files(dat$coverageHist, 
                                                  selected_filter, 
+                                                 input$remove_string,
                                                  input$selected_file, 
                                                  input$selected_node) %>%
             gather(Fold_Coverage, Base_Pairs, 7:ncol(.)) %>%
@@ -390,6 +425,7 @@ shinyServer(function(input, output) {
             labs(title = "Fold Coverage") +
             xlab("Fold Coverage (X)") +
             ylab("Base Pairs (n)") +
+            facet_wrap(File ~ Node, scales = "free_x")  + 
             scale_fill_manual(values = mode_colours) + 
             theme_minimal()
         
@@ -422,6 +458,7 @@ shinyServer(function(input, output) {
                                                   -contains("perc")), 
                       by = c("Index", "Mode", "File", "Node")) %>%
             filter_module_files(selected_filter, 
+                                input$remove_string,
                                 input$selected_file, 
                                 input$selected_node) %>%
             mutate(Mean = round(Mean, digits = 2),
@@ -465,9 +502,19 @@ shinyServer(function(input, output) {
                 selected_filter <- input$selected_filter
             }
             
+            if (input$remove_string == "") {
+                file_names <- dat$file_names
+            } else {
+                file_names <- dat$file_names %>% 
+                    str_remove(., input$remove_string)
+            }
+
+            print(file_names)
+            
             damage_data_comparison <- filter_module_files(dat$damageMismatch, 
                                                selected_filter, 
-                                               dat$file_name,
+                                               input$remove_string,
+                                               file_names,
                                                input$selected_node) %>%
                 gather(Mismatch, Frequency, 6:(ncol(.) - 1)) %>%
                 separate(Mismatch, c("Mismatch", "Position"), "_") %>%
@@ -481,6 +528,8 @@ shinyServer(function(input, output) {
                                           Position),
                        Position = as_factor(Position)
                 )
+            
+            
             
             plot_damage <- function(x){
                 ggplot(x, aes(Position, 
