@@ -36,13 +36,23 @@ load_module_files <- function(in_dir, file_ext) {
     mutate(Mode = factor(Mode, levels = c("default", "ancient")))
 }
 
-filter_module_files <- function(in_dat, filt, File, taxon) {
+filter_module_files <- function(in_dat, filt, remove_string, File, taxon) {
   sample <- enquo(File)
+  remove_string <- enquo(remove_string)
   taxon <- enquo(taxon)
-  in_dat %>% 
-    filter(File == !! sample,
-           Node == !! taxon,
-           Mode %in% filt)
+  
+  if (!!remove_string == "") {
+    in_dat %>% 
+      filter(File %in% !! sample,
+             Node == !! taxon,
+             Mode %in% filt)
+  } else {
+    in_dat %>% 
+      mutate(File = str_remove(File, !!remove_string)) %>%
+      filter(File %in% !! sample,
+             Node == !! taxon,
+             Mode %in% filt)
+  }
 }
 
 ## default aesthetics
@@ -77,7 +87,7 @@ filterstats_info <- c(`Reference Length` =  "ReferenceLength",
                       `Median Read Length (bp)` = "Median")
 
 ## Load data and get input selection options
-select_input <- "~/Documents/Scripts/shiny_web_apps/MEx-IPA/dev/test_data/v2/output_dairymicrobes_archive/"
+select_input <- "~/Documents/Scripts/shiny_web_apps/MEx-IPA/dev/test_data/output_dairymicrobes_archive/"
 input_dir <- paste0(select_input,"/")
 
 default_runsummary <- load_runsummary(input_dir, "default/")
@@ -104,11 +114,13 @@ selected_node <- node_names[37]
 selected_file <- file_names[1]
 selected_filter <- filter_names[1]  %>% unlist %>% unname
 selected_interactive <- T
+remove_string <- "_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6"
 ################################################################################
 
 ## Data processing
 damage_data <- filter_module_files(damageMismatch, 
-                                   selected_filter, 
+                                   selected_filter,
+                                   remove_string,
                                    selected_file, 
                                    selected_node) %>%
   gather(Mismatch, Frequency, 6:(ncol(.) - 1)) %>%
@@ -125,6 +137,7 @@ damage_data <- filter_module_files(damageMismatch,
   
 edit_data <- filter_module_files(editDistance, 
                                  selected_filter, 
+                                 remove_string,
                                  selected_file, 
                                  selected_node) %>%
   gather(Edit_Distance, Alignment_Count, 6:ncol(.)) %>%
