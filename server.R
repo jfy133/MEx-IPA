@@ -62,6 +62,31 @@ filter_module_files <- function(in_dat, filt, remove_string, File, taxon) {
     
 }
 
+plot_damage <- function(x){
+    ggplot(x, aes(Position, 
+                  Frequency,
+                  colour = Mismatch,
+                  group = Mismatch)) +
+        geom_line() + 
+        xlab("Position (bp)") +
+        ylab("Alignments (n)") +
+        facet_wrap(File ~ Strand, scales = "free_x")  + 
+        scale_colour_manual(values = mismatch_colours) +
+        theme_minimal()
+}
+
+plot_col <- function(dat, xaxis, yaxis, xlabel, ylabel) {
+    
+    ggplot(dat, aes_string(xaxis, yaxis, fill = "Mode")) +
+        geom_col() +
+        xlab(xlabel) +
+        ylab(ylabel) +
+        facet_wrap(File ~ Node, scales = "free_x")  + 
+        scale_fill_manual(values = mode_colours) + 
+        theme_minimal()
+}
+
+
 ## default aesthetics
 
 mode_colours <- c(default = "#1b9e77", ancient = "#7570b3") 
@@ -92,8 +117,6 @@ filterstats_info <- c(`Reference Length` =  "ReferenceLength",
                       `Standard Deviation Read Length (bp)` = "StandardDev", 
                       `Geometric Mean Read Length (bp)` = "GeometricMean", 
                       `Median Read Length (bp)` = "Median")
-
-max_plots <- 4
 
 # Define server logic required to draw a histogram
 shinyServer(function(input, output) {
@@ -223,20 +246,6 @@ shinyServer(function(input, output) {
                    Position = as_factor(Position)
             )
     
-        plot_damage <- function(x){
-            ggplot(x, aes(Position, 
-                          Frequency,
-                          colour = Mismatch,
-                          group = Mismatch)) +
-                geom_line() + 
-                xlab("Position (bp)") +
-                ylab("Alignments (n)") +
-                facet_wrap(File ~ Strand, scales = "free_x")  + 
-                scale_colour_manual(values = mismatch_colours) +
-                theme_minimal()
-        }
-        
-        
         if (any(selected_filter %in% "default")) {
             damage_plot <- plot_damage(damage_data %>% 
                                            filter(Mode == "default"))
@@ -269,16 +278,12 @@ shinyServer(function(input, output) {
             gather(Length_Bin, Alignment_Count, 6:ncol(.)) %>%
             mutate(Length_Bin = str_replace_all(Length_Bin, "bp", ""),
                    Length_Bin = as.numeric(Length_Bin))
-        
-        length_plot <- ggplot(length_data, aes(Length_Bin, 
-                                               Alignment_Count, 
-                                               fill = Mode)) +
-            geom_col() +
-            xlab("Read Length Bins (bp)") +
-            ylab("Alignments (n)") +
-            facet_wrap(File ~ Node, scales = "free_x")  + 
-            scale_fill_manual(values = mode_colours) + 
-            theme_minimal()
+
+        length_plot <- plot_col(length_data, 
+                                 "Length_Bin", 
+                                 "Alignment_Count",
+                                 "Read Length Bins (bp)",
+                                 "Alignments (n)")
         
         length_plot
     })
@@ -305,14 +310,11 @@ shinyServer(function(input, output) {
             mutate(Edit_Distance = factor(Edit_Distance, 
                                           levels = c(0:10, "higher")))
         
-        edit_plot <- ggplot(edit_data, 
-                            aes(Edit_Distance, Alignment_Count, fill = Mode)) +
-            geom_col() +
-            xlab("Edit Distance") +
-            ylab("Alignments (n)") +
-            facet_wrap(File ~ Node, scales = "free_x")  + 
-            scale_fill_manual(values = mode_colours) + 
-            theme_minimal()
+        edit_plot <- plot_col(edit_data,
+                              "Edit_Distance",
+                              "Alignment_Count",
+                              "Edit Distance",
+                              "Alignments (n)")
         
         edit_plot
     })
@@ -339,16 +341,11 @@ shinyServer(function(input, output) {
             mutate(Percent_Identity = factor(Percent_Identity, 
                                              levels = seq(80, 100, 5)))
         
-        percentidentity_plot <- ggplot(percentidentity_data, 
-                                       aes(Percent_Identity, 
-                                           Alignment_Count, 
-                                           fill = Mode)) + 
-            geom_col() +
-            xlab("Sequence Identity (%)") +
-            ylab("Alignments (n)") +
-            scale_fill_manual(values = mode_colours) + 
-            facet_wrap(File ~ Node, scales = "free_x")  + 
-            theme_minimal()
+        percentidentity_plot <- plot_col(percentidentity_data,
+                                         "Percent_Identity",
+                                         "Alignment_Count",
+                                         "Sequence Identity (%)",
+                                         "Alignments (n)")
         
         percentidentity_plot
     })
@@ -376,15 +373,11 @@ shinyServer(function(input, output) {
             mutate(Breadth = str_remove_all(Breadth, "percCoveredHigher") %>% 
                        as.numeric)
         
-        positionscovered_plot <- ggplot(positionscovered_data, 
-                                        aes(Breadth, Percentage, 
-                                            fill = Mode)) +
-            geom_col() +
-            xlab("Fold Coverage (X)") +
-            ylab("Percentage of Reference (%)") +
-            scale_fill_manual(values = mode_colours) + 
-            facet_wrap(File ~ Node, scales = "free_x")  + 
-            theme_minimal()
+        positionscovered_plot <- plot_col(positionscovered_data,
+                                          "Breadth",
+                                          "Percentage",
+                                          "Fold Coverage (X)",
+                                          "Percentage of Reference (%)")
         
         positionscovered_plot
         
@@ -412,16 +405,11 @@ shinyServer(function(input, output) {
             mutate(Fold_Coverage = as_factor(Fold_Coverage)) %>%
             filter(Fold_Coverage != "0")
         
-        coveragehist_plot <- ggplot(coveragehist_data, 
-                                    aes(Fold_Coverage, 
-                                        Base_Pairs, 
-                                        fill = Mode)) +
-            geom_col() +
-            xlab("Fold Coverage (X)") +
-            ylab("Base Pairs (n)") +
-            facet_wrap(File ~ Node, scales = "free_x")  + 
-            scale_fill_manual(values = mode_colours) + 
-            theme_minimal()
+        coveragehist_plot <- plot_col(coveragehist_data,
+                                      "Fold_Coverage",
+                                      "Base_Pairs",
+                                      "Fold Coverage (X)",
+                                      "Base Pairs (n)")
         
         coveragehist_plot
         
@@ -519,21 +507,6 @@ shinyServer(function(input, output) {
                                           Position),
                        Position = as_factor(Position)
                 )
-            
-            
-            
-            plot_damage <- function(x){
-                ggplot(x, aes(Position, 
-                              Frequency,
-                              colour = Mismatch,
-                              group = Mismatch)) +
-                    geom_line() + 
-                    xlab("Position (bp)") +
-                    ylab("Alignments (n)") +
-                    facet_wrap(File ~ Strand, scales = "free_x", ncol = 4)  + 
-                    scale_colour_manual(values = mismatch_colours) +
-                    theme_minimal()
-            }
             
             
             if (any(selected_filter %in% "default")) {
