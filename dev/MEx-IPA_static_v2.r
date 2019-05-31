@@ -19,7 +19,8 @@ load_module_files <- function(in_dir, file_ext) {
              recursive = T,
              full.names = T) %>% 
     enframe("Index", "File") %>%
-    mutate(data = purrr::map(File, function(x) fread(x, header = T) %>% as_tibble),
+    mutate(data = purrr::map(File, function(x) fread(x, header = T) %>% 
+                               as_tibble),
            File = map(File, function(file_name) {str_split(file_name, "/") %>% 
                unlist %>% 
                tail(n = 3) %>% 
@@ -31,28 +32,54 @@ load_module_files <- function(in_dir, file_ext) {
     unnest %>%
     rename_at(vars(matches("Taxon")), 
               function(x) str_replace_all(x, "Taxon", "Node")) %>%
-    rename_at(vars(matches("Taxon")), 
-              function(x) str_replace_all(x, "Taxon", "Node")) %>%
     mutate(Mode = factor(Mode, levels = c("default", "ancient")))
 }
 
 filter_module_files <- function(in_dat, filt, remove_string, File, taxon) {
   sample <- enquo(File)
-  remove_string <- enquo(remove_string)
   taxon <- enquo(taxon)
   
-  if (!!remove_string == "") {
+  
+  if (remove_string == "") {
     in_dat %>% 
       filter(File %in% !! sample,
              Node == !! taxon,
              Mode %in% filt)
   } else {
+    print(remove_string)
+    
+    ## Note static requires second str_remove, but not in shiny!
     in_dat %>% 
-      mutate(File = str_remove(File, !!remove_string)) %>%
-      filter(File %in% !! sample,
+      mutate(File = str_remove(File, remove_string)) %>%
+      filter(File %in% str_remove(!! sample, remove_string),
              Node == !! taxon,
              Mode %in% filt)
   }
+  
+}
+
+plot_damage <- function(x){
+  ggplot(x, aes(Position, 
+                Frequency,
+                colour = Mismatch,
+                group = Mismatch)) +
+    geom_line() + 
+    xlab("Position (bp)") +
+    ylab("Alignments (n)") +
+    facet_wrap(File ~ Strand, scales = "free_x")  + 
+    scale_colour_manual(values = mismatch_colours) +
+    theme_minimal()
+}
+
+plot_col <- function(dat, xaxis, yaxis, xlabel, ylabel) {
+  
+  ggplot(dat, aes_string(xaxis, yaxis, fill = "Mode")) +
+    geom_col() +
+    xlab(xlabel) +
+    ylab(ylabel) +
+    facet_wrap(File ~ Node, scales = "free_x")  + 
+    scale_fill_manual(values = mode_colours) + 
+    theme_minimal()
 }
 
 ## default aesthetics
@@ -119,13 +146,14 @@ remove_string <- "_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam
 
 ## Data processing
 damage_data <- filter_module_files(damageMismatch, 
-                                   selected_filter,
+                                   selected_filter, 
                                    remove_string,
-                                   selected_file, 
+                                   selected_file,
                                    selected_node) %>%
   gather(Mismatch, Frequency, 6:(ncol(.) - 1)) %>%
   separate(Mismatch, c("Mismatch", "Position"), "_") %>%
-  mutate(Strand = if_else(Mismatch %in% c("C>T", "D>V(11Substitution)"), 
+  mutate(Strand = if_else(Mismatch %in% c("C>T", 
+                                          "D>V(11Substitution)"),
                           "5 prime", 
                           "3 prime"),
          Strand = factor(Strand, levels = c("5 prime", "3 prime")),
@@ -133,7 +161,7 @@ damage_data <- filter_module_files(damageMismatch,
                             damage_xaxis[Position], 
                             Position),
          Position = as_factor(Position)
-         )
+  )
   
 edit_data <- filter_module_files(editDistance, 
                                  selected_filter, 
@@ -145,6 +173,7 @@ edit_data <- filter_module_files(editDistance,
 
 percentidentity_data <- filter_module_files(percentIdentity, 
                                             selected_filter, 
+                                            remove_string,
                                             selected_file, 
                                             selected_node) %>%
   gather(Percent_Identity, Alignment_Count, 6:ncol(.)) %>%
@@ -152,6 +181,7 @@ percentidentity_data <- filter_module_files(percentIdentity,
 
 length_data <- filter_module_files(readLengthDist, 
                                    selected_filter, 
+                                   remove_string, 
                                    selected_file, 
                                    selected_node) %>%
   gather(Length_Bin, Alignment_Count, 6:ncol(.)) %>%
@@ -160,6 +190,7 @@ length_data <- filter_module_files(readLengthDist,
 
 positionscovered_data <- filter_module_files(positionsCovered,
                                        selected_filter, 
+                                       remove_string,
                                        selected_file, 
                                        selected_node) %>%
   select(-contains("Average"), -contains("_"), -Reference) %>%
@@ -169,6 +200,7 @@ positionscovered_data <- filter_module_files(positionsCovered,
 
 coveragehist_data <- filter_module_files(coverageHist, 
                                     selected_filter, 
+                                    remove_string,
                                     selected_file, 
                                     selected_node) %>%
   gather(Fold_Coverage, Base_Pairs, 7:ncol(.)) %>%
@@ -183,7 +215,7 @@ filterstats_data <- filterStats %>%
             by = c("Index", "Mode", "File", "Node")) %>% 
   left_join(positionsCovered %>% select(-Module, -Reference, -contains("perc")), 
             by = c("Index", "Mode", "File", "Node")) %>%
-  filter_module_files(selected_filter, selected_file, selected_node) %>%
+  filter_module_files(selected_filter, remove_string, selected_file, selected_node) %>%
   mutate(Mean = round(Mean, digits = 2),
          GeometricMean = round(Mean, digits = 2),
          StandardDev = round(StandardDev, digits = 2)) %>%
@@ -218,60 +250,43 @@ if (any(selected_filter %in% "default")) {
   damage_plot <- plot_damage(damage_data)
 }
 
- edit_plot <- ggplot(edit_data, 
-                     aes(Edit_Distance, Alignment_Count, fill = Mode)) +
-  geom_col() +
-  labs(title = "Edit Distance Distribution") +
-  xlab("Edit Distance") +
-  ylab("Alignments (n)") +
-  scale_fill_manual(values = mode_colours) + 
-  theme_minimal()
+length_plot <- plot_col(length_data, 
+                        "Length_Bin", 
+                        "Alignment_Count",
+                        "Read Length Bins (bp)",
+                        "Alignments (n)")
 
- percentidentity_plot <- ggplot(percentidentity_data, aes(Percent_Identity, 
-                                                          Alignment_Count, 
-                                                          fill = Mode)) + 
-   geom_col() +
-   labs(title = "Percent Identity Distribution") +
-   xlab("Sequence Identity (%)") +
-   ylab("Alignments (n)") +
-   scale_fill_manual(values = mode_colours) + 
-   theme_minimal()
- 
- 
-length_plot <- ggplot(length_data, aes(Length_Bin, 
-                                       Alignment_Count, 
-                                       fill = Mode)) +
-  geom_col() +
-  labs(title = "Read Length Distribution") +
-  xlab("Read Length Bins (bp)") +
-  ylab("Alignments (n)") +
-  scale_fill_manual(values = mode_colours) + 
-  theme_minimal()
+edit_plot <- plot_col(edit_data,
+                      "Edit_Distance",
+                      "Alignment_Count",
+                      "Edit Distance",
+                      "Alignments (n)")
 
-positionscovered_plot <- ggplot(positionscovered_data, 
-                                aes(Breadth, Percentage, fill = Mode)) +
-  geom_col() +
-  labs(title = "Reference Covered") +
-  xlab("Fold Coverage (X)") +
-  ylab("Percentage of Reference (%)") +
-  scale_fill_manual(values = mode_colours) + 
-  theme_minimal()
+percentidentity_plot <- plot_col(percentidentity_data,
+                                 "Percent_Identity",
+                                 "Alignment_Count",
+                                 "Sequence Identity (%)",
+                                 "Alignments (n)")
 
-coveragehist_plot <- ggplot(coveragehist_data, 
-                            aes(Fold_Coverage, Base_Pairs, fill = Mode)) +
-  geom_col() +
-  labs(title = "Fold Coverage") +
-  xlab("Fold Coverage (X)") +
-  ylab("Base Pairs (n)") +
-  scale_fill_manual(values = mode_colours) + 
-  theme_minimal()
+positionscovered_plot <- plot_col(positionscovered_data,
+                                  "Breadth",
+                                  "Percentage",
+                                  "Fold Coverage (X)",
+                                  "Percentage of Reference (%)")
+
+coveragehist_plot <- plot_col(coveragehist_data,
+                              "Fold_Coverage",
+                              "Base_Pairs",
+                              "Fold Coverage (X)",
+                              "Base Pairs (n)")
 
 filterstats_plot <- ggplot(filterstats_data, 
-                           aes(y = Information, x = Mode, label = Value)) +
+                           aes(y = Information,
+                               x = Mode, 
+                               label = Value)) +
   geom_tile(colour = "darkgrey", fill = NA, size = 0.3) +
   geom_text() +
   scale_x_discrete(position = "top") +
-  labs(title = "Alignment Statistics") +
   theme_minimal() +
   theme(panel.grid = element_blank())
 
@@ -291,7 +306,7 @@ if (!isTRUE(selected_interactive)) {
   ggplotly(edit_plot)
   ggplotly(length_plot)
   ggplotly(percentidentity_plot)
-  ggplotly(filterstats_plot)
+  filterstats_plot
 }
 
 
