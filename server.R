@@ -12,6 +12,7 @@ library(shiny)
 library(tidyverse)
 library(data.table)
 library(plotly)
+library(DT)
 
 ## Functions 
 
@@ -253,8 +254,6 @@ shinyServer(function(input, output) {
             damage_plot <- plot_damage(damage_data)
         }
         
-        damage_plot
-        
     })
     
     output$length_plot <- renderPlotly({
@@ -416,7 +415,7 @@ shinyServer(function(input, output) {
         })
         
     
-    output$filterstats_plot <- renderPlot({
+    output$filterstats_plot <- DT::renderDataTable({
         
         req(maltExtract_data())
         
@@ -457,18 +456,10 @@ shinyServer(function(input, output) {
                    ) %>%
             arrange(Information)
         
+        filterstats_data %>% 
+            select(Mode, Information, Value) %>% 
+            spread(Mode, Value)
         
-        filterstats_plot <- ggplot(filterstats_data, 
-                                   aes(y = Information,
-                                       x = Mode, 
-                                       label = Value)) +
-            geom_tile(colour = "darkgrey", fill = NA, size = 0.3) +
-            geom_text() +
-            scale_x_discrete(position = "top") +
-            theme_minimal() +
-            theme(panel.grid = element_blank())
-        
-        filterstats_plot
     })
     
         output$comparison_plots <- renderPlot({

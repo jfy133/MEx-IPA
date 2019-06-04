@@ -11,6 +11,7 @@ library(shiny)
 library(shinyFiles)
 library(plotly)
 library(shinycustomloader)
+library(DT)
 
 # Define UI for application that draws a histogram
 shinyUI(fluidPage(
@@ -36,7 +37,12 @@ shinyUI(fluidPage(
       textInput("remove_string",
         strong("Remove from filename"),
         value = NULL
-      )
+      ),
+      checkboxInput("interactive", 
+                    "Interactive Plots?", 
+                    value = FALSE, 
+                    width = NULL)
+      
     ),
 
     # Show a plots
@@ -49,7 +55,7 @@ shinyUI(fluidPage(
             verticalLayout(
                 br(),
                 h3("Summary Statistics"),
-                withLoader(plotOutput("filterstats_plot"), type = "html", loader = "dnaspin"),
+                withLoader(DT::dataTableOutput("filterstats_plot"), type = "html", loader = "dnaspin"),
                 br(),
                 h3("Read Characteristics"),
                 splitLayout(cellWidths = c("50%", "50%"),
