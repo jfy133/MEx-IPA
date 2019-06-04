@@ -24,13 +24,13 @@ And a table of general node statistics.
 
 ## Preparation
 This shiny app has been tested on `R` version 3.6, and requires the packages 
-`shiny` (tested v1.3.2), `tidyverse` (tested 1.2.1), `data.table` (tested 1.12.2), 
-`shinycustomloader` (tested 0.9.0) and `plotly` (tested v4.9.0).
+`shiny` (tested v1.3.2), `tidyverse` (tested v1.2.1), `data.table` (tested v1.12.2), 
+`shinycustomloader` (tested v0.9.0), DT (tested v0.6) and `plotly` (tested v4.9.0).
 
 To install these packages in R:
 
 ```r
-install.packages(c("shiny", "tidyverse", "shiny", "plotly", "shinycustomloader"))
+install.packages(c("shiny", "tidyverse", "shiny", "plotly", "DT", "shinycustomloader"))
 ```
 
 ## Running
