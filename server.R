@@ -508,18 +508,6 @@ shinyServer(function(input, output) {
                        Position = as_factor(Position)
                 )
             
-            # damage_data_comparison %>% 
-            #     group_by(file_names) %>% 
-            #     nest() %>% 
-            #     mutate(
-            #         graphs = map(data, wq_plotly) 
-            #     ) %>% 
-            #     arrange(parameter) %>% 
-            #     pull(graphs)
-            
-            
-            
-            
             
             if (any(selected_filter %in% "default")) {
                 damage_plot <- plot_damage(damage_data_comparison %>% 

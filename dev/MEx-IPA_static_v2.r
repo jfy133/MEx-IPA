@@ -46,8 +46,6 @@ filter_module_files <- function(in_dat, filt, remove_string, File, taxon) {
              Node == !! taxon,
              Mode %in% filt)
   } else {
-    print(remove_string)
-    
     ## Note static requires second str_remove, but not in shiny!
     in_dat %>% 
       mutate(File = str_remove(File, remove_string)) %>%
@@ -290,7 +288,7 @@ filterstats_plot <- ggplot(filterstats_data,
   theme_minimal() +
   theme(panel.grid = element_blank())
 
-## Final plot display
+## Final single sample plot display
 
 if (!isTRUE(selected_interactive)) {
   damage_plot +
@@ -309,10 +307,138 @@ if (!isTRUE(selected_interactive)) {
   filterstats_plot
 }
 
+## Multiple sample comparison
 
+damage_data_comparison <- filter_module_files(damageMismatch, 
+                                              selected_filter, 
+                                              remove_string,
+                                              file_names,
+                                              selected_node) %>%
+  gather(Mismatch, Frequency, 6:(ncol(.) - 1)) %>%
+  separate(Mismatch, c("Mismatch", "Position"), "_") %>%
+  mutate(Strand = if_else(Mismatch %in% c("C>T", 
+                                          "D>V(11Substitution)"),
+                          "5 prime", 
+                          "3 prime"),
+         Strand = factor(Strand, levels = c("5 prime", "3 prime")),
+         Position = if_else(Position %in% names(damage_xaxis), 
+                            damage_xaxis[Position], 
+                            Position),
+         Position = as_factor(Position)
+  )
 
+## Following https://tbradley1013.github.io/2018/08/10/create-a-dynamic-number-of-ui-elements-in-shiny-with-purrr/
+
+multi_plot_data <- damage_data_comparison %>%
+    group_by(File) %>%
+    nest() %>%
+    mutate(plots = map(data, function(x) plot_damage(x))) %>%
+    pull(plots)
+
+output <- list()
+
+final <- iwalk(multi_plot_data, ~{
+  output_name <- paste0("plot_", .y)
+  output[[output_name]] <- renderPlotly(.x)
+  })
   
 
+graphs <- eventReactive(input$submit, {
+  req(maltExtract_data())
+  
+  dat <- maltExtract_data()
+  
+  if (input$selected_filter == "all") {
+    selected_filter <- c("default", "ancient")
+  } else {
+    selected_filter <- input$selected_filter
+  }
+  
+  if (input$remove_string == "") {
+    file_names <- dat$file_names
+  } else {
+    file_names <- dat$file_names %>% 
+      str_remove(., input$remove_string)
+  }
+  
+  damage_data_comparison <- filter_module_files(dat$damageMismatch, 
+                                                selected_filter, 
+                                                input$remove_string,
+                                                file_names,
+                                                input$selected_node) %>%
+    gather(Mismatch, Frequency, 6:(ncol(.) - 1)) %>%
+    separate(Mismatch, c("Mismatch", "Position"), "_") %>%
+    mutate(Strand = if_else(Mismatch %in% c("C>T", 
+                                            "D>V(11Substitution)"),
+                            "5 prime", 
+                            "3 prime"),
+           Strand = factor(Strand, levels = c("5 prime", "3 prime")),
+           Position = if_else(Position %in% names(damage_xaxis), 
+                              damage_xaxis[Position], 
+                              Position),
+           Position = as_factor(Position)
+    )
+  
+  damage_data_comparison %>%
+    group_by(File) %>%
+    nest() %>%
+    mutate(plots = map(data, function(x) plot_damage(x))) %>%
+    pull(plots)
+})
 
+# use purrr::iwalk to create a dynamic number of outputs
+observeEvent(input$submit, {
+  req(graphs())
+  
+  iwalk(graphs(), ~{
+    output_name <- paste0("plot_", .y)
+    output[[output_name]] <- renderPlotly(.x)
+  })
+})
+
+# use renderUI to create a dynamic number of output ui elements
+output$comparison_plots <- renderUI({
+  req(graphs())
+  
+  plots_list <- imap(graphs(), ~{
+    tagList(
+      plotlyOutput(
+        outputId = paste0("plot_", .y)
+      ),
+      br()
+    )
+    
+  })
+  
+  tagList(plots_list)
+})
+
+
+# use purrr::iwalk to create a dynamic number of outputs
+observeEvent(input$submit, {
+  req(graphs())
+  
+  iwalk(graphs(), ~{
+    output_name <- paste0("plot_", .y)
+    output[[output_name]] <- renderPlotly(.x)
+  })
+})
+
+# use renderUI to create a dynamic number of output ui elements
+output$graphs_ui <- renderUI({
+  req(graphs())
+  
+  plots_list <- imap(graphs(), ~{
+    tagList(
+      plotlyOutput(
+        outputId = paste0("plot_", .y)
+      ),
+      br()
+    )
+    
+  })
+  
+  tagList(plots_list)
+})
 
 
