@@ -406,6 +406,36 @@ shinyServer(function(input, output) {
         tagList({length_out})
     })
     
+    output$edit_plot <- renderUI({
+        dat <- maltExtract_data()
+        
+        if (input$selected_filter == "all") {
+            selected_filter <- c("default", "ancient")
+        } else {
+            selected_filter <- input$selected_filter
+        }
+        
+       edit_data <- clean_edit(dat$editDistance, 
+                                    selected_filter, 
+                                    input$remove_string,
+                                    input$selected_file,
+                                    input$selected_node)
+        
+        edit_plot <- plot_col(edit_data, 
+                              "Edit_Distance",
+                              "Alignment_Count",
+                              "Edit Distance",
+                              "Alignments (n)")
+        
+        if (input$interactive) {
+            edit_out <- renderPlotly({edit_plot})
+        } else if (!input$interactive) {
+            edit_out <- renderPlot({edit_plot})
+        }
+        
+        tagList({edit_out})
+    })
+    
     output$percentidentity_plot <- renderUI({
         dat <- maltExtract_data()
         
@@ -436,7 +466,7 @@ shinyServer(function(input, output) {
         tagList({percent_out})
     })
     
-    output$edit_plot <- renderUI({
+    output$positionscovered_plot <- renderUI({
         dat <- maltExtract_data()
         
         if (input$selected_filter == "all") {
@@ -445,25 +475,25 @@ shinyServer(function(input, output) {
             selected_filter <- input$selected_filter
         }
         
-        edit_data <- clean_edit(dat$editDistance, 
+        positionscov_data <- clean_positionscovered(dat$positionsCovered, 
                                 selected_filter, 
                                 input$remove_string,
                                 input$selected_file,
                                 input$selected_node)
         
-        edi_plot <- plot_col(edit_data, 
-                              "Edit_Distance",
-                              "Alignment_Count",
-                              "Edit Distance",
-                              "Alignments (n)")
+        positionscov_plot <- plot_col(positionscov_data, 
+                                      "Breadth",
+                                      "Percentage",
+                                      "Fold Coverage (X)",
+                                      "Percentage of Reference (%)")
         
         if (input$interactive) {
-            edit_out <- renderPlotly({edi_plot})
+            positionscov_out <- renderPlotly({positionscov_plot})
         } else if (!input$interactive) {
-            edit_out <- renderPlot({edi_plot})
+            positionscov_out <- renderPlot({positionscov_plot})
         }
         
-        tagList({edit_out})
+        tagList({positionscov_out})
     })
     
     output$coveragehist_plot <- renderUI({

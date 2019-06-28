@@ -57,7 +57,10 @@ shinyUI(fluidPage(
                         verticalLayout(
                             br(),
                             h3("Summary Statistics"),
-                            withLoader(DT::dataTableOutput("filterstats_plot"), type = "html", loader = "dnaspin"),
+                            column(width = 12,
+                                withLoader(DT::dataTableOutput("filterstats_plot", width = "75%"), type = "html", loader = "dnaspin"),  
+                                align = "center"
+                            ),
                             br(),
                             h3("Read Characteristics"),
                             splitLayout(cellWidths = c("50%", "50%"),
@@ -70,9 +73,10 @@ shinyUI(fluidPage(
                                         withLoader(uiOutput("edit_plot"), type = "html", loader = "dnaspin"),
                                         withLoader(uiOutput("percentidentity_plot"), type = "html", loader = "dnaspin")
                             ),
+                            br(),
                             h3("Reference Coverage"),
                             splitLayout(cellWidths = c("50%", "50%"),
-                                        withLoader(plotlyOutput("positionscovered_plot"), type = "html", loader = "dnaspin"),
+                                        withLoader(uiOutput("positionscovered_plot"), type = "html", loader = "dnaspin"),
                                         withLoader(uiOutput("coveragehist_plot"), type = "html", loader = "dnaspin")
                             )
                         )
