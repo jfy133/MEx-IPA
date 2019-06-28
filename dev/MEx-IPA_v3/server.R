@@ -466,6 +466,36 @@ shinyServer(function(input, output) {
         tagList({edit_out})
     })
     
+    output$coveragehist_plot <- renderUI({
+        dat <- maltExtract_data()
+        
+        if (input$selected_filter == "all") {
+            selected_filter <- c("default", "ancient")
+        } else {
+            selected_filter <- input$selected_filter
+        }
+        
+        coveragehist_data <- clean_coveragehist(dat$coverageHist, 
+                                selected_filter, 
+                                input$remove_string,
+                                input$selected_file,
+                                input$selected_node)
+        
+        coveragehist_plot <- plot_col(coveragehist_data, 
+                                 "Fold_Coverage",
+                                 "Base_Pairs",
+                                 "Fold Coverage (X)",
+                                 "Base Pairs (n)")
+        
+        if (input$interactive) {
+            coveragehist_out <- renderPlotly({coveragehist_plot})
+        } else if (!input$interactive) {
+            coveragehist_out <- renderPlot({coveragehist_plot})
+        }
+        
+        tagList({coveragehist_out})
+    })
+    
     
     
 })

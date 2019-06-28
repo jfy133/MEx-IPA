@@ -69,6 +69,11 @@ shinyUI(fluidPage(
                             splitLayout(cellWidths = c("50%", "50%"),
                                         withLoader(uiOutput("edit_plot"), type = "html", loader = "dnaspin"),
                                         withLoader(uiOutput("percentidentity_plot"), type = "html", loader = "dnaspin")
+                            ),
+                            h3("Reference Coverage"),
+                            splitLayout(cellWidths = c("50%", "50%"),
+                                        withLoader(plotlyOutput("positionscovered_plot"), type = "html", loader = "dnaspin"),
+                                        withLoader(uiOutput("coveragehist_plot"), type = "html", loader = "dnaspin")
                             )
                         )
                     )
