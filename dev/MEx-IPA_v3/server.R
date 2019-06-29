@@ -303,6 +303,7 @@ shinyServer(function(input, output) {
         
         dat <- maltExtract_data()
         
+        req(input$selected_filter)
         
         if (input$selected_filter == "all") {
             selected_filter <- c("default", "ancient")
@@ -340,13 +341,27 @@ shinyServer(function(input, output) {
         
         filterstats_data %>% 
             select(Mode, Information, Value) %>% 
-            spread(Mode, Value)
+            spread(Mode, Value) %>% 
+            datatable(extensions = 'Buttons', options = list(
+                    dom = 'Bfrtip',
+                    buttons = 
+                        list('copy', list(
+                            extend = 'collection',
+                            filename = 'no',
+                            buttons = c('csv', 'excel', 'pdf'),
+                            text = 'Download'
+                        ))
+                    
+                )
+            )
         
     })
 
     output$damage_plot <- renderUI({
         dat <- maltExtract_data()
 
+        req(input$selected_filter)
+        
         if (input$selected_filter == "all") {
             selected_filter <- c("default", "ancient")
         } else {
@@ -379,6 +394,8 @@ shinyServer(function(input, output) {
     output$length_plot <- renderUI({
         dat <- maltExtract_data()
         
+        req(input$selected_filter)
+        
         if (input$selected_filter == "all") {
             selected_filter <- c("default", "ancient")
         } else {
@@ -408,6 +425,8 @@ shinyServer(function(input, output) {
     
     output$edit_plot <- renderUI({
         dat <- maltExtract_data()
+        
+        req(input$selected_filter)
         
         if (input$selected_filter == "all") {
             selected_filter <- c("default", "ancient")
@@ -439,6 +458,8 @@ shinyServer(function(input, output) {
     output$percentidentity_plot <- renderUI({
         dat <- maltExtract_data()
         
+        req(input$selected_filter)
+        
         if (input$selected_filter == "all") {
             selected_filter <- c("default", "ancient")
         } else {
@@ -468,6 +489,8 @@ shinyServer(function(input, output) {
     
     output$positionscovered_plot <- renderUI({
         dat <- maltExtract_data()
+        
+        req(input$selected_filter)
         
         if (input$selected_filter == "all") {
             selected_filter <- c("default", "ancient")
@@ -499,6 +522,9 @@ shinyServer(function(input, output) {
     output$coveragehist_plot <- renderUI({
         dat <- maltExtract_data()
         
+        req(input$selected_filter)
+        
+        
         if (input$selected_filter == "all") {
             selected_filter <- c("default", "ancient")
         } else {
@@ -526,6 +552,108 @@ shinyServer(function(input, output) {
         tagList({coveragehist_out})
     })
     
+    ## 1) Make a list of all the data for each plot
+    ## 2) Make placeholders for each plot's data listed in the list
+    ## 3) For each entry in list, render the plot (observe executes immediately
+    ## when it detects a change)
+    ## Notes: as using renderUI, sends all plots to UI at once.
     
+    plotInput <- reactive({
+        
+        dat <- maltExtract_data()
+        
+        req(input$selected_filter)
+        
+        if (input$selected_filter == "all") {
+            selected_filter <- c("default", "ancient")
+        } else {
+            selected_filter <- input$selected_filter
+        }
+        
+        n_plot <- dat$file_names
+        
+        ## ERROR: pmap isn't working? so total_data not loading:
+        ## x, s_filter, r_string, s_file, s_node. Map doesn't work either.
+        ## Try running manually?
+        
+        if (input$characteristic == "damage") {
+            total_data <- purrr::map(n_plot, ~ clean_damage(x = dat$damageMismatch,
+                                                            s_filter = "default",
+                                                            r_string = input$remove_string,
+                                                            s_file = .x,
+                                                            s_node = input$selected_node))
+            
+        } else if (input$characteristic == "length") {
+            total_data <- purrr::map(n_plot, ~ clean_length(x = dat$readLengthDist,
+                                                            s_filter = selected_filter,
+                                                            r_string = input$remove_string,
+                                                            s_file = .x,
+                                                            s_node = input$selected_node))
+        }
+            
+        names(total_data) <- n_plot
+        
+        ## Removes entries with empty tibbles, n_plot above will be for every 
+        ## file, even if no data
+        total_data <- total_data[map(total_data, nrow) > 0]
+        
+        ## reset n_plot
+        n_plot <- names(total_data)
+        
+        return(list("n_plot" = n_plot, "total_data" = total_data))
+    })
+    
+    
+    ##### Create divs######
+    output$multisample_plots <- renderUI({
+        
+        ## make all the plot(ly) objects and place in a list
+        if (input$interactive) {
+            plot_output_list <- lapply(plotInput()$n_plot, function(i) {
+                plotname <- i
+                column(6, plotlyOutput(plotname))
+            })   
+        } else {
+            plot_output_list <- lapply(plotInput()$n_plot, function(i) {
+                plotname <- i
+                column(6, plotOutput(plotname))
+            })   
+        }
+        ## create the HTML objects that correspond to the plotly objects
+        do.call(tagList, plot_output_list)
+    })
+    
+    ## Mointor for changes in plotInput object (which is data generation above)
+    observe({
+        if (input$interactive) {
+            lapply(plotInput()$n_plot, function(i){
+                output[[i]] <- renderPlotly({
+                    if (input$characteristic == "damage") {
+                        plot_damage(plotInput()$total_data[[i]])
+                    } else if (input$characteristic == "length") {
+                        plot_col(plotInput()$total_data[[i]],
+                                 "Length_Bin", 
+                                 "Alignment_Count",
+                                 "Read Length Bins (bp)",
+                                 "Alignments (n)")
+                    }
+                })
+            })
+        } else {
+            lapply(plotInput()$n_plot, function(i){
+                output[[i]] <- renderPlot({
+                    if (input$characteristic == "damage") {
+                        plot_damage(plotInput()$total_data[[i]])
+                    } else if (input$characteristic == "length") {
+                        plot_col(plotInput()$total_data[[i]],
+                                 "Length_Bin", 
+                                 "Alignment_Count",
+                                 "Read Length Bins (bp)",
+                                 "Alignments (n)")
+                    }
+                })
+            })
+        }
+    })
     
 })

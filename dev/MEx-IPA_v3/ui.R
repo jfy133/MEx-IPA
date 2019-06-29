@@ -43,7 +43,12 @@ shinyUI(fluidPage(
             checkboxInput("interactive", 
                           "Interactive Plots?", 
                           value = FALSE, 
-                          width = NULL)
+                          width = NULL),
+            selectInput("characteristic", "Characteristic",
+                        list(`DNA Damage` = "damage", 
+                             `Read Length` = "length"),
+                        selected = "damage")
+            
             
         ),
         
@@ -84,7 +89,8 @@ shinyUI(fluidPage(
                 ),
                 tabPanel(
                     title = "Multiple Samples",
-                    h3("multiple")
+                    h3("multiple"),
+                    uiOutput("multisample_plots")
                 )
             )
         )
