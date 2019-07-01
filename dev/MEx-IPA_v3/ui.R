@@ -7,13 +7,15 @@
 #    http://shiny.rstudio.com/
 #
 
-######## VERSION 2 #################
+######## VERSION 3 #################
 
 library(shiny)
-library(shinyFiles)
+library(tidyverse)
+library(data.table)
 library(plotly)
-library(shinycustomloader)
 library(DT)
+library(shinycustomloader)
+
 
 # Define UI for application that draws a histogram
 shinyUI(fluidPage(
@@ -90,7 +92,7 @@ shinyUI(fluidPage(
                 tabPanel(
                     title = "Multiple Samples",
                     h3("multiple"),
-                    uiOutput("multisample_plots")
+                    withLoader(uiOutput("multisample_plots"), type = "html", loader = "dnaspin")
                 )
             )
         )

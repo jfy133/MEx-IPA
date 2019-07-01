@@ -13,6 +13,7 @@ library(tidyverse)
 library(data.table)
 library(plotly)
 library(DT)
+library(shinycustomloader)
 
 ## Functions 
 ## ## Data loading
@@ -247,9 +248,9 @@ shinyServer(function(input, output) {
         input_dir <- paste0(input$select_dir,"/")
         
         if (!file.exists(paste0(input_dir, "default/RunSummary.txt"))) {
-            paste("maltExtract data is not detected. Please check your input directory.")
+            paste("Detected maltExtract not data. Check input directory.")
         } else {
-            paste("maltExtract data is detected! Press 'Load data' to view.")
+            paste("Detected maltExtract data! Press 'Load data'")
         }
         
     })
@@ -570,11 +571,11 @@ shinyServer(function(input, output) {
             selected_filter <- input$selected_filter
         }
         
-        n_plot <- dat$file_names
-        
-        ## ERROR: pmap isn't working? so total_data not loading:
-        ## x, s_filter, r_string, s_file, s_node. Map doesn't work either.
-        ## Try running manually?
+        if (input$remove_string == "") {
+            n_plot <- dat$file_names
+        } else {
+            n_plot <- dat$file_names %>% str_remove(input$remove_string)
+        }
         
         if (input$characteristic == "damage") {
             total_data <- purrr::map(n_plot, ~ clean_damage(x = dat$damageMismatch,
@@ -590,7 +591,8 @@ shinyServer(function(input, output) {
                                                             s_file = .x,
                                                             s_node = input$selected_node))
         }
-            
+        
+
         names(total_data) <- n_plot
         
         ## Removes entries with empty tibbles, n_plot above will be for every 
@@ -600,7 +602,12 @@ shinyServer(function(input, output) {
         ## reset n_plot
         n_plot <- names(total_data)
         
-        return(list("n_plot" = n_plot, "total_data" = total_data))
+        names(total_data)
+        
+        interactive <- input$interactive
+        
+        return(list("n_plot" = n_plot, "total_data" = total_data, 
+                    "interactive" = interactive))
     })
     
     
@@ -608,38 +615,17 @@ shinyServer(function(input, output) {
     output$multisample_plots <- renderUI({
         
         ## make all the plot(ly) objects and place in a list
-        if (input$interactive) {
-            plot_output_list <- lapply(plotInput()$n_plot, function(i) {
-                plotname <- i
-                column(6, plotlyOutput(plotname))
-            })   
-        } else {
             plot_output_list <- lapply(plotInput()$n_plot, function(i) {
                 plotname <- i
                 column(6, plotOutput(plotname))
             })   
-        }
+        
         ## create the HTML objects that correspond to the plotly objects
         do.call(tagList, plot_output_list)
     })
     
     ## Mointor for changes in plotInput object (which is data generation above)
     observe({
-        if (input$interactive) {
-            lapply(plotInput()$n_plot, function(i){
-                output[[i]] <- renderPlotly({
-                    if (input$characteristic == "damage") {
-                        plot_damage(plotInput()$total_data[[i]])
-                    } else if (input$characteristic == "length") {
-                        plot_col(plotInput()$total_data[[i]],
-                                 "Length_Bin", 
-                                 "Alignment_Count",
-                                 "Read Length Bins (bp)",
-                                 "Alignments (n)")
-                    }
-                })
-            })
-        } else {
             lapply(plotInput()$n_plot, function(i){
                 output[[i]] <- renderPlot({
                     if (input$characteristic == "damage") {
@@ -653,7 +639,7 @@ shinyServer(function(input, output) {
                     }
                 })
             })
-        }
+        
     })
     
 })
