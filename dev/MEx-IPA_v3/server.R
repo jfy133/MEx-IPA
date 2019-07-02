@@ -201,7 +201,7 @@ filterstats_info <- c(`Reference Length` =  "ReferenceLength",
                       `Median Read Length (bp)` = "Median")
 
 
-# Define server logic required to draw a histogram
+# Define server logic required to on the fly load/clean/plot data 
 shinyServer(function(input, output) {
     maltExtract_data <- eventReactive(input$submit, {
         
@@ -250,7 +250,7 @@ shinyServer(function(input, output) {
         if (!file.exists(paste0(input_dir, "default/RunSummary.txt"))) {
             paste("Detected maltExtract not data. Check input directory.")
         } else {
-            paste("Detected maltExtract data! Press 'Load data'")
+            paste("Detected maltExtract data!")
         }
         
     })
@@ -299,63 +299,74 @@ shinyServer(function(input, output) {
                     selected = "all")
     })
     
-    output$filterstats_plot <- DT::renderDataTable({
-        req(maltExtract_data())
+    output$filterstats_plot <- renderUI({
         
-        dat <- maltExtract_data()
-        
-        req(input$selected_filter)
-        
-        if (input$selected_filter == "all") {
-            selected_filter <- c("default", "ancient")
-        } else {
-            selected_filter <- input$selected_filter
-        }
-        
-        filterstats_data <- dat$filterStats %>%
-            select(-Module) %>%
-            left_join(dat$readLengthStat %>% select(-Module), 
-                      by = c("Index", "Mode", "File", "Node")) %>%
-            left_join(dat$alignmentDist %>% select(-Module, -Reference), 
-                      by = c("Index", "Mode", "File", "Node")) %>% 
-            left_join(dat$positionsCovered %>% select(-Module, 
-                                                      -Reference, 
-                                                      -contains("perc")), 
-                      by = c("Index", "Mode", "File", "Node")) %>%
-            filter_module_files(selected_filter, 
-                                input$remove_string,
-                                input$selected_file, 
-                                input$selected_node) %>%
-            mutate(Mean = round(Mean, digits = 2),
-                   GeometricMean = round(Mean, digits = 2),
-                   StandardDev = round(StandardDev, digits = 2)) %>%
-            gather(Information, Value, 5:ncol(.)) %>%
-            select(-Index) %>% 
-            mutate(Information = map(Information, function(x) 
-                names(filterstats_info[filterstats_info == x])) %>% unlist) %>%
-            mutate(Information = factor(Information, 
-                                        levels = rev(names(filterstats_info)
-                                        )
-            )
-            ) %>%
-            arrange(Information)
-        
-        filterstats_data %>% 
-            select(Mode, Information, Value) %>% 
-            spread(Mode, Value) %>% 
-            datatable(extensions = 'Buttons', options = list(
-                    dom = 'Bfrtip',
-                    buttons = 
-                        list('copy', list(
-                            extend = 'collection',
-                            filename = 'no',
-                            buttons = c('csv', 'excel', 'pdf'),
-                            text = 'Download'
-                        ))
-                    
+            req(maltExtract_data())
+            
+            dat <- maltExtract_data()
+            
+            req(input$selected_filter)
+            
+            if (input$selected_filter == "all") {
+                selected_filter <- c("default", "ancient")
+            } else {
+                selected_filter <- input$selected_filter
+            }
+            
+            basicstats_data <- dat$filterStats %>%
+                select(-Module) %>%
+                left_join(dat$readLengthStat %>% select(-Module), 
+                          by = c("Index", "Mode", "File", "Node")) %>%
+                left_join(dat$alignmentDist %>% select(-Module, -Reference), 
+                          by = c("Index", "Mode", "File", "Node")) %>% 
+                left_join(dat$positionsCovered %>% select(-Module, 
+                                                          -Reference, 
+                                                          -contains("perc")), 
+                          by = c("Index", "Mode", "File", "Node")) %>%
+                filter_module_files(selected_filter, 
+                                    input$remove_string,
+                                    input$selected_file, 
+                                    input$selected_node) 
+            
+            if (nrow(basicstats_data) == 0) {
+                filterstats_out <- renderText({"\nNo input data for this taxon in this sample!"})
+            } else {
+            
+            filterstats_data <- basicstats_data %>%
+                mutate(Mean = round(Mean, digits = 2),
+                       GeometricMean = round(GeometricMean, digits = 2),
+                       StandardDev = round(StandardDev, digits = 2)) %>%
+                gather(Information, Value, 5:ncol(.)) %>%
+                select(-Index) %>% 
+                mutate(Information = map(Information, function(x) 
+                    names(filterstats_info[filterstats_info == x])) %>% unlist) %>%
+                mutate(Information = factor(Information, 
+                                            levels = rev(names(filterstats_info)
+                                            )
                 )
-            )
-        
+                ) %>%
+                arrange(Information)
+            
+            
+            filterstats_out <-  DT::renderDataTable({filterstats_data %>% 
+                select(Mode, Information, Value) %>% 
+                spread(Mode, Value) %>% 
+                datatable(extensions = 'Buttons', options = list(
+                        dom = 'Bfrtip',
+                        buttons = 
+                            list('copy', list(
+                                extend = 'collection',
+                                filename = 'no',
+                                buttons = c('csv', 'excel', 'pdf'),
+                                text = 'Download'
+                            ))
+                    
+                    )
+                )
+                })
+            }
+            
+           tagList({filterstats_out})
     })
 
     output$damage_plot <- renderUI({
@@ -382,7 +393,9 @@ shinyServer(function(input, output) {
             dam_plot <- plot_damage(damage_data)
         }
         
-        if (input$interactive) {
+        if (nrow(damage_data) == 0) {
+            damage_out <- renderText({"\nNo input data for this taxon in this sample!"})
+        } else if (input$interactive) {
             damage_out <- renderPlotly({dam_plot})
         } else if (!input$interactive) {
             damage_out <- renderPlot({dam_plot})
@@ -415,7 +428,9 @@ shinyServer(function(input, output) {
                                "Read Length Bins (bp)",
                                "Alignments (n)")
         
-        if (input$interactive) {
+        if (nrow(length_data) == 0) {
+            length_out <- renderText({"\nNo input data for this taxon in this sample!"})
+        } else if (input$interactive) {
             length_out <- renderPlotly({len_plot})
         } else if (!input$interactive) {
             length_out <- renderPlot({len_plot})
@@ -447,7 +462,9 @@ shinyServer(function(input, output) {
                               "Edit Distance",
                               "Alignments (n)")
         
-        if (input$interactive) {
+        if (nrow(edit_data) == 0) {
+            edit_out <- renderText({"\nNo input data for this taxon in this sample!"})
+        } else if (input$interactive) {
             edit_out <- renderPlotly({edit_plot})
         } else if (!input$interactive) {
             edit_out <- renderPlot({edit_plot})
@@ -479,7 +496,9 @@ shinyServer(function(input, output) {
                               "Sequence Identity (%)",
                               "Alignments (n)")
         
-        if (input$interactive) {
+        if (nrow(percent_data) == 0) {
+            percent_out <- renderText({"\nNo input data for this taxon in this sample!"})
+        } else if (input$interactive) {
             percent_out <- renderPlotly({perc_plot})
         } else if (!input$interactive) {
             percent_out <- renderPlot({perc_plot})
@@ -511,7 +530,9 @@ shinyServer(function(input, output) {
                                       "Fold Coverage (X)",
                                       "Percentage of Reference (%)")
         
-        if (input$interactive) {
+        if (nrow( positionscov_data) == 0) {
+            positionscov_out <- renderText({"\nNo input data for this taxon in this sample!"})
+        } else if (input$interactive) {
             positionscov_out <- renderPlotly({positionscov_plot})
         } else if (!input$interactive) {
             positionscov_out <- renderPlot({positionscov_plot})
@@ -544,7 +565,9 @@ shinyServer(function(input, output) {
                                  "Fold Coverage (X)",
                                  "Base Pairs (n)")
         
-        if (input$interactive) {
+        if (nrow(coveragehist_data) == 0) {
+            coveragehist_out <- renderText({"\nNo input data for this taxon in this sample!"})
+        } else if (input$interactive) {
             coveragehist_out <- renderPlotly({coveragehist_plot})
         } else if (!input$interactive) {
             coveragehist_out <- renderPlot({coveragehist_plot})

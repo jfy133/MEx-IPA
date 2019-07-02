@@ -25,7 +25,7 @@ shinyUI(fluidPage(
     # Sidebar with options
     sidebarLayout(
         sidebarPanel(
-            h3(strong("Options")),
+            h4("General Options"),
             textInput("select_dir",
                       strong("Enter directory"),
                       value = NULL
@@ -33,19 +33,21 @@ shinyUI(fluidPage(
             htmlOutput("report_dir"),
             uiOutput("run_button"),
             br(),
-            br(),
             uiOutput("file_options"),
             uiOutput("node_options"),
             uiOutput("filter_options"),
-            br(),
             textInput("remove_string",
                       strong("Remove from filename"),
                       value = NULL
             ),
+            br(),
+            h4("Single Sample Only"),
             checkboxInput("interactive", 
                           "Interactive Plots?", 
                           value = FALSE, 
                           width = NULL),
+            br(),
+            h4("Multiple Samples Only"),
             selectInput("characteristic", "Characteristic",
                         list(`DNA Damage` = "damage", 
                              `Read Length` = "length",
@@ -67,25 +69,25 @@ shinyUI(fluidPage(
                     fluidRow(
                         verticalLayout(
                             br(),
-                            h3("Summary Statistics"),
+                            h4("Summary Statistics"),
                             column(width = 12,
-                                withLoader(DT::dataTableOutput("filterstats_plot", width = "75%"), type = "html", loader = "dnaspin"),  
+                                withLoader(uiOutput("filterstats_plot", width = "75%"), type = "html", loader = "dnaspin"),  
                                 align = "center"
                             ),
                             br(),
-                            h3("Read Characteristics"),
+                            h4("Read Characteristics"),
                             splitLayout(cellWidths = c("50%", "50%"),
                                         withLoader(uiOutput("damage_plot"), type = "html", loader = "dnaspin"),
                                         withLoader(uiOutput("length_plot"), type = "html", loader = "dnaspin")
                             ),
                             br(),
-                            h3("Similarity to Reference"),
+                            h4("Similarity to Reference"),
                             splitLayout(cellWidths = c("50%", "50%"),
                                         withLoader(uiOutput("edit_plot"), type = "html", loader = "dnaspin"),
                                         withLoader(uiOutput("percentidentity_plot"), type = "html", loader = "dnaspin")
                             ),
                             br(),
-                            h3("Reference Coverage"),
+                            h4("Reference Coverage"),
                             splitLayout(cellWidths = c("50%", "50%"),
                                         withLoader(uiOutput("positionscovered_plot"), type = "html", loader = "dnaspin"),
                                         withLoader(uiOutput("coveragehist_plot"), type = "html", loader = "dnaspin")
@@ -95,7 +97,10 @@ shinyUI(fluidPage(
                 ),
                 tabPanel(
                     title = "Multiple Samples",
-                    h3("multiple"),
+                    br(),
+                    tags$b("Note"),
+                    br(),
+                    p("May take a few moments to load. Samples with no input data for selected taxon will not be displayed. Check single sample plot for confirmation."),
                     withLoader(uiOutput("multisample_plots"), type = "html", loader = "dnaspin")
                 )
             )
