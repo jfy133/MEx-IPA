@@ -565,8 +565,10 @@ shinyServer(function(input, output) {
         
         req(input$selected_filter)
         
-        if (input$selected_filter == "all") {
+        if (input$selected_filter == "all" & input$characteristic != "damage") {
             selected_filter <- c("default", "ancient")
+        } else if (input$selected_filter == "all" & input$characteristic == "damage") {
+            selected_filter <- "default"
         } else {
             selected_filter <- input$selected_filter
         }
@@ -579,7 +581,7 @@ shinyServer(function(input, output) {
         
         if (input$characteristic == "damage") {
             total_data <- purrr::map(n_plot, ~ clean_damage(x = dat$damageMismatch,
-                                                            s_filter = "default",
+                                                            s_filter = selected_filter,
                                                             r_string = input$remove_string,
                                                             s_file = .x,
                                                             s_node = input$selected_node))
@@ -590,6 +592,30 @@ shinyServer(function(input, output) {
                                                             r_string = input$remove_string,
                                                             s_file = .x,
                                                             s_node = input$selected_node))
+        } else if (input$characteristic == "edit") {
+            total_data <- purrr::map(n_plot, ~ clean_edit(x = dat$editDistance,
+                                                            s_filter = selected_filter,
+                                                            r_string = input$remove_string,
+                                                            s_file = .x,
+                                                            s_node = input$selected_node))
+        } else if (input$characteristic == "percentidentity") {
+            total_data <- purrr::map(n_plot, ~ clean_percentidentity(x = dat$percentIdentity,
+                                                          s_filter = selected_filter,
+                                                          r_string = input$remove_string,
+                                                          s_file = .x,
+                                                          s_node = input$selected_node))
+        } else if (input$characteristic == "positionscovered") {
+            total_data <- purrr::map(n_plot, ~ clean_positionscovered(x = dat$positionsCovered,
+                                                          s_filter = selected_filter,
+                                                          r_string = input$remove_string,
+                                                          s_file = .x,
+                                                          s_node = input$selected_node))
+        } else if (input$characteristic == "coveragehist") {
+            total_data <- purrr::map(n_plot, ~ clean_coveragehist(x = dat$coverageHist,
+                                                          s_filter = selected_filter,
+                                                          r_string = input$remove_string,
+                                                          s_file = .x,
+                                                          s_node = input$selected_node))
         }
         
 
@@ -636,6 +662,30 @@ shinyServer(function(input, output) {
                                  "Alignment_Count",
                                  "Read Length Bins (bp)",
                                  "Alignments (n)")
+                    } else if (input$characteristic == "edit") {
+                        plot_col(plotInput()$total_data[[i]],
+                                 "Edit_Distance",
+                                 "Alignment_Count",
+                                 "Edit Distance",
+                                 "Alignments (n)")
+                    } else if (input$characteristic == "percentidentity") {
+                        plot_col(plotInput()$total_data[[i]],
+                                 "Percent_Identity",
+                                 "Alignment_Count",
+                                 "Sequence Identity (%)",
+                                 "Alignments (n)")
+                    } else if (input$characteristic == "positionscovered") {
+                        plot_col(plotInput()$total_data[[i]],
+                                 "Breadth",
+                                 "Percentage",
+                                 "Fold Coverage (X)",
+                                 "Percentage of Reference (%)")
+                    } else if (input$characteristic == "coveragehist") {
+                        plot_col(plotInput()$total_data[[i]],
+                                 "Fold_Coverage",
+                                 "Base_Pairs",
+                                 "Fold Coverage (X)",
+                                 "Base Pairs (n)")
                     }
                 })
             })

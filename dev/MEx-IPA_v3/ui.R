@@ -48,7 +48,11 @@ shinyUI(fluidPage(
                           width = NULL),
             selectInput("characteristic", "Characteristic",
                         list(`DNA Damage` = "damage", 
-                             `Read Length` = "length"),
+                             `Read Length` = "length",
+                             `Edit Distance` = "edit",
+                             `Percent Identity` = "percentidentity",
+                             `Positions Covered` = "positionscovered",
+                             `Depth Coverage` = "coveragehist"),
                         selected = "damage")
             
             
