@@ -14,6 +14,7 @@ library(data.table)
 library(plotly)
 library(DT)
 library(shinycustomloader)
+library(patchwork)
 
 ## Functions 
 ## ## Data loading
@@ -151,7 +152,7 @@ plot_damage <- function(x){
                   group = Mismatch)) +
         geom_line() + 
         xlab("Position (bp)") +
-        ylab("Alignments (n)") +
+        ylab("Frequency of Mismatch") +
         facet_wrap(File ~ Strand, scales = "free_x")  + 
         scale_colour_manual(values = mismatch_colours) +
         theme_minimal()
@@ -203,6 +204,10 @@ filterstats_info <- c(`Reference Length` =  "ReferenceLength",
 
 # Define server logic required to on the fly load/clean/plot data 
 shinyServer(function(input, output) {
+    
+    
+    ######## User Input ###########
+
     maltExtract_data <- eventReactive(input$submit, {
         
         input_dir <- paste0(input$select_dir,"/")
@@ -243,7 +248,9 @@ shinyServer(function(input, output) {
         
     })
     
-    output$report_dir <- output$report_dir_2 <- renderText({
+
+    
+    output$report_dir <- renderText({
         
         input_dir <- paste0(input$select_dir,"/")
         
@@ -299,34 +306,43 @@ shinyServer(function(input, output) {
                     selected = "all")
     })
     
+    ######## Single Sample Plots ###########
+
+    filterstats_data <- reactive({
+        req(maltExtract_data())
+        
+        dat <- maltExtract_data()
+        
+        req(input$selected_filter)
+        
+        if (input$selected_filter == "all") {
+            selected_filter <- c("default", "ancient")
+        } else {
+            selected_filter <- input$selected_filter
+        }
+        
+        basicstats_data <- dat$filterStats %>%
+            select(-Module) %>%
+            left_join(dat$readLengthStat %>% select(-Module), 
+                      by = c("Index", "Mode", "File", "Node")) %>%
+            left_join(dat$alignmentDist %>% select(-Module, -Reference), 
+                      by = c("Index", "Mode", "File", "Node")) %>% 
+            left_join(dat$positionsCovered %>% select(-Module, 
+                                                      -Reference, 
+                                                      -contains("perc")), 
+                      by = c("Index", "Mode", "File", "Node")) %>%
+            filter_module_files(selected_filter, 
+                                input$remove_string,
+                                input$selected_file, 
+                                input$selected_node) 
+        
+        list(basicstats_data = basicstats_data)
+    })
+    
     output$filterstats_plot <- renderUI({
         
-            req(maltExtract_data())
-            
-            dat <- maltExtract_data()
-            
-            req(input$selected_filter)
-            
-            if (input$selected_filter == "all") {
-                selected_filter <- c("default", "ancient")
-            } else {
-                selected_filter <- input$selected_filter
-            }
-            
-            basicstats_data <- dat$filterStats %>%
-                select(-Module) %>%
-                left_join(dat$readLengthStat %>% select(-Module), 
-                          by = c("Index", "Mode", "File", "Node")) %>%
-                left_join(dat$alignmentDist %>% select(-Module, -Reference), 
-                          by = c("Index", "Mode", "File", "Node")) %>% 
-                left_join(dat$positionsCovered %>% select(-Module, 
-                                                          -Reference, 
-                                                          -contains("perc")), 
-                          by = c("Index", "Mode", "File", "Node")) %>%
-                filter_module_files(selected_filter, 
-                                    input$remove_string,
-                                    input$selected_file, 
-                                    input$selected_node) 
+            req(filterstats_data())
+            basicstats_data <- filterstats_data()$basicstats_data
             
             if (nrow(basicstats_data) == 0) {
                 filterstats_out <- renderText({"\nNo input data for this taxon in this sample!"})
@@ -369,9 +385,10 @@ shinyServer(function(input, output) {
            tagList({filterstats_out})
     })
 
-    output$damage_plot <- renderUI({
+    
+    damage_data <- reactive({
         dat <- maltExtract_data()
-
+        
         req(input$selected_filter)
         
         if (input$selected_filter == "all") {
@@ -385,10 +402,20 @@ shinyServer(function(input, output) {
                                     input$remove_string,
                                     input$selected_file,
                                     input$selected_node)
+    
+        list(damage_data = damage_data)
+    })
+    
+    
+    
+    output$damage_plot <- renderUI({
         
-        if (any(selected_filter %in% "default")) {
+        req(damage_data())
+        damage_data <- damage_data()$damage_data
+        
+        if (any(input$selected_filter == "all")) {
             dam_plot <- plot_damage(damage_data %>% 
-                                           filter(Mode == "default"))
+                                        filter(Mode == "default"))
         } else {
             dam_plot <- plot_damage(damage_data)
         }
@@ -401,11 +428,13 @@ shinyServer(function(input, output) {
             damage_out <- renderPlot({dam_plot})
         }
         
+        
         tagList({damage_out})
+        
         
     })
     
-    output$length_plot <- renderUI({
+    length_data <- reactive({
         dat <- maltExtract_data()
         
         req(input$selected_filter)
@@ -421,7 +450,15 @@ shinyServer(function(input, output) {
                                     input$remove_string,
                                     input$selected_file,
                                     input$selected_node)
-
+        
+        list(length_data = length_data)
+    })
+    
+    output$length_plot <- renderUI({
+        
+        req(length_data())
+        length_data <- length_data()$length_data
+        
         len_plot <- plot_col(length_data, 
                                "Length_Bin", 
                                "Alignment_Count",
@@ -439,7 +476,7 @@ shinyServer(function(input, output) {
         tagList({length_out})
     })
     
-    output$edit_plot <- renderUI({
+    edit_data <- reactive({
         dat <- maltExtract_data()
         
         req(input$selected_filter)
@@ -450,11 +487,20 @@ shinyServer(function(input, output) {
             selected_filter <- input$selected_filter
         }
         
-       edit_data <- clean_edit(dat$editDistance, 
-                                    selected_filter, 
-                                    input$remove_string,
-                                    input$selected_file,
-                                    input$selected_node)
+        edit_data <- clean_edit(dat$editDistance, 
+                                selected_filter, 
+                                input$remove_string,
+                                input$selected_file,
+                                input$selected_node)
+        
+        list(edit_data = edit_data)
+    })
+    
+    output$edit_plot <- renderUI({
+       
+        req(edit_data())
+        
+        edit_data <- edit_data()$edit_data
         
         edit_plot <- plot_col(edit_data, 
                               "Edit_Distance",
@@ -473,7 +519,7 @@ shinyServer(function(input, output) {
         tagList({edit_out})
     })
     
-    output$percentidentity_plot <- renderUI({
+    percentidentity_data <- reactive({
         dat <- maltExtract_data()
         
         req(input$selected_filter)
@@ -485,10 +531,19 @@ shinyServer(function(input, output) {
         }
         
         percent_data <- clean_percentidentity(dat$percentIdentity, 
-                                    selected_filter, 
-                                    input$remove_string,
-                                    input$selected_file,
-                                    input$selected_node)
+                                              selected_filter, 
+                                              input$remove_string,
+                                              input$selected_file,
+                                              input$selected_node)
+        
+        list(percent_data = percent_data)
+    })
+    
+    output$percentidentity_plot <- renderUI({
+        
+        req(percentidentity_data())
+        
+        percent_data <- percentidentity_data()$percent_data
         
         perc_plot <- plot_col(percent_data, 
                               "Percent_Identity",
@@ -507,7 +562,7 @@ shinyServer(function(input, output) {
         tagList({percent_out})
     })
     
-    output$positionscovered_plot <- renderUI({
+    positionscovered_data <- reactive({
         dat <- maltExtract_data()
         
         req(input$selected_filter)
@@ -519,10 +574,20 @@ shinyServer(function(input, output) {
         }
         
         positionscov_data <- clean_positionscovered(dat$positionsCovered, 
-                                selected_filter, 
-                                input$remove_string,
-                                input$selected_file,
-                                input$selected_node)
+                                                    selected_filter, 
+                                                    input$remove_string,
+                                                    input$selected_file,
+                                                    input$selected_node)
+        
+        list(positionscov_data = positionscov_data)
+        
+    })
+    
+    output$positionscovered_plot <- renderUI({
+        
+        req(positionscovered_data())
+        positionscov_data <- positionscovered_data()$positionscov_data
+
         
         positionscov_plot <- plot_col(positionscov_data, 
                                       "Breadth",
@@ -541,7 +606,8 @@ shinyServer(function(input, output) {
         tagList({positionscov_out})
     })
     
-    output$coveragehist_plot <- renderUI({
+    
+    coveragehist_data <- reactive({
         dat <- maltExtract_data()
         
         req(input$selected_filter)
@@ -554,10 +620,18 @@ shinyServer(function(input, output) {
         }
         
         coveragehist_data <- clean_coveragehist(dat$coverageHist, 
-                                selected_filter, 
-                                input$remove_string,
-                                input$selected_file,
-                                input$selected_node)
+                                                selected_filter, 
+                                                input$remove_string,
+                                                input$selected_file,
+                                                input$selected_node)
+        
+        list(coveragehist_data = coveragehist_data)
+    })
+    
+    output$coveragehist_plot <- renderUI({
+        
+        req(coveragehist_data())
+        coveragehist_data <- coveragehist_data()$coveragehist_data
         
         coveragehist_plot <- plot_col(coveragehist_data, 
                                  "Fold_Coverage",
@@ -576,6 +650,128 @@ shinyServer(function(input, output) {
         tagList({coveragehist_out})
     })
     
+    ######## Download Single Sample Plot ###########
+    output$downloadPlot <- downloadHandler(
+        filename = function() {
+                    if (input$remove_string == "") {
+                       file_name <- input$selected_file
+                    } else {
+                        file_name <- input$selected_file %>% str_remove(input$remove_string)
+                    }
+            
+                    return(paste0("MExIPA", "-", file_name, "-", input$selected_node, '.pdf'))
+                  },
+        content = function(file) {
+            
+            # filterstats_data <- filterstats_data()$basicstats_data
+            damage_data <- damage_data()$damage_data
+            length_data <- length_data()$length_data
+            edit_data <- edit_data()$edit_data
+            percent_data <- percentidentity_data()$percent_data
+            positionscov_data <- positionscovered_data()$positionscov_data
+            coveragehist_data <- coveragehist_data()$coveragehist_data
+            
+            # filterstats_plot <- filterstats_data %>% 
+            #     select(Mode, Information, Value) %>% 
+            #     spread(Mode, Value) %>%
+            #     ggplot(filterstats_data, 
+            #            aes(y = Information,
+            #                x = Mode, 
+            #                label = Value)) +
+            #     geom_tile(colour = "darkgrey", fill = NA, size = 0.3) +
+            #     geom_text() +
+            #     scale_x_discrete(position = "top") +
+            #     theme_minimal() +
+            #     theme(panel.grid = element_blank())
+            
+            if (any(input$selected_filter == "all")) {
+                dam_plot <- plot_damage(damage_data %>% 
+                                            filter(Mode == "default"))
+            } else {
+                dam_plot <- plot_damage(damage_data)
+            }
+            
+            len_plot <- plot_col(length_data, 
+                                 "Length_Bin", 
+                                 "Alignment_Count",
+                                 "Read Length Bins (bp)",
+                                 "Alignments (n)")
+            
+            edit_plot <- plot_col(edit_data, 
+                                  "Edit_Distance",
+                                  "Alignment_Count",
+                                  "Edit Distance",
+                                  "Alignments (n)")
+            
+            
+            perc_plot <- plot_col(percent_data, 
+                                  "Percent_Identity",
+                                  "Alignment_Count",
+                                  "Sequence Identity (%)",
+                                  "Alignments (n)")
+            
+            positionscov_plot <- plot_col(positionscov_data, 
+                                          "Breadth",
+                                          "Percentage",
+                                          "Fold Coverage (X)",
+                                          "Percentage of Reference (%)")
+            
+            
+            coveragehist_plot <- plot_col(coveragehist_data, 
+                                          "Fold_Coverage",
+                                          "Base_Pairs",
+                                          "Fold Coverage (X)",
+                                          "Base Pairs (n)")
+            
+            
+            if (nrow(damage_data) == 0) {
+                damage_out <- "\nNo input data for this taxon in this sample!"
+            } else {
+                damage_out <- dam_plot
+            }
+            
+            if (nrow(length_data) == 0) {
+                length_out <- "\nNo input data for this taxon in this sample!"
+            } else {
+                length_out <- len_plot
+            }
+            
+            if (nrow(edit_data) == 0) {
+                edit_out <- "\nNo input data for this taxon in this sample!"
+            } else {
+                edit_out <- edit_plot
+            }
+            
+            if (nrow(percent_data) == 0) {
+                percent_out <- "\nNo input data for this taxon in this sample!"
+            } else {
+                percent_out <- perc_plot
+
+            }
+            
+            if (nrow( positionscov_data) == 0) {
+                positionscov_out <- "\nNo input data for this taxon in this sample!"
+            } else {
+                positionscov_out <- positionscov_plot
+            }
+            
+            if (nrow(coveragehist_data) == 0) {
+                coveragehist_out <- "\nNo input data for this taxon in this sample!"
+            } else {
+                coveragehist_out <- coveragehist_plot
+            }
+            
+            report <- damage_out + length_out + 
+                edit_out + percent_out + 
+                positionscov_out + coveragehist_out + plot_layout(ncol = 2)
+            
+            ggsave(file, plot = report, device = cairo_pdf, width = 210, height = 297, units = "mm")
+        }
+    )
+    
+    
+    ######## Multiple Sample Plot ##########
+
     ## 1) Make a list of all the data for each plot
     ## 2) Make placeholders for each plot's data listed in the list
     ## 3) For each entry in list, render the plot (observe executes immediately
@@ -660,7 +856,7 @@ shinyServer(function(input, output) {
     })
     
     
-    ##### Create divs######
+    ##### Create divs
     output$multisample_plots <- renderUI({
         
         ## make all the plot(ly) objects and place in a list

@@ -15,6 +15,7 @@ library(data.table)
 library(plotly)
 library(DT)
 library(shinycustomloader)
+library(shinyWidgets)
 
 
 # Define UI for application that draws a histogram
@@ -42,10 +43,13 @@ shinyUI(fluidPage(
             ),
             br(),
             h4("Single Sample Only"),
-            checkboxInput("interactive", 
-                          "Interactive Plots?", 
+            strong("Interactive"),
+            switchInput("interactive", 
+                          "", 
                           value = FALSE, 
-                          width = NULL),
+                          width = "auto"),
+            downloadButton('downloadPlot', 'Download PDF Report'),
+            br(),
             br(),
             h4("Multiple Samples Only"),
             selectInput("characteristic", "Characteristic",
@@ -56,8 +60,6 @@ shinyUI(fluidPage(
                              `Positions Covered` = "positionscovered",
                              `Depth Coverage` = "coveragehist"),
                         selected = "damage")
-            
-            
         ),
         
         # Show a plots
