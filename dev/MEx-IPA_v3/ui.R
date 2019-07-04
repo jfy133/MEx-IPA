@@ -42,7 +42,7 @@ shinyUI(fluidPage(
                       value = NULL
             ),
             br(),
-            h4("Single Sample Only"),
+            h4("Single Sample Options"),
             strong("Interactive"),
             switchInput("interactive", 
                           "", 
@@ -51,7 +51,7 @@ shinyUI(fluidPage(
             downloadButton('downloadPlot', 'Download PDF Report'),
             br(),
             br(),
-            h4("Multiple Samples Only"),
+            h4("Multiple Samples Options"),
             selectInput("characteristic", "Characteristic",
                         list(`DNA Damage` = "damage", 
                              `Read Length` = "length",
@@ -104,6 +104,14 @@ shinyUI(fluidPage(
                     br(),
                     p("May take a few moments to load. Samples with no input data for selected taxon will not be displayed. Check single sample plot for confirmation."),
                     withLoader(uiOutput("multisample_plots"), type = "html", loader = "dnaspin")
+                ),
+                tabPanel(
+                    title = "Multiple Taxa",
+                    br(),
+                    tags$b("Note"),
+                    br(),
+                    p("May take a few moments to load. Taxa with no input data for selected taxon will not be displayed. Check single sample plot for confirmation."),
+                    withLoader(uiOutput("multitaxa_plots"), type = "html", loader = "dnaspin")
                 )
             )
         )

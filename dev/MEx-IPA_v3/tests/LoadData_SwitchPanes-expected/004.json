@@ -1,0 +1,659 @@
+{
+  "input": {
+    "characteristic": "damage",
+    "characteristic-selectized": "",
+    "interactive": false,
+    "out350f58a08b596e22_cell_clicked": {
+
+    },
+    "out350f58a08b596e22_rows_all": null,
+    "out350f58a08b596e22_rows_current": null,
+    "out350f58a08b596e22_rows_selected": null,
+    "out350f58a08b596e22_search": "",
+    "out350f58a08b596e22_state": null,
+    "remove_string": "",
+    "select_dir": "/home/fellows/Documents/Scripts/shiny_web_apps/MEx-IPA/dev/test_data/output_dairymicrobes_archive",
+    "selected_file": "CTW001.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6",
+    "selected_file-selectized": "",
+    "selected_filter": "all",
+    "selected_filter-selectized": "",
+    "selected_node": "Debaryomyces_hansenii",
+    "selected_node-selectized": "",
+    "submit": 1
+  },
+  "output": {
+    "coveragehist_plot": {
+      "html": "<div id=\"outddbb571021688df2\" class=\"shiny-plot-output\" style=\"width: 100% ; height: 400px\"><\/div>",
+      "deps": [
+
+      ]
+    },
+    "damage_plot": {
+      "html": "<div id=\"outa61768933121a71c\" class=\"shiny-plot-output\" style=\"width: 100% ; height: 400px\"><\/div>",
+      "deps": [
+
+      ]
+    },
+    "edit_plot": {
+      "html": "<div id=\"outbda09cc63dd6d5b3\" class=\"shiny-plot-output\" style=\"width: 100% ; height: 400px\"><\/div>",
+      "deps": [
+
+      ]
+    },
+    "file_options": {
+      "html": "<div class=\"form-group shiny-input-container\">\n  <label class=\"control-label\" for=\"selected_file\">Choose Sample:<\/label>\n  <div>\n    <select id=\"selected_file\"><option value=\"CTW001.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6\" selected>CTW001.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6<\/option>\n<option value=\"CTW002.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6\">CTW002.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6<\/option>\n<option value=\"CTW002.B0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6\">CTW002.B0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6<\/option>\n<option value=\"CTW003.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6\">CTW003.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6<\/option>\n<option value=\"CTW004.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6\">CTW004.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6<\/option>\n<option value=\"CTW005.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6\">CTW005.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6<\/option>\n<option value=\"CTW006.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6\">CTW006.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6<\/option>\n<option value=\"CTW006.B0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6\">CTW006.B0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6<\/option><\/select>\n    <script type=\"application/json\" data-for=\"selected_file\" data-nonempty=\"\">{}<\/script>\n  <\/div>\n<\/div>",
+      "deps": [
+        {
+          "name": "selectize",
+          "version": "0.11.2",
+          "src": {
+            "href": "shared/selectize"
+          },
+          "meta": null,
+          "script": null,
+          "stylesheet": "css/selectize.bootstrap3.css",
+          "head": "<!--[if lt IE 9]>\n<script src=\"shared/selectize/js/es5-shim.min.js\"><\/script>\n<![endif]-->\n<script src=\"shared/selectize/js/selectize.min.js\"><\/script>",
+          "attachment": null,
+          "package": null,
+          "all_files": true
+        }
+      ]
+    },
+    "filter_options": {
+      "html": "<div class=\"form-group shiny-input-container\">\n  <label class=\"control-label\" for=\"selected_filter\">Choose Filter:<\/label>\n  <div>\n    <select id=\"selected_filter\"><option value=\"all\" selected>all<\/option>\n<option value=\"default\">default<\/option>\n<option value=\"ancient\">ancient<\/option><\/select>\n    <script type=\"application/json\" data-for=\"selected_filter\" data-nonempty=\"\">{}<\/script>\n  <\/div>\n<\/div>",
+      "deps": [
+        {
+          "name": "selectize",
+          "version": "0.11.2",
+          "src": {
+            "href": "shared/selectize"
+          },
+          "meta": null,
+          "script": null,
+          "stylesheet": "css/selectize.bootstrap3.css",
+          "head": "<!--[if lt IE 9]>\n<script src=\"shared/selectize/js/es5-shim.min.js\"><\/script>\n<![endif]-->\n<script src=\"shared/selectize/js/selectize.min.js\"><\/script>",
+          "attachment": null,
+          "package": null,
+          "all_files": true
+        }
+      ]
+    },
+    "filterstats_plot": {
+      "html": "<div id=\"out350f58a08b596e22\" style=\"width:100%; height:auto; \" class=\"datatables html-widget html-widget-output\"><\/div>",
+      "deps": [
+        {
+          "name": "htmlwidgets",
+          "version": "1.3",
+          "src": {
+            "href": "htmlwidgets-1.3"
+          },
+          "meta": null,
+          "script": "htmlwidgets.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": true
+        },
+        {
+          "name": "jquery",
+          "version": "1.12.4",
+          "src": {
+            "href": "jquery-1.12.4"
+          },
+          "meta": null,
+          "script": "jquery.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": true
+        },
+        {
+          "name": "datatables-css",
+          "version": "0.0.0",
+          "src": {
+            "href": "datatables-css-0.0.0"
+          },
+          "meta": null,
+          "script": null,
+          "stylesheet": "datatables-crosstalk.css",
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": true
+        },
+        {
+          "name": "datatables-binding",
+          "version": "0.6",
+          "src": {
+            "href": "datatables-binding-0.6"
+          },
+          "meta": null,
+          "script": "datatables.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "crosstalk",
+          "version": "1.0.0",
+          "src": {
+            "href": "crosstalk-1.0.0"
+          },
+          "meta": null,
+          "script": "js/crosstalk.min.js",
+          "stylesheet": "css/crosstalk.css",
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": true
+        }
+      ]
+    },
+    "length_plot": {
+      "html": "<div id=\"out2dc019f6b19e1332\" class=\"shiny-plot-output\" style=\"width: 100% ; height: 400px\"><\/div>",
+      "deps": [
+
+      ]
+    },
+    "node_options": {
+      "html": "<div class=\"form-group shiny-input-container\">\n  <label class=\"control-label\" for=\"selected_node\">Choose Taxon:<\/label>\n  <div>\n    <select id=\"selected_node\"><option value=\"Debaryomyces_hansenii\" selected>Debaryomyces_hansenii<\/option>\n<option value=\"Enterococcus_casseliflavus\">Enterococcus_casseliflavus<\/option>\n<option value=\"Enterococcus_casseliflavus_EC20\">Enterococcus_casseliflavus_EC20<\/option>\n<option value=\"Enterococcus_durans\">Enterococcus_durans<\/option>\n<option value=\"Enterococcus_faecalis\">Enterococcus_faecalis<\/option>\n<option value=\"Enterococcus_faecalis_V583\">Enterococcus_faecalis_V583<\/option>\n<option value=\"Enterococcus_faecium\">Enterococcus_faecium<\/option>\n<option value=\"Enterococcus_faecium_T110\">Enterococcus_faecium_T110<\/option>\n<option value=\"Enterococcus_gallinarum\">Enterococcus_gallinarum<\/option>\n<option value=\"Enterococcus_hirae\">Enterococcus_hirae<\/option>\n<option value=\"Escherichia_coli\">Escherichia_coli<\/option>\n<option value=\"Geotrichum_candidum\">Geotrichum_candidum<\/option>\n<option value=\"Kluyveromyces_marxianus\">Kluyveromyces_marxianus<\/option>\n<option value=\"Lactobacillus_acidophilus\">Lactobacillus_acidophilus<\/option>\n<option value=\"Lactobacillus_amylovorus\">Lactobacillus_amylovorus<\/option>\n<option value=\"Lactobacillus_brevis\">Lactobacillus_brevis<\/option>\n<option value=\"Lactobacillus_buchneri\">Lactobacillus_buchneri<\/option>\n<option value=\"Lactobacillus_casei\">Lactobacillus_casei<\/option>\n<option value=\"Lactobacillus_coryniformis\">Lactobacillus_coryniformis<\/option>\n<option value=\"Lactobacillus_crispatus\">Lactobacillus_crispatus<\/option>\n<option value=\"Lactobacillus_delbrueckii\">Lactobacillus_delbrueckii<\/option>\n<option value=\"Lactobacillus_farciminis\">Lactobacillus_farciminis<\/option>\n<option value=\"Lactobacillus_fermentum\">Lactobacillus_fermentum<\/option>\n<option value=\"Lactobacillus_gallinarum\">Lactobacillus_gallinarum<\/option>\n<option value=\"Lactobacillus_gasseri\">Lactobacillus_gasseri<\/option>\n<option value=\"Lactobacillus_helveticus\">Lactobacillus_helveticus<\/option>\n<option value=\"Lactobacillus_hilgardii\">Lactobacillus_hilgardii<\/option>\n<option value=\"Lactobacillus_johnsonii\">Lactobacillus_johnsonii<\/option>\n<option value=\"Lactobacillus_kefiranofaciens\">Lactobacillus_kefiranofaciens<\/option>\n<option value=\"Lactobacillus_kefiri\">Lactobacillus_kefiri<\/option>\n<option value=\"Lactobacillus_paracasei\">Lactobacillus_paracasei<\/option>\n<option value=\"Lactobacillus_paraplantarum\">Lactobacillus_paraplantarum<\/option>\n<option value=\"Lactobacillus_pentosus\">Lactobacillus_pentosus<\/option>\n<option value=\"Lactobacillus_plantarum\">Lactobacillus_plantarum<\/option>\n<option value=\"Lactobacillus_reuteri\">Lactobacillus_reuteri<\/option>\n<option value=\"Lactobacillus_ruminis\">Lactobacillus_ruminis<\/option>\n<option value=\"Lactobacillus_ruminis_ATCC_27782\">Lactobacillus_ruminis_ATCC_27782<\/option>\n<option value=\"Lactobacillus_sanfranciscensis\">Lactobacillus_sanfranciscensis<\/option>\n<option value=\"Lactobacillus_sanfranciscensis_TMW_1.1304\">Lactobacillus_sanfranciscensis_TMW_1.1304<\/option>\n<option value=\"Lactococcus_garvieae\">Lactococcus_garvieae<\/option>\n<option value=\"Lactococcus_garvieae_ATCC_49156\">Lactococcus_garvieae_ATCC_49156<\/option>\n<option value=\"Lactococcus_plantarum\">Lactococcus_plantarum<\/option>\n<option value=\"Lactococcus_raffinolactis\">Lactococcus_raffinolactis<\/option>\n<option value=\"Leclercia_adecarboxylata\">Leclercia_adecarboxylata<\/option>\n<option value=\"Leuconostoc_carnosum\">Leuconostoc_carnosum<\/option>\n<option value=\"Leuconostoc_carnosum_JB16\">Leuconostoc_carnosum_JB16<\/option>\n<option value=\"Leuconostoc_fallax\">Leuconostoc_fallax<\/option>\n<option value=\"Leuconostoc_garlicum\">Leuconostoc_garlicum<\/option>\n<option value=\"Leuconostoc_lactis\">Leuconostoc_lactis<\/option>\n<option value=\"Leuconostoc_mesenteroides\">Leuconostoc_mesenteroides<\/option>\n<option value=\"Leuconostoc_mesenteroides_subsp._mesenteroides\">Leuconostoc_mesenteroides_subsp._mesenteroides<\/option>\n<option value=\"Leuconostoc_pseudomesenteroides\">Leuconostoc_pseudomesenteroides<\/option>\n<option value=\"Pediococcus_acidilactici\">Pediococcus_acidilactici<\/option>\n<option value=\"Saccharomyces_cerevisiae\">Saccharomyces_cerevisiae<\/option>\n<option value=\"Staphylococcus_aureus\">Staphylococcus_aureus<\/option>\n<option value=\"Staphylococcus_aureus_subsp._aureus\">Staphylococcus_aureus_subsp._aureus<\/option>\n<option value=\"Staphylococcus_aureus_subsp._aureus_ST398\">Staphylococcus_aureus_subsp._aureus_ST398<\/option>\n<option value=\"Staphylococcus_epidermidis\">Staphylococcus_epidermidis<\/option>\n<option value=\"Staphylococcus_equorum\">Staphylococcus_equorum<\/option>\n<option value=\"Staphylococcus_haemolyticus\">Staphylococcus_haemolyticus<\/option>\n<option value=\"Staphylococcus_haemolyticus_JCSC1435\">Staphylococcus_haemolyticus_JCSC1435<\/option>\n<option value=\"Staphylococcus_hyicus\">Staphylococcus_hyicus<\/option>\n<option value=\"Staphylococcus_lentus\">Staphylococcus_lentus<\/option>\n<option value=\"Staphylococcus_saprophyticus\">Staphylococcus_saprophyticus<\/option>\n<option value=\"Staphylococcus_xylosus\">Staphylococcus_xylosus<\/option>\n<option value=\"Streptococcus_thermophilus\">Streptococcus_thermophilus<\/option>\n<option value=\"Weissella_kandleri\">Weissella_kandleri<\/option>\n<option value=\"Weissella_paramesenteroides\">Weissella_paramesenteroides<\/option>\n<option value=\"Yarrowia_lipolytica\">Yarrowia_lipolytica<\/option><\/select>\n    <script type=\"application/json\" data-for=\"selected_node\" data-nonempty=\"\">{}<\/script>\n  <\/div>\n<\/div>",
+      "deps": [
+        {
+          "name": "selectize",
+          "version": "0.11.2",
+          "src": {
+            "href": "shared/selectize"
+          },
+          "meta": null,
+          "script": null,
+          "stylesheet": "css/selectize.bootstrap3.css",
+          "head": "<!--[if lt IE 9]>\n<script src=\"shared/selectize/js/es5-shim.min.js\"><\/script>\n<![endif]-->\n<script src=\"shared/selectize/js/selectize.min.js\"><\/script>",
+          "attachment": null,
+          "package": null,
+          "all_files": true
+        }
+      ]
+    },
+    "out2dc019f6b19e1332": {
+      "src": "[image data sha1: 0d9fd948ba86b20ca264a5e6a0ab95c9ee7225c2]",
+      "width": 331,
+      "height": 400,
+      "coordmap": {
+        "panels": [
+          {
+            "panel": 1,
+            "row": 1,
+            "col": 1,
+            "panel_vars": {
+              "panelvar1": "Debaryomyces_hansenii",
+              "panelvar2": "CTW001.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": 13.775,
+              "right": 211.225,
+              "bottom": -0.05,
+              "top": 0.05
+            },
+            "mapping": {
+              "fill": "Mode",
+              "x": "Length_Bin",
+              "y": "Alignment_Count",
+              "panelvar1": "Node",
+              "panelvar2": "File"
+            },
+            "range": {
+              "left": 49.1506849315068,
+              "right": 252.843287671233,
+              "bottom": 365.849315068493,
+              "top": 40.4383561643836
+            }
+          }
+        ],
+        "dims": {
+          "width": 331,
+          "height": 400
+        }
+      }
+    },
+    "out350f58a08b596e22": {
+      "x": {
+        "filter": "none",
+        "extensions": [
+          "Buttons"
+        ],
+        "container": "<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Information<\/th>\n      <th>default<\/th>\n      <th>ancient<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>",
+        "options": {
+          "dom": "Bfrtip",
+          "buttons": [
+            "copy",
+            {
+              "extend": "collection",
+              "filename": "no",
+              "buttons": [
+                "csv",
+                "excel",
+                "pdf"
+              ],
+              "text": "Download"
+            }
+          ],
+          "order": [
+
+          ],
+          "autoWidth": false,
+          "orderClasses": false,
+          "columnDefs": [
+            {
+              "orderable": false,
+              "targets": 0
+            }
+          ],
+          "ajax": {
+            "type": "POST",
+            "data": "function(d) {\nd.search.caseInsensitive = true;\nd.search.smart = true;\nd.escape = true;\nvar encodeAmp = function(x) { x.value = x.value.replace(/&/g, \"%26\"); }\nencodeAmp(d.search);\n$.each(d.columns, function(i, v) {encodeAmp(v.search);});\n}"
+          },
+          "serverSide": true,
+          "processing": true
+        },
+        "selection": {
+          "mode": "multiple",
+          "selected": null,
+          "target": "row"
+        }
+      },
+      "evals": [
+        "options.ajax.data"
+      ],
+      "jsHooks": [
+
+      ],
+      "deps": [
+        {
+          "name": "dt-core",
+          "version": "1.10.16",
+          "src": {
+            "href": "dt-core-1.10.16"
+          },
+          "meta": null,
+          "script": "js/jquery.dataTables.min.js",
+          "stylesheet": [
+            "css/jquery.dataTables.min.css",
+            "css/jquery.dataTables.extra.css"
+          ],
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "jszip",
+          "version": "1.10.16",
+          "src": {
+            "href": "jszip-1.10.16"
+          },
+          "meta": null,
+          "script": "jszip.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "pdfmake",
+          "version": "1.10.16",
+          "src": {
+            "href": "pdfmake-1.10.16"
+          },
+          "meta": null,
+          "script": [
+            "pdfmake.min.js",
+            "vfs_fonts.js"
+          ],
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "dt-ext-buttons",
+          "version": "1.10.16",
+          "src": {
+            "href": "dt-ext-buttons-1.10.16"
+          },
+          "meta": null,
+          "script": [
+            "js/dataTables.buttons.min.js",
+            "js/buttons.flash.min.js",
+            "js/buttons.html5.min.js",
+            "js/buttons.colVis.min.js",
+            "js/buttons.print.min.js"
+          ],
+          "stylesheet": "css/buttons.dataTables.min.css",
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "jquery",
+          "version": "1.11.3",
+          "src": {
+            "href": "jquery-1.11.3"
+          },
+          "meta": null,
+          "script": "jquery.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": true
+        },
+        {
+          "name": "crosstalk",
+          "version": "1.0.0",
+          "src": {
+            "href": "crosstalk-1.0.0"
+          },
+          "meta": null,
+          "script": "js/crosstalk.min.js",
+          "stylesheet": "css/crosstalk.css",
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": true
+        }
+      ]
+    },
+    "out6607b5ec2263fdc7": {
+      "src": "[image data sha1: ea6acfe7c69fe7dccac3d9c1b2e7acecea8c948b]",
+      "width": 331,
+      "height": 400,
+      "coordmap": {
+        "panels": [
+          {
+            "panel": 1,
+            "row": 1,
+            "col": 1,
+            "panel_vars": {
+              "panelvar1": "Debaryomyces_hansenii",
+              "panelvar2": "CTW001.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": 0.4,
+              "right": 5.6,
+              "bottom": -0.05,
+              "top": 0.05
+            },
+            "mapping": {
+              "fill": "Mode",
+              "x": "Percent_Identity",
+              "y": "Alignment_Count",
+              "panelvar1": "Node",
+              "panelvar2": "File"
+            },
+            "range": {
+              "left": 49.1506849315068,
+              "right": 252.843287671233,
+              "bottom": 365.849315068493,
+              "top": 40.4383561643836
+            }
+          }
+        ],
+        "dims": {
+          "width": 331,
+          "height": 400
+        }
+      }
+    },
+    "out91ed72367f1e9a65": {
+      "src": "[image data sha1: 14713edc4b5a9399973840a82a0e60706a881870]",
+      "width": 331,
+      "height": 400,
+      "coordmap": {
+        "panels": [
+          {
+            "panel": 1,
+            "row": 1,
+            "col": 1,
+            "panel_vars": {
+              "panelvar1": "Debaryomyces_hansenii",
+              "panelvar2": "CTW001.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": 0.305,
+              "right": 5.695,
+              "bottom": -0.05,
+              "top": 0.05
+            },
+            "mapping": {
+              "fill": "Mode",
+              "x": "Breadth",
+              "y": "Percentage",
+              "panelvar1": "Node",
+              "panelvar2": "File"
+            },
+            "range": {
+              "left": 49.1506849315068,
+              "right": 252.843287671233,
+              "bottom": 365.849315068493,
+              "top": 40.4383561643836
+            }
+          }
+        ],
+        "dims": {
+          "width": 331,
+          "height": 400
+        }
+      }
+    },
+    "outa61768933121a71c": {
+      "src": "[image data sha1: 94581d73d46c21945ada2eaf3007fc801deb92cb]",
+      "width": 331,
+      "height": 400,
+      "coordmap": {
+        "panels": [
+          {
+            "panel": 1,
+            "row": 1,
+            "col": 1,
+            "panel_vars": {
+              "panelvar1": "5 prime",
+              "panelvar2": "CTW001.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": 0.4,
+              "right": 10.6,
+              "bottom": -0.05,
+              "top": 0.05
+            },
+            "mapping": {
+              "x": "Position",
+              "y": "Frequency",
+              "colour": "Mismatch",
+              "group": "Mismatch",
+              "panelvar1": "Strand",
+              "panelvar2": "File"
+            },
+            "range": {
+              "left": 49.1506849315068,
+              "right": 123.257260273973,
+              "bottom": 365.849315068493,
+              "top": 59.2054794520548
+            }
+          },
+          {
+            "panel": 2,
+            "row": 1,
+            "col": 2,
+            "panel_vars": {
+              "panelvar1": "3 prime",
+              "panelvar2": "CTW001.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": 0.4,
+              "right": 10.6,
+              "bottom": -0.05,
+              "top": 0.05
+            },
+            "mapping": {
+              "x": "Position",
+              "y": "Frequency",
+              "colour": "Mismatch",
+              "group": "Mismatch",
+              "panelvar1": "Strand",
+              "panelvar2": "File"
+            },
+            "range": {
+              "left": 128.736712328767,
+              "right": 202.843287671233,
+              "bottom": 365.849315068493,
+              "top": 59.2054794520548
+            }
+          }
+        ],
+        "dims": {
+          "width": 331,
+          "height": 400
+        }
+      }
+    },
+    "outbda09cc63dd6d5b3": {
+      "src": "[image data sha1: c1c4ca7d6b2f79b41830e2325db25fc5403ae0a1]",
+      "width": 331,
+      "height": 400,
+      "coordmap": {
+        "panels": [
+          {
+            "panel": 1,
+            "row": 1,
+            "col": 1,
+            "panel_vars": {
+              "panelvar1": "Debaryomyces_hansenii",
+              "panelvar2": "CTW001.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": 0.4,
+              "right": 12.6,
+              "bottom": -0.05,
+              "top": 0.05
+            },
+            "mapping": {
+              "fill": "Mode",
+              "x": "Edit_Distance",
+              "y": "Alignment_Count",
+              "panelvar1": "Node",
+              "panelvar2": "File"
+            },
+            "range": {
+              "left": 49.1506849315068,
+              "right": 252.843287671233,
+              "bottom": 365.849315068493,
+              "top": 40.4383561643836
+            }
+          }
+        ],
+        "dims": {
+          "width": 331,
+          "height": 400
+        }
+      }
+    },
+    "outddbb571021688df2": {
+      "src": "[image data sha1: a47182a05e1eb135e3312283efe973da404167ae]",
+      "width": 331,
+      "height": 400,
+      "coordmap": {
+        "panels": [
+          {
+            "panel": 1,
+            "row": 1,
+            "col": 1,
+            "panel_vars": {
+              "panelvar1": "Debaryomyces_hansenii",
+              "panelvar2": "CTW001.A0101.SG1.1_S0_L001_R1_001.fastq.combined.fq.prefixed.extractunmapped.bam.rma6"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": 0.4,
+              "right": 11.6,
+              "bottom": -0.05,
+              "top": 0.05
+            },
+            "mapping": {
+              "fill": "Mode",
+              "x": "Fold_Coverage",
+              "y": "Base_Pairs",
+              "panelvar1": "Node",
+              "panelvar2": "File"
+            },
+            "range": {
+              "left": 49.1506849315068,
+              "right": 252.843287671233,
+              "bottom": 365.849315068493,
+              "top": 40.4383561643836
+            }
+          }
+        ],
+        "dims": {
+          "width": 331,
+          "height": 400
+        }
+      }
+    },
+    "percentidentity_plot": {
+      "html": "<div id=\"out6607b5ec2263fdc7\" class=\"shiny-plot-output\" style=\"width: 100% ; height: 400px\"><\/div>",
+      "deps": [
+
+      ]
+    },
+    "positionscovered_plot": {
+      "html": "<div id=\"out91ed72367f1e9a65\" class=\"shiny-plot-output\" style=\"width: 100% ; height: 400px\"><\/div>",
+      "deps": [
+
+      ]
+    },
+    "report_dir": "Detected maltExtract data!",
+    "run_button": {
+      "html": "<button id=\"submit\" type=\"button\" class=\"btn btn-default action-button\">Load data<\/button>",
+      "deps": [
+
+      ]
+    }
+  },
+  "export": {
+
+  }
+}
