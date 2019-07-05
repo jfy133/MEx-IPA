@@ -157,8 +157,7 @@ plot_damage <- function(x){
         ylab("Frequency of Mismatch") +
         facet_grid(File ~ Strand, scales = "free_x")  + 
         scale_colour_manual(values = mismatch_colours) +
-        theme_minimal() +
-        theme(strip.text.y = element_blank())
+        theme_minimal()
 }
 
 plot_col <- function(dat, xaxis, yaxis, xlabel, ylabel) {
@@ -171,8 +170,7 @@ plot_col <- function(dat, xaxis, yaxis, xlabel, ylabel) {
         ylab(ylabel) +
         facet_wrap(File ~ Node, scales = "free_x")  + 
         scale_fill_manual(values = mode_colours) + 
-        theme_minimal() +
-          theme(strip.text = element_blank())
+        theme_minimal()
 }
 
 
@@ -550,7 +548,7 @@ shinyServer(function(input, output) {
         } else if (input$interactive) {
             damage_out <- renderPlotly({dam_plot})
         } else if (!input$interactive) {
-            damage_out <- renderPlot({dam_plot})
+            damage_out <- renderPlot({dam_plot + theme(strip.text.y = element_blank())})
         }
         
         
@@ -580,7 +578,7 @@ shinyServer(function(input, output) {
         } else if (input$interactive) {
             length_out <- renderPlotly({len_plot})
         } else if (!input$interactive) {
-            length_out <- renderPlot({len_plot})
+            length_out <- renderPlot({len_plot + theme(strip.text = element_blank())})
         }
         
         tagList({length_out})
@@ -632,7 +630,7 @@ shinyServer(function(input, output) {
         } else if (input$interactive) {
             percent_out <- renderPlotly({perc_plot})
         } else if (!input$interactive) {
-            percent_out <- renderPlot({perc_plot})
+            percent_out <- renderPlot({perc_plot + theme(strip.text = element_blank())})
         }
         
         tagList({percent_out})
@@ -659,7 +657,7 @@ shinyServer(function(input, output) {
         } else if (input$interactive) {
             positionscov_out <- renderPlotly({positionscov_plot})
         } else if (!input$interactive) {
-            positionscov_out <- renderPlot({positionscov_plot})
+            positionscov_out <- renderPlot({positionscov_plot + theme(strip.text = element_blank())})
         }
         
         tagList({positionscov_out})
@@ -683,7 +681,7 @@ shinyServer(function(input, output) {
         } else if (input$interactive) {
             coveragehist_out <- renderPlotly({coveragehist_plot})
         } else if (!input$interactive) {
-            coveragehist_out <- renderPlot({coveragehist_plot})
+            coveragehist_out <- renderPlot({coveragehist_plot + theme(strip.text = element_blank())})
         }
         
         tagList({coveragehist_out})
@@ -779,7 +777,8 @@ shinyServer(function(input, output) {
                 dam_plot <- plot_damage(damage_data %>% 
                                             filter(Mode == "default"))
             } else {
-                dam_plot <- plot_damage(damage_data)
+                dam_plot <- plot_damage(damage_data  + 
+                                          theme(strip.text.y = element_blank()))
             }
             
             len_plot <- plot_col(length_data, 
@@ -971,7 +970,8 @@ shinyServer(function(input, output) {
                 cat("\nMultiple sample plot: loading", i)
                 output[[i]] <- renderPlot({
                     if (input$characteristic == "damage") {
-                        plot_damage(plotInput()$total_data[[i]])
+                        plot_damage(plotInput()$total_data[[i]]) + 
+                        theme(strip.text.y = element_blank())
                     } else if (input$characteristic == "length") {
                         plot_col(plotInput()$total_data[[i]],
                                  "Length_Bin", 
@@ -1110,7 +1110,8 @@ shinyServer(function(input, output) {
         cat("\nMultiple taxa plot: loading", i)
         output[[i]] <- renderPlot({
           if (input$characteristic == "damage") {
-            plot_damage(plotInput2()$total_data[[i]])
+            plot_damage(plotInput2()$total_data[[i]])  + 
+              theme(strip.text.y = element_blank())
           } else if (input$characteristic == "length") {
             plot_col(plotInput2()$total_data[[i]],
                      "Length_Bin", 
