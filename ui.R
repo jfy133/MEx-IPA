@@ -54,6 +54,9 @@ shinyUI(fluidPage(
         mainPanel(
             tabsetPanel(
                 type = "tabs",
+                tabPanel(title = "Documentation",
+                         includeMarkdown("docs/documentation.md")
+                         ),
                 tabPanel(
                     title = "Single Sample",
                     fluidRow(
