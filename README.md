@@ -2,7 +2,7 @@
 
 **M**(alt)**Ex**(tract)-**I**(nteractive)**P**(lotting)A(pp)
 
-Interactive viewer of MALT-Extract results. 
+Interactive viewer of MALT-Extract results. Written by James A. Fellows Yates.
 
 [MaltExtract](https://github.com/rhuebler/MaltExtract) is a part of the [HOPS pipeline](https://github.com/rhuebler/HOPS) ([Huebler et al. 2019 bioRxiv](https://doi.org/10.1101/534198)).
 It extracts various metrics of from alignments as stored
@@ -96,7 +96,6 @@ specific alignment counts for that position or bin.
 > NB: If you have a very large MaltExtract results run, plots may take a 
 > long time to display - particularly on the multi-plot panels.
 
-
 5) You can download the summary stats table in a range of tabular formats 
 using the 'Download Table' button above the table.
 
@@ -138,7 +137,11 @@ Huson, D. H. et al. MEGAN Community Edition - Interactive Exploration and Analys
 
 ## Change Log
 
+**0.4.1**
+  * New rewrite with dynamically generate plots and an option for interactive plots
+
 **0.4**
   * New rewrite with dynamically generate plots and an option for interactive plots
 
-<0.4 - Experimental alpha versions
+**<0.4** 
+  * Experimental alpha versions
