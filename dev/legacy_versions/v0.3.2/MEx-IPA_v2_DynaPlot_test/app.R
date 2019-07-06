@@ -69,18 +69,18 @@ clean_damage <- function(x) {
                         remove_string,
                         x,
                         selected_node) %>%
-    gather(Mismatch, Frequency, 6:(ncol(.) - 1)) %>%
-    separate(Mismatch, c("Mismatch", "Position"), "_") %>%
-    mutate(Strand = if_else(Mismatch %in% c("C>T", 
-                                            "D>V(11Substitution)"),
-                            "5 prime", 
-                            "3 prime"),
-           Strand = factor(Strand, levels = c("5 prime", "3 prime")),
-           Position = if_else(Position %in% names(damage_xaxis), 
-                              damage_xaxis[Position], 
-                              Position),
-           Position = as_factor(Position)
-    )
+        gather(Mismatch, Frequency, 6:(ncol(.) - 1)) %>%
+        separate(Mismatch, c("Mismatch", "Position"), "_") %>%
+        mutate(Strand = if_else(Mismatch %in% c("C>T", 
+                                                "D>V(11Substitution)"),
+                                "5 prime", 
+                                "3 prime"),
+               Strand = factor(Strand, levels = c("5 prime", "3 prime")),
+               Position = if_else(Position %in% names(damage_xaxis), 
+                                  damage_xaxis[Position], 
+                                  Position),
+               Position = as_factor(Position)
+        )
 }
 
 clean_length <- function(x) {
@@ -108,7 +108,7 @@ plot_damage <- function(x){
 }
 
 plot_col <- function(dat, xaxis, yaxis, xlabel, ylabel) {
-
+    
     ggplot(dat, aes_string(xaxis, yaxis, fill = "Mode")) +
         geom_col() +
         xlab(xlabel) +
@@ -168,10 +168,10 @@ damage_data_comparison <- filter_module_files(damageMismatch,
     )
 
 length_data_comparison <- filter_module_files(readLengthDist, 
-                                   selected_filter, 
-                                   remove_string,
-                                   file_names,
-                                   selected_node) %>%
+                                              selected_filter, 
+                                              remove_string,
+                                              file_names,
+                                              selected_node) %>%
     gather(Length_Bin, Alignment_Count, 6:ncol(.)) %>%
     mutate(Length_Bin = str_replace_all(Length_Bin, "bp", ""),
            Length_Bin = as.numeric(Length_Bin))
@@ -185,7 +185,7 @@ ui <- fluidPage(
 
 # Define server logic required to draw a histogram
 server <- function(input, output) {
-
+    
     ## 1) Make a list of all the data for each plot
     ## 2) Make placeholders for each plot's data listed in the list
     ## 3) For each entry in list, render the plot (observe executes immediately
@@ -220,15 +220,15 @@ server <- function(input, output) {
         
         ## make all the plot(ly) objects and place in a list
         if (interactive) {
-        plot_output_list <- lapply(plotInput()$n_plot, function(i) {
-            plotname <- i
-            column(6, plotlyOutput(plotname))
-        })   
+            plot_output_list <- lapply(plotInput()$n_plot, function(i) {
+                plotname <- i
+                column(6, plotlyOutput(plotname))
+            })   
         } else {
-        plot_output_list <- lapply(plotInput()$n_plot, function(i) {
-            plotname <- i
-            column(6, plotOutput(plotname))
-        })   
+            plot_output_list <- lapply(plotInput()$n_plot, function(i) {
+                plotname <- i
+                column(6, plotOutput(plotname))
+            })   
         }
         ## create the HTML objects that correspond to the plotly objects
         do.call(tagList, plot_output_list)
@@ -237,33 +237,33 @@ server <- function(input, output) {
     ## Mointor for changes in plotInput object (which is data generation above)
     observe({
         if (interactive) {
-        lapply(plotInput()$n_plot, function(i){
-            output[[i]] <- renderPlotly({
-                if (statistic == "damage") {
-                    plot_damage(plotInput()$total_data[[i]])
-                } else if (statistic == "length") {
-                    plot_col(plotInput()$total_data[[i]],
-                             "Length_Bin", 
-                             "Alignment_Count",
-                             "Read Length Bins (bp)",
-                             "Alignments (n)")
-                }
+            lapply(plotInput()$n_plot, function(i){
+                output[[i]] <- renderPlotly({
+                    if (statistic == "damage") {
+                        plot_damage(plotInput()$total_data[[i]])
+                    } else if (statistic == "length") {
+                        plot_col(plotInput()$total_data[[i]],
+                                 "Length_Bin", 
+                                 "Alignment_Count",
+                                 "Read Length Bins (bp)",
+                                 "Alignments (n)")
+                    }
+                })
             })
-        })
         } else {
-        lapply(plotInput()$n_plot, function(i){
-            output[[i]] <- renderPlot({
-                if (statistic == "damage") {
-                    plot_damage(plotInput()$total_data[[i]])
-                } else if (statistic == "length") {
-                    plot_col(plotInput()$total_data[[i]],
-                             "Length_Bin", 
-                             "Alignment_Count",
-                             "Read Length Bins (bp)",
-                             "Alignments (n)")
-                }
+            lapply(plotInput()$n_plot, function(i){
+                output[[i]] <- renderPlot({
+                    if (statistic == "damage") {
+                        plot_damage(plotInput()$total_data[[i]])
+                    } else if (statistic == "length") {
+                        plot_col(plotInput()$total_data[[i]],
+                                 "Length_Bin", 
+                                 "Alignment_Count",
+                                 "Read Length Bins (bp)",
+                                 "Alignments (n)")
+                    }
+                })
             })
-        })
         }
     })
 }
