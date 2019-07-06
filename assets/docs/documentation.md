@@ -2,7 +2,7 @@
 
 **M**(alt)**Ex**(tract)-**I**(nteractive)**P**(lotting)A(pp)
 
-Interactive viewer of MALT-Extract results. Written by James A. Fellows Yates.
+Interactive viewer of MaltExtract results. Written by James A. Fellows Yates.
 
 [MaltExtract](https://github.com/rhuebler/MaltExtract) is a part of the [HOPS pipeline](https://github.com/rhuebler/HOPS) ([Huebler et al. 2019 bioRxiv](https://doi.org/10.1101/534198)).
 It extracts various metrics of from alignments as stored
