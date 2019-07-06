@@ -319,6 +319,11 @@ shinyServer(function(input, output) {
         
         req(input$selected_filter)
         
+        cat("\nSingle Sample: Loading filter stats data for", 
+            input$selected_node ,
+            "from", 
+            input$selected_file)
+        
         if (input$selected_filter == "all") {
             selected_filter <- c("default", "ancient")
         } else {
@@ -348,7 +353,10 @@ shinyServer(function(input, output) {
       
       req(input$selected_filter)
       
-      cat("\nSingle Sample: Loading ", input$selected_node ,"damage data for", input$selected_file)
+      cat("\nSingle Sample: Loading damage data for", 
+          input$selected_node ,
+          "from", 
+          input$selected_file)
       
       if (input$selected_filter == "all") {
         selected_filter <- c("default", "ancient")
@@ -370,7 +378,10 @@ shinyServer(function(input, output) {
       
       req(input$selected_filter)
       
-      cat("\nSingle Sample: Loading ", input$selected_node ,"length data for", input$selected_file)
+      cat("\nSingle Sample: Loading length data for", 
+          input$selected_node ,
+          "from", 
+          input$selected_file)
       
       if (input$selected_filter == "all") {
         selected_filter <- c("default", "ancient")
@@ -392,7 +403,10 @@ shinyServer(function(input, output) {
       
       req(input$selected_filter)
       
-      cat("\nSingle Sample: Loading ", input$selected_node ,"edit distance data for", input$selected_file)
+      cat("\nSingle Sample: Loading edit distance data for", 
+          input$selected_node ,
+          "from", 
+          input$selected_file)
       
       if (input$selected_filter == "all") {
         selected_filter <- c("default", "ancient")
@@ -414,7 +428,10 @@ shinyServer(function(input, output) {
       
       req(input$selected_filter)
       
-      cat("\nSingle Sample: Loading ", input$selected_node ,"percent identity data for", input$selected_file)
+      cat("\nSingle Sample: Loading percent identity data for", 
+          input$selected_node ,
+          "from", 
+          input$selected_file)
       
       if (input$selected_filter == "all") {
         selected_filter <- c("default", "ancient")
@@ -436,7 +453,10 @@ shinyServer(function(input, output) {
       
       req(input$selected_filter)
       
-      cat("\nSingle Sample: Loading ", input$selected_node ,"breadth coverage data for", input$selected_file)
+      cat("\nSingle Sample: Loading breadth coverage data for", 
+          input$selected_node ,
+          "from", 
+          input$selected_file)
       
       if (input$selected_filter == "all") {
         selected_filter <- c("default", "ancient")
@@ -459,7 +479,10 @@ shinyServer(function(input, output) {
       
       req(input$selected_filter)
       
-      cat("\nSingle Sample: Loading ", input$selected_node ,"depth coverage data for", input$selected_file)
+        cat("\nSingle Sample: Loading depth coverage data for", 
+            input$selected_node ,
+            "from", 
+            input$selected_file)
       
       if (input$selected_filter == "all") {
         selected_filter <- c("default", "ancient")
@@ -483,7 +506,10 @@ shinyServer(function(input, output) {
           
             req(filterstats_data())
       
-            cat("\nSingle Sample: Plotting", input$selected_node ,"stats table for", input$selected_file)
+            cat("\nSingle Sample: Plotting filter statistics plot for", 
+                input$selected_node ,
+                "from", 
+                input$selected_file)
       
       
             basicstats_data <- filterstats_data()$basicstats_data
@@ -532,8 +558,10 @@ shinyServer(function(input, output) {
     output$damage_plot <- renderUI({
         
         req(damage_data())
-       cat("\nSingle Sample: Plotting", input$selected_node ,"damage plot for", input$selected_file)
-      
+      cat("\nSingle Sample: Plotting depth coverage plot for", 
+          input$selected_node ,
+          "from", 
+          input$selected_file)
         damage_data <- damage_data()$damage_data
         
         if (any(input$selected_filter == "all")) {
@@ -562,8 +590,10 @@ shinyServer(function(input, output) {
         
         req(length_data())
       
-        cat("\nSingle Sample: Plotting", input$selected_node ,"length plot for", input$selected_file)
-      
+        cat("\nSingle Sample: Plotting length plot for", 
+            input$selected_node ,
+            "from", 
+            input$selected_file)
       
         length_data <- length_data()$length_data
         
@@ -589,7 +619,10 @@ shinyServer(function(input, output) {
     output$edit_plot <- renderUI({
        
         req(edit_data())
-        cat("\nSingle Sample: Plotting", input$selected_node ,"edit distantance plot for", input$selected_file)
+         cat("\nSingle Sample: Plotting edit distance plot for", 
+          input$selected_node ,
+          "from", 
+          input$selected_file)
       
         edit_data <- edit_data()$edit_data
         
@@ -615,7 +648,10 @@ shinyServer(function(input, output) {
     output$percentidentity_plot <- renderUI({
         
         req(percentidentity_data())
-         cat("\nSingle Sample: Plotting", input$selected_node ,"percent identity plot for", input$selected_file)
+      cat("\nSingle Sample: Plotting percent identity plot for", 
+          input$selected_node ,
+          "from", 
+          input$selected_file)
       
         percent_data <- percentidentity_data()$percent_data
         
@@ -641,7 +677,10 @@ shinyServer(function(input, output) {
     output$positionscovered_plot <- renderUI({
         
         req(positionscovered_data())
-       cat("\nSingle Sample: Plotting", input$selected_node ,"breadth coverage plot for", input$selected_file)
+      cat("\nSingle Sample: Plotting breadth coverage plot for", 
+          input$selected_node ,
+          "from", 
+          input$selected_file)
       
         positionscov_data <- positionscovered_data()$positionscov_data
 
@@ -667,7 +706,10 @@ shinyServer(function(input, output) {
     
     output$coveragehist_plot <- renderUI({
         req(coveragehist_data())
-        cat("\nSingle Sample: Plotting", input$selected_node ,"depth coverage plot for", input$selected_file)
+        cat("\nSingle Sample: Plotting depth coverage plot for", 
+            input$selected_node ,
+            "from", 
+            input$selected_file)
         coveragehist_data <- coveragehist_data()$coveragehist_data
         
         coveragehist_plot <- plot_col(coveragehist_data, 
@@ -785,33 +827,38 @@ shinyServer(function(input, output) {
                                  "Length_Bin", 
                                  "Alignment_Count",
                                  "Read Length Bins (bp)",
-                                 "Alignments (n)")
+                                 "Alignments (n)") + 
+              theme(strip.text = element_blank())
             
             edit_plot <- plot_col(edit_data, 
                                   "Edit_Distance",
                                   "Alignment_Count",
                                   "Edit Distance",
-                                  "Alignments (n)")
+                                  "Alignments (n)") + 
+              theme(strip.text = element_blank())
             
             
             perc_plot <- plot_col(percent_data, 
                                   "Percent_Identity",
                                   "Alignment_Count",
                                   "Sequence Identity (%)",
-                                  "Alignments (n)")
+                                  "Alignments (n)") + 
+              theme(strip.text = element_blank())
             
             positionscov_plot <- plot_col(positionscov_data, 
                                           "Breadth",
                                           "Percentage",
                                           "Fold Coverage (X)",
-                                          "Percentage of Reference (%)")
+                                          "Percentage of Reference (%)") + 
+              theme(strip.text = element_blank())
             
             
             coveragehist_plot <- plot_col(coveragehist_data, 
                                           "Fold_Coverage",
                                           "Base_Pairs",
                                           "Fold Coverage (X)",
-                                          "Base Pairs (n)")
+                                          "Base Pairs (n)") + 
+              theme(strip.text = element_blank())
             
             if (nrow(basicstats_data) == 0) {
                 filterstats_out <- nodata_message
@@ -878,6 +925,7 @@ shinyServer(function(input, output) {
         dat <- maltExtract_data()
         
         req(input$selected_filter)
+        cat("\nMultiple sample plot: Loading data for all samples with", input$selected_node)
         
         if (input$selected_filter == "all" & input$characteristic != "damage") {
             selected_filter <- c("default", "ancient")
@@ -955,6 +1003,7 @@ shinyServer(function(input, output) {
         
         ## make all the plot(ly) objects and place in a list
             plot_output_list <- lapply(plotInput()$n_plot, function(i) {
+                cat("\nMultiple taxa plot: Allocating plot slot for", i)
                 plotname <- i
                 column(6, plotOutput(plotname))
             })   
@@ -967,7 +1016,7 @@ shinyServer(function(input, output) {
     observe({
             lapply(plotInput()$n_plot, function(i){
               
-                cat("\nMultiple sample plot: loading", i)
+                cat("\nMultiple sample plot: Generating plot for", i)
                 output[[i]] <- renderPlot({
                     if (input$characteristic == "damage") {
                         plot_damage(plotInput()$total_data[[i]]) + 
@@ -977,38 +1026,43 @@ shinyServer(function(input, output) {
                                  "Length_Bin", 
                                  "Alignment_Count",
                                  "Read Length Bins (bp)",
-                                 "Alignments (n)")
+                                 "Alignments (n)") + 
+                        theme(strip.text = element_blank())
                     } else if (input$characteristic == "edit") {
                         plot_col(plotInput()$total_data[[i]],
                                  "Edit_Distance",
                                  "Alignment_Count",
                                  "Edit Distance",
-                                 "Alignments (n)")
+                                 "Alignments (n)") + 
+                        theme(strip.text = element_blank())
                     } else if (input$characteristic == "percentidentity") {
                         plot_col(plotInput()$total_data[[i]],
                                  "Percent_Identity",
                                  "Alignment_Count",
                                  "Sequence Identity (%)",
-                                 "Alignments (n)")
+                                 "Alignments (n)") + 
+                        theme(strip.text = element_blank())
                     } else if (input$characteristic == "positionscovered") {
                         plot_col(plotInput()$total_data[[i]],
                                  "Breadth",
                                  "Percentage",
                                  "Fold Coverage (X)",
-                                 "Percentage of Reference (%)")
+                                 "Percentage of Reference (%)") + 
+                        theme(strip.text = element_blank())
                     } else if (input$characteristic == "coveragehist") {
                         plot_col(plotInput()$total_data[[i]],
                                  "Fold_Coverage",
                                  "Base_Pairs",
                                  "Fold Coverage (X)",
-                                 "Base Pairs (n)")
+                                 "Base Pairs (n)") + 
+                        theme(strip.text = element_blank())
                     }
                 })
             })
         
     })
     
-    ######## Multiple Sample Plot ##########
+    ######## Multiple Taxa Plot ##########
     
     ## 1) Make a list of all the data for each plot
     ## 2) Make placeholders for each plot's data listed in the list
@@ -1021,6 +1075,7 @@ shinyServer(function(input, output) {
       dat <- maltExtract_data()
       
       req(input$selected_filter)
+      cat("\nMultiple taxa plot: Loading data for all species of ", input$selected_file)
       
       if (input$selected_filter == "all" & input$characteristic != "damage") {
         selected_filter <- c("default", "ancient")
@@ -1095,7 +1150,7 @@ shinyServer(function(input, output) {
       
       ## make all the plot(ly) objects and place in a list
       plot_output_list <- lapply(plotInput2()$n_plot, function(i) {
-        cat("\nMultiple taxa plot: generating plot for", i)
+        cat("\nMultiple taxa plot: Allocating plot slot for", i)
         plotname <- i
         column(6, plotOutput(plotname))
       })   
@@ -1107,7 +1162,7 @@ shinyServer(function(input, output) {
     ## Mointor for changes in plotInput object (which is data generation above)
     observe({
       lapply(plotInput2()$n_plot, function(i){
-        cat("\nMultiple taxa plot: loading", i)
+        cat("\nMultiple taxa plot: Generating plot for", i)
         output[[i]] <- renderPlot({
           if (input$characteristic == "damage") {
             plot_damage(plotInput2()$total_data[[i]])  + 
@@ -1117,31 +1172,36 @@ shinyServer(function(input, output) {
                      "Length_Bin", 
                      "Alignment_Count",
                      "Read Length Bins (bp)",
-                     "Alignments (n)")
+                     "Alignments (n)")  + 
+              theme(strip.text = element_blank())
           } else if (input$characteristic == "edit") {
             plot_col(plotInput2()$total_data[[i]],
                      "Edit_Distance",
                      "Alignment_Count",
                      "Edit Distance",
-                     "Alignments (n)")
+                     "Alignments (n)") + 
+              theme(strip.text = element_blank())
           } else if (input$characteristic == "percentidentity") {
             plot_col(plotInput2()$total_data[[i]],
                      "Percent_Identity",
                      "Alignment_Count",
                      "Sequence Identity (%)",
-                     "Alignments (n)")
+                     "Alignments (n)") + 
+              theme(strip.text = element_blank())
           } else if (input$characteristic == "positionscovered") {
             plot_col(plotInput2()$total_data[[i]],
                      "Breadth",
                      "Percentage",
                      "Fold Coverage (X)",
-                     "Percentage of Reference (%)")
+                     "Percentage of Reference (%)") + 
+              theme(strip.text = element_blank())
           } else if (input$characteristic == "coveragehist") {
             plot_col(plotInput2()$total_data[[i]],
                      "Fold_Coverage",
                      "Base_Pairs",
                      "Fold Coverage (X)",
-                     "Base Pairs (n)")
+                     "Base Pairs (n)") + 
+              theme(strip.text = element_blank())
           }
         })
       })
