@@ -70,7 +70,7 @@ Once installed there are two methods of running the app.
 R -e "shiny::runApp('/<path>/<to>/MEx-IPA')"
 ```
 
-![How to run in a Terminal](assets/images/02-rstudio_instructions.png)
+![How to run in a Terminal](assets/images/02-terminal_instructions.png)
 
 and then go to the IP address given once loaded in your internet browser.
 
