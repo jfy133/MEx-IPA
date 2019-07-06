@@ -1,13 +1,4 @@
-#
-# This is the server logic of a Shiny web application. You can run the
-# application by clicking 'Run App' above.
-#
-# Find out more about building applications with Shiny here:
-#
-#    http://shiny.rstudio.com/
-#
-
-######## VERSION 0.4 #################
+######## MEx-IPA VERSION 0.4 #################
 
 library(shiny)
 library(tidyverse)
@@ -259,9 +250,9 @@ shinyServer(function(input, output) {
         input_dir <- paste0(input$select_dir,"/")
         
         if (!file.exists(paste0(input_dir, "default/RunSummary.txt"))) {
-            paste("Detected maltExtract not data. Check input directory.")
+            paste("Detected MaltExtract not data. Check input directory.")
         } else {
-            paste("Detected maltExtract data!")
+            paste("Detected MaltExtract data!")
         }
         
     })
@@ -544,7 +535,7 @@ shinyServer(function(input, output) {
                                 extend = 'collection',
                                 filename = 'no',
                                 buttons = c('csv', 'excel', 'pdf'),
-                                text = 'Download'
+                                text = 'Download Table'
                             ))
                     
                     )

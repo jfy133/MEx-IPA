@@ -1,13 +1,4 @@
-#
-# This is the user-interface definition of a Shiny web application. You can
-# run the application by clicking 'Run App' above.
-#
-# Find out more about building applications with Shiny here:
-#
-#    http://shiny.rstudio.com/
-#
-
-######## VERSION 3.3 #################
+######## MEx-IPA VERSION 0.4 #################
 
 library(shiny)
 library(DT)
@@ -15,10 +6,10 @@ library(shinycustomloader)
 library(shinyWidgets)
 
 
-# Define UI for application that draws a histogram
+# Define UI for application 
 shinyUI(fluidPage(
     # Application title
-    titlePanel("MEx-IPA (MALT-Extract Interactive Plotting Application)"),
+    titlePanel("MEx-IPA (MaltExtract Interactive Plotting Application)"),
     
     # Sidebar with options
     sidebarLayout(
