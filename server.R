@@ -628,7 +628,7 @@ shinyServer(function(input, output) {
         } else if (input$interactive) {
             edit_out <- renderPlotly({edit_plot})
         } else if (!input$interactive) {
-            edit_out <- renderPlot({edit_plot})
+            edit_out <- renderPlot({edit_plot + theme(strip.text = element_blank())})
         }
         
         tagList({edit_out})

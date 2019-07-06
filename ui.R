@@ -98,7 +98,7 @@ shinyUI(fluidPage(
                     br(),
                     tags$b("Note"),
                     br(),
-                    p("May take a few moments to load. Taxa with no input data for selected taxon will not be displayed. Check single sample plot for confirmation."),
+                    p("May take a few moments to load. Taxa with no input data for selected sample will not be displayed. Check single sample plot for confirmation."),
                     withLoader(uiOutput("multitaxa_plots"), type = "html", loader = "dnaspin")
                 ),
                 tabPanel(title = "Documentation",
