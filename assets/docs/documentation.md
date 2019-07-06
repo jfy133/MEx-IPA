@@ -34,7 +34,7 @@ samples or taxa of interest from large datasets.
 the RunSummary.txt file is found in this directory, the 'Run Visualisation' 
 button will appear.
 
-> The app must be running on an a machine that is able to access your 
+> NB: The app must be running on an a machine that is able to access your 
 > MaltExtract results directory via a directory path e.g. as listed 
 > in from your file explorer or terminal. It does not take remote URLs.
 
@@ -66,7 +66,7 @@ of a given plot.
 
 This can be because it takes a long time to render the plots - particularly
 when you are displaying many plots at once or if loading the data
-from a remote server into your own computer. Be patient.
+from a remote server into your own computer.
 
 ### What is the difference between the 'everything at 0' plots and the 'No Input data found' messages
 
