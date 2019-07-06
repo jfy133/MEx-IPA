@@ -70,8 +70,9 @@ from a remote server into your own computer.
 
 ### What is the difference between the 'everything at 0' plots and the 'No Input data found' messages
 
-This is something to do with the way MaltExtract saves results. The both 
-essentially mean the same thing: there are no alignments to that specific node.
+This is something to do with the way MaltExtract saves results. Both 
+essentially mean the same thing: there are no alignments to that specific node
+in that sample.
 
 ### Why is the interactive plots a bit ugly with titles and axis labels?
 The `plotly` package is unfortunately not fully compatible with all `ggplot` 
