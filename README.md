@@ -5,11 +5,11 @@
 Interactive viewer of MaltExtract results. Written by James A. Fellows Yates.
 
 ##### Table of Contents  
-[Description](#description)  
-[Installation](#installation)
-[Running](#running)
-[FAQs](#faqs)
-[Change Log](#change-log)
+ * [Description](#description)  
+ * [Installation](#installation)
+ * [Running](#running)
+ * [FAQs](#faqs)
+ * [Change Log](#change-log)
 
 ## Description
 [MaltExtract](https://github.com/rhuebler/MaltExtract) is a part of the [HOPS pipeline](https://github.com/rhuebler/HOPS) ([Huebler et al. 2019 bioRxiv](https://doi.org/10.1101/534198)).
