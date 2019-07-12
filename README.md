@@ -4,6 +4,14 @@
 
 Interactive viewer of MaltExtract results. Written by James A. Fellows Yates.
 
+##### Table of Contents  
+[Description](#description)  
+[Installation](#installation)
+[Running](#running)
+[FAQs](#faqs)
+[Change Log](#change-log)
+
+## Description
 [MaltExtract](https://github.com/rhuebler/MaltExtract) is a part of the [HOPS pipeline](https://github.com/rhuebler/HOPS) ([Huebler et al. 2019 bioRxiv](https://doi.org/10.1101/534198)).
 It extracts various metrics of from alignments as stored
 in MEGAN6 ([Huson et al. 2016 PloS Comp. Bio.](https://doi.org/10.1371/journal.pcbi.1004957)) RMA6 files.
@@ -30,7 +38,7 @@ samples or taxa of interest from large datasets.
 
 ![Example display of MEx-IPA](assets/images/01-MExIPA_example.png)
 
-## Preparation
+## Installation
 This shiny app has been tested on `R` version 3.6, and requires the following 
 packages:
 
