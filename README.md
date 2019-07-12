@@ -9,6 +9,7 @@ Interactive viewer of MaltExtract results. Written by James A. Fellows Yates.
  * [Installation](#installation)
  * [Running](#running)
  * [FAQs](#faqs)
+ * [References](#references)
  * [Change Log](#change-log)
 
 ## Description
@@ -82,7 +83,7 @@ R -e "shiny::runApp('/<path>/<to>/MEx-IPA')"
 
 and then go to the IP address given once loaded in your internet browser.
 
-2 ) Alternatively, you can use Rstudio to load either the `server.R` or `ui.R` 
+2) Alternatively, you can use Rstudio to load either the `server.R` or `ui.R` 
 file, and press the 'Run App' button in the top right hand corner of the 
 code pane.
 
@@ -94,7 +95,9 @@ code pane.
 
 3) Type or copy and paste the path to your MaltExtract results directory. Once
 the RunSummary.txt file is found in this directory, the 'Run Visualisation' 
-button will appear.
+button will appear. You can try this with some test data from Weyrich et al. 
+(2017) and Velsko et al. (2019) in this repository under 
+`dev/test_data/maltExtract_v1.5_Weyrich2017Velsko2019/` 
 
 4) Customise the display based on the options on the left. Remove from
 file name allows you to remove a given string (e.g. file suffix) from the
@@ -139,9 +142,13 @@ statistics of each characteristic. All report downloads are
 
 ## References
 
-Huebler, R. et al. HOPS: Automated detection and authentication of pathogen DNA in archaeological remains. bioRxiv 534198 (2019). doi:10.1101/53419
+Huebler, R. et al. HOPS: Automated detection and authentication of pathogen DNA in archaeological remains. bioRxiv 534198 (2019). doi:[10.1101/53419](http://dx.doi.org/10.1101/534198)
 
-Huson, D. H. et al. MEGAN Community Edition - Interactive Exploration and Analysis of Large-Scale Microbiome Sequencing Data. PLoS Comput. Biol. 12, e1004957 (2016).
+Huson, D. H. et al. MEGAN Community Edition - Interactive Exploration and Analysis of Large-Scale Microbiome Sequencing Data. PLoS Comput. Biol. 12, e1004957 (2016). doi:[10.1371/journal.pcbi.1004957](http://dx.doi.org/10.1371/journal.pcbi.1004957)
+
+Velsko, I. M. et al. Microbial differences between dental plaque and historic dental calculus are related to oral biofilm maturation stage. Microbiome 7, 102 (2019). doi:[10.1186/s40168-019-0717-3](http://dx.doi.org/10.1186/s40168-019-0717-3)
+
+Weyrich, L. S. et al. Neanderthal behaviour, diet, and disease inferred from ancient DNA in dental calculus. Nature 544, 357–361 (2017). doi:[10.1038/nature21674](http://dx.doi.org/10.1038/nature21674)
 
 ## Change Log
 
