@@ -1,0 +1,2 @@
+Node	CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6	CS21_S0_L001_R1_001.sorted.bam.unmapped.rma6	CS22_S0_L001_R1_001.sorted.bam.unmapped.rma6	CS23_S0_L001_R1_001.sorted.bam.unmapped.rma6	ELSIDRON1_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6	ELSIDRON2_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6	SPYNEW_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6	SPYOLD_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+Total_Count	6356860	6113698	5168132	9941445	6062611	7575915	539997	1635460

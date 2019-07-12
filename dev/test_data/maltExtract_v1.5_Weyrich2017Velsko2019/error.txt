@@ -1,0 +1,930 @@
+Jul 12, 2019 5:48:55 PM RMAExtractor.RMAExtractor main
+SEVERE: Candidatus Saccharibacteria oral TM7 has no assigned taxID and cannot be processed! Consider checking for a error in filepath if you provided a taxon file as input
+Jul 12, 2019 5:48:55 PM RMAExtractor.RMAExtractor main
+SEVERE: Peptosctreptococcus has no assigned taxID and cannot be processed! Consider checking for a error in filepath if you provided a taxon file as input
+Jul 12, 2019 5:49:03 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Fretibacteriumhas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:49:03 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Fretibacteriumhas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:49:04 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Treponema_brennaborensehas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:49:04 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Treponema_brennaborensehas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:49:04 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Treponema_brennaborensehas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:49:05 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Porphyromonas_asaccharolytica_DSM_20707has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:49:05 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Porphyromonas_asaccharolytica_DSM_20707has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:49:05 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Treponema_brennaborensehas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:49:05 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Treponema_brennaborensehas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:49:06 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Porphyromonas_asaccharolytica_DSM_20707has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:49:06 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Ovis_canadensis_canadensishas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:49:06 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Ovis_canadensis_canadensishas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:49:10 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Porphyromonas_asaccharolytica_DSM_20707has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:49:14 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Tannerella_forsythia_92A2has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:49:14 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Tannerella_forsythia_92A2has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:49:14 PM RMA6TaxonProcessor.NodeProcessor process
+WARNING: TaxID: Pinus not assigned in File CS21_S0_L001_R1_001.sorted.bam.unmapped.rma6
+
+Jul 12, 2019 5:49:16 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Tannerella_forsythia_92A2has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:49:16 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Tannerella_forsythia_92A2has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:49:16 PM RMA6TaxonProcessor.NodeProcessor process
+WARNING: TaxID: Pinus not assigned in File CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6
+
+Jul 12, 2019 5:49:16 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Tannerella_forsythia_92A2has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:49:17 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Methanobrevibacter_olleyaehas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:49:17 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Methanobrevibacter_olleyaehas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:49:17 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Tannerella_forsythia_92A2has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:49:17 PM RMA6TaxonProcessor.NodeProcessor process
+WARNING: TaxID: Pinus not assigned in File CS22_S0_L001_R1_001.sorted.bam.unmapped.rma6
+
+Jul 12, 2019 5:49:18 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Methanobrevibacter_ruminantium_M1has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:49:18 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Methanobrevibacter_ruminantium_M1has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:49:18 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Eubacterium_limosum_KIST612has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:49:18 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Eubacterium_limosum_KIST612has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:49:19 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Methanobrevibacter_olleyaehas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:49:19 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Methanobrevibacter_olleyaehas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:49:19 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Eubacterium_limosum_KIST612has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:49:19 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Eubacterium_limosum_KIST612has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:49:19 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Treponema_denticola_ATCC_33520has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:49:23 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Tannerella_sp._oral_taxon_HOT-286has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:49:23 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Tannerella_sp._oral_taxon_HOT-286has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:49:23 PM RMA6TaxonProcessor.NodeProcessor process
+WARNING: TaxID: Physcomitrella not assigned in File CS21_S0_L001_R1_001.sorted.bam.unmapped.rma6
+
+Jul 12, 2019 5:49:26 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Tannerella_forsythia_92A2has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:49:26 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Methanobrevibacter_olleyaehas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:49:26 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Methanobrevibacter_olleyaehas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:49:27 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Tannerella_forsythia_92A2has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:49:27 PM RMA6TaxonProcessor.NodeProcessor process
+WARNING: TaxID: Pinus not assigned in File CS23_S0_L001_R1_001.sorted.bam.unmapped.rma6
+
+Jul 12, 2019 5:49:27 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Tannerella_sp._oral_taxon_HOT-286has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:49:27 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Treponema_denticola_ATCC_33521has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:49:27 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Eubacterium_limosum_KIST612has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:49:27 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Methanobrevibacter_smithii_ATCC_35061has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:49:27 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Tannerella_sp._oral_taxon_HOT-286has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:49:27 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Methanobrevibacter_smithii_ATCC_35061has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:49:28 PM RMA6TaxonProcessor.NodeProcessor process
+WARNING: TaxID: Physcomitrella not assigned in File CS22_S0_L001_R1_001.sorted.bam.unmapped.rma6
+
+Jul 12, 2019 5:49:28 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Methanobrevibacter_olleyaehas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:49:28 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Methanobrevibacter_olleyaehas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:49:28 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Eubacterium_sp._oral_clone_23-90has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:49:28 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Eubacterium_sp._oral_clone_23-90has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:49:28 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Treponema_denticola_ATCC_33520has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:49:28 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Treponema_denticola_ATCC_33520has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:49:28 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: environmental_samples_<Eubacterium>has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:49:28 PM RMA6TaxonProcessor.NodeProcessor process
+WARNING: TaxID: Malassezia not assigned in File CS21_S0_L001_R1_001.sorted.bam.unmapped.rma6
+
+Jul 12, 2019 5:49:28 PM RMA6TaxonProcessor.NodeProcessor process
+WARNING: TaxID: Phaeosphaeria not assigned in File CS21_S0_L001_R1_001.sorted.bam.unmapped.rma6
+
+Jul 12, 2019 5:49:29 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Treponema_denticola_ATCC_33520has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:49:32 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Methanobrevibacter_smithii_ATCC_35061has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:49:32 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Methanobrevibacter_smithii_ATCC_35061has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:49:32 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: environmental_samples_<Eubacterium>has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:49:32 PM RMA6TaxonProcessor.NodeProcessor process
+WARNING: TaxID: Malassezia not assigned in File CS22_S0_L001_R1_001.sorted.bam.unmapped.rma6
+
+Jul 12, 2019 5:49:32 PM RMA6TaxonProcessor.NodeProcessor process
+WARNING: TaxID: Phaeosphaeria not assigned in File CS22_S0_L001_R1_001.sorted.bam.unmapped.rma6
+
+Jul 12, 2019 5:49:33 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Treponemahas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:49:33 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Treponemahas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:49:34 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Tannerella_sp._oral_taxon_HOT-286has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:49:34 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Tannerella_sp._oral_taxon_HOT-286has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:49:34 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Treponema_denticolahas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:49:34 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Treponema_denticolahas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:49:34 PM RMA6TaxonProcessor.NodeProcessor process
+WARNING: TaxID: Physcomitrella not assigned in File CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6
+
+Jul 12, 2019 5:49:34 PM RMA6TaxonProcessor.NodeProcessor process
+WARNING: TaxID: Ixodes not assigned in File CS21_S0_L001_R1_001.sorted.bam.unmapped.rma6
+
+Jul 12, 2019 5:49:35 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Methanobrevibacter_oralishas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:49:35 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Methanobrevibacter_oralishas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:49:36 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Tannerella_sp._oral_taxon_HOT-286has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:49:36 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Tannerella_sp._oral_taxon_HOT-286has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:49:36 PM RMA6TaxonProcessor.NodeProcessor process
+WARNING: TaxID: Physcomitrella not assigned in File CS23_S0_L001_R1_001.sorted.bam.unmapped.rma6
+
+Jul 12, 2019 5:49:37 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Methanobrevibacter_smithii_ATCC_35061has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:49:39 PM RMA6TaxonProcessor.NodeProcessor process
+WARNING: TaxID: Malassezia not assigned in File CS23_S0_L001_R1_001.sorted.bam.unmapped.rma6
+
+Jul 12, 2019 5:49:39 PM RMA6TaxonProcessor.NodeProcessor process
+WARNING: TaxID: Phaeosphaeria not assigned in File CS23_S0_L001_R1_001.sorted.bam.unmapped.rma6
+
+Jul 12, 2019 5:49:40 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Treponemahas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:49:41 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Treponemahas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:49:41 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Methanobrevibacter_smithii_ATCC_35061has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:49:41 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Methanobrevibacter_smithii_ATCC_35061has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:49:41 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: environmental_samples_<Eubacterium>has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:49:41 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: environmental_samples_<Eubacterium>has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:49:41 PM RMA6TaxonProcessor.NodeProcessor process
+WARNING: TaxID: Malassezia not assigned in File CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6
+
+Jul 12, 2019 5:49:41 PM RMA6TaxonProcessor.NodeProcessor process
+WARNING: TaxID: Phaeosphaeria not assigned in File CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6
+
+Jul 12, 2019 5:49:43 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Fretibacterium_fastidiosumhas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:49:43 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Fretibacterium_fastidiosumhas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:49:43 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Methanobrevibacter_sp._D5has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:49:44 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Treponema_denticolahas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:49:44 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Treponema_denticolahas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:49:44 PM RMA6TaxonProcessor.NodeProcessor process
+WARNING: TaxID: Ixodes not assigned in File CS22_S0_L001_R1_001.sorted.bam.unmapped.rma6
+
+Jul 12, 2019 5:49:45 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Treponema_pallidumhas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:49:46 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Treponemahas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:49:46 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Treponemahas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:49:47 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Methanobrevibacter_oralishas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:49:47 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Methanobrevibacter_oralishas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:49:48 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: [Eubacterium]_eligens_ATCC_27750has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:49:49 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Treponema_denticolahas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:49:49 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Treponema_denticolahas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:49:50 PM RMA6TaxonProcessor.NodeProcessor process
+WARNING: TaxID: Ixodes not assigned in File CS23_S0_L001_R1_001.sorted.bam.unmapped.rma6
+
+Jul 12, 2019 5:49:50 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Tannerella_forsythia_KS16has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:49:50 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Tannerella_forsythia_KS16has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:49:50 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Treponema_lecithinolyticumhas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:49:50 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Treponema_lecithinolyticumhas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:49:51 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Methanobrevibacter_oralishas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:49:51 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Methanobrevibacter_oralishas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:49:52 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Treponemahas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:49:52 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Treponemahas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:49:56 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Fretibacterium_fastidiosumhas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:49:56 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Fretibacterium_fastidiosumhas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:49:57 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Treponema_denticolahas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:49:57 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Tannerella_forsythia_3313has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:49:57 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Treponema_denticolahas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:49:57 PM RMA6TaxonProcessor.NodeProcessor process
+WARNING: TaxID: Ixodes not assigned in File CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6
+
+Jul 12, 2019 5:49:57 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Tannerella_forsythia_3313has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:49:58 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Treponema_pallidumhas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:49:58 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Fretibacterium_fastidiosumhas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:49:58 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Fretibacterium_fastidiosumhas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:49:58 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Porphyromonas_gingivalis_TDC60has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:49:58 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Porphyromonas_gingivalis_TDC60has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:49:59 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Porphyromonas_gingivalis_W83has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:49:59 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Porphyromonas_gingivalis_W83has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:49:59 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Eubacterium_sp._oral_clone_FX028has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:49:59 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Eubacteriumhas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:49:59 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Eubacteriumhas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:49:59 PM RMA6TaxonProcessor.NodeProcessor process
+WARNING: TaxID: Enterocytozoon not assigned in File CS21_S0_L001_R1_001.sorted.bam.unmapped.rma6
+
+Jul 12, 2019 5:49:59 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Porphyromonashas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:50:00 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Methanobrevibacter_oralishas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:50:00 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Methanobrevibacter_oralishas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:50:00 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Treponema_caldariumhas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:50:03 PM RMA6TaxonProcessor.NodeProcessor process
+WARNING: For Fretibacterium_fastidiosum in file CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6 downsampling was turned on
+Jul 12, 2019 5:50:03 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Tannerella_forsythia_KS16has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:50:04 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Tannerella_forsythia_KS16has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:50:04 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Treponema_lecithinolyticumhas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:50:04 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Tannerella_forsythia_KS16has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:50:05 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Tannerella_forsythia_KS16has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:50:08 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Tannerella_forsythia_3313has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:50:09 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Tannerella_forsythia_3313has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:50:10 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Fretibacterium_fastidiosumhas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:50:10 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Fretibacterium_fastidiosumhas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:50:10 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Porphyromonas_gingivalis_TDC60has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:50:10 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Porphyromonas_gingivalis_TDC60has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:50:11 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Porphyromonas_gingivalis_W83has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:50:11 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Porphyromonas_gingivalis_W83has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:50:12 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Eubacteriumhas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:50:12 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Eubacteriumhas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:50:12 PM RMA6TaxonProcessor.NodeProcessor process
+WARNING: TaxID: Enterocytozoon not assigned in File CS23_S0_L001_R1_001.sorted.bam.unmapped.rma6
+
+Jul 12, 2019 5:50:13 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Tannerella_forsythia_3313has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:50:13 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Tannerella_forsythia_3313has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:50:13 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Treponema_socranskiihas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:50:15 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Porphyromonas_gingivalis_TDC60has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:50:15 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Porphyromonas_gingivalis_TDC60has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:50:16 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Porphyromonas_gingivalis_W83has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:50:16 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Porphyromonas_gingivalis_W83has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:50:17 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Eubacterium_sp._oral_clone_FX028has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:50:17 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Eubacterium_sp._oral_clone_FX028has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:50:17 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Eubacteriumhas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:50:17 PM RMA6TaxonProcessor.NodeProcessor process
+WARNING: TaxID: Enterocytozoon not assigned in File CS22_S0_L001_R1_001.sorted.bam.unmapped.rma6
+
+Jul 12, 2019 5:50:17 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: uncultured_Eubacterium_sp.has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:50:17 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Porphyromonashas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:50:18 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Tannerella_forsythia_KS16has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:50:18 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Tannerella_forsythia_KS16has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:50:18 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Treponema_lecithinolyticumhas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:50:21 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Porphyromonas_gingivalishas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:50:21 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Porphyromonas_gingivalishas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:50:21 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Eubacterium_limosumhas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:50:21 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Eubacterium_limosumhas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:50:25 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Tannerella_forsythia_3313has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:50:26 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Tannerella_forsythia_3313has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:50:26 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Treponema_socranskiihas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:50:26 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Treponema_socranskiihas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:50:27 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Treponema_denticola_ATCC_35405has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:50:28 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Treponema_denticola_ATCC_35405has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:50:28 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Methanobrevibacter_sp._AbM4has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:50:28 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Porphyromonas_gingivalis_ATCC_33277has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:50:28 PM RMA6TaxonProcessor.NodeProcessor process
+WARNING: TaxID: Ceratotherium not assigned in File CS21_S0_L001_R1_001.sorted.bam.unmapped.rma6
+
+Jul 12, 2019 5:50:28 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Propionibacteriumhas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:50:29 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Propionibacterium_freudenreichiihas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:50:29 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Propionibacterium_freudenreichiihas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:50:30 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Porphyromonas_gingivalishas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:50:30 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Porphyromonas_gingivalishas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:50:32 PM RMA6TaxonProcessor.NodeProcessor process
+WARNING: For Tannerella_forsythia in file CS21_S0_L001_R1_001.sorted.bam.unmapped.rma6 downsampling was turned on
+Jul 12, 2019 5:50:33 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Porphyromonas_gingivalis_TDC60has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:50:33 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Porphyromonas_gingivalis_TDC60has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:50:34 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Porphyromonas_gingivalis_W83has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:50:34 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Porphyromonas_gingivalis_W83has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:50:35 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Eubacterium_sp._oral_clone_FX028has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:50:35 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Eubacterium_sp._oral_clone_FX028has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:50:35 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Eubacteriumhas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:50:35 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Eubacteriumhas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:50:35 PM RMA6TaxonProcessor.NodeProcessor process
+WARNING: TaxID: Enterocytozoon not assigned in File CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6
+
+Jul 12, 2019 5:50:37 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Treponema_denticola_ATCC_35405has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:50:38 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Treponema_denticola_ATCC_35405has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:50:38 PM RMA6TaxonProcessor.NodeProcessor process
+WARNING: For Porphyromonas_gingivalis in file CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6 downsampling was turned on
+Jul 12, 2019 5:50:39 PM RMA6TaxonProcessor.NodeProcessor process
+WARNING: TaxID: Ceratotherium not assigned in File CS23_S0_L001_R1_001.sorted.bam.unmapped.rma6
+
+Jul 12, 2019 5:50:41 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Porphyromonas_gingivalishas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:50:42 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Porphyromonas_gingivalishas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:50:43 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Propionibacterium_freudenreichiihas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:50:44 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Tannerella_forsythiahas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:50:44 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Tannerella_forsythiahas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:50:44 PM RMA6TaxonProcessor.NodeProcessor process
+WARNING: TaxID: Penicillium not assigned in File CS21_S0_L001_R1_001.sorted.bam.unmapped.rma6
+
+Jul 12, 2019 5:50:45 PM RMA6TaxonProcessor.NodeProcessor process
+WARNING: TaxID: Schizophyllum not assigned in File CS21_S0_L001_R1_001.sorted.bam.unmapped.rma6
+
+Jul 12, 2019 5:50:45 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Treponema_brennaborense_DSM_12168has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:50:46 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Treponema_maltophilumhas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:50:46 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Treponema_maltophilumhas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:50:48 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Methanobrevibacter_milleraehas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:50:48 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Methanobrevibacter_milleraehas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:50:48 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Treponema_sp._OMZ_840has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:50:48 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Treponema_sp._OMZ_840has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:50:49 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Porphyromonas_gingivalis_AJW4has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:50:49 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Porphyromonas_gingivalis_AJW4has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:50:49 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Porphyromonas_gingivalis_A7A1-28has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:50:49 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Porphyromonas_gingivalis_A7A1-28has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:50:50 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Treponema_denticola_ATCC_35405has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:50:50 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Treponema_denticola_ATCC_35405has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:50:50 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Treponema_pedis_str._T_A4has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:50:50 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Treponema_pedis_str._T_A4has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:50:50 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Methanobrevibacter_sp._AbM4has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:50:51 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Porphyromonas_gingivalis_ATCC_33277has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:50:51 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Porphyromonas_gingivalis_ATCC_33277has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:50:51 PM RMA6TaxonProcessor.NodeProcessor process
+WARNING: TaxID: Ceratotherium not assigned in File CS22_S0_L001_R1_001.sorted.bam.unmapped.rma6
+
+Jul 12, 2019 5:50:54 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Tannerella_forsythiahas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:50:54 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Treponema_putidumhas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:50:54 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Tannerella_forsythiahas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:50:54 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Treponema_putidumhas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:50:54 PM RMA6TaxonProcessor.NodeProcessor process
+WARNING: TaxID: Penicillium not assigned in File CS23_S0_L001_R1_001.sorted.bam.unmapped.rma6
+
+Jul 12, 2019 5:50:55 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Treponema_maltophilum_ATCC_51939has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:50:55 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Treponema_socranskii_subsp._socranskiihas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:50:56 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Treponema_succinifaciens_DSM_2489has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:50:56 PM RMA6TaxonProcessor.NodeProcessor process
+WARNING: TaxID: Schizophyllum not assigned in File CS23_S0_L001_R1_001.sorted.bam.unmapped.rma6
+
+Jul 12, 2019 5:50:57 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Treponema_maltophilumhas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:50:57 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Treponema_maltophilumhas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:50:58 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Methanobrevibacter_milleraehas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:50:58 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Methanobrevibacter_milleraehas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:50:58 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Treponema_sp._OMZ_840has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:50:58 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Treponema_sp._OMZ_840has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:50:59 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Porphyromonas_gingivalishas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:51:00 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Porphyromonas_gingivalishas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:51:00 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Porphyromonas_gingivalis_AJW4has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:51:00 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Porphyromonas_gingivalis_AJW4has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:51:01 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Eubacterium_limosumhas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:51:01 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Eubacterium_limosumhas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:51:01 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Methanobrevibacter_sp._YE315has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:51:01 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Methanobrevibacter_sp._YE315has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:51:01 PM RMA6TaxonProcessor.NodeProcessor process
+WARNING: TaxID: Populus not assigned in File CS21_S0_L001_R1_001.sorted.bam.unmapped.rma6
+
+Jul 12, 2019 5:51:01 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Porphyromonas_gingivalis_A7A1-28has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:51:01 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: uncultured_Treponema_sp.has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:51:01 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: uncultured_Treponema_sp.has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:51:01 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Porphyromonas_gingivalis_A7A1-28has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:51:02 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: uncultured_Methanobrevibacter_sp.has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:51:02 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: uncultured_Methanobrevibacter_sp.has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:51:02 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Treponema_pedis_str._T_A4has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:51:02 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Treponema_pedis_str._T_A4has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:51:02 PM RMA6TaxonProcessor.NodeProcessor process
+WARNING: TaxID: Coprinopsis not assigned in File CS21_S0_L001_R1_001.sorted.bam.unmapped.rma6
+
+Jul 12, 2019 5:51:02 PM RMA6TaxonProcessor.NodeProcessor process
+WARNING: TaxID: Zymoseptoria not assigned in File CS21_S0_L001_R1_001.sorted.bam.unmapped.rma6
+
+Jul 12, 2019 5:51:03 PM RMA6TaxonProcessor.NodeProcessor process
+WARNING: TaxID: Myceliophthora not assigned in File CS21_S0_L001_R1_001.sorted.bam.unmapped.rma6
+
+Jul 12, 2019 5:51:04 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Treponema_sp._OMZ_838has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:51:04 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Treponema_sp._OMZ_838has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:51:05 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Treponema_mediumhas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:51:05 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Treponema_mediumhas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:51:06 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Treponema_putidumhas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:51:06 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Treponema_putidumhas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:51:07 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Methanobrevibacter_sp._YE315has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:51:07 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Methanobrevibacter_sp._YE315has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:51:08 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Methanobrevibacterhas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:51:08 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Methanobrevibacterhas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:51:08 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Tannerella_forsythiahas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:51:08 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: uncultured_Fretibacterium_sp.has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:51:08 PM RMA6TaxonProcessor.NodeProcessor process
+WARNING: TaxID: Coprinopsis not assigned in File CS23_S0_L001_R1_001.sorted.bam.unmapped.rma6
+
+Jul 12, 2019 5:51:09 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Tannerella_forsythiahas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:51:09 PM RMA6TaxonProcessor.NodeProcessor process
+WARNING: TaxID: Zymoseptoria not assigned in File CS23_S0_L001_R1_001.sorted.bam.unmapped.rma6
+
+Jul 12, 2019 5:51:09 PM RMA6TaxonProcessor.NodeProcessor process
+WARNING: TaxID: Penicillium not assigned in File CS22_S0_L001_R1_001.sorted.bam.unmapped.rma6
+
+Jul 12, 2019 5:51:09 PM RMA6TaxonProcessor.NodeProcessor process
+WARNING: TaxID: Myceliophthora not assigned in File CS23_S0_L001_R1_001.sorted.bam.unmapped.rma6
+
+Jul 12, 2019 5:51:09 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Treponema_denticola_ATCC_35405has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:51:09 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Treponema_maltophilum_ATCC_51939has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:51:09 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Treponema_maltophilum_ATCC_51939has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:51:09 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Treponema_denticola_ATCC_35405has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:51:09 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Treponema_socranskii_subsp._socranskiihas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:51:09 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Treponema_socranskii_subsp._socranskiihas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:51:09 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Ovis_arieshas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:51:10 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Treponema_succinifaciens_DSM_2489has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:51:10 PM RMA6TaxonProcessor.NodeProcessor process
+WARNING: TaxID: Schizophyllum not assigned in File CS22_S0_L001_R1_001.sorted.bam.unmapped.rma6
+
+Jul 12, 2019 5:51:10 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Methanobrevibacter_sp._AbM4has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:51:10 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Treponema_brennaborense_DSM_12168has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:51:10 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Treponema_maltophilumhas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:51:10 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Treponema_maltophilumhas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:51:10 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Porphyromonas_gingivalis_ATCC_33277has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:51:10 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Porphyromonas_gingivalis_ATCC_33277has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:51:10 PM RMA6TaxonProcessor.NodeProcessor process
+WARNING: TaxID: Ceratotherium not assigned in File CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6
+
+Jul 12, 2019 5:51:11 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Propionibacterium_freudenreichiihas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:51:11 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Propionibacterium_freudenreichiihas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:51:13 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Methanobrevibacter_milleraehas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:51:13 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Methanobrevibacter_milleraehas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:51:13 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Eubacterium_sp._oral_taxon_B60has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:51:14 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Treponema_sp._OMZ_838has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:51:14 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Treponema_sp._OMZ_838has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:51:15 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Porphyromonas_gingivalis_AJW4has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:51:15 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Porphyromonas_gingivalis_AJW4has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:51:16 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Porphyromonas_gingivalis_A7A1-28has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:51:16 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Porphyromonas_gingivalis_A7A1-28has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:51:16 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Methanobrevibacter_smithiihas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:51:18 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Treponema_pedis_str._T_A4has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:51:18 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Treponema_pedis_str._T_A4has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:51:25 PM RMA6TaxonProcessor.NodeProcessor process
+WARNING: For Tannerella_forsythia in file CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6 downsampling was turned on
+Jul 12, 2019 5:51:25 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Treponema_putidumhas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:51:25 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Treponema_putidumhas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:51:26 PM RMA6TaxonProcessor.NodeProcessor process
+WARNING: TaxID: Pinus not assigned in File ELSIDRON1_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+
+Jul 12, 2019 5:51:28 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Methanobrevibacter_sp._YE315has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:51:28 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Methanobrevibacter_sp._YE315has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:51:28 PM RMA6TaxonProcessor.NodeProcessor process
+WARNING: TaxID: Populus not assigned in File CS22_S0_L001_R1_001.sorted.bam.unmapped.rma6
+
+Jul 12, 2019 5:51:34 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: uncultured_Methanobrevibacter_sp.has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:51:34 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: uncultured_Methanobrevibacter_sp.has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:51:35 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Tannerellahas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:51:35 PM RMA6TaxonProcessor.NodeProcessor process
+WARNING: TaxID: Coprinopsis not assigned in File CS22_S0_L001_R1_001.sorted.bam.unmapped.rma6
+
+Jul 12, 2019 5:51:35 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Treponema_vincentii_ATCC_35580has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:51:35 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Methanobrevibacter_sp._SM9has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:51:35 PM RMA6TaxonProcessor.NodeProcessor process
+WARNING: TaxID: Zymoseptoria not assigned in File CS22_S0_L001_R1_001.sorted.bam.unmapped.rma6
+
+Jul 12, 2019 5:51:35 PM RMA6TaxonProcessor.NodeProcessor process
+WARNING: TaxID: Myceliophthora not assigned in File CS22_S0_L001_R1_001.sorted.bam.unmapped.rma6
+
+Jul 12, 2019 5:51:36 PM RMA6TaxonProcessor.NodeProcessor process
+WARNING: TaxID: Phaeosphaeria not assigned in File ELSIDRON1_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+
+Jul 12, 2019 5:51:36 PM RMA6TaxonProcessor.NodeProcessor process
+WARNING: TaxID: Ixodes not assigned in File ELSIDRON1_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+
+Jul 12, 2019 5:51:36 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Tannerella_forsythiahas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:51:37 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Tannerella_forsythiahas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:51:37 PM RMA6TaxonProcessor.NodeProcessor process
+WARNING: TaxID: Penicillium not assigned in File CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6
+
+Jul 12, 2019 5:51:37 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Porphyromonas_gingivalis_381has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:51:38 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Treponema_maltophilum_ATCC_51939has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:51:38 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Treponema_socranskii_subsp._socranskiihas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:51:38 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Treponema_socranskii_subsp._socranskiihas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:51:38 PM RMA6TaxonProcessor.NodeProcessor process
+WARNING: TaxID: Schizophyllum not assigned in File CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6
+
+Jul 12, 2019 5:51:39 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Treponema_maltophilumhas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:51:39 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Treponema_maltophilumhas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:51:41 PM RMA6TaxonProcessor.NodeProcessor process
+WARNING: For Fretibacterium_fastidiosum in file ELSIDRON1_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6 downsampling was turned on
+Jul 12, 2019 5:51:42 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Methanobrevibacter_milleraehas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:51:42 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Methanobrevibacter_milleraehas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:51:42 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Treponema_sp._OMZ_840has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:51:42 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Treponema_sp._OMZ_838has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:51:43 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Treponema_sp._OMZ_838has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:51:47 PM RMA6TaxonProcessor.NodeProcessor process
+WARNING: TaxID: Enterocytozoon not assigned in File ELSIDRON1_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+
+Jul 12, 2019 5:51:48 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Methanobrevibacterhas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:51:48 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Methanobrevibacterhas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:51:49 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Methanobrevibacter_smithiihas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:51:49 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Methanobrevibacter_smithiihas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:51:49 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: uncultured_Fretibacterium_sp.has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:51:49 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Porphyromonas_gingivalis_AJW4has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:51:49 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Porphyromonas_gingivalis_AJW4has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:51:54 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Porphyromonas_gingivalis_A7A1-28has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:51:54 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Porphyromonas_gingivalis_A7A1-28has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:51:55 PM RMA6TaxonProcessor.NodeProcessor process
+WARNING: TaxID: Eubacterium not assigned in File SPYNEW_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+
+Jul 12, 2019 5:51:55 PM RMA6TaxonProcessor.NodeProcessor process
+WARNING: TaxID: Enterocytozoon not assigned in File SPYNEW_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+
+Jul 12, 2019 5:51:55 PM RMA6TaxonProcessor.NodeProcessor process
+WARNING: TaxID: Fretibacterium not assigned in File SPYNEW_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+
+Jul 12, 2019 5:51:55 PM RMA6TaxonProcessor.NodeProcessor process
+WARNING: TaxID: Porphyromonas not assigned in File SPYNEW_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+
+Jul 12, 2019 5:51:55 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Treponema_pedis_str._T_A4has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:51:55 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Treponema_pedis_str._T_A4has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:51:59 PM RMA6TaxonProcessor.NodeProcessor process
+WARNING: TaxID: Physcomitrella not assigned in File ELSIDRON2_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+
+Jul 12, 2019 5:52:04 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Treponema_putidumhas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:52:04 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Treponema_putidumhas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:52:04 PM RMA6TaxonProcessor.NodeProcessor process
+WARNING: TaxID: Pinus not assigned in File SPYNEW_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+
+Jul 12, 2019 5:52:05 PM RMA6TaxonProcessor.NodeProcessor process
+WARNING: TaxID: Ceratotherium not assigned in File SPYNEW_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+
+Jul 12, 2019 5:52:07 PM RMA6TaxonProcessor.NodeProcessor process
+WARNING: TaxID: Penicillium not assigned in File SPYNEW_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+
+Jul 12, 2019 5:52:07 PM RMA6TaxonProcessor.NodeProcessor process
+WARNING: TaxID: Physcomitrella not assigned in File SPYNEW_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+
+Jul 12, 2019 5:52:08 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Methanobrevibacter_sp._YE315has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:52:08 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Methanobrevibacter_sp._YE315has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:52:08 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: uncultured_Treponema_sp.has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:52:09 PM RMA6TaxonProcessor.NodeProcessor process
+WARNING: TaxID: Schizophyllum not assigned in File SPYNEW_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+
+Jul 12, 2019 5:52:10 PM RMA6TaxonProcessor.NodeProcessor process
+WARNING: TaxID: Malassezia not assigned in File SPYNEW_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+
+Jul 12, 2019 5:52:10 PM RMA6TaxonProcessor.NodeProcessor process
+WARNING: TaxID: Phaeosphaeria not assigned in File SPYNEW_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+
+Jul 12, 2019 5:52:10 PM RMA6TaxonProcessor.NodeProcessor process
+WARNING: TaxID: Ixodes not assigned in File SPYNEW_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+
+Jul 12, 2019 5:52:11 PM RMA6TaxonProcessor.NodeProcessor process
+WARNING: TaxID: Populus not assigned in File SPYNEW_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+
+Jul 12, 2019 5:52:11 PM RMA6TaxonProcessor.NodeProcessor process
+WARNING: TaxID: Coprinopsis not assigned in File SPYNEW_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+
+Jul 12, 2019 5:52:11 PM RMA6TaxonProcessor.NodeProcessor process
+WARNING: TaxID: Zymoseptoria not assigned in File SPYNEW_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+
+Jul 12, 2019 5:52:11 PM RMA6TaxonProcessor.NodeProcessor process
+WARNING: TaxID: Myceliophthora not assigned in File SPYNEW_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+
+Jul 12, 2019 5:52:12 PM RMA6TaxonProcessor.NodeProcessor process
+WARNING: TaxID: Ceratotherium not assigned in File ELSIDRON1_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+
+Jul 12, 2019 5:52:15 PM RMA6TaxonProcessor.NodeProcessor process
+WARNING: TaxID: Malassezia not assigned in File ELSIDRON2_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+
+Jul 12, 2019 5:52:16 PM RMA6TaxonProcessor.NodeProcessor process
+WARNING: TaxID: Phaeosphaeria not assigned in File ELSIDRON2_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+
+Jul 12, 2019 5:52:16 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: uncultured_Methanobrevibacter_sp.has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:52:17 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: uncultured_Methanobrevibacter_sp.has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:52:17 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Treponema_sp._SO4A1has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:52:17 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Treponema_sp._SO4A1has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:52:17 PM RMA6TaxonProcessor.NodeProcessor process
+WARNING: TaxID: Coprinopsis not assigned in File CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6
+
+Jul 12, 2019 5:52:17 PM RMA6TaxonProcessor.NodeProcessor process
+WARNING: TaxID: Zymoseptoria not assigned in File CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6
+
+Jul 12, 2019 5:52:17 PM RMA6TaxonProcessor.NodeProcessor process
+WARNING: TaxID: Myceliophthora not assigned in File CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6
+
+Jul 12, 2019 5:52:21 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Treponema_sp._OMZ_838has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:52:21 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Treponema_sp._OMZ_838has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:52:22 PM RMA6TaxonProcessor.NodeProcessor process
+WARNING: TaxID: Ixodes not assigned in File ELSIDRON2_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+
+Jul 12, 2019 5:52:23 PM RMA6TaxonProcessor.NodeProcessor process
+WARNING: TaxID: Fretibacterium not assigned in File SPYOLD_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+
+Jul 12, 2019 5:52:24 PM RMA6TaxonProcessor.NodeProcessor process
+WARNING: TaxID: Coprinopsis not assigned in File ELSIDRON1_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+
+Jul 12, 2019 5:52:24 PM RMA6TaxonProcessor.NodeProcessor process
+WARNING: TaxID: Zymoseptoria not assigned in File ELSIDRON1_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+
+Jul 12, 2019 5:52:25 PM RMA6TaxonProcessor.NodeProcessor process
+WARNING: TaxID: Myceliophthora not assigned in File ELSIDRON1_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+
+Jul 12, 2019 5:52:25 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Methanobrevibacterhas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:52:25 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Methanobrevibacterhas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:52:26 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Methanobrevibacter_smithiihas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:52:26 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: Methanobrevibacter_smithiihas reads that fall outside the 25-200 target range
+Jul 12, 2019 5:52:26 PM RMA6TaxonProcessor.RMA6TaxonProcessor calculateReadLengthDistribution
+WARNING: uncultured_Fretibacterium_sp.has reads that fall outside the 25-200 target range
+Jul 12, 2019 5:52:39 PM RMA6TaxonProcessor.NodeProcessor process
+WARNING: TaxID: Enterocytozoon not assigned in File ELSIDRON2_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+
+Jul 12, 2019 5:52:49 PM RMA6TaxonProcessor.NodeProcessor process
+WARNING: TaxID: Physcomitrella not assigned in File ELSIDRON1_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+
+Jul 12, 2019 5:53:02 PM RMA6TaxonProcessor.NodeProcessor process
+WARNING: TaxID: Ceratotherium not assigned in File ELSIDRON2_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+
+Jul 12, 2019 5:53:05 PM RMA6TaxonProcessor.NodeProcessor process
+WARNING: TaxID: Physcomitrella not assigned in File SPYOLD_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+
+Jul 12, 2019 5:53:19 PM RMA6TaxonProcessor.NodeProcessor process
+WARNING: TaxID: Phaeosphaeria not assigned in File SPYOLD_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+
+Jul 12, 2019 5:53:22 PM RMA6TaxonProcessor.NodeProcessor process
+WARNING: TaxID: Ixodes not assigned in File SPYOLD_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+
+Jul 12, 2019 5:53:26 PM RMA6TaxonProcessor.NodeProcessor process
+WARNING: TaxID: Enterocytozoon not assigned in File SPYOLD_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+
+Jul 12, 2019 5:53:27 PM RMA6TaxonProcessor.NodeProcessor process
+WARNING: TaxID: Porphyromonas not assigned in File SPYOLD_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+
+Jul 12, 2019 5:53:27 PM RMA6TaxonProcessor.NodeProcessor process
+WARNING: TaxID: Schizophyllum not assigned in File ELSIDRON2_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+
+Jul 12, 2019 5:53:29 PM RMA6TaxonProcessor.NodeProcessor process
+WARNING: TaxID: Ceratotherium not assigned in File SPYOLD_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+
+Jul 12, 2019 5:53:40 PM RMA6TaxonProcessor.NodeProcessor process
+WARNING: TaxID: Schizophyllum not assigned in File SPYOLD_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+
+Jul 12, 2019 5:53:42 PM RMA6TaxonProcessor.NodeProcessor process
+WARNING: TaxID: Coprinopsis not assigned in File ELSIDRON2_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+
+Jul 12, 2019 5:53:43 PM RMA6TaxonProcessor.NodeProcessor process
+WARNING: TaxID: Zymoseptoria not assigned in File ELSIDRON2_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+
+Jul 12, 2019 5:53:43 PM RMA6TaxonProcessor.NodeProcessor process
+WARNING: TaxID: Myceliophthora not assigned in File ELSIDRON2_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+
+Jul 12, 2019 5:53:44 PM RMA6TaxonProcessor.NodeProcessor process
+WARNING: TaxID: Schizophyllum not assigned in File ELSIDRON1_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+
+Jul 12, 2019 5:53:46 PM RMA6TaxonProcessor.NodeProcessor process
+WARNING: TaxID: Tannerella not assigned in File SPYOLD_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+
+Jul 12, 2019 5:53:47 PM RMA6TaxonProcessor.NodeProcessor process
+WARNING: TaxID: Coprinopsis not assigned in File SPYOLD_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+
+Jul 12, 2019 5:53:48 PM RMA6TaxonProcessor.NodeProcessor process
+WARNING: TaxID: Zymoseptoria not assigned in File SPYOLD_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+
+Jul 12, 2019 5:53:48 PM RMA6TaxonProcessor.NodeProcessor process
+WARNING: TaxID: Myceliophthora not assigned in File SPYOLD_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+
+Jul 12, 2019 5:53:50 PM RMA6TaxonProcessor.NodeProcessor process
+WARNING: For Methanobrevibacter_millerae in file ELSIDRON1_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6 downsampling was turned on

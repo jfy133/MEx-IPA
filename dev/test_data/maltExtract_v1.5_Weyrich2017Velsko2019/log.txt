@@ -1,0 +1,1711 @@
+Jul 12, 2019 5:48:39 PM RMAExtractor.RMAExtractor main
+INFO: MaltTExtract 1.5
+--input /projects1/users/fellows/MEx-IPA/test_data/Weyrich2017Velsko2019/input/CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6/projects1/users/fellows/MEx-IPA/test_data/Weyrich2017Velsko2019/input/CS21_S0_L001_R1_001.sorted.bam.unmapped.rma6/projects1/users/fellows/MEx-IPA/test_data/Weyrich2017Velsko2019/input/CS22_S0_L001_R1_001.sorted.bam.unmapped.rma6/projects1/users/fellows/MEx-IPA/test_data/Weyrich2017Velsko2019/input/CS23_S0_L001_R1_001.sorted.bam.unmapped.rma6/projects1/users/fellows/MEx-IPA/test_data/Weyrich2017Velsko2019/input/ELSIDRON1_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6/projects1/users/fellows/MEx-IPA/test_data/Weyrich2017Velsko2019/input/ELSIDRON2_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6/projects1/users/fellows/MEx-IPA/test_data/Weyrich2017Velsko2019/input/SPYNEW_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6/projects1/users/fellows/MEx-IPA/test_data/Weyrich2017Velsko2019/input/SPYOLD_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+--taxa ZymoseptoriaPhaeosphaeriaPenicilliumMyceliophthoraCoprinopsisSchizophyllumMalasseziaEnterocytozoonOvisCeratotheriumIxodesPhyscomitrellaPinusPopulusMethanobrevibacterCandidatus Saccharibacteria oral TM7PropionibacteriumFretibacteriumEubacteriumPeptosctreptococcusEubacteriumPorphyromonasTannerellaTreponema
+--output /projects1/users/fellows/MEx-IPA/test_data/Weyrich2017Velsko2019/output/
+--filter NON_ANCIENT
+--top 0.01
+--maxLength 0
+--minPI 0.0
+--resources /projects1/clusterhomes/huebler/RMASifter/RMA_Extractor_Resources
+--threads 4
+--verbose
+--destackingOff 
+
+Jul 12, 2019 5:48:39 PM RMAExtractor.RMAExtractor main
+INFO: Setting up Taxon Name and Taxon ID maps
+Jul 12, 2019 5:48:55 PM RMAExtractor.RMAExtractor main
+INFO: Setting up Phylogenetic Tree
+Jul 12, 2019 5:48:55 PM RMAExtractor.RMAExtractor main
+INFO: 1047167 added to analysis
+Jul 12, 2019 5:48:55 PM RMAExtractor.RMAExtractor main
+INFO: 55067 added to analysis
+Jul 12, 2019 5:48:55 PM RMAExtractor.RMAExtractor main
+INFO: 5073 added to analysis
+Jul 12, 2019 5:48:55 PM RMAExtractor.RMAExtractor main
+INFO: 49009 added to analysis
+Jul 12, 2019 5:48:55 PM RMAExtractor.RMAExtractor main
+INFO: 184431 added to analysis
+Jul 12, 2019 5:48:55 PM RMAExtractor.RMAExtractor main
+INFO: 5333 added to analysis
+Jul 12, 2019 5:48:55 PM RMAExtractor.RMAExtractor main
+INFO: 55193 added to analysis
+Jul 12, 2019 5:48:55 PM RMAExtractor.RMAExtractor main
+INFO: 27971 added to analysis
+Jul 12, 2019 5:48:55 PM RMAExtractor.RMAExtractor main
+INFO: 9935 added to analysis
+Jul 12, 2019 5:48:55 PM RMAExtractor.RMAExtractor main
+INFO: 9806 added to analysis
+Jul 12, 2019 5:48:55 PM RMAExtractor.RMAExtractor main
+INFO: 6944 added to analysis
+Jul 12, 2019 5:48:55 PM RMAExtractor.RMAExtractor main
+INFO: 3217 added to analysis
+Jul 12, 2019 5:48:55 PM RMAExtractor.RMAExtractor main
+INFO: 3337 added to analysis
+Jul 12, 2019 5:48:55 PM RMAExtractor.RMAExtractor main
+INFO: 3689 added to analysis
+Jul 12, 2019 5:48:55 PM RMAExtractor.RMAExtractor main
+INFO: 2172 added to analysis
+Jul 12, 2019 5:48:55 PM RMAExtractor.RMAExtractor main
+INFO: 1743 added to analysis
+Jul 12, 2019 5:48:55 PM RMAExtractor.RMAExtractor main
+INFO: 1434006 added to analysis
+Jul 12, 2019 5:48:55 PM RMAExtractor.RMAExtractor main
+INFO: 1730 added to analysis
+Jul 12, 2019 5:48:55 PM RMAExtractor.RMAExtractor main
+INFO: 1730 added to analysis
+Jul 12, 2019 5:48:55 PM RMAExtractor.RMAExtractor main
+INFO: 836 added to analysis
+Jul 12, 2019 5:48:55 PM RMAExtractor.RMAExtractor main
+INFO: 195950 added to analysis
+Jul 12, 2019 5:48:55 PM RMAExtractor.RMAExtractor main
+INFO: 157 added to analysis
+Jul 12, 2019 5:48:55 PM RMAExtractor.RMAExtractor main
+INFO: Using 4cores
+Jul 12, 2019 5:48:55 PM RMAExtractor.RMAExtractor main
+INFO: Finished Processing RMA6 files
+Jul 12, 2019 5:48:55 PM RMA6Processor.RMA6Processor process
+INFO: Reading File: /projects1/users/fellows/MEx-IPA/test_data/Weyrich2017Velsko2019/input/CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6
+Jul 12, 2019 5:48:55 PM RMA6Processor.RMA6Processor process
+INFO: Reading File: /projects1/users/fellows/MEx-IPA/test_data/Weyrich2017Velsko2019/input/CS21_S0_L001_R1_001.sorted.bam.unmapped.rma6
+Jul 12, 2019 5:48:55 PM RMA6Processor.RMA6Processor process
+INFO: Reading File: /projects1/users/fellows/MEx-IPA/test_data/Weyrich2017Velsko2019/input/CS22_S0_L001_R1_001.sorted.bam.unmapped.rma6
+Jul 12, 2019 5:48:55 PM RMA6Processor.RMA6Processor process
+INFO: Reading File: /projects1/users/fellows/MEx-IPA/test_data/Weyrich2017Velsko2019/input/CS23_S0_L001_R1_001.sorted.bam.unmapped.rma6
+Jul 12, 2019 5:49:02 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Fretibacterium in File CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 2
+Jul 12, 2019 5:49:02 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Fretibacterium in File CS22_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 1
+Jul 12, 2019 5:49:02 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Fretibacterium in File CS21_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 5
+Jul 12, 2019 5:49:03 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_brennaborense in File CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 120
+Jul 12, 2019 5:49:03 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_brennaborense in File CS22_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 61
+Jul 12, 2019 5:49:03 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon environmental_samples_<Methanobrevibacter> in File CS21_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 1
+Jul 12, 2019 5:49:03 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_brennaborense in File CS21_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 45
+Jul 12, 2019 5:49:03 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Fretibacterium in File CS23_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 5
+Jul 12, 2019 5:49:04 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_brennaborense in File CS23_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 37
+Jul 12, 2019 5:49:04 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Porphyromonas_asaccharolytica_DSM_20707 in File CS21_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 58
+Jul 12, 2019 5:49:04 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Porphyromonas_asaccharolytica_DSM_20707 in File CS22_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 45
+Jul 12, 2019 5:49:05 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Porphyromonas_asaccharolytica_DSM_20707 in File CS23_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 315
+Jul 12, 2019 5:49:05 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Ovis_canadensis_canadensis in File CS21_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 23
+Jul 12, 2019 5:49:05 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Ovis_canadensis_canadensis in File CS22_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 73
+Jul 12, 2019 5:49:05 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Porphyromonas_asaccharolytica_DSM_20707 in File CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 71
+Jul 12, 2019 5:49:06 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Tannerella_forsythia_92A2 in File CS21_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 17613
+Jul 12, 2019 5:49:06 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Ovis_canadensis_canadensis in File CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 25
+Jul 12, 2019 5:49:07 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Tannerella_forsythia_92A2 in File CS22_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 12006
+Jul 12, 2019 5:49:08 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Tannerella_forsythia_92A2 in File CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 71157
+Jul 12, 2019 5:49:10 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Ovis_canadensis_canadensis in File CS23_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 21
+Jul 12, 2019 5:49:11 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Tannerella_forsythia_92A2 in File CS23_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 9335
+Jul 12, 2019 5:49:14 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Methanobrevibacter_olleyae in File CS21_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 364
+Jul 12, 2019 5:49:16 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_denticola_ATCC_33521 in File CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 18
+Jul 12, 2019 5:49:17 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Methanobrevibacter_olleyae in File CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 1074
+Jul 12, 2019 5:49:17 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Methanobrevibacter_ruminantium_M1 in File CS21_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 187
+Jul 12, 2019 5:49:17 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Methanobrevibacter_olleyae in File CS22_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 792
+Jul 12, 2019 5:49:18 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Eubacterium_limosum_KIST612 in File CS21_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 10
+Jul 12, 2019 5:49:18 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_denticola_ATCC_33520 in File CS21_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 26
+Jul 12, 2019 5:49:18 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Tannerella_sp._oral_taxon_HOT-286 in File CS21_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 953
+Jul 12, 2019 5:49:19 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Methanobrevibacter_ruminantium_M1 in File CS22_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 51
+Jul 12, 2019 5:49:19 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Eubacterium_limosum_KIST612 in File CS22_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 15
+Jul 12, 2019 5:49:19 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_denticola_ATCC_33520 in File CS22_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 68
+Jul 12, 2019 5:49:20 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Tannerella_sp._oral_taxon_HOT-286 in File CS22_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 15393
+Jul 12, 2019 5:49:23 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Methanobrevibacter_smithii_ATCC_35061 in File CS21_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 2085
+Jul 12, 2019 5:49:27 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Methanobrevibacter_ruminantium_M1 in File CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 66
+Jul 12, 2019 5:49:27 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_denticola_ATCC_33521 in File CS23_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 11
+Jul 12, 2019 5:49:27 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Eubacterium_limosum_KIST612 in File CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 24
+Jul 12, 2019 5:49:27 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Methanobrevibacter_olleyae in File CS23_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 245
+Jul 12, 2019 5:49:28 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_denticola_ATCC_33520 in File CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 79
+Jul 12, 2019 5:49:28 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Eubacterium_sp._oral_clone_23-90 in File CS21_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 15
+Jul 12, 2019 5:49:28 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon environmental_samples_<Eubacterium> in File CS21_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 45
+Jul 12, 2019 5:49:28 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Methanobrevibacter_smithii_ATCC_35061 in File CS22_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 4311
+Jul 12, 2019 5:49:28 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Methanobrevibacter_ruminantium_M1 in File CS23_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 24
+Jul 12, 2019 5:49:28 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Tannerella_sp._oral_taxon_HOT-286 in File CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 1110
+Jul 12, 2019 5:49:28 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema in File CS21_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 2886
+Jul 12, 2019 5:49:28 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Eubacterium_limosum_KIST612 in File CS23_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 18
+Jul 12, 2019 5:49:29 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_denticola_ATCC_33520 in File CS23_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 48
+Jul 12, 2019 5:49:30 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Tannerella_sp._oral_taxon_HOT-286 in File CS23_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 34467
+Jul 12, 2019 5:49:32 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon environmental_samples_<Eubacterium> in File CS22_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 19
+Jul 12, 2019 5:49:33 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema in File CS22_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 5509
+Jul 12, 2019 5:49:33 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_denticola in File CS21_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 749
+Jul 12, 2019 5:49:34 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_denticola_ASLM in File CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 14
+Jul 12, 2019 5:49:34 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_pallidum in File CS21_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 20
+Jul 12, 2019 5:49:34 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Methanobrevibacter_smithii_ATCC_35061 in File CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 5035
+Jul 12, 2019 5:49:35 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Methanobrevibacter_oralis in File CS21_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 168
+Jul 12, 2019 5:49:35 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon [Eubacterium]_eligens_ATCC_27750 in File CS21_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 17
+Jul 12, 2019 5:49:36 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Methanobrevibacter_smithii_ATCC_35061 in File CS23_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 804
+Jul 12, 2019 5:49:37 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Fretibacterium_fastidiosum in File CS21_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 71364
+Jul 12, 2019 5:49:37 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Physcomitrella_patens in File CS23_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 10
+Jul 12, 2019 5:49:38 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon environmental_samples_<Eubacterium> in File CS23_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 18
+Jul 12, 2019 5:49:38 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_primitia_ZAS-2 in File CS23_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 28
+Jul 12, 2019 5:49:39 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_azotonutricium_ZAS-9 in File CS23_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 12
+Jul 12, 2019 5:49:39 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema in File CS23_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 6877
+Jul 12, 2019 5:49:41 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_denticola in File CS22_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 2192
+Jul 12, 2019 5:49:41 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon environmental_samples_<Eubacterium> in File CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 44
+Jul 12, 2019 5:49:42 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema in File CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 8229
+Jul 12, 2019 5:49:43 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Methanobrevibacter_sp._D5 in File CS21_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 24
+Jul 12, 2019 5:49:43 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Tannerella_forsythia_KS16 in File CS21_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 13120
+Jul 12, 2019 5:49:44 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_pallidum in File CS22_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 35
+Jul 12, 2019 5:49:45 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Methanobrevibacter_oralis in File CS22_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 2095
+Jul 12, 2019 5:49:46 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_denticola in File CS23_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 2235
+Jul 12, 2019 5:49:48 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon [Eubacterium]_eligens_ATCC_27750 in File CS22_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 44
+Jul 12, 2019 5:49:48 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_caldarium_DSM_7334 in File CS22_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 14
+Jul 12, 2019 5:49:48 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_caldarium in File CS22_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 4
+Jul 12, 2019 5:49:49 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Fretibacterium_fastidiosum in File CS22_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 56007
+Jul 12, 2019 5:49:50 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_pallidum in File CS23_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 31
+Jul 12, 2019 5:49:50 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_lecithinolyticum in File CS21_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 77
+Jul 12, 2019 5:49:51 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Methanobrevibacter_oralis in File CS23_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 108
+Jul 12, 2019 5:49:51 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Tannerella_forsythia_3313 in File CS21_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 13704
+Jul 12, 2019 5:49:51 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon [Eubacterium]_eligens_ATCC_27750 in File CS23_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 172
+Jul 12, 2019 5:49:51 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_caldarium_DSM_7334 in File CS23_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 13
+Jul 12, 2019 5:49:52 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_caldarium in File CS23_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 3
+Jul 12, 2019 5:49:52 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_denticola in File CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 2728
+Jul 12, 2019 5:49:53 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Fretibacterium_fastidiosum in File CS23_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 52193
+Jul 12, 2019 5:49:56 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon environmental_samples_<Treponema> in File CS22_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 1
+Jul 12, 2019 5:49:57 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Methanobrevibacter_sp._D5 in File CS22_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 41
+Jul 12, 2019 5:49:57 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Tannerella_forsythia_KS16 in File CS22_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 12424
+Jul 12, 2019 5:49:57 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_pallidum in File CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 29
+Jul 12, 2019 5:49:57 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_socranskii in File CS21_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 179
+Jul 12, 2019 5:49:58 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Porphyromonas_gingivalis_TDC60 in File CS21_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 1183
+Jul 12, 2019 5:49:58 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Methanobrevibacter_oralis in File CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 2093
+Jul 12, 2019 5:49:59 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Malassezia_globosa_CBS_7966 in File CS21_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 17
+Jul 12, 2019 5:49:59 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Porphyromonas_gingivalis_W83 in File CS21_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 199
+Jul 12, 2019 5:49:59 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon uncultured_Porphyromonas_sp. in File CS23_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 24
+Jul 12, 2019 5:49:59 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Eubacterium_sp._oral_clone_FX028 in File CS21_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 11
+Jul 12, 2019 5:49:59 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Eubacterium in File CS21_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 19
+Jul 12, 2019 5:49:59 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Tannerella_forsythia_KS16 in File CS23_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 7431
+Jul 12, 2019 5:49:59 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Porphyromonas in File CS21_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 23
+Jul 12, 2019 5:50:00 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Porphyromonas_gingivalis in File CS21_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 15567
+Jul 12, 2019 5:50:00 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon [Eubacterium]_eligens_ATCC_27750 in File CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 24
+Jul 12, 2019 5:50:00 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_caldarium_DSM_7334 in File CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 13
+Jul 12, 2019 5:50:00 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_caldarium in File CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 10
+Jul 12, 2019 5:50:03 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Fretibacterium_fastidiosum in File CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 141274
+Jul 12, 2019 5:50:04 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_lecithinolyticum in File CS23_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 16
+Jul 12, 2019 5:50:05 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Tannerella_forsythia_3313 in File CS23_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 7840
+Jul 12, 2019 5:50:05 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Tannerella_forsythia_3313 in File CS22_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 11107
+Jul 12, 2019 5:50:09 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_socranskii in File CS23_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 54
+Jul 12, 2019 5:50:09 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_azotonutricium in File CS23_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 1
+Jul 12, 2019 5:50:10 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Porphyromonas_gingivalis_TDC60 in File CS23_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 1772
+Jul 12, 2019 5:50:10 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon environmental_samples_<Treponema> in File CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 2
+Jul 12, 2019 5:50:10 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Methanobrevibacter_sp._D5 in File CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 32
+Jul 12, 2019 5:50:11 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Porphyromonas_gingivalis_W83 in File CS23_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 303
+Jul 12, 2019 5:50:11 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Tannerella_forsythia_KS16 in File CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 52181
+Jul 12, 2019 5:50:12 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Eubacterium in File CS23_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 129
+Jul 12, 2019 5:50:12 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Porphyromonas in File CS23_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 74
+Jul 12, 2019 5:50:13 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_socranskii in File CS22_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 90
+Jul 12, 2019 5:50:13 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Porphyromonas_gingivalis_TDC60 in File CS22_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 2034
+Jul 12, 2019 5:50:14 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Porphyromonas_gingivalis in File CS23_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 45613
+Jul 12, 2019 5:50:15 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Ovis_canadensis in File CS22_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 2
+Jul 12, 2019 5:50:15 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Malassezia_globosa_CBS_7966 in File CS22_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 18
+Jul 12, 2019 5:50:16 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Porphyromonas_gingivalis_W83 in File CS22_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 366
+Jul 12, 2019 5:50:16 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Eubacterium_sp._oral_clone_FX028 in File CS22_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 215
+Jul 12, 2019 5:50:17 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Eubacterium in File CS22_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 64
+Jul 12, 2019 5:50:17 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon uncultured_Eubacterium_sp. in File CS22_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 25
+Jul 12, 2019 5:50:17 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Porphyromonas in File CS22_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 34
+Jul 12, 2019 5:50:18 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Porphyromonas_gingivalis in File CS22_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 33439
+Jul 12, 2019 5:50:18 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_lecithinolyticum in File CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 89
+Jul 12, 2019 5:50:19 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Tannerella_forsythia_3313 in File CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 45128
+Jul 12, 2019 5:50:21 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Eubacterium_limosum in File CS21_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 88
+Jul 12, 2019 5:50:22 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_denticola_ATCC_35405 in File CS21_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 21348
+Jul 12, 2019 5:50:26 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_socranskii in File CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 275
+Jul 12, 2019 5:50:26 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Porphyromonas_gingivalis_TDC60 in File CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 9250
+Jul 12, 2019 5:50:28 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Methanobrevibacter_sp._AbM4 in File CS21_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 55
+Jul 12, 2019 5:50:28 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Porphyromonas_gingivalis_ATCC_33277 in File CS21_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 44
+Jul 12, 2019 5:50:28 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Ovis in File CS21_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 10
+Jul 12, 2019 5:50:28 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Propionibacterium in File CS21_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 74
+Jul 12, 2019 5:50:28 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Propionibacterium_freudenreichii in File CS21_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 279
+Jul 12, 2019 5:50:31 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Eubacterium_limosum in File CS23_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 51
+Jul 12, 2019 5:50:32 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Tannerella_forsythia in File CS21_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 130695
+Jul 12, 2019 5:50:33 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_denticola_ATCC_35405 in File CS23_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 60231
+Jul 12, 2019 5:50:33 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Malassezia_globosa_CBS_7966 in File CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 47
+Jul 12, 2019 5:50:33 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Porphyromonas_gingivalis_W83 in File CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 1548
+Jul 12, 2019 5:50:34 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Eubacterium_sp._oral_clone_FX028 in File CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 83
+Jul 12, 2019 5:50:35 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Eubacterium in File CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 39
+Jul 12, 2019 5:50:35 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Porphyromonas in File CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 65
+Jul 12, 2019 5:50:38 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Porphyromonas_gingivalis in File CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 127176
+Jul 12, 2019 5:50:38 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Methanobrevibacter_sp._AbM4 in File CS23_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 78
+Jul 12, 2019 5:50:38 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Porphyromonas_gingivalis_ATCC_33277 in File CS23_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 52
+Jul 12, 2019 5:50:39 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Ovis in File CS23_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 4
+Jul 12, 2019 5:50:39 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Propionibacterium in File CS23_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 232
+Jul 12, 2019 5:50:40 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Propionibacterium_freudenreichii in File CS23_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 758
+Jul 12, 2019 5:50:42 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Eubacterium_limosum in File CS22_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 26
+Jul 12, 2019 5:50:43 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Porphyromonas_catoniae_ATCC_51270 in File CS23_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 14
+Jul 12, 2019 5:50:43 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_denticola_ATCC_35405 in File CS22_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 63693
+Jul 12, 2019 5:50:44 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Porphyromonas_gingivalis_381 in File CS21_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 12
+Jul 12, 2019 5:50:45 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_maltophilum_ATCC_51939 in File CS21_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 38
+Jul 12, 2019 5:50:45 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_socranskii_subsp._socranskii in File CS21_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 80
+Jul 12, 2019 5:50:45 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_succinifaciens_DSM_2489 in File CS21_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 24
+Jul 12, 2019 5:50:45 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_brennaborense_DSM_12168 in File CS21_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 31
+Jul 12, 2019 5:50:45 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Propionibacterium_freudenreichii_subsp._shermanii in File CS21_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 12
+Jul 12, 2019 5:50:45 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Tannerella_forsythia in File CS23_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 89382
+Jul 12, 2019 5:50:45 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_maltophilum in File CS21_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 205
+Jul 12, 2019 5:50:46 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Methanobrevibacter_millerae in File CS21_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 2337
+Jul 12, 2019 5:50:48 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_sp._OMZ_840 in File CS21_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 105
+Jul 12, 2019 5:50:48 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Porphyromonas_gingivalis_AJW4 in File CS21_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 1009
+Jul 12, 2019 5:50:49 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Porphyromonas_gingivalis_A7A1-28 in File CS21_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 598
+Jul 12, 2019 5:50:50 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_pedis_str._T_A4 in File CS21_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 782
+Jul 12, 2019 5:50:50 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Methanobrevibacter_sp._AbM4 in File CS22_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 185
+Jul 12, 2019 5:50:50 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_putidum in File CS21_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 5958
+Jul 12, 2019 5:50:51 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Porphyromonas_gingivalis_ATCC_33277 in File CS22_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 64
+Jul 12, 2019 5:50:51 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Ovis in File CS22_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 4
+Jul 12, 2019 5:50:51 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Propionibacterium in File CS22_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 35
+Jul 12, 2019 5:50:51 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_vincentii in File CS22_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 7
+Jul 12, 2019 5:50:51 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Propionibacterium_freudenreichii in File CS22_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 76
+Jul 12, 2019 5:50:53 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Tannerella_forsythia in File CS22_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 62568
+Jul 12, 2019 5:50:55 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Methanobrevibacter_sp._YE315 in File CS21_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 6568
+Jul 12, 2019 5:50:55 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Porphyromonas_gingivalis_381 in File CS23_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 33
+Jul 12, 2019 5:50:55 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_maltophilum_ATCC_51939 in File CS23_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 66
+Jul 12, 2019 5:50:55 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_socranskii_subsp._socranskii in File CS23_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 35
+Jul 12, 2019 5:50:56 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_succinifaciens_DSM_2489 in File CS23_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 71
+Jul 12, 2019 5:50:56 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_brennaborense_DSM_12168 in File CS23_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 158
+Jul 12, 2019 5:50:57 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_socranskii_subsp._'04' in File CS23_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 19
+Jul 12, 2019 5:50:57 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_maltophilum in File CS23_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 247
+Jul 12, 2019 5:50:57 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Methanobrevibacter_millerae in File CS23_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 771
+Jul 12, 2019 5:50:58 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_sp._OMZ_840 in File CS23_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 45
+Jul 12, 2019 5:50:58 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Porphyromonas_asaccharolytica in File CS23_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 2
+Jul 12, 2019 5:50:59 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Porphyromonas_gingivalis_AJW4 in File CS23_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 1895
+Jul 12, 2019 5:51:00 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Eubacterium_limosum in File CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 164
+Jul 12, 2019 5:51:00 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Porphyromonas_gingivalis_A7A1-28 in File CS23_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 1277
+Jul 12, 2019 5:51:01 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon uncultured_Tannerella_sp. in File CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 22
+Jul 12, 2019 5:51:01 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon uncultured_Treponema_sp. in File CS21_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 29
+Jul 12, 2019 5:51:01 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon uncultured_Methanobrevibacter_sp. in File CS21_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 70
+Jul 12, 2019 5:51:01 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_pedis_str._T_A4 in File CS23_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 813
+Jul 12, 2019 5:51:02 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Tannerella in File CS21_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 30
+Jul 12, 2019 5:51:02 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_pedis in File CS21_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 1
+Jul 12, 2019 5:51:02 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_sp._SO4A1 in File CS21_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 32
+Jul 12, 2019 5:51:02 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_putidum in File CS23_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 7278
+Jul 12, 2019 5:51:03 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_denticola_ATCC_35405 in File CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 78315
+Jul 12, 2019 5:51:03 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_sp._OMZ_838 in File CS21_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 2636
+Jul 12, 2019 5:51:05 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_medium in File CS21_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 25
+Jul 12, 2019 5:51:05 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Methanobrevibacter in File CS21_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 1653
+Jul 12, 2019 5:51:06 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon environmental_samples_<Porphyromonas> in File CS23_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 1
+Jul 12, 2019 5:51:07 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Methanobrevibacter_sp._YE315 in File CS23_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 678
+Jul 12, 2019 5:51:07 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Populus in File CS23_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 22
+Jul 12, 2019 5:51:08 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon uncultured_Methanobrevibacter_sp. in File CS23_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 18
+Jul 12, 2019 5:51:08 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Methanobrevibacter_smithii in File CS21_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 60
+Jul 12, 2019 5:51:08 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Tannerella in File CS23_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 71
+Jul 12, 2019 5:51:08 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon uncultured_Fretibacterium_sp. in File CS21_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 57
+Jul 12, 2019 5:51:08 PM RMA6Processor.RMA6Processor process
+INFO: Finished File: CS21_S0_L001_R1_001.sorted.bam.unmapped.rma6
+Jul 12, 2019 5:51:08 PM RMA6Processor.RMA6Processor process
+INFO: Reading File: /projects1/users/fellows/MEx-IPA/test_data/Weyrich2017Velsko2019/input/ELSIDRON1_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+Jul 12, 2019 5:51:09 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Porphyromonas_gingivalis_381 in File CS22_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 36
+Jul 12, 2019 5:51:09 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_maltophilum_ATCC_51939 in File CS22_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 114
+Jul 12, 2019 5:51:09 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_socranskii_subsp._socranskii in File CS22_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 48
+Jul 12, 2019 5:51:09 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_sp._OMZ_838 in File CS23_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 14596
+Jul 12, 2019 5:51:09 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon environmental_samples_<Tannerella> in File CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 1
+Jul 12, 2019 5:51:09 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Ovis_aries in File CS22_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 17
+Jul 12, 2019 5:51:10 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Methanobrevibacter_sp._AbM4 in File CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 278
+Jul 12, 2019 5:51:10 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_succinifaciens_DSM_2489 in File CS22_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 32
+Jul 12, 2019 5:51:10 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_brennaborense_DSM_12168 in File CS22_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 28
+Jul 12, 2019 5:51:10 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Porphyromonas_gingivalis_ATCC_33277 in File CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 532
+Jul 12, 2019 5:51:10 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_socranskii_subsp._'04' in File CS22_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 14
+Jul 12, 2019 5:51:10 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_maltophilum in File CS22_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 300
+Jul 12, 2019 5:51:10 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Methanobrevibacter_millerae in File CS22_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 3405
+Jul 12, 2019 5:51:10 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Ovis in File CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 6
+Jul 12, 2019 5:51:11 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Propionibacterium in File CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 41
+Jul 12, 2019 5:51:11 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Propionibacterium_freudenreichii in File CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 102
+Jul 12, 2019 5:51:13 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Eubacterium_sp._oral_taxon_B60 in File CS22_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 16
+Jul 12, 2019 5:51:13 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Porphyromonas_gingivalis_AJW4 in File CS22_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 1639
+Jul 12, 2019 5:51:14 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_medium in File CS23_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 43
+Jul 12, 2019 5:51:15 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Porphyromonas_catoniae in File CS23_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 65
+Jul 12, 2019 5:51:15 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Porphyromonas_gingivalis_A7A1-28 in File CS22_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 1364
+Jul 12, 2019 5:51:15 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Methanobrevibacter in File CS23_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 372
+Jul 12, 2019 5:51:16 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Penicillium_rubens_Wisconsin_54-1255 in File ELSIDRON1_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 46
+Jul 12, 2019 5:51:16 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Methanobrevibacter_smithii in File CS23_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 40
+Jul 12, 2019 5:51:16 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_pedis_str._T_A4 in File CS22_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 1523
+Jul 12, 2019 5:51:17 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Propionibacterium_sp._oral_taxon_193 in File CS23_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 45
+Jul 12, 2019 5:51:17 PM RMA6Processor.RMA6Processor process
+INFO: Finished File: CS23_S0_L001_R1_001.sorted.bam.unmapped.rma6
+Jul 12, 2019 5:51:17 PM RMA6Processor.RMA6Processor process
+INFO: Reading File: /projects1/users/fellows/MEx-IPA/test_data/Weyrich2017Velsko2019/input/ELSIDRON2_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+Jul 12, 2019 5:51:17 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Methanobrevibacter_woesei in File ELSIDRON1_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 71
+Jul 12, 2019 5:51:19 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon environmental_samples_<Methanobrevibacter> in File ELSIDRON1_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 16
+Jul 12, 2019 5:51:19 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_putidum in File CS22_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 35168
+Jul 12, 2019 5:51:19 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Pinus_<subgenus> in File ELSIDRON1_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 4
+Jul 12, 2019 5:51:20 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Tannerella_forsythia_92A2 in File ELSIDRON1_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 6572
+Jul 12, 2019 5:51:24 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Porphyromonas_gulae in File ELSIDRON2_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 15
+Jul 12, 2019 5:51:25 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Fretibacterium in File ELSIDRON2_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 2
+Jul 12, 2019 5:51:25 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Tannerella_forsythia in File CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 620148
+Jul 12, 2019 5:51:25 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Pinus_<subgenus> in File ELSIDRON2_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 280
+Jul 12, 2019 5:51:26 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Methanobrevibacter_sp._YE315 in File CS22_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 3513
+Jul 12, 2019 5:51:28 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Methanobrevibacter_olleyae in File ELSIDRON1_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 66059
+Jul 12, 2019 5:51:28 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon uncultured_Treponema_sp. in File CS22_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 28
+Jul 12, 2019 5:51:28 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon uncultured_Methanobrevibacter_sp. in File CS22_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 304
+Jul 12, 2019 5:51:31 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Porphyromonas_asaccharolytica_DSM_20707 in File ELSIDRON2_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 144
+Jul 12, 2019 5:51:33 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Tannerella_sp._oral_taxon_HOT-286 in File ELSIDRON1_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 5352
+Jul 12, 2019 5:51:33 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Ovis_canadensis_canadensis in File ELSIDRON2_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 56
+Jul 12, 2019 5:51:35 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Tannerella in File CS22_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 34
+Jul 12, 2019 5:51:35 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Tannerella_forsythia_92A2 in File ELSIDRON2_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 8545
+Jul 12, 2019 5:51:35 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_vincentii_ATCC_35580 in File CS22_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 14
+Jul 12, 2019 5:51:35 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Methanobrevibacter_sp._SM9 in File CS22_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 16
+Jul 12, 2019 5:51:35 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Methanobrevibacter_arboriphilus in File ELSIDRON1_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 114
+Jul 12, 2019 5:51:36 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Pinus_taeda in File ELSIDRON1_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 35
+Jul 12, 2019 5:51:36 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_sp._OMZ_838 in File CS22_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 24679
+Jul 12, 2019 5:51:37 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Methanobrevibacter_oralis in File ELSIDRON1_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 1796
+Jul 12, 2019 5:51:37 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Porphyromonas_gingivalis_381 in File CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 326
+Jul 12, 2019 5:51:37 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_maltophilum_ATCC_51939 in File CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 111
+Jul 12, 2019 5:51:38 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_socranskii_subsp._socranskii in File CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 173
+Jul 12, 2019 5:51:38 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_succinifaciens_DSM_2489 in File CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 33
+Jul 12, 2019 5:51:38 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_brennaborense_DSM_12168 in File CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 63
+Jul 12, 2019 5:51:38 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon [Eubacterium]_eligens_ATCC_27750 in File ELSIDRON1_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 135
+Jul 12, 2019 5:51:38 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_maltophilum in File CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 433
+Jul 12, 2019 5:51:39 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Methanobrevibacter_sp. in File ELSIDRON1_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 18
+Jul 12, 2019 5:51:39 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Methanobrevibacter_millerae in File CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 4255
+Jul 12, 2019 5:51:41 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Fretibacterium_fastidiosum in File ELSIDRON1_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 103931
+Jul 12, 2019 5:51:42 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_sp._OMZ_840 in File CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 134
+Jul 12, 2019 5:51:42 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Porphyromonas_asaccharolytica in File CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 4
+Jul 12, 2019 5:51:42 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Porphyromonas_endodontalis in File CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 66
+Jul 12, 2019 5:51:43 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_medium in File CS22_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 88
+Jul 12, 2019 5:51:43 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Porphyromonas_gingivalis_AJW4 in File CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 7302
+Jul 12, 2019 5:51:43 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Methanobrevibacter in File CS22_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 2232
+Jul 12, 2019 5:51:45 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Methanobrevibacter_sp._D5 in File ELSIDRON1_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 285
+Jul 12, 2019 5:51:46 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Methanobrevibacter_smithii_DSM_11975 in File ELSIDRON1_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 130
+Jul 12, 2019 5:51:47 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Malassezia_globosa_CBS_7966 in File ELSIDRON1_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 12
+Jul 12, 2019 5:51:47 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Pinus in File ELSIDRON2_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 38
+Jul 12, 2019 5:51:48 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon uncultured_Eubacterium_sp. in File ELSIDRON1_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 79
+Jul 12, 2019 5:51:48 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Methanobrevibacter_smithii in File CS22_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 181
+Jul 12, 2019 5:51:48 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Methanobrevibacter_olleyae in File ELSIDRON2_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 21058
+Jul 12, 2019 5:51:48 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Porphyromonas in File ELSIDRON1_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 49
+Jul 12, 2019 5:51:49 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon uncultured_Fretibacterium_sp. in File CS22_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 24
+Jul 12, 2019 5:51:49 PM RMA6Processor.RMA6Processor process
+INFO: Finished File: CS22_S0_L001_R1_001.sorted.bam.unmapped.rma6
+Jul 12, 2019 5:51:49 PM RMA6Processor.RMA6Processor process
+INFO: Reading File: /projects1/users/fellows/MEx-IPA/test_data/Weyrich2017Velsko2019/input/SPYNEW_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+Jul 12, 2019 5:51:49 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Porphyromonas_gingivalis in File ELSIDRON1_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 15662
+Jul 12, 2019 5:51:50 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Porphyromonas_gingivalis_A7A1-28 in File CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 5966
+Jul 12, 2019 5:51:53 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Methanobrevibacter_ruminantium_M1 in File ELSIDRON2_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 551
+Jul 12, 2019 5:51:54 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Eubacterium_limosum_KIST612 in File ELSIDRON2_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 27
+Jul 12, 2019 5:51:54 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_denticola_ATCC_33520 in File ELSIDRON2_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 29
+Jul 12, 2019 5:51:54 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_pedis_str._T_A4 in File CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 1563
+Jul 12, 2019 5:51:55 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Pinus_<subgenus> in File SPYNEW_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+ Number of Reads 4
+Jul 12, 2019 5:51:55 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Ovis_canadensis_canadensis in File SPYNEW_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+ Number of Reads 4120
+Jul 12, 2019 5:51:55 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Tannerella_sp._oral_taxon_HOT-286 in File ELSIDRON2_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 22701
+Jul 12, 2019 5:51:56 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_putidum in File CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 18120
+Jul 12, 2019 5:51:59 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Methanobrevibacter_arboriphilus in File ELSIDRON2_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 11
+Jul 12, 2019 5:52:00 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Methanobrevibacter_smithii_ATCC_35061 in File ELSIDRON2_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 8760
+Jul 12, 2019 5:52:04 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon environmental_samples_<Porphyromonas> in File CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 11
+Jul 12, 2019 5:52:04 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Methanobrevibacter_olleyae in File SPYNEW_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+ Number of Reads 14
+Jul 12, 2019 5:52:04 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Methanobrevibacter_sp._YE315 in File CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 4193
+Jul 12, 2019 5:52:04 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Tannerella_sp._oral_taxon_HOT-286 in File SPYNEW_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+ Number of Reads 514
+Jul 12, 2019 5:52:05 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Ovis in File SPYNEW_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+ Number of Reads 840
+Jul 12, 2019 5:52:06 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Propionibacterium in File SPYNEW_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+ Number of Reads 476
+Jul 12, 2019 5:52:06 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Propionibacterium_freudenreichii in File SPYNEW_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+ Number of Reads 399
+Jul 12, 2019 5:52:07 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Methanobrevibacter_smithii_ATCC_35061 in File SPYNEW_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+ Number of Reads 627
+Jul 12, 2019 5:52:07 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_denticola_ATCC_35405 in File ELSIDRON1_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 17696
+Jul 12, 2019 5:52:07 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Ovis_sp. in File SPYNEW_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+ Number of Reads 342
+Jul 12, 2019 5:52:08 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Ovis_aries in File SPYNEW_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+ Number of Reads 1038
+Jul 12, 2019 5:52:08 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Populus in File CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 11
+Jul 12, 2019 5:52:08 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon environmental_samples_<Eubacterium> in File ELSIDRON2_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 5
+Jul 12, 2019 5:52:08 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon uncultured_Treponema_sp. in File CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 57
+Jul 12, 2019 5:52:08 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_primitia_ZAS-2 in File ELSIDRON2_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 26
+Jul 12, 2019 5:52:09 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon uncultured_Methanobrevibacter_sp. in File CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 351
+Jul 12, 2019 5:52:09 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_azotonutricium_ZAS-9 in File ELSIDRON2_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 24
+Jul 12, 2019 5:52:09 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Pinus_taeda in File ELSIDRON2_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 7156
+Jul 12, 2019 5:52:09 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Pinus_taeda in File SPYNEW_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+ Number of Reads 383
+Jul 12, 2019 5:52:10 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Methanobrevibacter_millerae in File SPYNEW_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+ Number of Reads 1343
+Jul 12, 2019 5:52:10 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema in File SPYNEW_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+ Number of Reads 5
+Jul 12, 2019 5:52:11 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_pedis_str._T_A4 in File SPYNEW_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+ Number of Reads 402
+Jul 12, 2019 5:52:11 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Fretibacterium_fastidiosum in File SPYNEW_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+ Number of Reads 64
+Jul 12, 2019 5:52:11 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Tannerella in File SPYNEW_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+ Number of Reads 7
+Jul 12, 2019 5:52:11 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Ovis_canadensis in File SPYNEW_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+ Number of Reads 307
+Jul 12, 2019 5:52:11 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Methanobrevibacter in File SPYNEW_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+ Number of Reads 20
+Jul 12, 2019 5:52:11 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Methanobrevibacter_smithii in File SPYNEW_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+ Number of Reads 4
+Jul 12, 2019 5:52:12 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Porphyromonas_gingivalis_ATCC_33277 in File ELSIDRON1_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 28
+Jul 12, 2019 5:52:12 PM RMA6Processor.RMA6Processor process
+INFO: Finished File: SPYNEW_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+Jul 12, 2019 5:52:12 PM RMA6Processor.RMA6Processor process
+INFO: Reading File: /projects1/users/fellows/MEx-IPA/test_data/Weyrich2017Velsko2019/input/SPYOLD_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+Jul 12, 2019 5:52:12 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Enterocytozoon_bieneusi_H348 in File ELSIDRON1_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 10
+Jul 12, 2019 5:52:13 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_maltophilum_ATCC_51939 in File ELSIDRON1_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 44
+Jul 12, 2019 5:52:13 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_socranskii_subsp._socranskii in File ELSIDRON1_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 25
+Jul 12, 2019 5:52:13 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_succinifaciens_DSM_2489 in File ELSIDRON1_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 74
+Jul 12, 2019 5:52:14 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_socranskii_subsp._'04' in File ELSIDRON1_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 14
+Jul 12, 2019 5:52:14 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_sp._OMZ_840 in File ELSIDRON1_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 12
+Jul 12, 2019 5:52:15 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Methanobrevibacter_sp._MD103 in File ELSIDRON1_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 67
+Jul 12, 2019 5:52:15 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Eubacterium_sp._oral_taxon_B60 in File ELSIDRON1_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 17
+Jul 12, 2019 5:52:15 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Fretibacterium_sp._feline_oral_taxon_215 in File ELSIDRON1_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 18
+Jul 12, 2019 5:52:16 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Pinus_tabuliformis in File ELSIDRON2_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 18
+Jul 12, 2019 5:52:16 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_pedis_str._T_A4 in File ELSIDRON1_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 5682
+Jul 12, 2019 5:52:16 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Pinus_massoniana in File ELSIDRON2_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 20
+Jul 12, 2019 5:52:16 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Pinus_yunnanensis in File ELSIDRON2_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 130
+Jul 12, 2019 5:52:17 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Tannerella in File CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 59
+Jul 12, 2019 5:52:17 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema in File ELSIDRON2_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 2935
+Jul 12, 2019 5:52:17 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_pedis in File CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 1
+Jul 12, 2019 5:52:17 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_sp._SO4A1 in File CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 58
+Jul 12, 2019 5:52:17 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_sp._OMZ_838 in File CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 4874
+Jul 12, 2019 5:52:19 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Penicillium_rubens_Wisconsin_54-1255 in File SPYOLD_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+ Number of Reads 291
+Jul 12, 2019 5:52:21 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_putidum in File ELSIDRON1_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 3710
+Jul 12, 2019 5:52:21 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_medium in File CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 25
+Jul 12, 2019 5:52:21 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_denticola in File ELSIDRON2_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 853
+Jul 12, 2019 5:52:21 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Methanobrevibacter in File CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 2439
+Jul 12, 2019 5:52:22 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_pallidum in File ELSIDRON2_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 34
+Jul 12, 2019 5:52:23 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Methanobrevibacter_oralis in File ELSIDRON2_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 109
+Jul 12, 2019 5:52:23 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Populus in File ELSIDRON1_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 17
+Jul 12, 2019 5:52:23 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon [Eubacterium]_eligens_ATCC_27750 in File ELSIDRON2_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 471
+Jul 12, 2019 5:52:23 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon uncultured_Treponema_sp. in File ELSIDRON1_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 12
+Jul 12, 2019 5:52:23 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Pinus_<subgenus> in File SPYOLD_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+ Number of Reads 3329
+Jul 12, 2019 5:52:24 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Tannerella in File ELSIDRON1_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 30
+Jul 12, 2019 5:52:25 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Methanobrevibacter_sp._87.7 in File ELSIDRON1_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 11
+Jul 12, 2019 5:52:25 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Fretibacterium_fastidiosum in File ELSIDRON2_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 40758
+Jul 12, 2019 5:52:25 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_medium in File ELSIDRON1_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 14
+Jul 12, 2019 5:52:26 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Methanobrevibacter_smithii in File CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 260
+Jul 12, 2019 5:52:26 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon uncultured_Fretibacterium_sp. in File CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6
+ Number of Reads 50
+Jul 12, 2019 5:52:26 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Methanobrevibacter in File ELSIDRON1_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 41199
+Jul 12, 2019 5:52:29 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Methanobrevibacter_sp._D5 in File ELSIDRON2_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 10
+Jul 12, 2019 5:52:29 PM RMA6Processor.RMA6Processor process
+INFO: Finished File: CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6
+Jul 12, 2019 5:52:29 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Tannerella_forsythia_KS16 in File ELSIDRON2_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 9591
+Jul 12, 2019 5:52:34 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Tannerella_forsythia_3313 in File ELSIDRON2_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 9619
+Jul 12, 2019 5:52:36 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Methanobrevibacter_smithii in File ELSIDRON1_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 11905
+Jul 12, 2019 5:52:38 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_socranskii in File ELSIDRON2_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 74
+Jul 12, 2019 5:52:38 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Methanobrevibacter_smithii_DSM_11975 in File ELSIDRON2_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 23
+Jul 12, 2019 5:52:38 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Porphyromonas_gingivalis_TDC60 in File ELSIDRON2_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 631
+Jul 12, 2019 5:52:39 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Malassezia_globosa_CBS_7966 in File ELSIDRON2_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 28
+Jul 12, 2019 5:52:39 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Porphyromonas_gingivalis_W83 in File ELSIDRON2_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 112
+Jul 12, 2019 5:52:39 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Eubacterium in File ELSIDRON2_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 332
+Jul 12, 2019 5:52:40 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon uncultured_Eubacterium_sp. in File ELSIDRON2_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 144
+Jul 12, 2019 5:52:40 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Porphyromonas in File ELSIDRON2_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 36
+Jul 12, 2019 5:52:41 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Porphyromonas_gingivalis in File ELSIDRON2_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 9682
+Jul 12, 2019 5:52:44 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Fretibacterium in File ELSIDRON1_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 19
+Jul 12, 2019 5:52:44 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_brennaborense in File ELSIDRON1_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 21
+Jul 12, 2019 5:52:44 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Porphyromonas_asaccharolytica_DSM_20707 in File SPYOLD_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+ Number of Reads 104
+Jul 12, 2019 5:52:45 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Porphyromonas_asaccharolytica_DSM_20707 in File ELSIDRON1_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 121
+Jul 12, 2019 5:52:45 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Ovis_canadensis_canadensis in File SPYOLD_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+ Number of Reads 16499
+Jul 12, 2019 5:52:45 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Ovis_canadensis_canadensis in File ELSIDRON1_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 24
+Jul 12, 2019 5:52:45 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Methanobrevibacter_curvatus in File ELSIDRON1_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 62
+Jul 12, 2019 5:52:46 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Methanobrevibacter_ruminantium_M1 in File ELSIDRON1_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 5059
+Jul 12, 2019 5:52:48 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Eubacterium_limosum_KIST612 in File ELSIDRON1_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 127
+Jul 12, 2019 5:52:50 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Methanobrevibacter_smithii_ATCC_35061 in File ELSIDRON1_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 82946
+Jul 12, 2019 5:52:55 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Schizophyllum_commune_H4-8 in File ELSIDRON1_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 42
+Jul 12, 2019 5:52:55 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Tannerella_forsythia_92A2 in File SPYOLD_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+ Number of Reads 18
+Jul 12, 2019 5:52:55 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_primitia_ZAS-2 in File ELSIDRON1_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 96
+Jul 12, 2019 5:52:55 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Pinus in File SPYOLD_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+ Number of Reads 529
+Jul 12, 2019 5:52:55 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Penicillium_expansum in File ELSIDRON2_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 17
+Jul 12, 2019 5:52:56 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_azotonutricium_ZAS-9 in File ELSIDRON1_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 50
+Jul 12, 2019 5:52:56 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Eubacterium_limosum in File ELSIDRON2_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 149
+Jul 12, 2019 5:52:56 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Malassezia in File ELSIDRON1_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 10
+Jul 12, 2019 5:52:56 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Propionibacterium_freudenreichii_subsp._freudenreichii in File ELSIDRON1_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 24
+Jul 12, 2019 5:52:57 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Penicillium_chrysogenum_species_complex in File ELSIDRON1_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 1
+Jul 12, 2019 5:52:57 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_denticola_ATCC_35405 in File ELSIDRON2_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 19655
+Jul 12, 2019 5:52:57 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema in File ELSIDRON1_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 2746
+Jul 12, 2019 5:52:59 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_denticola in File ELSIDRON1_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 712
+Jul 12, 2019 5:53:00 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_pallidum in File ELSIDRON1_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 71
+Jul 12, 2019 5:53:01 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Methanobrevibacter_sp._AbM4 in File ELSIDRON2_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 1993
+Jul 12, 2019 5:53:01 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_pallidum_subsp._pallidum in File ELSIDRON1_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 21
+Jul 12, 2019 5:53:02 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_caldarium_DSM_7334 in File ELSIDRON1_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 13
+Jul 12, 2019 5:53:02 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Porphyromonas_gingivalis_ATCC_33277 in File ELSIDRON2_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 26
+Jul 12, 2019 5:53:02 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Tannerella_forsythia_KS16 in File ELSIDRON1_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 6317
+Jul 12, 2019 5:53:02 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Ovis in File ELSIDRON2_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 3
+Jul 12, 2019 5:53:03 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Strobus in File SPYOLD_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+ Number of Reads 43
+Jul 12, 2019 5:53:03 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Propionibacterium in File ELSIDRON2_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 822
+Jul 12, 2019 5:53:03 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Methanobrevibacter_olleyae in File SPYOLD_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+ Number of Reads 298
+Jul 12, 2019 5:53:03 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Methanobrevibacter_ruminantium_M1 in File SPYOLD_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+ Number of Reads 55
+Jul 12, 2019 5:53:04 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Pinus_halepensis in File ELSIDRON2_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 14
+Jul 12, 2019 5:53:04 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Eubacterium_limosum_KIST612 in File SPYOLD_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+ Number of Reads 31
+Jul 12, 2019 5:53:04 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Propionibacterium_freudenreichii in File ELSIDRON2_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 2963
+Jul 12, 2019 5:53:04 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Zymoseptoria_tritici in File SPYOLD_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+ Number of Reads 20
+Jul 12, 2019 5:53:05 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Tannerella_sp._oral_taxon_HOT-286 in File SPYOLD_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+ Number of Reads 220
+Jul 12, 2019 5:53:05 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Pinus_lambertiana in File SPYOLD_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+ Number of Reads 16
+Jul 12, 2019 5:53:06 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Tannerella_forsythia_3313 in File ELSIDRON1_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 6974
+Jul 12, 2019 5:53:06 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Methanobrevibacter_smithii_ATCC_35061 in File SPYOLD_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+ Number of Reads 772
+Jul 12, 2019 5:53:06 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Pinus_radiata in File SPYOLD_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+ Number of Reads 159
+Jul 12, 2019 5:53:07 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Pinus_strobus in File SPYOLD_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+ Number of Reads 67
+Jul 12, 2019 5:53:07 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Pinus_sylvestris in File SPYOLD_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+ Number of Reads 459
+Jul 12, 2019 5:53:07 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Pinus_hwangshanensis in File SPYOLD_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+ Number of Reads 41
+Jul 12, 2019 5:53:08 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Pinus_thunbergii in File SPYOLD_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+ Number of Reads 48
+Jul 12, 2019 5:53:08 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Pinus_brutia in File SPYOLD_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+ Number of Reads 32
+Jul 12, 2019 5:53:09 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_socranskii in File ELSIDRON1_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 42
+Jul 12, 2019 5:53:09 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Porphyromonas_gingivalis_TDC60 in File ELSIDRON1_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 917
+Jul 12, 2019 5:53:10 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Pinus_taeda in File SPYOLD_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+ Number of Reads 62018
+Jul 12, 2019 5:53:10 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Porphyromonas_gingivalis_W83 in File ELSIDRON1_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 211
+Jul 12, 2019 5:53:10 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Eubacterium_sp._oral_clone_FX028 in File ELSIDRON1_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 502
+Jul 12, 2019 5:53:11 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Eubacterium in File ELSIDRON1_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 408
+Jul 12, 2019 5:53:12 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Eubacterium_limosum in File ELSIDRON1_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 340
+Jul 12, 2019 5:53:13 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Methanobrevibacter_sp._AbM4 in File ELSIDRON1_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 17985
+Jul 12, 2019 5:53:17 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Ovis in File ELSIDRON1_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 2
+Jul 12, 2019 5:53:17 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Propionibacterium in File ELSIDRON1_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 1284
+Jul 12, 2019 5:53:18 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Tannerella_forsythia in File ELSIDRON2_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 69697
+Jul 12, 2019 5:53:18 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Malassezia in File SPYOLD_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+ Number of Reads 15
+Jul 12, 2019 5:53:18 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Pinus_koraiensis in File SPYOLD_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+ Number of Reads 46
+Jul 12, 2019 5:53:19 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Propionibacterium_freudenreichii in File ELSIDRON1_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 4041
+Jul 12, 2019 5:53:19 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Propionibacterium_freudenreichii_subsp._freudenreichii in File SPYOLD_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+ Number of Reads 15
+Jul 12, 2019 5:53:19 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Pinus_tabuliformis in File SPYOLD_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+ Number of Reads 2
+Jul 12, 2019 5:53:19 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Pinus_massoniana in File SPYOLD_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+ Number of Reads 495
+Jul 12, 2019 5:53:20 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Pinus_armandii in File SPYOLD_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+ Number of Reads 28
+Jul 12, 2019 5:53:20 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Penicillium_chrysogenum_species_complex in File SPYOLD_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+ Number of Reads 13
+Jul 12, 2019 5:53:21 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Pinus_yunnanensis in File SPYOLD_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+ Number of Reads 1324
+Jul 12, 2019 5:53:22 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema in File SPYOLD_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+ Number of Reads 19
+Jul 12, 2019 5:53:22 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Penicillium_digitatum_Pd1 in File SPYOLD_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+ Number of Reads 39
+Jul 12, 2019 5:53:23 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Fretibacterium_fastidiosum in File SPYOLD_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+ Number of Reads 281
+Jul 12, 2019 5:53:23 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Penicillium_arizonense in File SPYOLD_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+ Number of Reads 55
+Jul 12, 2019 5:53:23 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Tannerella_forsythia_KS16 in File SPYOLD_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+ Number of Reads 26
+Jul 12, 2019 5:53:24 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Tannerella_forsythia_3313 in File SPYOLD_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+ Number of Reads 40
+Jul 12, 2019 5:53:24 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Coprinopsis_cinerea_okayama7#130 in File SPYOLD_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+ Number of Reads 15
+Jul 12, 2019 5:53:24 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Ovis_canadensis in File SPYOLD_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+ Number of Reads 217
+Jul 12, 2019 5:53:25 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Malassezia_globosa_CBS_7966 in File SPYOLD_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+ Number of Reads 544
+Jul 12, 2019 5:53:25 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Populus_euphratica in File SPYOLD_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+ Number of Reads 11
+Jul 12, 2019 5:53:26 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Penicillium in File ELSIDRON2_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 16
+Jul 12, 2019 5:53:26 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Malassezia_sympodialis_ATCC_42132 in File SPYOLD_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+ Number of Reads 13
+Jul 12, 2019 5:53:26 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon uncultured_Propionibacterium_sp. in File ELSIDRON2_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 34
+Jul 12, 2019 5:53:26 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Eubacterium in File SPYOLD_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+ Number of Reads 55
+Jul 12, 2019 5:53:26 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Porphyromonas_gingivalis_381 in File ELSIDRON2_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 27
+Jul 12, 2019 5:53:27 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_maltophilum_ATCC_51939 in File ELSIDRON2_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 28
+Jul 12, 2019 5:53:27 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Porphyromonas_gingivalis in File SPYOLD_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+ Number of Reads 206
+Jul 12, 2019 5:53:27 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_socranskii_subsp._socranskii in File ELSIDRON2_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 20
+Jul 12, 2019 5:53:27 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_succinifaciens_DSM_2489 in File ELSIDRON2_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 21
+Jul 12, 2019 5:53:28 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_brennaborense_DSM_12168 in File ELSIDRON2_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 142
+Jul 12, 2019 5:53:28 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Penicillium_expansum in File SPYOLD_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+ Number of Reads 71
+Jul 12, 2019 5:53:28 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_maltophilum in File ELSIDRON2_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 132
+Jul 12, 2019 5:53:28 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Eubacterium_limosum in File SPYOLD_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+ Number of Reads 17
+Jul 12, 2019 5:53:28 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Pinus_densiflora in File ELSIDRON2_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 52
+Jul 12, 2019 5:53:28 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_denticola_ATCC_35405 in File SPYOLD_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+ Number of Reads 19
+Jul 12, 2019 5:53:29 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Methanobrevibacter_sp._AbM4 in File SPYOLD_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+ Number of Reads 86
+Jul 12, 2019 5:53:29 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Methanobrevibacter_millerae in File ELSIDRON2_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 11827
+Jul 12, 2019 5:53:29 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Ovis in File SPYOLD_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+ Number of Reads 1131
+Jul 12, 2019 5:53:32 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Propionibacterium in File SPYOLD_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+ Number of Reads 331
+Jul 12, 2019 5:53:32 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Pinus_elliottii in File SPYOLD_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+ Number of Reads 18
+Jul 12, 2019 5:53:32 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Pinus_halepensis in File SPYOLD_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+ Number of Reads 10
+Jul 12, 2019 5:53:33 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Propionibacterium_freudenreichii in File SPYOLD_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+ Number of Reads 722
+Jul 12, 2019 5:53:33 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Malassezia_pachydermatis in File ELSIDRON2_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 15
+Jul 12, 2019 5:53:33 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Methanobrevibacter_sp._MD103 in File ELSIDRON2_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 16
+Jul 12, 2019 5:53:34 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Porphyromonas_gingivalis_AJW4 in File ELSIDRON2_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 451
+Jul 12, 2019 5:53:34 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Pinus_pinaster in File ELSIDRON2_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 44
+Jul 12, 2019 5:53:35 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Porphyromonas_gingivalis_A7A1-28 in File ELSIDRON2_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 529
+Jul 12, 2019 5:53:35 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_pedis_str._T_A4 in File ELSIDRON2_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 2586
+Jul 12, 2019 5:53:36 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Tannerella_forsythia in File ELSIDRON1_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 50753
+Jul 12, 2019 5:53:36 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Tannerella_forsythia in File SPYOLD_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+ Number of Reads 289
+Jul 12, 2019 5:53:36 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Penicillium in File SPYOLD_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+ Number of Reads 108
+Jul 12, 2019 5:53:37 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Penicillium_brevicompactum in File SPYOLD_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+ Number of Reads 12
+Jul 12, 2019 5:53:37 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_putidum in File ELSIDRON2_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 2979
+Jul 12, 2019 5:53:37 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Ovis_aries_musimon in File SPYOLD_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+ Number of Reads 394
+Jul 12, 2019 5:53:38 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Ovis_sp. in File SPYOLD_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+ Number of Reads 164
+Jul 12, 2019 5:53:38 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Ovis_aries in File SPYOLD_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+ Number of Reads 1385
+Jul 12, 2019 5:53:38 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Methanobrevibacter_sp._YE315 in File ELSIDRON2_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 2954
+Jul 12, 2019 5:53:40 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_brennaborense_DSM_12168 in File SPYOLD_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+ Number of Reads 13
+Jul 12, 2019 5:53:40 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Populus in File ELSIDRON2_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 11
+Jul 12, 2019 5:53:40 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Ovis_dalli in File SPYOLD_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+ Number of Reads 30
+Jul 12, 2019 5:53:40 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon uncultured_Methanobrevibacter_sp. in File ELSIDRON2_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 124
+Jul 12, 2019 5:53:41 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Pinus_densiflora in File SPYOLD_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+ Number of Reads 256
+Jul 12, 2019 5:53:41 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Methanobrevibacter_millerae in File SPYOLD_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+ Number of Reads 854
+Jul 12, 2019 5:53:42 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Malassezia_pachydermatis in File SPYOLD_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+ Number of Reads 10
+Jul 12, 2019 5:53:42 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Tannerella in File ELSIDRON2_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 40
+Jul 12, 2019 5:53:42 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Pinus_pinaster in File SPYOLD_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+ Number of Reads 857
+Jul 12, 2019 5:53:43 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Populus_trichocarpa in File ELSIDRON2_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 72
+Jul 12, 2019 5:53:43 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_sp._OMZ_838 in File ELSIDRON2_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 1293
+Jul 12, 2019 5:53:43 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_pedis_str._T_A4 in File SPYOLD_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+ Number of Reads 46
+Jul 12, 2019 5:53:44 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Penicillium in File ELSIDRON1_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 12
+Jul 12, 2019 5:53:44 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Malassezia_globosa in File SPYOLD_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+ Number of Reads 14
+Jul 12, 2019 5:53:44 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_medium in File ELSIDRON2_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 12
+Jul 12, 2019 5:53:44 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon uncultured_Propionibacterium_sp. in File ELSIDRON1_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 25
+Jul 12, 2019 5:53:44 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Pinus_canariensis in File SPYOLD_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+ Number of Reads 14
+Jul 12, 2019 5:53:45 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Porphyromonas_pasteri in File ELSIDRON2_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 15
+Jul 12, 2019 5:53:45 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Malassezia_sympodialis in File SPYOLD_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+ Number of Reads 16
+Jul 12, 2019 5:53:45 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_brennaborense_DSM_12168 in File ELSIDRON1_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 168
+Jul 12, 2019 5:53:45 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Methanobrevibacter in File ELSIDRON2_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 4406
+Jul 12, 2019 5:53:45 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Methanobrevibacter_sp._YE315 in File SPYOLD_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+ Number of Reads 390
+Jul 12, 2019 5:53:45 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Schizophyllum_commune in File ELSIDRON1_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 1
+Jul 12, 2019 5:53:46 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Propionibacterium_freudenreichii_subsp._shermanii in File ELSIDRON1_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 13
+Jul 12, 2019 5:53:46 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Populus in File SPYOLD_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+ Number of Reads 16
+Jul 12, 2019 5:53:46 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon uncultured_Methanobrevibacter_sp. in File SPYOLD_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+ Number of Reads 12
+Jul 12, 2019 5:53:46 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_maltophilum in File ELSIDRON1_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 129
+Jul 12, 2019 5:53:47 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Pinus_luchuensis in File SPYOLD_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+ Number of Reads 15
+Jul 12, 2019 5:53:47 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Populus_trichocarpa in File SPYOLD_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+ Number of Reads 35
+Jul 12, 2019 5:53:48 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Pinus_mugo in File SPYOLD_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+ Number of Reads 40
+Jul 12, 2019 5:53:49 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_sp._OMZ_838 in File SPYOLD_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+ Number of Reads 21
+Jul 12, 2019 5:53:49 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Pinus_tabuliformis_var._henryi in File SPYOLD_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+ Number of Reads 12
+Jul 12, 2019 5:53:49 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Ceratotherium_simum_simum in File SPYOLD_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+ Number of Reads 123
+Jul 12, 2019 5:53:50 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Methanobrevibacter_millerae in File ELSIDRON1_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 121914
+Jul 12, 2019 5:53:50 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Methanobrevibacter in File SPYOLD_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+ Number of Reads 569
+Jul 12, 2019 5:53:50 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Methanobrevibacter_smithii in File ELSIDRON2_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 1159
+Jul 12, 2019 5:53:51 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Methanobrevibacter_smithii in File SPYOLD_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+ Number of Reads 48
+Jul 12, 2019 5:53:51 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Propionibacterium_sp._oral_taxon_193 in File SPYOLD_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+ Number of Reads 1644
+Jul 12, 2019 5:53:51 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Propionibacterium_sp._oral_taxon_193 in File ELSIDRON2_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 234
+Jul 12, 2019 5:53:52 PM RMA6Processor.RMA6Processor process
+INFO: Finished File: ELSIDRON2_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+Jul 12, 2019 5:53:52 PM RMA6Processor.RMA6Processor process
+INFO: Finished File: SPYOLD_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6
+Jul 12, 2019 5:53:54 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Porphyromonas_gingivalis_AJW4 in File ELSIDRON1_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 514
+Jul 12, 2019 5:53:54 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Porphyromonas_gingivalis_A7A1-28 in File ELSIDRON1_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 753
+Jul 12, 2019 5:53:55 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Methanobrevibacter_sp._YE315 in File ELSIDRON1_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 27999
+Jul 12, 2019 5:53:59 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon uncultured_Methanobrevibacter_sp. in File ELSIDRON1_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 587
+Jul 12, 2019 5:54:03 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_pedis in File ELSIDRON1_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 3
+Jul 12, 2019 5:54:04 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Methanobrevibacter_sp._SM9 in File ELSIDRON1_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 15
+Jul 12, 2019 5:54:04 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Methanobrevibacter_sp._YLM1 in File ELSIDRON1_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 39
+Jul 12, 2019 5:54:04 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Treponema_sp._OMZ_838 in File ELSIDRON1_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 1865
+Jul 12, 2019 5:54:05 PM RMA6TaxonProcessor.NodeProcessor process
+INFO: Processing Taxon Propionibacterium_sp._oral_taxon_193 in File ELSIDRON1_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+ Number of Reads 225
+Jul 12, 2019 5:54:05 PM RMA6Processor.RMA6Processor process
+INFO: Finished File: ELSIDRON1_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6
+Jul 12, 2019 5:54:05 PM RMAExtractor.RMAExtractor main
+INFO: Writing Summary File
+Jul 12, 2019 5:54:05 PM RMAExtractor.RMAExtractor main
+INFO: Runtime: 5 Minutes
+Jul 12, 2019 5:54:05 PM RMAExtractor.RMAExtractor main
+INFO: Peak memory: 14.5 of 30.0G
+Jul 12, 2019 5:54:05 PM RMAExtractor.RMAExtractor main
+INFO: Shutdown
