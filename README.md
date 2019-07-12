@@ -4,7 +4,7 @@
 
 Interactive viewer of MaltExtract results. Written by James A. Fellows Yates.
 
-##### Table of Contents  
+## Table of Contents  
  * [Description](#description)  
  * [Installation](#installation)
  * [Running](#running)
