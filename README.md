@@ -28,7 +28,7 @@ given node, the plots for every sample with data on that node, and b) for a
 given sample, plots for every node. This allows for fast detection of potential
 samples or taxa of interest from large datasets.  
 
-![](Example display of MEx-IPA)
+![Example display of MEx-IPA](assets/images/01-MExIPA_example.png)
 
 ## Preparation
 This shiny app has been tested on `R` version 3.6, and requires the following 
