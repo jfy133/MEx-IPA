@@ -1,8 +1,5 @@
 ######## MEx-IPA VERSION 0.4,1 #################
 
-options(shiny.trace = TRUE)
-options(shiny.error = browser)
-
 
 library(shiny)
 library(DT)

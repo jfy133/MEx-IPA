@@ -1000,136 +1000,136 @@ shinyServer(function(input, output) {
     ## when it detects a change)
     ## Notes: as using renderUI, sends all plots to UI at once.
     
-    plotInput2 <- reactive({
-
-      dat <- maltExtract_data()
-
-      req(input$selected_filter)
-
-      if (input$selected_filter == "all" & input$characteristic != "damage") {
-        selected_filter <- c("default", "ancient")
-      } else if (input$selected_filter == "all" & input$characteristic == "damage") {
-        selected_filter <- "default"
-      } else {
-        selected_filter <- input$selected_filter
-      }
-
-      n_plot <- dat$node_names
-
-
-      if (input$characteristic == "damage") {
-        total_data <- purrr::map(n_plot, ~ clean_damage(x = dat$damageMismatch,
-                                                        s_filter = selected_filter,
-                                                        r_string = input$remove_string,
-                                                        s_file = input$selected_file,
-                                                        s_node = .x))
-
-      } else if (input$characteristic == "length") {
-        total_data <- purrr::map(n_plot, ~ clean_length(x = dat$readLengthDist,
-                                                        s_filter = selected_filter,
-                                                        r_string = input$remove_string,
-                                                        s_file = input$selected_file,
-                                                        s_node = .x))
-      } else if (input$characteristic == "edit") {
-        total_data <- purrr::map(n_plot, ~ clean_edit(x = dat$editDistance,
-                                                      s_filter = selected_filter,
-                                                      r_string = input$remove_string,
-                                                      s_file = input$selected_file,
-                                                      s_node = .x))
-      } else if (input$characteristic == "percentidentity") {
-        total_data <- purrr::map(n_plot, ~ clean_percentidentity(x = dat$percentIdentity,
-                                                                 s_filter = selected_filter,
-                                                                 r_string = input$remove_string,
-                                                                 s_file = input$selected_file,
-                                                                 s_node = .x))
-      } else if (input$characteristic == "positionscovered") {
-        total_data <- purrr::map(n_plot, ~ clean_positionscovered(x = dat$positionsCovered,
-                                                                  s_filter = selected_filter,
-                                                                  r_string = input$remove_string,
-                                                                  s_file = input$selected_file,
-                                                                  s_node = .x))
-      } else if (input$characteristic == "coveragehist") {
-        total_data <- purrr::map(n_plot, ~ clean_coveragehist(x = dat$coverageHist,
-                                                              s_filter = selected_filter,
-                                                              r_string = input$remove_string,
-                                                              s_file = input$selected_file,
-                                                              s_node = .x))
-      }
-
-      names(total_data) <- n_plot
-
-      interactive <- input$interactive
-
-      return(list("n_plot" = n_plot, "total_data" = total_data,
-                  "interactive" = interactive))
-    })
-
-
-    ##### Create divs
-    output$multitaxa_plots <- renderUI({
-      req(plotInput2())
-      ## make all the plot(ly) objects and place in a list
-      plot_output_list <- lapply(plotInput2()$n_plot, function(i) {
-        plotname <- i
-        column(6, plotOutput(plotname))
-      })
-
-      ## create the HTML objects that correspond to the plotly objects
-      do.call(tagList, plot_output_list)
-    })
-
-    ## Mointor for changes in plotInput object (which is data generation above)
-    observe({
-      lapply(plotInput2()$n_plot, function(i){
-
-        req(plotInput2())
-
-        output[[i]] <- renderPlot({
-          if (nrow(plotInput2()$total_data[[i]]) == 0) {
-            nodata_message(input$selected_file, i)
-          } else if (input$characteristic == "damage") {
-            plot_damage(plotInput2()$total_data[[i]])  +
-              theme(strip.text.y = element_blank())
-          } else if (input$characteristic == "length") {
-            plot_col(plotInput2()$total_data[[i]],
-                     "Length_Bin",
-                     "Alignment_Count",
-                     "Read Length Bins (bp)",
-                     "Alignments (n)")  +
-              theme(strip.text = element_blank())
-          } else if (input$characteristic == "edit") {
-            plot_col(plotInput2()$total_data[[i]],
-                     "Edit_Distance",
-                     "Alignment_Count",
-                     "Edit Distance",
-                     "Alignments (n)") +
-              theme(strip.text = element_blank())
-          } else if (input$characteristic == "percentidentity") {
-            plot_col(plotInput2()$total_data[[i]],
-                     "Percent_Identity",
-                     "Alignment_Count",
-                     "Sequence Identity (%)",
-                     "Alignments (n)") +
-              theme(strip.text = element_blank())
-          } else if (input$characteristic == "positionscovered") {
-            plot_col(plotInput2()$total_data[[i]],
-                     "Breadth",
-                     "Percentage",
-                     "Fold Coverage (X)",
-                     "Percentage of Reference (%)") +
-              theme(strip.text = element_blank())
-          } else if (input$characteristic == "coveragehist") {
-            plot_col(plotInput2()$total_data[[i]],
-                     "Fold_Coverage",
-                     "Base_Pairs",
-                     "Fold Coverage (X)",
-                     "Base Pairs (n)") +
-              theme(strip.text = element_blank())
-          }
-        })
-      })
-
-    })
+    # plotInput2 <- reactive({
+    # 
+    #   dat <- maltExtract_data()
+    # 
+    #   req(input$selected_filter)
+    # 
+    #   if (input$selected_filter == "all" & input$characteristic != "damage") {
+    #     selected_filter <- c("default", "ancient")
+    #   } else if (input$selected_filter == "all" & input$characteristic == "damage") {
+    #     selected_filter <- "default"
+    #   } else {
+    #     selected_filter <- input$selected_filter
+    #   }
+    # 
+    #   n_plot <- dat$node_names
+    # 
+    # 
+    #   if (input$characteristic == "damage") {
+    #     total_data <- purrr::map(n_plot, ~ clean_damage(x = dat$damageMismatch,
+    #                                                     s_filter = selected_filter,
+    #                                                     r_string = input$remove_string,
+    #                                                     s_file = input$selected_file,
+    #                                                     s_node = .x))
+    # 
+    #   } else if (input$characteristic == "length") {
+    #     total_data <- purrr::map(n_plot, ~ clean_length(x = dat$readLengthDist,
+    #                                                     s_filter = selected_filter,
+    #                                                     r_string = input$remove_string,
+    #                                                     s_file = input$selected_file,
+    #                                                     s_node = .x))
+    #   } else if (input$characteristic == "edit") {
+    #     total_data <- purrr::map(n_plot, ~ clean_edit(x = dat$editDistance,
+    #                                                   s_filter = selected_filter,
+    #                                                   r_string = input$remove_string,
+    #                                                   s_file = input$selected_file,
+    #                                                   s_node = .x))
+    #   } else if (input$characteristic == "percentidentity") {
+    #     total_data <- purrr::map(n_plot, ~ clean_percentidentity(x = dat$percentIdentity,
+    #                                                              s_filter = selected_filter,
+    #                                                              r_string = input$remove_string,
+    #                                                              s_file = input$selected_file,
+    #                                                              s_node = .x))
+    #   } else if (input$characteristic == "positionscovered") {
+    #     total_data <- purrr::map(n_plot, ~ clean_positionscovered(x = dat$positionsCovered,
+    #                                                               s_filter = selected_filter,
+    #                                                               r_string = input$remove_string,
+    #                                                               s_file = input$selected_file,
+    #                                                               s_node = .x))
+    #   } else if (input$characteristic == "coveragehist") {
+    #     total_data <- purrr::map(n_plot, ~ clean_coveragehist(x = dat$coverageHist,
+    #                                                           s_filter = selected_filter,
+    #                                                           r_string = input$remove_string,
+    #                                                           s_file = input$selected_file,
+    #                                                           s_node = .x))
+    #   }
+    # 
+    #   names(total_data) <- n_plot
+    # 
+    #   interactive <- input$interactive
+    # 
+    #   return(list("n_plot" = n_plot, "total_data" = total_data,
+    #               "interactive" = interactive))
+    # })
+    # 
+    # 
+    # ##### Create divs
+    # output$multitaxa_plots <- renderUI({
+    #   req(plotInput2())
+    #   ## make all the plot(ly) objects and place in a list
+    #   plot_output_list <- lapply(plotInput2()$n_plot, function(i) {
+    #     plotname <- i
+    #     column(6, plotOutput(plotname))
+    #   })
+    # 
+    #   ## create the HTML objects that correspond to the plotly objects
+    #   do.call(tagList, plot_output_list)
+    # })
+    # 
+    # ## Mointor for changes in plotInput object (which is data generation above)
+    # observe({
+    #   lapply(plotInput2()$n_plot, function(i){
+    # 
+    #     req(plotInput2())
+    # 
+    #     output[[i]] <- renderPlot({
+    #       if (nrow(plotInput2()$total_data[[i]]) == 0) {
+    #         nodata_message(input$selected_file, i)
+    #       } else if (input$characteristic == "damage") {
+    #         plot_damage(plotInput2()$total_data[[i]])  +
+    #           theme(strip.text.y = element_blank())
+    #       } else if (input$characteristic == "length") {
+    #         plot_col(plotInput2()$total_data[[i]],
+    #                  "Length_Bin",
+    #                  "Alignment_Count",
+    #                  "Read Length Bins (bp)",
+    #                  "Alignments (n)")  +
+    #           theme(strip.text = element_blank())
+    #       } else if (input$characteristic == "edit") {
+    #         plot_col(plotInput2()$total_data[[i]],
+    #                  "Edit_Distance",
+    #                  "Alignment_Count",
+    #                  "Edit Distance",
+    #                  "Alignments (n)") +
+    #           theme(strip.text = element_blank())
+    #       } else if (input$characteristic == "percentidentity") {
+    #         plot_col(plotInput2()$total_data[[i]],
+    #                  "Percent_Identity",
+    #                  "Alignment_Count",
+    #                  "Sequence Identity (%)",
+    #                  "Alignments (n)") +
+    #           theme(strip.text = element_blank())
+    #       } else if (input$characteristic == "positionscovered") {
+    #         plot_col(plotInput2()$total_data[[i]],
+    #                  "Breadth",
+    #                  "Percentage",
+    #                  "Fold Coverage (X)",
+    #                  "Percentage of Reference (%)") +
+    #           theme(strip.text = element_blank())
+    #       } else if (input$characteristic == "coveragehist") {
+    #         plot_col(plotInput2()$total_data[[i]],
+    #                  "Fold_Coverage",
+    #                  "Base_Pairs",
+    #                  "Fold Coverage (X)",
+    #                  "Base Pairs (n)") +
+    #           theme(strip.text = element_blank())
+    #       }
+    #     })
+    #   })
+    # 
+    # })
     
 })
 
