@@ -151,9 +151,13 @@ Velsko, I. M. et al. Microbial differences between dental plaque and historic de
 Weyrich, L. S. et al. Neanderthal behaviour, diet, and disease inferred from ancient DNA in dental calculus. Nature 544, 357–361 (2017). doi:[10.1038/nature21674](http://dx.doi.org/10.1038/nature21674)
 
 ## Change Log
+**0.4.2**
+  * Fixed missing data message for multi-sample comparison
+  * Temporarily deactivated multiple-taxa comparison due to missing data resulting in empty divs
+  * Added more documentation on github repo, and documentation panel to app itself
 
 **0.4.1**
-  * New rewrite with dynamically generate plots and an option for interactive plots
+  * New-new rewrite with dynamically generate plots and an option for interactive plots
 
 **0.4**
   * New rewrite with dynamically generate plots and an option for interactive plots
