@@ -6,6 +6,7 @@ library(data.table)
 library(plotly)
 library(DT)
 library(patchwork)
+library(shinycustomloader)
 
 ## Functions 
 ## ## Data loading
@@ -164,6 +165,22 @@ plot_col <- function(dat, xaxis, yaxis, xlabel, ylabel) {
         theme_minimal()
 }
 
+nodata_message <- function(sample, node) {
+  ggplot() + 
+    labs(title = sample,
+         subtitle = node) +
+    annotate("text",
+           x = 0, 
+           y = 0, 
+           label =  "\nNo input data for this\ntaxon in this sample!") +
+    theme_linedraw() +
+    theme(axis.text = element_blank(), 
+          panel.grid = element_blank(),
+          axis.ticks = element_blank(),
+          axis.title = element_blank(),
+          panel.border = element_rect(colour = "lightgrey", size = 1.2))
+  }
+
 
 ## Default Aesthetics
 
@@ -250,7 +267,7 @@ shinyServer(function(input, output) {
         input_dir <- paste0(input$select_dir,"/")
         
         if (!file.exists(paste0(input_dir, "default/RunSummary.txt"))) {
-            paste("Detected MaltExtract not data. Check input directory.")
+            paste("No MaltExtract data found. Check input directory.")
         } else {
             paste("Detected MaltExtract data!")
         }
@@ -273,12 +290,12 @@ shinyServer(function(input, output) {
         
         if (input$remove_string == "") {
             selectInput("selected_file", 
-                        "Choose Sample:", 
+                        "Choose sample:", 
                         as.list(dat$file_names), 
                         selectize =  T) 
         } else {
             selectInput("selected_file", 
-                        "Choose Sample:", 
+                        "Choose sample:", 
                         as.list(dat$file_names) %>% 
                             str_remove(., input$remove_string), 
                         selectize =  T) 
@@ -289,7 +306,7 @@ shinyServer(function(input, output) {
         dat <- maltExtract_data()
         
         selectInput("selected_node", 
-                    "Choose Taxon:", 
+                    "Choose taxon:", 
                     as.list(dat$node_names),
                     selectize = T)
     })
@@ -309,11 +326,6 @@ shinyServer(function(input, output) {
         dat <- maltExtract_data()
         
         req(input$selected_filter)
-        
-        cat("\nSingle Sample: Loading filter stats data for", 
-            input$selected_node ,
-            "from", 
-            input$selected_file)
         
         if (input$selected_filter == "all") {
             selected_filter <- c("default", "ancient")
@@ -343,11 +355,7 @@ shinyServer(function(input, output) {
       dat <- maltExtract_data()
       
       req(input$selected_filter)
-      
-      cat("\nSingle Sample: Loading damage data for", 
-          input$selected_node ,
-          "from", 
-          input$selected_file)
+
       
       if (input$selected_filter == "all") {
         selected_filter <- c("default", "ancient")
@@ -369,11 +377,6 @@ shinyServer(function(input, output) {
       
       req(input$selected_filter)
       
-      cat("\nSingle Sample: Loading length data for", 
-          input$selected_node ,
-          "from", 
-          input$selected_file)
-      
       if (input$selected_filter == "all") {
         selected_filter <- c("default", "ancient")
       } else {
@@ -393,11 +396,6 @@ shinyServer(function(input, output) {
       dat <- maltExtract_data()
       
       req(input$selected_filter)
-      
-      cat("\nSingle Sample: Loading edit distance data for", 
-          input$selected_node ,
-          "from", 
-          input$selected_file)
       
       if (input$selected_filter == "all") {
         selected_filter <- c("default", "ancient")
@@ -419,11 +417,6 @@ shinyServer(function(input, output) {
       
       req(input$selected_filter)
       
-      cat("\nSingle Sample: Loading percent identity data for", 
-          input$selected_node ,
-          "from", 
-          input$selected_file)
-      
       if (input$selected_filter == "all") {
         selected_filter <- c("default", "ancient")
       } else {
@@ -443,11 +436,6 @@ shinyServer(function(input, output) {
       dat <- maltExtract_data()
       
       req(input$selected_filter)
-      
-      cat("\nSingle Sample: Loading breadth coverage data for", 
-          input$selected_node ,
-          "from", 
-          input$selected_file)
       
       if (input$selected_filter == "all") {
         selected_filter <- c("default", "ancient")
@@ -470,11 +458,6 @@ shinyServer(function(input, output) {
       
       req(input$selected_filter)
       
-        cat("\nSingle Sample: Loading depth coverage data for", 
-            input$selected_node ,
-            "from", 
-            input$selected_file)
-      
       if (input$selected_filter == "all") {
         selected_filter <- c("default", "ancient")
       } else {
@@ -496,17 +479,11 @@ shinyServer(function(input, output) {
     output$filterstats_plot <- renderUI({
           
             req(filterstats_data())
-      
-            cat("\nSingle Sample: Plotting filter statistics plot for", 
-                input$selected_node ,
-                "from", 
-                input$selected_file)
-      
-      
+  
             basicstats_data <- filterstats_data()$basicstats_data
             
             if (nrow(basicstats_data) == 0) {
-                filterstats_out <- renderText({"\nNo input data for this taxon in this sample!"})
+              filterstats_out <- renderPlot({nodata_message(input$selected_file, input$selected_node)})
             } else {
             
             filterstats_data <- basicstats_data %>%
@@ -549,10 +526,7 @@ shinyServer(function(input, output) {
     output$damage_plot <- renderUI({
         
         req(damage_data())
-      cat("\nSingle Sample: Plotting depth coverage plot for", 
-          input$selected_node ,
-          "from", 
-          input$selected_file)
+
         damage_data <- damage_data()$damage_data
         
         if (any(input$selected_filter == "all")) {
@@ -563,7 +537,7 @@ shinyServer(function(input, output) {
         }
         
         if (nrow(damage_data) == 0) {
-            damage_out <- renderText({"\nNo input data for this taxon in this sample!"})
+            damage_out <- renderPlot({nodata_message(input$selected_file, input$selected_node)})
         } else if (input$interactive) {
             damage_out <- renderPlotly({dam_plot})
         } else if (!input$interactive) {
@@ -581,11 +555,6 @@ shinyServer(function(input, output) {
         
         req(length_data())
       
-        cat("\nSingle Sample: Plotting length plot for", 
-            input$selected_node ,
-            "from", 
-            input$selected_file)
-      
         length_data <- length_data()$length_data
         
         len_plot <- plot_col(length_data, 
@@ -595,7 +564,7 @@ shinyServer(function(input, output) {
                                "Alignments (n)")
         
         if (nrow(length_data) == 0) {
-            length_out <- renderText({"\nNo input data for this taxon in this sample!"})
+          length_out <- renderPlot({nodata_message(input$selected_file, input$selected_node)})
         } else if (input$interactive) {
             length_out <- renderPlotly({len_plot})
         } else if (!input$interactive) {
@@ -610,10 +579,6 @@ shinyServer(function(input, output) {
     output$edit_plot <- renderUI({
        
         req(edit_data())
-         cat("\nSingle Sample: Plotting edit distance plot for", 
-          input$selected_node ,
-          "from", 
-          input$selected_file)
       
         edit_data <- edit_data()$edit_data
         
@@ -624,7 +589,7 @@ shinyServer(function(input, output) {
                               "Alignments (n)")
         
         if (nrow(edit_data) == 0) {
-            edit_out <- renderText({"\nNo input data for this taxon in this sample!"})
+          edit_out <- renderPlot({nodata_message(input$selected_file, input$selected_node)})
         } else if (input$interactive) {
             edit_out <- renderPlotly({edit_plot})
         } else if (!input$interactive) {
@@ -639,10 +604,6 @@ shinyServer(function(input, output) {
     output$percentidentity_plot <- renderUI({
         
         req(percentidentity_data())
-      cat("\nSingle Sample: Plotting percent identity plot for", 
-          input$selected_node ,
-          "from", 
-          input$selected_file)
       
         percent_data <- percentidentity_data()$percent_data
         
@@ -653,7 +614,7 @@ shinyServer(function(input, output) {
                               "Alignments (n)")
         
         if (nrow(percent_data) == 0) {
-            percent_out <- renderText({"\nNo input data for this taxon in this sample!"})
+            percent_out <- renderPlot({nodata_message(input$selected_file, input$selected_node)})
         } else if (input$interactive) {
             percent_out <- renderPlotly({perc_plot})
         } else if (!input$interactive) {
@@ -668,10 +629,6 @@ shinyServer(function(input, output) {
     output$positionscovered_plot <- renderUI({
         
         req(positionscovered_data())
-      cat("\nSingle Sample: Plotting breadth coverage plot for", 
-          input$selected_node ,
-          "from", 
-          input$selected_file)
       
         positionscov_data <- positionscovered_data()$positionscov_data
 
@@ -682,8 +639,8 @@ shinyServer(function(input, output) {
                                       "Fold Coverage (X)",
                                       "Percentage of Reference (%)")
         
-        if (nrow( positionscov_data) == 0) {
-            positionscov_out <- renderText({"\nNo input data for this taxon in this sample!"})
+        if (nrow(positionscov_data) == 0) {
+            positionscov_out <- renderPlot({nodata_message(input$selected_file, input$selected_node)})
         } else if (input$interactive) {
             positionscov_out <- renderPlotly({positionscov_plot})
         } else if (!input$interactive) {
@@ -697,10 +654,7 @@ shinyServer(function(input, output) {
     
     output$coveragehist_plot <- renderUI({
         req(coveragehist_data())
-        cat("\nSingle Sample: Plotting depth coverage plot for", 
-            input$selected_node ,
-            "from", 
-            input$selected_file)
+
         coveragehist_data <- coveragehist_data()$coveragehist_data
         
         coveragehist_plot <- plot_col(coveragehist_data, 
@@ -710,7 +664,7 @@ shinyServer(function(input, output) {
                                  "Base Pairs (n)")
         
         if (nrow(coveragehist_data) == 0) {
-            coveragehist_out <- renderText({"\nNo input data for this taxon in this sample!"})
+            coveragehist_out <- renderPlot({nodata_message(input$selected_file, input$selected_node)})
         } else if (input$interactive) {
             coveragehist_out <- renderPlotly({coveragehist_plot})
         } else if (!input$interactive) {
@@ -732,16 +686,6 @@ shinyServer(function(input, output) {
                     return(paste0("MExIPA", "-", file_name, "-", input$selected_node, '.pdf'))
                   },
         content = function(file) {
-            
-            nodata_message <- ggplot() + 
-                annotate("text",
-                         x = 4, 
-                         y = 2, 
-                         size = 3, 
-                         label =  "\nNo input data for this taxon in this sample!") + 
-                theme_void()
-                
-               
             
             damage_data <- damage_data()$damage_data
             length_data <- length_data()$length_data
@@ -916,8 +860,7 @@ shinyServer(function(input, output) {
         dat <- maltExtract_data()
         
         req(input$selected_filter)
-        cat("\nMultiple sample plot: Loading data for all samples with", input$selected_node)
-        
+
         if (input$selected_filter == "all" & input$characteristic != "damage") {
             selected_filter <- c("default", "ancient")
         } else if (input$selected_filter == "all" & input$characteristic == "damage") {
@@ -973,16 +916,7 @@ shinyServer(function(input, output) {
         
         names(total_data) <- n_plot
         
-        
-        ## Removes entries with empty tibbles, n_plot above will be for every 
-        ## file, even if no data
-        total_data <- total_data[map(total_data, nrow) > 0]
-        
-        ## reset n_plot
-        n_plot <- names(total_data)
-        
         interactive <- input$interactive
-        
         
         return(list("n_plot" = n_plot, "total_data" = total_data, 
                     "interactive" = interactive))
@@ -991,12 +925,12 @@ shinyServer(function(input, output) {
     
     ##### Create divs
     output$multisample_plots <- renderUI({
-        
+      req(plotInput())
+      
         ## make all the plot(ly) objects and place in a list
             plot_output_list <- lapply(plotInput()$n_plot, function(i) {
-                cat("\nMultiple taxa plot: Allocating plot slot for", i)
-                plotname <- i
-                column(6, plotOutput(plotname))
+                  plotname <- i
+                  column(6, plotOutput(plotname))
             })   
         
         ## create the HTML objects that correspond to the plotly objects
@@ -1005,50 +939,55 @@ shinyServer(function(input, output) {
     
     ## Mointor for changes in plotInput object (which is data generation above)
     observe({
+      
+            req(plotInput())
+      
             lapply(plotInput()$n_plot, function(i){
               
-                cat("\nMultiple sample plot: Generating plot for", i)
                 output[[i]] <- renderPlot({
-                    if (input$characteristic == "damage") {
-                        plot_damage(plotInput()$total_data[[i]]) + 
-                        theme(strip.text.y = element_blank())
-                    } else if (input$characteristic == "length") {
-                        plot_col(plotInput()$total_data[[i]],
-                                 "Length_Bin", 
-                                 "Alignment_Count",
-                                 "Read Length Bins (bp)",
-                                 "Alignments (n)") + 
-                        theme(strip.text = element_blank())
-                    } else if (input$characteristic == "edit") {
-                        plot_col(plotInput()$total_data[[i]],
-                                 "Edit_Distance",
-                                 "Alignment_Count",
-                                 "Edit Distance",
-                                 "Alignments (n)") + 
-                        theme(strip.text = element_blank())
-                    } else if (input$characteristic == "percentidentity") {
-                        plot_col(plotInput()$total_data[[i]],
-                                 "Percent_Identity",
-                                 "Alignment_Count",
-                                 "Sequence Identity (%)",
-                                 "Alignments (n)") + 
-                        theme(strip.text = element_blank())
-                    } else if (input$characteristic == "positionscovered") {
-                        plot_col(plotInput()$total_data[[i]],
-                                 "Breadth",
-                                 "Percentage",
-                                 "Fold Coverage (X)",
-                                 "Percentage of Reference (%)") + 
-                        theme(strip.text = element_blank())
-                    } else if (input$characteristic == "coveragehist") {
-                        plot_col(plotInput()$total_data[[i]],
-                                 "Fold_Coverage",
-                                 "Base_Pairs",
-                                 "Fold Coverage (X)",
-                                 "Base Pairs (n)") + 
-                        theme(strip.text = element_blank())
-                    }
+                  if (nrow(plotInput()$total_data[[i]]) == 0) {
+                    nodata_message(i, input$selected_node)
+                  } else if (input$characteristic == "damage") {
+                    plot_damage(plotInput()$total_data[[i]]) + 
+                      theme(strip.text.y = element_blank())
+                  } else if (input$characteristic == "length") {
+                    plot_col(plotInput()$total_data[[i]],
+                             "Length_Bin", 
+                             "Alignment_Count",
+                             "Read Length Bins (bp)",
+                             "Alignments (n)") + 
+                      theme(strip.text = element_blank())
+                  } else if (input$characteristic == "edit") {
+                    plot_col(plotInput()$total_data[[i]],
+                             "Edit_Distance",
+                             "Alignment_Count",
+                             "Edit Distance",
+                             "Alignments (n)") + 
+                      theme(strip.text = element_blank())
+                  } else if (input$characteristic == "percentidentity") {
+                    plot_col(plotInput()$total_data[[i]],
+                             "Percent_Identity",
+                             "Alignment_Count",
+                             "Sequence Identity (%)",
+                             "Alignments (n)") + 
+                      theme(strip.text = element_blank())
+                  } else if (input$characteristic == "positionscovered") {
+                    plot_col(plotInput()$total_data[[i]],
+                             "Breadth",
+                             "Percentage",
+                             "Fold Coverage (X)",
+                             "Percentage of Reference (%)") + 
+                      theme(strip.text = element_blank())
+                  } else if (input$characteristic == "coveragehist") {
+                    plot_col(plotInput()$total_data[[i]],
+                             "Fold_Coverage",
+                             "Base_Pairs",
+                             "Fold Coverage (X)",
+                             "Base Pairs (n)") + 
+                      theme(strip.text = element_blank())
+                  }
                 })
+              
             })
         
     })
@@ -1061,143 +1000,143 @@ shinyServer(function(input, output) {
     ## when it detects a change)
     ## Notes: as using renderUI, sends all plots to UI at once.
     
-    plotInput2 <- reactive({
-      
-      dat <- maltExtract_data()
-      
-      req(input$selected_filter)
-      cat("\nMultiple taxa plot: Loading data for all species of ", input$selected_file)
-      
-      if (input$selected_filter == "all" & input$characteristic != "damage") {
-        selected_filter <- c("default", "ancient")
-      } else if (input$selected_filter == "all" & input$characteristic == "damage") {
-        selected_filter <- "default"
-      } else {
-        selected_filter <- input$selected_filter
-      }
-      
-      n_plot <- dat$node_names
-
-      
-      if (input$characteristic == "damage") {
-        total_data <- purrr::map(n_plot, ~ clean_damage(x = dat$damageMismatch,
-                                                        s_filter = selected_filter,
-                                                        r_string = input$remove_string,
-                                                        s_file = input$selected_file,
-                                                        s_node = .x))
-        
-      } else if (input$characteristic == "length") {
-        total_data <- purrr::map(n_plot, ~ clean_length(x = dat$readLengthDist,
-                                                        s_filter = selected_filter,
-                                                        r_string = input$remove_string,
-                                                        s_file = input$selected_file,
-                                                        s_node = .x))
-      } else if (input$characteristic == "edit") {
-        total_data <- purrr::map(n_plot, ~ clean_edit(x = dat$editDistance,
-                                                      s_filter = selected_filter,
-                                                      r_string = input$remove_string,
-                                                      s_file = input$selected_file,
-                                                      s_node = .x))
-      } else if (input$characteristic == "percentidentity") {
-        total_data <- purrr::map(n_plot, ~ clean_percentidentity(x = dat$percentIdentity,
-                                                                 s_filter = selected_filter,
-                                                                 r_string = input$remove_string,
-                                                                 s_file = input$selected_file,
-                                                                 s_node = .x))
-      } else if (input$characteristic == "positionscovered") {
-        total_data <- purrr::map(n_plot, ~ clean_positionscovered(x = dat$positionsCovered,
-                                                                  s_filter = selected_filter,
-                                                                  r_string = input$remove_string,
-                                                                  s_file = input$selected_file,
-                                                                  s_node = .x))
-      } else if (input$characteristic == "coveragehist") {
-        total_data <- purrr::map(n_plot, ~ clean_coveragehist(x = dat$coverageHist,
-                                                              s_filter = selected_filter,
-                                                              r_string = input$remove_string,
-                                                              s_file = input$selected_file,
-                                                              s_node = .x))
-      }
-      
-      names(total_data) <- n_plot
-      
-      
-      ## Removes entries with empty tibbles, n_plot above will be for every 
-      ## file, even if no data
-      total_data <- total_data[map(total_data, nrow) > 0]
-      
-      ## reset n_plot
-      n_plot <- names(total_data)
-      
-      interactive <- input$interactive
-      
-      
-      return(list("n_plot" = n_plot, "total_data" = total_data, 
-                  "interactive" = interactive))
-    })
-    
-    
-    ##### Create divs
-    output$multitaxa_plots <- renderUI({
-      
-      ## make all the plot(ly) objects and place in a list
-      plot_output_list <- lapply(plotInput2()$n_plot, function(i) {
-        cat("\nMultiple taxa plot: Allocating plot slot for", i)
-        plotname <- i
-        column(6, plotOutput(plotname))
-      })   
-      
-      ## create the HTML objects that correspond to the plotly objects
-      do.call(tagList, plot_output_list)
-    })
-    
-    ## Mointor for changes in plotInput object (which is data generation above)
-    observe({
-      lapply(plotInput2()$n_plot, function(i){
-        cat("\nMultiple taxa plot: Generating plot for", i)
-        output[[i]] <- renderPlot({
-          if (input$characteristic == "damage") {
-            plot_damage(plotInput2()$total_data[[i]])  + 
-              theme(strip.text.y = element_blank())
-          } else if (input$characteristic == "length") {
-            plot_col(plotInput2()$total_data[[i]],
-                     "Length_Bin", 
-                     "Alignment_Count",
-                     "Read Length Bins (bp)",
-                     "Alignments (n)")  + 
-              theme(strip.text = element_blank())
-          } else if (input$characteristic == "edit") {
-            plot_col(plotInput2()$total_data[[i]],
-                     "Edit_Distance",
-                     "Alignment_Count",
-                     "Edit Distance",
-                     "Alignments (n)") + 
-              theme(strip.text = element_blank())
-          } else if (input$characteristic == "percentidentity") {
-            plot_col(plotInput2()$total_data[[i]],
-                     "Percent_Identity",
-                     "Alignment_Count",
-                     "Sequence Identity (%)",
-                     "Alignments (n)") + 
-              theme(strip.text = element_blank())
-          } else if (input$characteristic == "positionscovered") {
-            plot_col(plotInput2()$total_data[[i]],
-                     "Breadth",
-                     "Percentage",
-                     "Fold Coverage (X)",
-                     "Percentage of Reference (%)") + 
-              theme(strip.text = element_blank())
-          } else if (input$characteristic == "coveragehist") {
-            plot_col(plotInput2()$total_data[[i]],
-                     "Fold_Coverage",
-                     "Base_Pairs",
-                     "Fold Coverage (X)",
-                     "Base Pairs (n)") + 
-              theme(strip.text = element_blank())
-          }
-        })
-      })
-      
-    })
+    # plotInput2 <- reactive({
+    #   
+    #   dat <- maltExtract_data()
+    #   
+    #   req(input$selected_filter)
+    # 
+    #   if (input$selected_filter == "all" & input$characteristic != "damage") {
+    #     selected_filter <- c("default", "ancient")
+    #   } else if (input$selected_filter == "all" & input$characteristic == "damage") {
+    #     selected_filter <- "default"
+    #   } else {
+    #     selected_filter <- input$selected_filter
+    #   }
+    #   
+    #   n_plot <- dat$node_names
+    # 
+    #   
+    #   if (input$characteristic == "damage") {
+    #     total_data <- purrr::map(n_plot, ~ clean_damage(x = dat$damageMismatch,
+    #                                                     s_filter = selected_filter,
+    #                                                     r_string = input$remove_string,
+    #                                                     s_file = input$selected_file,
+    #                                                     s_node = .x))
+    #     
+    #   } else if (input$characteristic == "length") {
+    #     total_data <- purrr::map(n_plot, ~ clean_length(x = dat$readLengthDist,
+    #                                                     s_filter = selected_filter,
+    #                                                     r_string = input$remove_string,
+    #                                                     s_file = input$selected_file,
+    #                                                     s_node = .x))
+    #   } else if (input$characteristic == "edit") {
+    #     total_data <- purrr::map(n_plot, ~ clean_edit(x = dat$editDistance,
+    #                                                   s_filter = selected_filter,
+    #                                                   r_string = input$remove_string,
+    #                                                   s_file = input$selected_file,
+    #                                                   s_node = .x))
+    #   } else if (input$characteristic == "percentidentity") {
+    #     total_data <- purrr::map(n_plot, ~ clean_percentidentity(x = dat$percentIdentity,
+    #                                                              s_filter = selected_filter,
+    #                                                              r_string = input$remove_string,
+    #                                                              s_file = input$selected_file,
+    #                                                              s_node = .x))
+    #   } else if (input$characteristic == "positionscovered") {
+    #     total_data <- purrr::map(n_plot, ~ clean_positionscovered(x = dat$positionsCovered,
+    #                                                               s_filter = selected_filter,
+    #                                                               r_string = input$remove_string,
+    #                                                               s_file = input$selected_file,
+    #                                                               s_node = .x))
+    #   } else if (input$characteristic == "coveragehist") {
+    #     total_data <- purrr::map(n_plot, ~ clean_coveragehist(x = dat$coverageHist,
+    #                                                           s_filter = selected_filter,
+    #                                                           r_string = input$remove_string,
+    #                                                           s_file = input$selected_file,
+    #                                                           s_node = .x))
+    #   }
+    #   
+    #   names(total_data) <- n_plot
+    #   
+    #   
+    #   ## Removes entries with empty tibbles, n_plot above will be for every 
+    #   ## file, even if no data
+    #   total_data <- total_data[map(total_data, nrow) > 0]
+    #   
+    #   ## reset n_plot
+    #   n_plot <- names(total_data)
+    #   
+    #   interactive <- input$interactive
+    #   
+    #   
+    #   return(list("n_plot" = n_plot, "total_data" = total_data, 
+    #               "interactive" = interactive))
+    # })
+    # 
+    # 
+    # ##### Create divs
+    # output$multitaxa_plots <- renderUI({
+    #   req(plotInput2())
+    #   ## make all the plot(ly) objects and place in a list
+    #   plot_output_list <- lapply(plotInput2()$n_plot, function(i) {
+    #     plotname <- i
+    #     column(6, plotOutput(plotname))
+    #   })   
+    #   
+    #   ## create the HTML objects that correspond to the plotly objects
+    #   do.call(tagList, plot_output_list)
+    # })
+    # 
+    # ## Mointor for changes in plotInput object (which is data generation above)
+    # observe({
+    #   lapply(plotInput2()$n_plot, function(i){
+    # 
+    #     req(plotInput2())
+    #     
+    #     output[[i]] <- renderPlot({
+    #       if (input$characteristic == "damage") {
+    #         plot_damage(plotInput2()$total_data[[i]])  + 
+    #           theme(strip.text.y = element_blank())
+    #       } else if (input$characteristic == "length") {
+    #         plot_col(plotInput2()$total_data[[i]],
+    #                  "Length_Bin", 
+    #                  "Alignment_Count",
+    #                  "Read Length Bins (bp)",
+    #                  "Alignments (n)")  + 
+    #           theme(strip.text = element_blank())
+    #       } else if (input$characteristic == "edit") {
+    #         plot_col(plotInput2()$total_data[[i]],
+    #                  "Edit_Distance",
+    #                  "Alignment_Count",
+    #                  "Edit Distance",
+    #                  "Alignments (n)") + 
+    #           theme(strip.text = element_blank())
+    #       } else if (input$characteristic == "percentidentity") {
+    #         plot_col(plotInput2()$total_data[[i]],
+    #                  "Percent_Identity",
+    #                  "Alignment_Count",
+    #                  "Sequence Identity (%)",
+    #                  "Alignments (n)") + 
+    #           theme(strip.text = element_blank())
+    #       } else if (input$characteristic == "positionscovered") {
+    #         plot_col(plotInput2()$total_data[[i]],
+    #                  "Breadth",
+    #                  "Percentage",
+    #                  "Fold Coverage (X)",
+    #                  "Percentage of Reference (%)") + 
+    #           theme(strip.text = element_blank())
+    #       } else if (input$characteristic == "coveragehist") {
+    #         plot_col(plotInput2()$total_data[[i]],
+    #                  "Fold_Coverage",
+    #                  "Base_Pairs",
+    #                  "Fold Coverage (X)",
+    #                  "Base Pairs (n)") + 
+    #           theme(strip.text = element_blank())
+    #       }
+    #     })
+    #   })
+    #   
+    # })
     
 })
 

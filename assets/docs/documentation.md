@@ -78,4 +78,4 @@ in that sample.
 The `plotly` package is unfortunately not fully compatible with all `ggplot` 
 functions. I tried different ways of hacking around it but failed. However,
 this does not remove from the utility of being able to get fine resolution
-statistics of each characteristic. All report downloads are 
+statistics of each characteristic.
