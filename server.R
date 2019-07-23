@@ -1,4 +1,4 @@
-######## MEx-IPA VERSION 0.4,3 #################
+######## MEx-IPA VERSION 0.4.3 #################
 
 library(shiny)
 library(tidyverse)

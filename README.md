@@ -154,7 +154,7 @@ Velsko, I. M. et al. Microbial differences between dental plaque and historic de
 Weyrich, L. S. et al. Neanderthal behaviour, diet, and disease inferred from ancient DNA in dental calculus. Nature 544, 357–361 (2017). doi:[10.1038/nature21674](http://dx.doi.org/10.1038/nature21674)
 
 ## Change Log
-**0.4.3 (dev)**
+**0.4.3**
   * Added `shinytest` tests
   * Added 'close app' button - when running on own machine/Rstudio
 
