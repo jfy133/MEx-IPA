@@ -1,0 +1,5193 @@
+{
+  "input": {
+    ".clientValue-default-plotlyCrosstalkOpts": {
+      "on": "plotly_click",
+      "persistent": false,
+      "dynamic": false,
+      "selectize": false,
+      "opacityDim": 0.2,
+      "selected": {
+        "opacity": 1
+      },
+      "debounce": 0,
+      "color": [
+
+      ]
+    },
+    "characteristic": "damage",
+    "characteristic-selectized": "",
+    "close": 0,
+    "interactive": false,
+    "out9c89c16185a03afe_cell_clicked": {
+
+    },
+    "out9c89c16185a03afe_rows_all": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17
+    ],
+    "out9c89c16185a03afe_rows_current": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "out9c89c16185a03afe_rows_selected": null,
+    "out9c89c16185a03afe_search": "",
+    "out9c89c16185a03afe_state": null,
+    "outc78191ad5bb111e1_rows_all": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17
+    ],
+    "outc78191ad5bb111e1_rows_current": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "outd4197c0a1078e1f2_cell_clicked": {
+
+    },
+    "outd4197c0a1078e1f2_rows_all": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17
+    ],
+    "outd4197c0a1078e1f2_rows_current": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "outd4197c0a1078e1f2_rows_selected": null,
+    "outd4197c0a1078e1f2_search": "",
+    "outd4197c0a1078e1f2_state": null,
+    "plotly_afterplot-A": "\"outf42e815df51df7f4\"",
+    "remove_string": "",
+    "select_dir": "/home/fellows/Documents/Scripts/shiny_web_apps/MEx-IPA/dev/test_data/maltExtract_v1.5_Weyrich2017Velsko2019",
+    "selected_file": "CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6",
+    "selected_file-selectized": "",
+    "selected_filter": "all",
+    "selected_filter-selectized": "",
+    "selected_node": "Fretibacterium_fastidiosum",
+    "selected_node-selectized": "Fre",
+    "submit": 1
+  },
+  "output": {
+    "coveragehist_plot": {
+      "html": "<div id=\"out434ef02ad6c81970\" class=\"shiny-plot-output\" style=\"width: 100% ; height: 400px\"><\/div>",
+      "deps": [
+
+      ]
+    },
+    "damage_plot": {
+      "html": "<div id=\"out042a1e4f9a2ab910\" class=\"shiny-plot-output\" style=\"width: 100% ; height: 400px\"><\/div>",
+      "deps": [
+
+      ]
+    },
+    "edit_plot": {
+      "html": "<div id=\"out0aa6e691a91682c6\" class=\"shiny-plot-output\" style=\"width: 100% ; height: 400px\"><\/div>",
+      "deps": [
+
+      ]
+    },
+    "file_options": {
+      "html": "<div class=\"form-group shiny-input-container\">\n  <label class=\"control-label\" for=\"selected_file\">Choose sample:<\/label>\n  <div>\n    <select id=\"selected_file\"><option value=\"CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6\" selected>CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6<\/option>\n<option value=\"CS21_S0_L001_R1_001.sorted.bam.unmapped.rma6\">CS21_S0_L001_R1_001.sorted.bam.unmapped.rma6<\/option>\n<option value=\"CS22_S0_L001_R1_001.sorted.bam.unmapped.rma6\">CS22_S0_L001_R1_001.sorted.bam.unmapped.rma6<\/option>\n<option value=\"CS23_S0_L001_R1_001.sorted.bam.unmapped.rma6\">CS23_S0_L001_R1_001.sorted.bam.unmapped.rma6<\/option>\n<option value=\"ELSIDRON1_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6\">ELSIDRON1_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6<\/option>\n<option value=\"ELSIDRON2_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6\">ELSIDRON2_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6<\/option>\n<option value=\"SPYNEW_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6\">SPYNEW_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6<\/option>\n<option value=\"SPYOLD_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6\">SPYOLD_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6<\/option><\/select>\n    <script type=\"application/json\" data-for=\"selected_file\" data-nonempty=\"\">{}<\/script>\n  <\/div>\n<\/div>",
+      "deps": [
+        {
+          "name": "selectize",
+          "version": "0.11.2",
+          "src": {
+            "href": "shared/selectize"
+          },
+          "meta": null,
+          "script": null,
+          "stylesheet": "css/selectize.bootstrap3.css",
+          "head": "<!--[if lt IE 9]>\n<script src=\"shared/selectize/js/es5-shim.min.js\"><\/script>\n<![endif]-->\n<script src=\"shared/selectize/js/selectize.min.js\"><\/script>",
+          "attachment": null,
+          "package": null,
+          "all_files": true
+        }
+      ]
+    },
+    "filter_options": {
+      "html": "<div class=\"form-group shiny-input-container\">\n  <label class=\"control-label\" for=\"selected_filter\">Choose Filter:<\/label>\n  <div>\n    <select id=\"selected_filter\"><option value=\"all\" selected>all<\/option>\n<option value=\"default\">default<\/option>\n<option value=\"ancient\">ancient<\/option><\/select>\n    <script type=\"application/json\" data-for=\"selected_filter\" data-nonempty=\"\">{}<\/script>\n  <\/div>\n<\/div>",
+      "deps": [
+        {
+          "name": "selectize",
+          "version": "0.11.2",
+          "src": {
+            "href": "shared/selectize"
+          },
+          "meta": null,
+          "script": null,
+          "stylesheet": "css/selectize.bootstrap3.css",
+          "head": "<!--[if lt IE 9]>\n<script src=\"shared/selectize/js/es5-shim.min.js\"><\/script>\n<![endif]-->\n<script src=\"shared/selectize/js/selectize.min.js\"><\/script>",
+          "attachment": null,
+          "package": null,
+          "all_files": true
+        }
+      ]
+    },
+    "filterstats_plot": {
+      "html": "<div id=\"out9c89c16185a03afe\" style=\"width:100%; height:auto; \" class=\"datatables html-widget html-widget-output\"><\/div>",
+      "deps": [
+        {
+          "name": "htmlwidgets",
+          "version": "1.3",
+          "src": {
+            "href": "htmlwidgets-1.3"
+          },
+          "meta": null,
+          "script": "htmlwidgets.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": true
+        },
+        {
+          "name": "jquery",
+          "version": "1.12.4",
+          "src": {
+            "href": "jquery-1.12.4"
+          },
+          "meta": null,
+          "script": "jquery.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": true
+        },
+        {
+          "name": "datatables-css",
+          "version": "0.0.0",
+          "src": {
+            "href": "datatables-css-0.0.0"
+          },
+          "meta": null,
+          "script": null,
+          "stylesheet": "datatables-crosstalk.css",
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": true
+        },
+        {
+          "name": "datatables-binding",
+          "version": "0.6",
+          "src": {
+            "href": "datatables-binding-0.6"
+          },
+          "meta": null,
+          "script": "datatables.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "crosstalk",
+          "version": "1.0.0",
+          "src": {
+            "href": "crosstalk-1.0.0"
+          },
+          "meta": null,
+          "script": "js/crosstalk.min.js",
+          "stylesheet": "css/crosstalk.css",
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": true
+        }
+      ]
+    },
+    "length_plot": {
+      "html": "<div id=\"out6901a5d2027392c1\" class=\"shiny-plot-output\" style=\"width: 100% ; height: 400px\"><\/div>",
+      "deps": [
+
+      ]
+    },
+    "node_options": {
+      "html": "<div class=\"form-group shiny-input-container\">\n  <label class=\"control-label\" for=\"selected_node\">Choose taxon:<\/label>\n  <div>\n    <select id=\"selected_node\"><option value=\"Ceratotherium\" selected>Ceratotherium<\/option>\n<option value=\"Ceratotherium_simum_simum\">Ceratotherium_simum_simum<\/option>\n<option value=\"Coprinopsis\">Coprinopsis<\/option>\n<option value=\"Coprinopsis_cinerea_okayama7#130\">Coprinopsis_cinerea_okayama7#130<\/option>\n<option value=\"Enterocytozoon\">Enterocytozoon<\/option>\n<option value=\"Enterocytozoon_bieneusi_H348\">Enterocytozoon_bieneusi_H348<\/option>\n<option value=\"Eubacterium\">Eubacterium<\/option>\n<option value=\"Eubacterium_limosum\">Eubacterium_limosum<\/option>\n<option value=\"Eubacterium_limosum_KIST612\">Eubacterium_limosum_KIST612<\/option>\n<option value=\"Eubacterium_sp._oral_clone_23-90\">Eubacterium_sp._oral_clone_23-90<\/option>\n<option value=\"Eubacterium_sp._oral_clone_FX028\">Eubacterium_sp._oral_clone_FX028<\/option>\n<option value=\"Eubacterium_sp._oral_taxon_B60\">Eubacterium_sp._oral_taxon_B60<\/option>\n<option value=\"Fretibacterium\">Fretibacterium<\/option>\n<option value=\"Fretibacterium_fastidiosum\">Fretibacterium_fastidiosum<\/option>\n<option value=\"Fretibacterium_sp._feline_oral_taxon_215\">Fretibacterium_sp._feline_oral_taxon_215<\/option>\n<option value=\"Ixodes\">Ixodes<\/option>\n<option value=\"Malassezia\">Malassezia<\/option>\n<option value=\"Malassezia_globosa\">Malassezia_globosa<\/option>\n<option value=\"Malassezia_globosa_CBS_7966\">Malassezia_globosa_CBS_7966<\/option>\n<option value=\"Malassezia_pachydermatis\">Malassezia_pachydermatis<\/option>\n<option value=\"Malassezia_sympodialis\">Malassezia_sympodialis<\/option>\n<option value=\"Malassezia_sympodialis_ATCC_42132\">Malassezia_sympodialis_ATCC_42132<\/option>\n<option value=\"Methanobrevibacter\">Methanobrevibacter<\/option>\n<option value=\"Methanobrevibacter_arboriphilus\">Methanobrevibacter_arboriphilus<\/option>\n<option value=\"Methanobrevibacter_curvatus\">Methanobrevibacter_curvatus<\/option>\n<option value=\"Methanobrevibacter_millerae\">Methanobrevibacter_millerae<\/option>\n<option value=\"Methanobrevibacter_olleyae\">Methanobrevibacter_olleyae<\/option>\n<option value=\"Methanobrevibacter_oralis\">Methanobrevibacter_oralis<\/option>\n<option value=\"Methanobrevibacter_ruminantium_M1\">Methanobrevibacter_ruminantium_M1<\/option>\n<option value=\"Methanobrevibacter_smithii\">Methanobrevibacter_smithii<\/option>\n<option value=\"Methanobrevibacter_smithii_ATCC_35061\">Methanobrevibacter_smithii_ATCC_35061<\/option>\n<option value=\"Methanobrevibacter_smithii_DSM_11975\">Methanobrevibacter_smithii_DSM_11975<\/option>\n<option value=\"Methanobrevibacter_sp.\">Methanobrevibacter_sp.<\/option>\n<option value=\"Methanobrevibacter_sp._87.7\">Methanobrevibacter_sp._87.7<\/option>\n<option value=\"Methanobrevibacter_sp._AbM4\">Methanobrevibacter_sp._AbM4<\/option>\n<option value=\"Methanobrevibacter_sp._D5\">Methanobrevibacter_sp._D5<\/option>\n<option value=\"Methanobrevibacter_sp._MD103\">Methanobrevibacter_sp._MD103<\/option>\n<option value=\"Methanobrevibacter_sp._SM9\">Methanobrevibacter_sp._SM9<\/option>\n<option value=\"Methanobrevibacter_sp._YE315\">Methanobrevibacter_sp._YE315<\/option>\n<option value=\"Methanobrevibacter_sp._YLM1\">Methanobrevibacter_sp._YLM1<\/option>\n<option value=\"Methanobrevibacter_woesei\">Methanobrevibacter_woesei<\/option>\n<option value=\"Myceliophthora\">Myceliophthora<\/option>\n<option value=\"Ovis\">Ovis<\/option>\n<option value=\"Ovis_aries\">Ovis_aries<\/option>\n<option value=\"Ovis_aries_musimon\">Ovis_aries_musimon<\/option>\n<option value=\"Ovis_canadensis\">Ovis_canadensis<\/option>\n<option value=\"Ovis_canadensis_canadensis\">Ovis_canadensis_canadensis<\/option>\n<option value=\"Ovis_dalli\">Ovis_dalli<\/option>\n<option value=\"Ovis_sp.\">Ovis_sp.<\/option>\n<option value=\"Penicillium\">Penicillium<\/option>\n<option value=\"Penicillium_arizonense\">Penicillium_arizonense<\/option>\n<option value=\"Penicillium_brevicompactum\">Penicillium_brevicompactum<\/option>\n<option value=\"Penicillium_chrysogenum_species_complex\">Penicillium_chrysogenum_species_complex<\/option>\n<option value=\"Penicillium_digitatum_Pd1\">Penicillium_digitatum_Pd1<\/option>\n<option value=\"Penicillium_expansum\">Penicillium_expansum<\/option>\n<option value=\"Penicillium_rubens_Wisconsin_54-1255\">Penicillium_rubens_Wisconsin_54-1255<\/option>\n<option value=\"Phaeosphaeria\">Phaeosphaeria<\/option>\n<option value=\"Physcomitrella\">Physcomitrella<\/option>\n<option value=\"Physcomitrella_patens\">Physcomitrella_patens<\/option>\n<option value=\"Pinus\">Pinus<\/option>\n<option value=\"Pinus_&lt;subgenus&gt;\">Pinus_&lt;subgenus&gt;<\/option>\n<option value=\"Pinus_armandii\">Pinus_armandii<\/option>\n<option value=\"Pinus_brutia\">Pinus_brutia<\/option>\n<option value=\"Pinus_canariensis\">Pinus_canariensis<\/option>\n<option value=\"Pinus_densiflora\">Pinus_densiflora<\/option>\n<option value=\"Pinus_elliottii\">Pinus_elliottii<\/option>\n<option value=\"Pinus_halepensis\">Pinus_halepensis<\/option>\n<option value=\"Pinus_hwangshanensis\">Pinus_hwangshanensis<\/option>\n<option value=\"Pinus_koraiensis\">Pinus_koraiensis<\/option>\n<option value=\"Pinus_lambertiana\">Pinus_lambertiana<\/option>\n<option value=\"Pinus_luchuensis\">Pinus_luchuensis<\/option>\n<option value=\"Pinus_massoniana\">Pinus_massoniana<\/option>\n<option value=\"Pinus_mugo\">Pinus_mugo<\/option>\n<option value=\"Pinus_pinaster\">Pinus_pinaster<\/option>\n<option value=\"Pinus_radiata\">Pinus_radiata<\/option>\n<option value=\"Pinus_strobus\">Pinus_strobus<\/option>\n<option value=\"Pinus_sylvestris\">Pinus_sylvestris<\/option>\n<option value=\"Pinus_tabuliformis\">Pinus_tabuliformis<\/option>\n<option value=\"Pinus_tabuliformis_var._henryi\">Pinus_tabuliformis_var._henryi<\/option>\n<option value=\"Pinus_taeda\">Pinus_taeda<\/option>\n<option value=\"Pinus_thunbergii\">Pinus_thunbergii<\/option>\n<option value=\"Pinus_yunnanensis\">Pinus_yunnanensis<\/option>\n<option value=\"Populus\">Populus<\/option>\n<option value=\"Populus_euphratica\">Populus_euphratica<\/option>\n<option value=\"Populus_trichocarpa\">Populus_trichocarpa<\/option>\n<option value=\"Porphyromonas\">Porphyromonas<\/option>\n<option value=\"Porphyromonas_asaccharolytica\">Porphyromonas_asaccharolytica<\/option>\n<option value=\"Porphyromonas_asaccharolytica_DSM_20707\">Porphyromonas_asaccharolytica_DSM_20707<\/option>\n<option value=\"Porphyromonas_catoniae\">Porphyromonas_catoniae<\/option>\n<option value=\"Porphyromonas_catoniae_ATCC_51270\">Porphyromonas_catoniae_ATCC_51270<\/option>\n<option value=\"Porphyromonas_endodontalis\">Porphyromonas_endodontalis<\/option>\n<option value=\"Porphyromonas_gingivalis\">Porphyromonas_gingivalis<\/option>\n<option value=\"Porphyromonas_gingivalis_381\">Porphyromonas_gingivalis_381<\/option>\n<option value=\"Porphyromonas_gingivalis_A7A1-28\">Porphyromonas_gingivalis_A7A1-28<\/option>\n<option value=\"Porphyromonas_gingivalis_AJW4\">Porphyromonas_gingivalis_AJW4<\/option>\n<option value=\"Porphyromonas_gingivalis_ATCC_33277\">Porphyromonas_gingivalis_ATCC_33277<\/option>\n<option value=\"Porphyromonas_gingivalis_TDC60\">Porphyromonas_gingivalis_TDC60<\/option>\n<option value=\"Porphyromonas_gingivalis_W83\">Porphyromonas_gingivalis_W83<\/option>\n<option value=\"Porphyromonas_gulae\">Porphyromonas_gulae<\/option>\n<option value=\"Porphyromonas_pasteri\">Porphyromonas_pasteri<\/option>\n<option value=\"Propionibacterium\">Propionibacterium<\/option>\n<option value=\"Propionibacterium_freudenreichii\">Propionibacterium_freudenreichii<\/option>\n<option value=\"Propionibacterium_freudenreichii_subsp._freudenreichii\">Propionibacterium_freudenreichii_subsp._freudenreichii<\/option>\n<option value=\"Propionibacterium_freudenreichii_subsp._shermanii\">Propionibacterium_freudenreichii_subsp._shermanii<\/option>\n<option value=\"Propionibacterium_sp._oral_taxon_193\">Propionibacterium_sp._oral_taxon_193<\/option>\n<option value=\"Schizophyllum\">Schizophyllum<\/option>\n<option value=\"Schizophyllum_commune\">Schizophyllum_commune<\/option>\n<option value=\"Schizophyllum_commune_H4-8\">Schizophyllum_commune_H4-8<\/option>\n<option value=\"Strobus\">Strobus<\/option>\n<option value=\"Tannerella\">Tannerella<\/option>\n<option value=\"Tannerella_forsythia\">Tannerella_forsythia<\/option>\n<option value=\"Tannerella_forsythia_3313\">Tannerella_forsythia_3313<\/option>\n<option value=\"Tannerella_forsythia_92A2\">Tannerella_forsythia_92A2<\/option>\n<option value=\"Tannerella_forsythia_KS16\">Tannerella_forsythia_KS16<\/option>\n<option value=\"Tannerella_sp._oral_taxon_HOT-286\">Tannerella_sp._oral_taxon_HOT-286<\/option>\n<option value=\"Treponema\">Treponema<\/option>\n<option value=\"Treponema_azotonutricium\">Treponema_azotonutricium<\/option>\n<option value=\"Treponema_azotonutricium_ZAS-9\">Treponema_azotonutricium_ZAS-9<\/option>\n<option value=\"Treponema_brennaborense\">Treponema_brennaborense<\/option>\n<option value=\"Treponema_brennaborense_DSM_12168\">Treponema_brennaborense_DSM_12168<\/option>\n<option value=\"Treponema_caldarium\">Treponema_caldarium<\/option>\n<option value=\"Treponema_caldarium_DSM_7334\">Treponema_caldarium_DSM_7334<\/option>\n<option value=\"Treponema_denticola\">Treponema_denticola<\/option>\n<option value=\"Treponema_denticola_ASLM\">Treponema_denticola_ASLM<\/option>\n<option value=\"Treponema_denticola_ATCC_33520\">Treponema_denticola_ATCC_33520<\/option>\n<option value=\"Treponema_denticola_ATCC_33521\">Treponema_denticola_ATCC_33521<\/option>\n<option value=\"Treponema_denticola_ATCC_35405\">Treponema_denticola_ATCC_35405<\/option>\n<option value=\"Treponema_lecithinolyticum\">Treponema_lecithinolyticum<\/option>\n<option value=\"Treponema_maltophilum\">Treponema_maltophilum<\/option>\n<option value=\"Treponema_maltophilum_ATCC_51939\">Treponema_maltophilum_ATCC_51939<\/option>\n<option value=\"Treponema_medium\">Treponema_medium<\/option>\n<option value=\"Treponema_pallidum\">Treponema_pallidum<\/option>\n<option value=\"Treponema_pallidum_subsp._pallidum\">Treponema_pallidum_subsp._pallidum<\/option>\n<option value=\"Treponema_pedis\">Treponema_pedis<\/option>\n<option value=\"Treponema_pedis_str._T_A4\">Treponema_pedis_str._T_A4<\/option>\n<option value=\"Treponema_primitia_ZAS-2\">Treponema_primitia_ZAS-2<\/option>\n<option value=\"Treponema_putidum\">Treponema_putidum<\/option>\n<option value=\"Treponema_socranskii\">Treponema_socranskii<\/option>\n<option value=\"Treponema_socranskii_subsp._&#39;04&#39;\">Treponema_socranskii_subsp._'04'<\/option>\n<option value=\"Treponema_socranskii_subsp._socranskii\">Treponema_socranskii_subsp._socranskii<\/option>\n<option value=\"Treponema_sp._OMZ_838\">Treponema_sp._OMZ_838<\/option>\n<option value=\"Treponema_sp._OMZ_840\">Treponema_sp._OMZ_840<\/option>\n<option value=\"Treponema_sp._SO4A1\">Treponema_sp._SO4A1<\/option>\n<option value=\"Treponema_succinifaciens_DSM_2489\">Treponema_succinifaciens_DSM_2489<\/option>\n<option value=\"Treponema_vincentii\">Treponema_vincentii<\/option>\n<option value=\"Treponema_vincentii_ATCC_35580\">Treponema_vincentii_ATCC_35580<\/option>\n<option value=\"Zymoseptoria\">Zymoseptoria<\/option>\n<option value=\"Zymoseptoria_tritici\">Zymoseptoria_tritici<\/option>\n<option value=\"[Eubacterium]_eligens_ATCC_27750\">[Eubacterium]_eligens_ATCC_27750<\/option>\n<option value=\"environmental_samples_&lt;Eubacterium&gt;\">environmental_samples_&lt;Eubacterium&gt;<\/option>\n<option value=\"environmental_samples_&lt;Methanobrevibacter&gt;\">environmental_samples_&lt;Methanobrevibacter&gt;<\/option>\n<option value=\"environmental_samples_&lt;Porphyromonas&gt;\">environmental_samples_&lt;Porphyromonas&gt;<\/option>\n<option value=\"environmental_samples_&lt;Tannerella&gt;\">environmental_samples_&lt;Tannerella&gt;<\/option>\n<option value=\"environmental_samples_&lt;Treponema&gt;\">environmental_samples_&lt;Treponema&gt;<\/option>\n<option value=\"uncultured_Eubacterium_sp.\">uncultured_Eubacterium_sp.<\/option>\n<option value=\"uncultured_Fretibacterium_sp.\">uncultured_Fretibacterium_sp.<\/option>\n<option value=\"uncultured_Methanobrevibacter_sp.\">uncultured_Methanobrevibacter_sp.<\/option>\n<option value=\"uncultured_Porphyromonas_sp.\">uncultured_Porphyromonas_sp.<\/option>\n<option value=\"uncultured_Propionibacterium_sp.\">uncultured_Propionibacterium_sp.<\/option>\n<option value=\"uncultured_Tannerella_sp.\">uncultured_Tannerella_sp.<\/option>\n<option value=\"uncultured_Treponema_sp.\">uncultured_Treponema_sp.<\/option><\/select>\n    <script type=\"application/json\" data-for=\"selected_node\" data-nonempty=\"\">{}<\/script>\n  <\/div>\n<\/div>",
+      "deps": [
+        {
+          "name": "selectize",
+          "version": "0.11.2",
+          "src": {
+            "href": "shared/selectize"
+          },
+          "meta": null,
+          "script": null,
+          "stylesheet": "css/selectize.bootstrap3.css",
+          "head": "<!--[if lt IE 9]>\n<script src=\"shared/selectize/js/es5-shim.min.js\"><\/script>\n<![endif]-->\n<script src=\"shared/selectize/js/selectize.min.js\"><\/script>",
+          "attachment": null,
+          "package": null,
+          "all_files": true
+        }
+      ]
+    },
+    "out042a1e4f9a2ab910": {
+      "src": "[image data sha1: 190c5e1f13aedc65fc101b232226143ffb2cd60f]",
+      "width": 331,
+      "height": 400,
+      "coordmap": {
+        "panels": [
+          {
+            "panel": 1,
+            "row": 1,
+            "col": 1,
+            "panel_vars": {
+              "panelvar1": "5 prime",
+              "panelvar2": "CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": 0.4,
+              "right": 10.6,
+              "bottom": -0.0478086731048712,
+              "top": 1.04413422645705
+            },
+            "mapping": {
+              "x": "Position",
+              "y": "Frequency",
+              "colour": "Mismatch",
+              "group": "Mismatch",
+              "panelvar1": "Strand",
+              "panelvar2": "File"
+            },
+            "range": {
+              "left": 41.1506849315069,
+              "right": 119.257260273973,
+              "bottom": 365.849315068493,
+              "top": 59.2054794520548
+            }
+          },
+          {
+            "panel": 2,
+            "row": 1,
+            "col": 2,
+            "panel_vars": {
+              "panelvar1": "3 prime",
+              "panelvar2": "CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": 0.4,
+              "right": 10.6,
+              "bottom": -0.0478086731048712,
+              "top": 1.04413422645705
+            },
+            "mapping": {
+              "x": "Position",
+              "y": "Frequency",
+              "colour": "Mismatch",
+              "group": "Mismatch",
+              "panelvar1": "Strand",
+              "panelvar2": "File"
+            },
+            "range": {
+              "left": 124.736712328767,
+              "right": 202.843287671233,
+              "bottom": 365.849315068493,
+              "top": 59.2054794520548
+            }
+          }
+        ],
+        "dims": {
+          "width": 331,
+          "height": 400
+        }
+      }
+    },
+    "out0aa6e691a91682c6": {
+      "src": "[image data sha1: 74cbc46de8b73538db9119ce3e8100cdf88e9dbd]",
+      "width": 331,
+      "height": 400,
+      "coordmap": {
+        "panels": [
+          {
+            "panel": 1,
+            "row": 1,
+            "col": 1,
+            "panel_vars": {
+              "panelvar1": "Fretibacterium_fastidiosum",
+              "panelvar2": "CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": 0.4,
+              "right": 12.6,
+              "bottom": -137.5,
+              "top": 2887.5
+            },
+            "mapping": {
+              "fill": "Mode",
+              "x": "Edit_Distance",
+              "y": "Alignment_Count",
+              "panelvar1": "Node",
+              "panelvar2": "File"
+            },
+            "range": {
+              "left": 44.1506849315069,
+              "right": 252.843287671233,
+              "bottom": 365.849315068493,
+              "top": 40.4383561643836
+            }
+          }
+        ],
+        "dims": {
+          "width": 331,
+          "height": 400
+        }
+      }
+    },
+    "out399d192121284b53": {
+      "src": "[image data sha1: b3edbabea137e73fa43089d3715b13911402ec70]",
+      "width": 331,
+      "height": 400,
+      "coordmap": {
+        "panels": [
+          {
+            "panel": 1,
+            "row": 1,
+            "col": 1,
+            "panel_vars": {
+              "panelvar1": "Fretibacterium_fastidiosum",
+              "panelvar2": "CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": 0.305,
+              "right": 5.695,
+              "bottom": -0.01885,
+              "top": 0.39585
+            },
+            "mapping": {
+              "fill": "Mode",
+              "x": "Breadth",
+              "y": "Percentage",
+              "panelvar1": "Node",
+              "panelvar2": "File"
+            },
+            "range": {
+              "left": 36.1506849315069,
+              "right": 252.843287671233,
+              "bottom": 365.849315068493,
+              "top": 40.4383561643836
+            }
+          }
+        ],
+        "dims": {
+          "width": 331,
+          "height": 400
+        }
+      }
+    },
+    "out3b114a4605799761": {
+      "src": "[image data sha1: 269f7e3902ca3f0081f9d08a403d3a58dad33e4d]",
+      "width": 331,
+      "height": 400,
+      "coordmap": {
+        "panels": [
+          {
+            "panel": 1,
+            "row": 1,
+            "col": 1,
+            "panel_vars": {
+              "panelvar1": "Fretibacterium_fastidiosum",
+              "panelvar2": "CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": 0.4,
+              "right": 5.6,
+              "bottom": -347.85,
+              "top": 7304.85
+            },
+            "mapping": {
+              "fill": "Mode",
+              "x": "Percent_Identity",
+              "y": "Alignment_Count",
+              "panelvar1": "Node",
+              "panelvar2": "File"
+            },
+            "range": {
+              "left": 44.1506849315069,
+              "right": 252.843287671233,
+              "bottom": 365.849315068493,
+              "top": 40.4383561643836
+            }
+          }
+        ],
+        "dims": {
+          "width": 331,
+          "height": 400
+        }
+      }
+    },
+    "out434ef02ad6c81970": {
+      "src": "[image data sha1: 5b03dea0b29ea43f7f82a5f33bbec71a512ab752]",
+      "width": 331,
+      "height": 400,
+      "coordmap": {
+        "panels": [
+          {
+            "panel": 1,
+            "row": 1,
+            "col": 1,
+            "panel_vars": {
+              "panelvar1": "Fretibacterium_fastidiosum",
+              "panelvar2": "CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": 0.4,
+              "right": 11.6,
+              "bottom": -41447.55,
+              "top": 870398.55
+            },
+            "mapping": {
+              "fill": "Mode",
+              "x": "Fold_Coverage",
+              "y": "Base_Pairs",
+              "panelvar1": "Node",
+              "panelvar2": "File"
+            },
+            "range": {
+              "left": 49.1506849315068,
+              "right": 252.843287671233,
+              "bottom": 365.849315068493,
+              "top": 40.4383561643836
+            }
+          }
+        ],
+        "dims": {
+          "width": 331,
+          "height": 400
+        }
+      }
+    },
+    "out437c675beb86b87f": {
+      "x": {
+        "data": [
+          {
+            "x": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ],
+            "y": [
+              0.00182509505703422,
+              0.994500458295142,
+              0.247191011235955,
+              0.958037443511943,
+              0.0147025559828093,
+              0.0123203285420945,
+              0.0750497017892644,
+              0.0637119113573407,
+              0.0582750582750583,
+              0.0623315363881402
+            ],
+            "text": [
+              "Position: 1<br />Frequency: 0.001825095<br />Mismatch: C>T<br />Mismatch: C>T",
+              "Position: 2<br />Frequency: 0.994500458<br />Mismatch: C>T<br />Mismatch: C>T",
+              "Position: 3<br />Frequency: 0.247191011<br />Mismatch: C>T<br />Mismatch: C>T",
+              "Position: 4<br />Frequency: 0.958037444<br />Mismatch: C>T<br />Mismatch: C>T",
+              "Position: 5<br />Frequency: 0.014702556<br />Mismatch: C>T<br />Mismatch: C>T",
+              "Position: 6<br />Frequency: 0.012320329<br />Mismatch: C>T<br />Mismatch: C>T",
+              "Position: 7<br />Frequency: 0.075049702<br />Mismatch: C>T<br />Mismatch: C>T",
+              "Position: 8<br />Frequency: 0.063711911<br />Mismatch: C>T<br />Mismatch: C>T",
+              "Position: 9<br />Frequency: 0.058275058<br />Mismatch: C>T<br />Mismatch: C>T",
+              "Position: 10<br />Frequency: 0.062331536<br />Mismatch: C>T<br />Mismatch: C>T"
+            ],
+            "type": "scatter",
+            "mode": "lines",
+            "line": {
+              "width": 1.88976377952756,
+              "color": "rgba(228,26,28,1)",
+              "dash": "solid"
+            },
+            "hoveron": "points",
+            "name": "C>T",
+            "legendgroup": "C>T",
+            "showlegend": true,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          },
+          {
+            "x": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ],
+            "y": [
+              0.024594583799329,
+              0.0575770889918517,
+              0.053283272088193,
+              0.0555000798849657,
+              0.044286227831922,
+              0.0564187569899345,
+              0.0165961016136763,
+              0.00718964690845183,
+              0.00414403259306598,
+              0.00340509666080844
+            ],
+            "text": [
+              "Position: 1<br />Frequency: 0.024594584<br />Mismatch: D>V(11Substitution)<br />Mismatch: D>V(11Substitution)",
+              "Position: 2<br />Frequency: 0.057577089<br />Mismatch: D>V(11Substitution)<br />Mismatch: D>V(11Substitution)",
+              "Position: 3<br />Frequency: 0.053283272<br />Mismatch: D>V(11Substitution)<br />Mismatch: D>V(11Substitution)",
+              "Position: 4<br />Frequency: 0.055500080<br />Mismatch: D>V(11Substitution)<br />Mismatch: D>V(11Substitution)",
+              "Position: 5<br />Frequency: 0.044286228<br />Mismatch: D>V(11Substitution)<br />Mismatch: D>V(11Substitution)",
+              "Position: 6<br />Frequency: 0.056418757<br />Mismatch: D>V(11Substitution)<br />Mismatch: D>V(11Substitution)",
+              "Position: 7<br />Frequency: 0.016596102<br />Mismatch: D>V(11Substitution)<br />Mismatch: D>V(11Substitution)",
+              "Position: 8<br />Frequency: 0.007189647<br />Mismatch: D>V(11Substitution)<br />Mismatch: D>V(11Substitution)",
+              "Position: 9<br />Frequency: 0.004144033<br />Mismatch: D>V(11Substitution)<br />Mismatch: D>V(11Substitution)",
+              "Position: 10<br />Frequency: 0.003405097<br />Mismatch: D>V(11Substitution)<br />Mismatch: D>V(11Substitution)"
+            ],
+            "type": "scatter",
+            "mode": "lines",
+            "line": {
+              "width": 1.88976377952756,
+              "color": "rgba(190,190,190,1)",
+              "dash": "solid"
+            },
+            "hoveron": "points",
+            "name": "D>V(11Substitution)",
+            "legendgroup": "D>V(11Substitution)",
+            "showlegend": true,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          },
+          {
+            "x": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ],
+            "y": [
+              0.0284510010537408,
+              0.0300289435600579,
+              0.0363262508567512,
+              0.037280701754386,
+              0.0342998585572843,
+              0.0493869209809264,
+              0.0497851002865329,
+              0.0438346400570207,
+              0.0685673042223024,
+              0.0842841369157159
+            ],
+            "text": [
+              "Position: -10<br />Frequency: 0.028451001<br />Mismatch: G>A<br />Mismatch: G>A",
+              "Position: -9<br />Frequency: 0.030028944<br />Mismatch: G>A<br />Mismatch: G>A",
+              "Position: -8<br />Frequency: 0.036326251<br />Mismatch: G>A<br />Mismatch: G>A",
+              "Position: -7<br />Frequency: 0.037280702<br />Mismatch: G>A<br />Mismatch: G>A",
+              "Position: -6<br />Frequency: 0.034299859<br />Mismatch: G>A<br />Mismatch: G>A",
+              "Position: -5<br />Frequency: 0.049386921<br />Mismatch: G>A<br />Mismatch: G>A",
+              "Position: -4<br />Frequency: 0.049785100<br />Mismatch: G>A<br />Mismatch: G>A",
+              "Position: -3<br />Frequency: 0.043834640<br />Mismatch: G>A<br />Mismatch: G>A",
+              "Position: -2<br />Frequency: 0.068567304<br />Mismatch: G>A<br />Mismatch: G>A",
+              "Position: -1<br />Frequency: 0.084284137<br />Mismatch: G>A<br />Mismatch: G>A"
+            ],
+            "type": "scatter",
+            "mode": "lines",
+            "line": {
+              "width": 1.88976377952756,
+              "color": "rgba(55,126,184,1)",
+              "dash": "solid"
+            },
+            "hoveron": "points",
+            "name": "G>A",
+            "legendgroup": "G>A",
+            "showlegend": true,
+            "xaxis": "x2",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          },
+          {
+            "x": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ],
+            "y": [
+              0.00229669276242211,
+              0.00254633328007669,
+              0.00255631890078287,
+              0.00256630452148906,
+              0.00273606007349417,
+              0.00326529797092187,
+              0.00320538424668477,
+              0.00311551366032913,
+              0.00378455024764339,
+              0.00396429142035469
+            ],
+            "text": [
+              "Position: -10<br />Frequency: 0.002296693<br />Mismatch: H>B(11Substitution)<br />Mismatch: H>B(11Substitution)",
+              "Position: -9<br />Frequency: 0.002546333<br />Mismatch: H>B(11Substitution)<br />Mismatch: H>B(11Substitution)",
+              "Position: -8<br />Frequency: 0.002556319<br />Mismatch: H>B(11Substitution)<br />Mismatch: H>B(11Substitution)",
+              "Position: -7<br />Frequency: 0.002566305<br />Mismatch: H>B(11Substitution)<br />Mismatch: H>B(11Substitution)",
+              "Position: -6<br />Frequency: 0.002736060<br />Mismatch: H>B(11Substitution)<br />Mismatch: H>B(11Substitution)",
+              "Position: -5<br />Frequency: 0.003265298<br />Mismatch: H>B(11Substitution)<br />Mismatch: H>B(11Substitution)",
+              "Position: -4<br />Frequency: 0.003205384<br />Mismatch: H>B(11Substitution)<br />Mismatch: H>B(11Substitution)",
+              "Position: -3<br />Frequency: 0.003115514<br />Mismatch: H>B(11Substitution)<br />Mismatch: H>B(11Substitution)",
+              "Position: -2<br />Frequency: 0.003784550<br />Mismatch: H>B(11Substitution)<br />Mismatch: H>B(11Substitution)",
+              "Position: -1<br />Frequency: 0.003964291<br />Mismatch: H>B(11Substitution)<br />Mismatch: H>B(11Substitution)"
+            ],
+            "type": "scatter",
+            "mode": "lines",
+            "line": {
+              "width": 1.88976377952756,
+              "color": "rgba(190,190,190,1)",
+              "dash": "solid"
+            },
+            "hoveron": "points",
+            "name": "H>B(11Substitution)",
+            "legendgroup": "H>B(11Substitution)",
+            "showlegend": true,
+            "xaxis": "x2",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          }
+        ],
+        "layout": {
+          "margin": {
+            "t": 54.9649923896499,
+            "r": 18.9954337899543,
+            "b": 39.6955859969559,
+            "l": 48.9497716894977
+          },
+          "font": {
+            "color": "rgba(0,0,0,1)",
+            "family": "",
+            "size": 14.6118721461187
+          },
+          "title": {
+            "text": "CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6",
+            "font": {
+              "color": "rgba(0,0,0,1)",
+              "family": "",
+              "size": 17.5342465753425
+            },
+            "x": 0,
+            "xref": "paper"
+          },
+          "xaxis": {
+            "domain": [
+              0,
+              0.491438356164384
+            ],
+            "automargin": true,
+            "type": "linear",
+            "autorange": false,
+            "range": [
+              0.4,
+              10.6
+            ],
+            "tickmode": "array",
+            "ticktext": [
+              "1",
+              "2",
+              "3",
+              "4",
+              "5",
+              "6",
+              "7",
+              "8",
+              "9",
+              "10"
+            ],
+            "tickvals": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ],
+            "categoryorder": "array",
+            "categoryarray": [
+              "1",
+              "2",
+              "3",
+              "4",
+              "5",
+              "6",
+              "7",
+              "8",
+              "9",
+              "10"
+            ],
+            "nticks": null,
+            "ticks": "",
+            "tickcolor": null,
+            "ticklen": 3.65296803652968,
+            "tickwidth": 0,
+            "showticklabels": true,
+            "tickfont": {
+              "color": "rgba(77,77,77,1)",
+              "family": "",
+              "size": 11.689497716895
+            },
+            "tickangle": 0,
+            "showline": false,
+            "linecolor": null,
+            "linewidth": 0,
+            "showgrid": true,
+            "gridcolor": "rgba(235,235,235,1)",
+            "gridwidth": 0.66417600664176,
+            "zeroline": false,
+            "anchor": "y",
+            "title": "",
+            "hoverformat": ".2f"
+          },
+          "annotations": [
+            {
+              "text": "Position (bp)",
+              "x": 0.5,
+              "y": -0.0353881278538813,
+              "showarrow": false,
+              "ax": 0,
+              "ay": 0,
+              "font": {
+                "color": "rgba(0,0,0,1)",
+                "family": "",
+                "size": 14.6118721461187
+              },
+              "xref": "paper",
+              "yref": "paper",
+              "textangle": 0,
+              "xanchor": "center",
+              "yanchor": "top",
+              "annotationType": "axis"
+            },
+            {
+              "text": "Frequency of Mismatch",
+              "x": -0.0402397260273973,
+              "y": 0.5,
+              "showarrow": false,
+              "ax": 0,
+              "ay": 0,
+              "font": {
+                "color": "rgba(0,0,0,1)",
+                "family": "",
+                "size": 14.6118721461187
+              },
+              "xref": "paper",
+              "yref": "paper",
+              "textangle": -90,
+              "xanchor": "right",
+              "yanchor": "center",
+              "annotationType": "axis"
+            },
+            {
+              "text": "5 prime",
+              "x": 0.245719178082192,
+              "y": 1,
+              "showarrow": false,
+              "ax": 0,
+              "ay": 0,
+              "font": {
+                "color": "rgba(26,26,26,1)",
+                "family": "",
+                "size": 11.689497716895
+              },
+              "xref": "paper",
+              "yref": "paper",
+              "textangle": 0,
+              "xanchor": "center",
+              "yanchor": "bottom"
+            },
+            {
+              "text": "3 prime",
+              "x": 0.754280821917808,
+              "y": 1,
+              "showarrow": false,
+              "ax": 0,
+              "ay": 0,
+              "font": {
+                "color": "rgba(26,26,26,1)",
+                "family": "",
+                "size": 11.689497716895
+              },
+              "xref": "paper",
+              "yref": "paper",
+              "textangle": 0,
+              "xanchor": "center",
+              "yanchor": "bottom"
+            },
+            {
+              "text": "CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6",
+              "x": 1,
+              "y": 0.5,
+              "showarrow": false,
+              "ax": 0,
+              "ay": 0,
+              "font": {
+                "color": "rgba(26,26,26,1)",
+                "family": "",
+                "size": 11.689497716895
+              },
+              "xref": "paper",
+              "yref": "paper",
+              "textangle": 90,
+              "xanchor": "left",
+              "yanchor": "middle"
+            },
+            {
+              "text": "Mismatch",
+              "x": 1.02,
+              "y": 1,
+              "showarrow": false,
+              "ax": 0,
+              "ay": 0,
+              "font": {
+                "color": "rgba(0,0,0,1)",
+                "family": "",
+                "size": 14.6118721461187
+              },
+              "xref": "paper",
+              "yref": "paper",
+              "textangle": 0,
+              "xanchor": "left",
+              "yanchor": "bottom",
+              "legendTitle": true
+            }
+          ],
+          "yaxis": {
+            "domain": [
+              0,
+              1
+            ],
+            "automargin": true,
+            "type": "linear",
+            "autorange": false,
+            "range": [
+              -0.0478086731048712,
+              1.04413422645705
+            ],
+            "tickmode": "array",
+            "ticktext": [
+              "0.00",
+              "0.25",
+              "0.50",
+              "0.75",
+              "1.00"
+            ],
+            "tickvals": [
+              0,
+              0.25,
+              0.5,
+              0.75,
+              1
+            ],
+            "categoryorder": "array",
+            "categoryarray": [
+              "0.00",
+              "0.25",
+              "0.50",
+              "0.75",
+              "1.00"
+            ],
+            "nticks": null,
+            "ticks": "",
+            "tickcolor": null,
+            "ticklen": 3.65296803652968,
+            "tickwidth": 0,
+            "showticklabels": true,
+            "tickfont": {
+              "color": "rgba(77,77,77,1)",
+              "family": "",
+              "size": 11.689497716895
+            },
+            "tickangle": 0,
+            "showline": false,
+            "linecolor": null,
+            "linewidth": 0,
+            "showgrid": true,
+            "gridcolor": "rgba(235,235,235,1)",
+            "gridwidth": 0.66417600664176,
+            "zeroline": false,
+            "anchor": "x",
+            "title": "",
+            "hoverformat": ".2f"
+          },
+          "shapes": [
+            {
+              "type": "rect",
+              "fillcolor": null,
+              "line": {
+                "color": null,
+                "width": 0,
+                "linetype": [
+
+                ]
+              },
+              "yref": "paper",
+              "xref": "paper",
+              "x0": 0,
+              "x1": 0.491438356164384,
+              "y0": 0,
+              "y1": 1
+            },
+            {
+              "type": "rect",
+              "fillcolor": null,
+              "line": {
+                "color": null,
+                "width": 0,
+                "linetype": [
+
+                ]
+              },
+              "yref": "paper",
+              "xref": "paper",
+              "x0": 0,
+              "x1": 0.491438356164384,
+              "y0": 0,
+              "y1": 23.37899543379,
+              "yanchor": 1,
+              "ysizemode": "pixel"
+            },
+            {
+              "type": "rect",
+              "fillcolor": null,
+              "line": {
+                "color": null,
+                "width": 0,
+                "linetype": [
+
+                ]
+              },
+              "yref": "paper",
+              "xref": "paper",
+              "x0": 0.508561643835616,
+              "x1": 1,
+              "y0": 0,
+              "y1": 1
+            },
+            {
+              "type": "rect",
+              "fillcolor": null,
+              "line": {
+                "color": null,
+                "width": 0,
+                "linetype": [
+
+                ]
+              },
+              "yref": "paper",
+              "xref": "paper",
+              "x0": 0.508561643835616,
+              "x1": 1,
+              "y0": 0,
+              "y1": 23.37899543379,
+              "yanchor": 1,
+              "ysizemode": "pixel"
+            },
+            {
+              "type": "rect",
+              "fillcolor": null,
+              "line": {
+                "color": null,
+                "width": 0,
+                "linetype": [
+
+                ]
+              },
+              "yref": "paper",
+              "xref": "paper",
+              "y0": 0,
+              "y1": 1,
+              "x0": 0,
+              "x1": 23.37899543379,
+              "xanchor": 1,
+              "xsizemode": "pixel"
+            }
+          ],
+          "xaxis2": {
+            "type": "linear",
+            "autorange": false,
+            "range": [
+              0.4,
+              10.6
+            ],
+            "tickmode": "array",
+            "ticktext": [
+              "-10",
+              "-9",
+              "-8",
+              "-7",
+              "-6",
+              "-5",
+              "-4",
+              "-3",
+              "-2",
+              "-1"
+            ],
+            "tickvals": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ],
+            "categoryorder": "array",
+            "categoryarray": [
+              "-10",
+              "-9",
+              "-8",
+              "-7",
+              "-6",
+              "-5",
+              "-4",
+              "-3",
+              "-2",
+              "-1"
+            ],
+            "nticks": null,
+            "ticks": "",
+            "tickcolor": null,
+            "ticklen": 3.65296803652968,
+            "tickwidth": 0,
+            "showticklabels": true,
+            "tickfont": {
+              "color": "rgba(77,77,77,1)",
+              "family": "",
+              "size": 11.689497716895
+            },
+            "tickangle": 0,
+            "showline": false,
+            "linecolor": null,
+            "linewidth": 0,
+            "showgrid": true,
+            "domain": [
+              0.508561643835616,
+              1
+            ],
+            "gridcolor": "rgba(235,235,235,1)",
+            "gridwidth": 0.66417600664176,
+            "zeroline": false,
+            "anchor": "y",
+            "title": "",
+            "hoverformat": ".2f"
+          },
+          "showlegend": true,
+          "legend": {
+            "bgcolor": null,
+            "bordercolor": null,
+            "borderwidth": 0,
+            "font": {
+              "color": "rgba(0,0,0,1)",
+              "family": "",
+              "size": 11.689497716895
+            },
+            "y": 0.93503937007874
+          },
+          "hovermode": "closest",
+          "barmode": "relative"
+        },
+        "config": {
+          "doubleClick": "reset",
+          "showSendToCloud": false
+        },
+        "source": "A",
+        "highlight": {
+          "on": "plotly_click",
+          "persistent": false,
+          "dynamic": false,
+          "selectize": false,
+          "opacityDim": 0.2,
+          "selected": {
+            "opacity": 1
+          },
+          "debounce": 0
+        },
+        "shinyEvents": [
+          "plotly_hover",
+          "plotly_click",
+          "plotly_selected",
+          "plotly_relayout",
+          "plotly_brushed",
+          "plotly_brushing",
+          "plotly_clickannotation",
+          "plotly_doubleclick",
+          "plotly_deselect",
+          "plotly_afterplot"
+        ],
+        "base_url": "https://plot.ly"
+      },
+      "evals": [
+
+      ],
+      "jsHooks": [
+
+      ],
+      "deps": [
+        {
+          "name": "typedarray",
+          "version": "0.1",
+          "src": {
+            "href": "typedarray-0.1"
+          },
+          "meta": null,
+          "script": "typedarray.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        },
+        {
+          "name": "jquery",
+          "version": "1.11.3",
+          "src": {
+            "href": "jquery-1.11.3"
+          },
+          "meta": null,
+          "script": "jquery.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": true
+        },
+        {
+          "name": "crosstalk",
+          "version": "1.0.0",
+          "src": {
+            "href": "crosstalk-1.0.0"
+          },
+          "meta": null,
+          "script": "js/crosstalk.min.js",
+          "stylesheet": "css/crosstalk.css",
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": true
+        },
+        {
+          "name": "plotly-htmlwidgets-css",
+          "version": "1.46.1",
+          "src": {
+            "href": "plotly-htmlwidgets-css-1.46.1"
+          },
+          "meta": null,
+          "script": null,
+          "stylesheet": "plotly-htmlwidgets.css",
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        },
+        {
+          "name": "plotly-main",
+          "version": "1.46.1",
+          "src": {
+            "href": "plotly-main-1.46.1"
+          },
+          "meta": null,
+          "script": "plotly-latest.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        }
+      ]
+    },
+    "out4417a8ecb0f674cf": {
+      "x": {
+        "data": [
+          {
+            "orientation": "v",
+            "width": [
+              0.9,
+              0.9,
+              0.9,
+              0.9,
+              0.9,
+              0.9,
+              0.9,
+              0.899999999999999,
+              0.899999999999999,
+              0.899999999999999,
+              0.899999999999999,
+              0.899999999999999
+            ],
+            "base": [
+              0,
+              4,
+              50,
+              340,
+              688,
+              673,
+              504,
+              334,
+              228,
+              172,
+              114,
+              344
+            ],
+            "x": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            "y": [
+              3,
+              38,
+              259,
+              1128,
+              2062,
+              1999,
+              1369,
+              874,
+              630,
+              449,
+              301,
+              888
+            ],
+            "text": [
+              "Mode: default<br />Edit_Distance: 0<br />Alignment_Count:    3",
+              "Mode: default<br />Edit_Distance: 1<br />Alignment_Count:   38",
+              "Mode: default<br />Edit_Distance: 2<br />Alignment_Count:  259",
+              "Mode: default<br />Edit_Distance: 3<br />Alignment_Count: 1128",
+              "Mode: default<br />Edit_Distance: 4<br />Alignment_Count: 2062",
+              "Mode: default<br />Edit_Distance: 5<br />Alignment_Count: 1999",
+              "Mode: default<br />Edit_Distance: 6<br />Alignment_Count: 1369",
+              "Mode: default<br />Edit_Distance: 7<br />Alignment_Count:  874",
+              "Mode: default<br />Edit_Distance: 8<br />Alignment_Count:  630",
+              "Mode: default<br />Edit_Distance: 9<br />Alignment_Count:  449",
+              "Mode: default<br />Edit_Distance: 10<br />Alignment_Count:  301",
+              "Mode: default<br />Edit_Distance: higher<br />Alignment_Count:  888"
+            ],
+            "type": "bar",
+            "marker": {
+              "autocolorscale": false,
+              "color": "rgba(27,158,119,1)",
+              "line": {
+                "width": 1.88976377952756,
+                "color": "transparent"
+              }
+            },
+            "name": "default",
+            "legendgroup": "default",
+            "showlegend": true,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          },
+          {
+            "orientation": "v",
+            "width": [
+              0.9,
+              0.9,
+              0.9,
+              0.9,
+              0.9,
+              0.9,
+              0.9,
+              0.899999999999999,
+              0.899999999999999,
+              0.899999999999999,
+              0.899999999999999,
+              0.899999999999999
+            ],
+            "base": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "x": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            "y": [
+              0,
+              4,
+              50,
+              340,
+              688,
+              673,
+              504,
+              334,
+              228,
+              172,
+              114,
+              344
+            ],
+            "text": [
+              "Mode: ancient<br />Edit_Distance: 0<br />Alignment_Count:    0",
+              "Mode: ancient<br />Edit_Distance: 1<br />Alignment_Count:    4",
+              "Mode: ancient<br />Edit_Distance: 2<br />Alignment_Count:   50",
+              "Mode: ancient<br />Edit_Distance: 3<br />Alignment_Count:  340",
+              "Mode: ancient<br />Edit_Distance: 4<br />Alignment_Count:  688",
+              "Mode: ancient<br />Edit_Distance: 5<br />Alignment_Count:  673",
+              "Mode: ancient<br />Edit_Distance: 6<br />Alignment_Count:  504",
+              "Mode: ancient<br />Edit_Distance: 7<br />Alignment_Count:  334",
+              "Mode: ancient<br />Edit_Distance: 8<br />Alignment_Count:  228",
+              "Mode: ancient<br />Edit_Distance: 9<br />Alignment_Count:  172",
+              "Mode: ancient<br />Edit_Distance: 10<br />Alignment_Count:  114",
+              "Mode: ancient<br />Edit_Distance: higher<br />Alignment_Count:  344"
+            ],
+            "type": "bar",
+            "marker": {
+              "autocolorscale": false,
+              "color": "rgba(117,112,179,1)",
+              "line": {
+                "width": 1.88976377952756,
+                "color": "transparent"
+              }
+            },
+            "name": "ancient",
+            "legendgroup": "ancient",
+            "showlegend": true,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          }
+        ],
+        "layout": {
+          "margin": {
+            "t": 54.9649923896499,
+            "r": 7.30593607305936,
+            "b": 39.6955859969559,
+            "l": 48.9497716894977
+          },
+          "font": {
+            "color": "rgba(0,0,0,1)",
+            "family": "",
+            "size": 14.6118721461187
+          },
+          "title": {
+            "text": "CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6",
+            "font": {
+              "color": "rgba(0,0,0,1)",
+              "family": "",
+              "size": 17.5342465753425
+            },
+            "x": 0,
+            "xref": "paper"
+          },
+          "xaxis": {
+            "domain": [
+              0,
+              1
+            ],
+            "automargin": true,
+            "type": "linear",
+            "autorange": false,
+            "range": [
+              0.4,
+              12.6
+            ],
+            "tickmode": "array",
+            "ticktext": [
+              "0",
+              "1",
+              "2",
+              "3",
+              "4",
+              "5",
+              "6",
+              "7",
+              "8",
+              "9",
+              "10",
+              "higher"
+            ],
+            "tickvals": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            "categoryorder": "array",
+            "categoryarray": [
+              "0",
+              "1",
+              "2",
+              "3",
+              "4",
+              "5",
+              "6",
+              "7",
+              "8",
+              "9",
+              "10",
+              "higher"
+            ],
+            "nticks": null,
+            "ticks": "",
+            "tickcolor": null,
+            "ticklen": 3.65296803652968,
+            "tickwidth": 0,
+            "showticklabels": true,
+            "tickfont": {
+              "color": "rgba(77,77,77,1)",
+              "family": "",
+              "size": 11.689497716895
+            },
+            "tickangle": 0,
+            "showline": false,
+            "linecolor": null,
+            "linewidth": 0,
+            "showgrid": true,
+            "gridcolor": "rgba(235,235,235,1)",
+            "gridwidth": 0.66417600664176,
+            "zeroline": false,
+            "anchor": "y",
+            "title": "",
+            "hoverformat": ".2f"
+          },
+          "annotations": [
+            {
+              "text": "Edit Distance",
+              "x": 0.5,
+              "y": -0.0353881278538813,
+              "showarrow": false,
+              "ax": 0,
+              "ay": 0,
+              "font": {
+                "color": "rgba(0,0,0,1)",
+                "family": "",
+                "size": 14.6118721461187
+              },
+              "xref": "paper",
+              "yref": "paper",
+              "textangle": 0,
+              "xanchor": "center",
+              "yanchor": "top",
+              "annotationType": "axis"
+            },
+            {
+              "text": "Alignments (n)",
+              "x": -0.0402397260273973,
+              "y": 0.5,
+              "showarrow": false,
+              "ax": 0,
+              "ay": 0,
+              "font": {
+                "color": "rgba(0,0,0,1)",
+                "family": "",
+                "size": 14.6118721461187
+              },
+              "xref": "paper",
+              "yref": "paper",
+              "textangle": -90,
+              "xanchor": "right",
+              "yanchor": "center",
+              "annotationType": "axis"
+            },
+            {
+              "text": "CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6<br />Fretibacterium_fastidiosum",
+              "x": 0.5,
+              "y": 1,
+              "showarrow": false,
+              "ax": 0,
+              "ay": 0,
+              "font": {
+                "color": "rgba(26,26,26,1)",
+                "family": "",
+                "size": 11.689497716895
+              },
+              "xref": "paper",
+              "yref": "paper",
+              "textangle": 0,
+              "xanchor": "center",
+              "yanchor": "bottom"
+            },
+            {
+              "text": "Mode",
+              "x": 1.02,
+              "y": 1,
+              "showarrow": false,
+              "ax": 0,
+              "ay": 0,
+              "font": {
+                "color": "rgba(0,0,0,1)",
+                "family": "",
+                "size": 14.6118721461187
+              },
+              "xref": "paper",
+              "yref": "paper",
+              "textangle": 0,
+              "xanchor": "left",
+              "yanchor": "bottom",
+              "legendTitle": true
+            }
+          ],
+          "yaxis": {
+            "domain": [
+              0,
+              1
+            ],
+            "automargin": true,
+            "type": "linear",
+            "autorange": false,
+            "range": [
+              -137.5,
+              2887.5
+            ],
+            "tickmode": "array",
+            "ticktext": [
+              "0",
+              "1000",
+              "2000"
+            ],
+            "tickvals": [
+              0,
+              1000,
+              2000
+            ],
+            "categoryorder": "array",
+            "categoryarray": [
+              "0",
+              "1000",
+              "2000"
+            ],
+            "nticks": null,
+            "ticks": "",
+            "tickcolor": null,
+            "ticklen": 3.65296803652968,
+            "tickwidth": 0,
+            "showticklabels": true,
+            "tickfont": {
+              "color": "rgba(77,77,77,1)",
+              "family": "",
+              "size": 11.689497716895
+            },
+            "tickangle": 0,
+            "showline": false,
+            "linecolor": null,
+            "linewidth": 0,
+            "showgrid": true,
+            "gridcolor": "rgba(235,235,235,1)",
+            "gridwidth": 0.66417600664176,
+            "zeroline": false,
+            "anchor": "x",
+            "title": "",
+            "hoverformat": ".2f"
+          },
+          "shapes": [
+            {
+              "type": "rect",
+              "fillcolor": null,
+              "line": {
+                "color": null,
+                "width": 0,
+                "linetype": [
+
+                ]
+              },
+              "yref": "paper",
+              "xref": "paper",
+              "x0": 0,
+              "x1": 1,
+              "y0": 0,
+              "y1": 1
+            },
+            {
+              "type": "rect",
+              "fillcolor": null,
+              "line": {
+                "color": null,
+                "width": 0,
+                "linetype": [
+
+                ]
+              },
+              "yref": "paper",
+              "xref": "paper",
+              "x0": 0,
+              "x1": 1,
+              "y0": 0,
+              "y1": 23.37899543379,
+              "yanchor": 1,
+              "ysizemode": "pixel"
+            }
+          ],
+          "showlegend": true,
+          "legend": {
+            "bgcolor": null,
+            "bordercolor": null,
+            "borderwidth": 0,
+            "font": {
+              "color": "rgba(0,0,0,1)",
+              "family": "",
+              "size": 11.689497716895
+            },
+            "y": 0.93503937007874
+          },
+          "hovermode": "closest",
+          "barmode": "relative"
+        },
+        "config": {
+          "doubleClick": "reset",
+          "showSendToCloud": false
+        },
+        "source": "A",
+        "highlight": {
+          "on": "plotly_click",
+          "persistent": false,
+          "dynamic": false,
+          "selectize": false,
+          "opacityDim": 0.2,
+          "selected": {
+            "opacity": 1
+          },
+          "debounce": 0
+        },
+        "shinyEvents": [
+          "plotly_hover",
+          "plotly_click",
+          "plotly_selected",
+          "plotly_relayout",
+          "plotly_brushed",
+          "plotly_brushing",
+          "plotly_clickannotation",
+          "plotly_doubleclick",
+          "plotly_deselect",
+          "plotly_afterplot"
+        ],
+        "base_url": "https://plot.ly"
+      },
+      "evals": [
+
+      ],
+      "jsHooks": [
+
+      ],
+      "deps": [
+        {
+          "name": "typedarray",
+          "version": "0.1",
+          "src": {
+            "href": "typedarray-0.1"
+          },
+          "meta": null,
+          "script": "typedarray.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        },
+        {
+          "name": "jquery",
+          "version": "1.11.3",
+          "src": {
+            "href": "jquery-1.11.3"
+          },
+          "meta": null,
+          "script": "jquery.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": true
+        },
+        {
+          "name": "crosstalk",
+          "version": "1.0.0",
+          "src": {
+            "href": "crosstalk-1.0.0"
+          },
+          "meta": null,
+          "script": "js/crosstalk.min.js",
+          "stylesheet": "css/crosstalk.css",
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": true
+        },
+        {
+          "name": "plotly-htmlwidgets-css",
+          "version": "1.46.1",
+          "src": {
+            "href": "plotly-htmlwidgets-css-1.46.1"
+          },
+          "meta": null,
+          "script": null,
+          "stylesheet": "plotly-htmlwidgets.css",
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        },
+        {
+          "name": "plotly-main",
+          "version": "1.46.1",
+          "src": {
+            "href": "plotly-main-1.46.1"
+          },
+          "meta": null,
+          "script": "plotly-latest.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        }
+      ]
+    },
+    "out518d56e8e9bae3a9": {
+      "src": "[image data sha1: 88b5768b0697360c205bad4aeb3ab8dc880a5382]",
+      "width": 331,
+      "height": 400,
+      "coordmap": {
+        "panels": [
+          {
+            "panel": 1,
+            "row": 1,
+            "col": 1,
+            "panel_vars": {
+              "panelvar1": "Ceratotherium",
+              "panelvar2": "CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": 0.4,
+              "right": 11.6,
+              "bottom": -0.05,
+              "top": 0.05
+            },
+            "mapping": {
+              "fill": "Mode",
+              "x": "Fold_Coverage",
+              "y": "Base_Pairs",
+              "panelvar1": "Node",
+              "panelvar2": "File"
+            },
+            "range": {
+              "left": 49.1506849315068,
+              "right": 252.843287671233,
+              "bottom": 365.849315068493,
+              "top": 40.4383561643836
+            }
+          }
+        ],
+        "dims": {
+          "width": 331,
+          "height": 400
+        }
+      }
+    },
+    "out6177be85d3f6beb7": {
+      "src": "[image data sha1: 5b03dea0b29ea43f7f82a5f33bbec71a512ab752]",
+      "width": 331,
+      "height": 400,
+      "coordmap": {
+        "panels": [
+          {
+            "panel": 1,
+            "row": 1,
+            "col": 1,
+            "panel_vars": {
+              "panelvar1": "Fretibacterium_fastidiosum",
+              "panelvar2": "CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": 0.4,
+              "right": 11.6,
+              "bottom": -41447.55,
+              "top": 870398.55
+            },
+            "mapping": {
+              "fill": "Mode",
+              "x": "Fold_Coverage",
+              "y": "Base_Pairs",
+              "panelvar1": "Node",
+              "panelvar2": "File"
+            },
+            "range": {
+              "left": 49.1506849315068,
+              "right": 252.843287671233,
+              "bottom": 365.849315068493,
+              "top": 40.4383561643836
+            }
+          }
+        ],
+        "dims": {
+          "width": 331,
+          "height": 400
+        }
+      }
+    },
+    "out62e25b9897809a46": {
+      "src": "[image data sha1: 269f7e3902ca3f0081f9d08a403d3a58dad33e4d]",
+      "width": 331,
+      "height": 400,
+      "coordmap": {
+        "panels": [
+          {
+            "panel": 1,
+            "row": 1,
+            "col": 1,
+            "panel_vars": {
+              "panelvar1": "Fretibacterium_fastidiosum",
+              "panelvar2": "CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": 0.4,
+              "right": 5.6,
+              "bottom": -347.85,
+              "top": 7304.85
+            },
+            "mapping": {
+              "fill": "Mode",
+              "x": "Percent_Identity",
+              "y": "Alignment_Count",
+              "panelvar1": "Node",
+              "panelvar2": "File"
+            },
+            "range": {
+              "left": 44.1506849315069,
+              "right": 252.843287671233,
+              "bottom": 365.849315068493,
+              "top": 40.4383561643836
+            }
+          }
+        ],
+        "dims": {
+          "width": 331,
+          "height": 400
+        }
+      }
+    },
+    "out6722cd9684275eec": {
+      "src": "[image data sha1: 74cbc46de8b73538db9119ce3e8100cdf88e9dbd]",
+      "width": 331,
+      "height": 400,
+      "coordmap": {
+        "panels": [
+          {
+            "panel": 1,
+            "row": 1,
+            "col": 1,
+            "panel_vars": {
+              "panelvar1": "Fretibacterium_fastidiosum",
+              "panelvar2": "CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": 0.4,
+              "right": 12.6,
+              "bottom": -137.5,
+              "top": 2887.5
+            },
+            "mapping": {
+              "fill": "Mode",
+              "x": "Edit_Distance",
+              "y": "Alignment_Count",
+              "panelvar1": "Node",
+              "panelvar2": "File"
+            },
+            "range": {
+              "left": 44.1506849315069,
+              "right": 252.843287671233,
+              "bottom": 365.849315068493,
+              "top": 40.4383561643836
+            }
+          }
+        ],
+        "dims": {
+          "width": 331,
+          "height": 400
+        }
+      }
+    },
+    "out6901a5d2027392c1": {
+      "src": "[image data sha1: f0e0a5891c1219864500fea7fbd590e979551a6b]",
+      "width": 331,
+      "height": 400,
+      "coordmap": {
+        "panels": [
+          {
+            "panel": 1,
+            "row": 1,
+            "col": 1,
+            "panel_vars": {
+              "panelvar1": "Fretibacterium_fastidiosum",
+              "panelvar2": "CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": 13.775,
+              "right": 211.225,
+              "bottom": -48.05,
+              "top": 1009.05
+            },
+            "mapping": {
+              "fill": "Mode",
+              "x": "Length_Bin",
+              "y": "Alignment_Count",
+              "panelvar1": "Node",
+              "panelvar2": "File"
+            },
+            "range": {
+              "left": 44.1506849315069,
+              "right": 252.843287671233,
+              "bottom": 365.849315068493,
+              "top": 40.4383561643836
+            }
+          }
+        ],
+        "dims": {
+          "width": 331,
+          "height": 400
+        }
+      }
+    },
+    "out79589c5b879500e0": {
+      "x": {
+        "data": [
+          {
+            "orientation": "v",
+            "width": [
+              0.9,
+              0.9,
+              0.9,
+              0.9,
+              0.9
+            ],
+            "base": [
+              0.111,
+              0.011,
+              0.001,
+              0,
+              0
+            ],
+            "x": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "y": [
+              0.266,
+              0.063,
+              0.015,
+              0.005,
+              0.002
+            ],
+            "text": [
+              "Mode: default<br />Breadth: 1<br />Percentage: 0.266",
+              "Mode: default<br />Breadth: 2<br />Percentage: 0.063",
+              "Mode: default<br />Breadth: 3<br />Percentage: 0.015",
+              "Mode: default<br />Breadth: 4<br />Percentage: 0.005",
+              "Mode: default<br />Breadth: 5<br />Percentage: 0.002"
+            ],
+            "type": "bar",
+            "marker": {
+              "autocolorscale": false,
+              "color": "rgba(27,158,119,1)",
+              "line": {
+                "width": 1.88976377952756,
+                "color": "transparent"
+              }
+            },
+            "name": "default",
+            "legendgroup": "default",
+            "showlegend": true,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          },
+          {
+            "orientation": "v",
+            "width": [
+              0.9,
+              0.9,
+              0.9,
+              0.9,
+              0.9
+            ],
+            "base": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "x": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "y": [
+              0.111,
+              0.011,
+              0.001,
+              0,
+              0
+            ],
+            "text": [
+              "Mode: ancient<br />Breadth: 1<br />Percentage: 0.111",
+              "Mode: ancient<br />Breadth: 2<br />Percentage: 0.011",
+              "Mode: ancient<br />Breadth: 3<br />Percentage: 0.001",
+              "Mode: ancient<br />Breadth: 4<br />Percentage: 0.000",
+              "Mode: ancient<br />Breadth: 5<br />Percentage: 0.000"
+            ],
+            "type": "bar",
+            "marker": {
+              "autocolorscale": false,
+              "color": "rgba(117,112,179,1)",
+              "line": {
+                "width": 1.88976377952756,
+                "color": "transparent"
+              }
+            },
+            "name": "ancient",
+            "legendgroup": "ancient",
+            "showlegend": true,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          }
+        ],
+        "layout": {
+          "margin": {
+            "t": 54.9649923896499,
+            "r": 7.30593607305936,
+            "b": 39.6955859969559,
+            "l": 43.1050228310502
+          },
+          "font": {
+            "color": "rgba(0,0,0,1)",
+            "family": "",
+            "size": 14.6118721461187
+          },
+          "title": {
+            "text": "CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6",
+            "font": {
+              "color": "rgba(0,0,0,1)",
+              "family": "",
+              "size": 17.5342465753425
+            },
+            "x": 0,
+            "xref": "paper"
+          },
+          "xaxis": {
+            "domain": [
+              0,
+              1
+            ],
+            "automargin": true,
+            "type": "linear",
+            "autorange": false,
+            "range": [
+              0.305,
+              5.695
+            ],
+            "tickmode": "array",
+            "ticktext": [
+              "1",
+              "2",
+              "3",
+              "4",
+              "5"
+            ],
+            "tickvals": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "categoryorder": "array",
+            "categoryarray": [
+              "1",
+              "2",
+              "3",
+              "4",
+              "5"
+            ],
+            "nticks": null,
+            "ticks": "",
+            "tickcolor": null,
+            "ticklen": 3.65296803652968,
+            "tickwidth": 0,
+            "showticklabels": true,
+            "tickfont": {
+              "color": "rgba(77,77,77,1)",
+              "family": "",
+              "size": 11.689497716895
+            },
+            "tickangle": 0,
+            "showline": false,
+            "linecolor": null,
+            "linewidth": 0,
+            "showgrid": true,
+            "gridcolor": "rgba(235,235,235,1)",
+            "gridwidth": 0.66417600664176,
+            "zeroline": false,
+            "anchor": "y",
+            "title": "",
+            "hoverformat": ".2f"
+          },
+          "annotations": [
+            {
+              "text": "Fold Coverage (X)",
+              "x": 0.5,
+              "y": -0.0353881278538813,
+              "showarrow": false,
+              "ax": 0,
+              "ay": 0,
+              "font": {
+                "color": "rgba(0,0,0,1)",
+                "family": "",
+                "size": 14.6118721461187
+              },
+              "xref": "paper",
+              "yref": "paper",
+              "textangle": 0,
+              "xanchor": "center",
+              "yanchor": "top",
+              "annotationType": "axis"
+            },
+            {
+              "text": "Percentage of Reference (%)",
+              "x": -0.0333904109589041,
+              "y": 0.5,
+              "showarrow": false,
+              "ax": 0,
+              "ay": 0,
+              "font": {
+                "color": "rgba(0,0,0,1)",
+                "family": "",
+                "size": 14.6118721461187
+              },
+              "xref": "paper",
+              "yref": "paper",
+              "textangle": -90,
+              "xanchor": "right",
+              "yanchor": "center",
+              "annotationType": "axis"
+            },
+            {
+              "text": "CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6<br />Fretibacterium_fastidiosum",
+              "x": 0.5,
+              "y": 1,
+              "showarrow": false,
+              "ax": 0,
+              "ay": 0,
+              "font": {
+                "color": "rgba(26,26,26,1)",
+                "family": "",
+                "size": 11.689497716895
+              },
+              "xref": "paper",
+              "yref": "paper",
+              "textangle": 0,
+              "xanchor": "center",
+              "yanchor": "bottom"
+            },
+            {
+              "text": "Mode",
+              "x": 1.02,
+              "y": 1,
+              "showarrow": false,
+              "ax": 0,
+              "ay": 0,
+              "font": {
+                "color": "rgba(0,0,0,1)",
+                "family": "",
+                "size": 14.6118721461187
+              },
+              "xref": "paper",
+              "yref": "paper",
+              "textangle": 0,
+              "xanchor": "left",
+              "yanchor": "bottom",
+              "legendTitle": true
+            }
+          ],
+          "yaxis": {
+            "domain": [
+              0,
+              1
+            ],
+            "automargin": true,
+            "type": "linear",
+            "autorange": false,
+            "range": [
+              -0.01885,
+              0.39585
+            ],
+            "tickmode": "array",
+            "ticktext": [
+              "0.0",
+              "0.1",
+              "0.2",
+              "0.3"
+            ],
+            "tickvals": [
+              0,
+              0.1,
+              0.2,
+              0.3
+            ],
+            "categoryorder": "array",
+            "categoryarray": [
+              "0.0",
+              "0.1",
+              "0.2",
+              "0.3"
+            ],
+            "nticks": null,
+            "ticks": "",
+            "tickcolor": null,
+            "ticklen": 3.65296803652968,
+            "tickwidth": 0,
+            "showticklabels": true,
+            "tickfont": {
+              "color": "rgba(77,77,77,1)",
+              "family": "",
+              "size": 11.689497716895
+            },
+            "tickangle": 0,
+            "showline": false,
+            "linecolor": null,
+            "linewidth": 0,
+            "showgrid": true,
+            "gridcolor": "rgba(235,235,235,1)",
+            "gridwidth": 0.66417600664176,
+            "zeroline": false,
+            "anchor": "x",
+            "title": "",
+            "hoverformat": ".2f"
+          },
+          "shapes": [
+            {
+              "type": "rect",
+              "fillcolor": null,
+              "line": {
+                "color": null,
+                "width": 0,
+                "linetype": [
+
+                ]
+              },
+              "yref": "paper",
+              "xref": "paper",
+              "x0": 0,
+              "x1": 1,
+              "y0": 0,
+              "y1": 1
+            },
+            {
+              "type": "rect",
+              "fillcolor": null,
+              "line": {
+                "color": null,
+                "width": 0,
+                "linetype": [
+
+                ]
+              },
+              "yref": "paper",
+              "xref": "paper",
+              "x0": 0,
+              "x1": 1,
+              "y0": 0,
+              "y1": 23.37899543379,
+              "yanchor": 1,
+              "ysizemode": "pixel"
+            }
+          ],
+          "showlegend": true,
+          "legend": {
+            "bgcolor": null,
+            "bordercolor": null,
+            "borderwidth": 0,
+            "font": {
+              "color": "rgba(0,0,0,1)",
+              "family": "",
+              "size": 11.689497716895
+            },
+            "y": 0.93503937007874
+          },
+          "hovermode": "closest",
+          "barmode": "relative"
+        },
+        "config": {
+          "doubleClick": "reset",
+          "showSendToCloud": false
+        },
+        "source": "A",
+        "highlight": {
+          "on": "plotly_click",
+          "persistent": false,
+          "dynamic": false,
+          "selectize": false,
+          "opacityDim": 0.2,
+          "selected": {
+            "opacity": 1
+          },
+          "debounce": 0
+        },
+        "shinyEvents": [
+          "plotly_hover",
+          "plotly_click",
+          "plotly_selected",
+          "plotly_relayout",
+          "plotly_brushed",
+          "plotly_brushing",
+          "plotly_clickannotation",
+          "plotly_doubleclick",
+          "plotly_deselect",
+          "plotly_afterplot"
+        ],
+        "base_url": "https://plot.ly"
+      },
+      "evals": [
+
+      ],
+      "jsHooks": [
+
+      ],
+      "deps": [
+        {
+          "name": "typedarray",
+          "version": "0.1",
+          "src": {
+            "href": "typedarray-0.1"
+          },
+          "meta": null,
+          "script": "typedarray.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        },
+        {
+          "name": "jquery",
+          "version": "1.11.3",
+          "src": {
+            "href": "jquery-1.11.3"
+          },
+          "meta": null,
+          "script": "jquery.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": true
+        },
+        {
+          "name": "crosstalk",
+          "version": "1.0.0",
+          "src": {
+            "href": "crosstalk-1.0.0"
+          },
+          "meta": null,
+          "script": "js/crosstalk.min.js",
+          "stylesheet": "css/crosstalk.css",
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": true
+        },
+        {
+          "name": "plotly-htmlwidgets-css",
+          "version": "1.46.1",
+          "src": {
+            "href": "plotly-htmlwidgets-css-1.46.1"
+          },
+          "meta": null,
+          "script": null,
+          "stylesheet": "plotly-htmlwidgets.css",
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        },
+        {
+          "name": "plotly-main",
+          "version": "1.46.1",
+          "src": {
+            "href": "plotly-main-1.46.1"
+          },
+          "meta": null,
+          "script": "plotly-latest.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        }
+      ]
+    },
+    "out976fe572b8e55b7a": {
+      "src": "[image data sha1: 40380b0ba1cadf005adc60d94d33a0bb9b16bb6f]",
+      "width": 331,
+      "height": 400,
+      "coordmap": {
+        "panels": [
+          {
+            "panel": 1,
+            "row": 1,
+            "col": 1,
+            "panel_vars": {
+              "panelvar1": "5 prime",
+              "panelvar2": "CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": 0.4,
+              "right": 10.6,
+              "bottom": -0.05,
+              "top": 0.05
+            },
+            "mapping": {
+              "x": "Position",
+              "y": "Frequency",
+              "colour": "Mismatch",
+              "group": "Mismatch",
+              "panelvar1": "Strand",
+              "panelvar2": "File"
+            },
+            "range": {
+              "left": 49.1506849315068,
+              "right": 123.257260273973,
+              "bottom": 365.849315068493,
+              "top": 59.2054794520548
+            }
+          },
+          {
+            "panel": 2,
+            "row": 1,
+            "col": 2,
+            "panel_vars": {
+              "panelvar1": "3 prime",
+              "panelvar2": "CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": 0.4,
+              "right": 10.6,
+              "bottom": -0.05,
+              "top": 0.05
+            },
+            "mapping": {
+              "x": "Position",
+              "y": "Frequency",
+              "colour": "Mismatch",
+              "group": "Mismatch",
+              "panelvar1": "Strand",
+              "panelvar2": "File"
+            },
+            "range": {
+              "left": 128.736712328767,
+              "right": 202.843287671233,
+              "bottom": 365.849315068493,
+              "top": 59.2054794520548
+            }
+          }
+        ],
+        "dims": {
+          "width": 331,
+          "height": 400
+        }
+      }
+    },
+    "out9941047286a45d93": {
+      "src": "[image data sha1: b3edbabea137e73fa43089d3715b13911402ec70]",
+      "width": 331,
+      "height": 400,
+      "coordmap": {
+        "panels": [
+          {
+            "panel": 1,
+            "row": 1,
+            "col": 1,
+            "panel_vars": {
+              "panelvar1": "Fretibacterium_fastidiosum",
+              "panelvar2": "CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": 0.305,
+              "right": 5.695,
+              "bottom": -0.01885,
+              "top": 0.39585
+            },
+            "mapping": {
+              "fill": "Mode",
+              "x": "Breadth",
+              "y": "Percentage",
+              "panelvar1": "Node",
+              "panelvar2": "File"
+            },
+            "range": {
+              "left": 36.1506849315069,
+              "right": 252.843287671233,
+              "bottom": 365.849315068493,
+              "top": 40.4383561643836
+            }
+          }
+        ],
+        "dims": {
+          "width": 331,
+          "height": 400
+        }
+      }
+    },
+    "out9c89c16185a03afe": {
+      "x": {
+        "filter": "none",
+        "extensions": [
+          "Buttons"
+        ],
+        "container": "<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Information<\/th>\n      <th>default<\/th>\n      <th>ancient<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>",
+        "options": {
+          "dom": "Bfrtip",
+          "buttons": [
+            "copy",
+            {
+              "extend": "collection",
+              "filename": "no",
+              "buttons": [
+                "csv",
+                "excel",
+                "pdf"
+              ],
+              "text": "Download Table"
+            }
+          ],
+          "order": [
+
+          ],
+          "autoWidth": false,
+          "orderClasses": false,
+          "columnDefs": [
+            {
+              "orderable": false,
+              "targets": 0
+            }
+          ],
+          "ajax": {
+            "type": "POST",
+            "data": "function(d) {\nd.search.caseInsensitive = true;\nd.search.smart = true;\nd.escape = true;\nvar encodeAmp = function(x) { x.value = x.value.replace(/&/g, \"%26\"); }\nencodeAmp(d.search);\n$.each(d.columns, function(i, v) {encodeAmp(v.search);});\n}"
+          },
+          "serverSide": true,
+          "processing": true
+        },
+        "selection": {
+          "mode": "multiple",
+          "selected": null,
+          "target": "row"
+        }
+      },
+      "evals": [
+        "options.ajax.data"
+      ],
+      "jsHooks": [
+
+      ],
+      "deps": [
+        {
+          "name": "dt-core",
+          "version": "1.10.16",
+          "src": {
+            "href": "dt-core-1.10.16"
+          },
+          "meta": null,
+          "script": "js/jquery.dataTables.min.js",
+          "stylesheet": [
+            "css/jquery.dataTables.min.css",
+            "css/jquery.dataTables.extra.css"
+          ],
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "jszip",
+          "version": "1.10.16",
+          "src": {
+            "href": "jszip-1.10.16"
+          },
+          "meta": null,
+          "script": "jszip.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "pdfmake",
+          "version": "1.10.16",
+          "src": {
+            "href": "pdfmake-1.10.16"
+          },
+          "meta": null,
+          "script": [
+            "pdfmake.min.js",
+            "vfs_fonts.js"
+          ],
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "dt-ext-buttons",
+          "version": "1.10.16",
+          "src": {
+            "href": "dt-ext-buttons-1.10.16"
+          },
+          "meta": null,
+          "script": [
+            "js/dataTables.buttons.min.js",
+            "js/buttons.flash.min.js",
+            "js/buttons.html5.min.js",
+            "js/buttons.colVis.min.js",
+            "js/buttons.print.min.js"
+          ],
+          "stylesheet": "css/buttons.dataTables.min.css",
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "jquery",
+          "version": "1.11.3",
+          "src": {
+            "href": "jquery-1.11.3"
+          },
+          "meta": null,
+          "script": "jquery.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": true
+        },
+        {
+          "name": "crosstalk",
+          "version": "1.0.0",
+          "src": {
+            "href": "crosstalk-1.0.0"
+          },
+          "meta": null,
+          "script": "js/crosstalk.min.js",
+          "stylesheet": "css/crosstalk.css",
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": true
+        }
+      ]
+    },
+    "out9f634206152d6d6b": {
+      "x": {
+        "data": [
+          {
+            "orientation": "v",
+            "width": [
+              0.9,
+              0.9,
+              0.9,
+              0.9,
+              0.9
+            ],
+            "base": [
+              0,
+              0,
+              1734,
+              1686,
+              31
+            ],
+            "x": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "y": [
+              0,
+              0,
+              4583,
+              5271,
+              146
+            ],
+            "text": [
+              "Mode: default<br />Percent_Identity: 80<br />Alignment_Count:    0",
+              "Mode: default<br />Percent_Identity: 85<br />Alignment_Count:    0",
+              "Mode: default<br />Percent_Identity: 90<br />Alignment_Count: 4583",
+              "Mode: default<br />Percent_Identity: 95<br />Alignment_Count: 5271",
+              "Mode: default<br />Percent_Identity: 100<br />Alignment_Count:  146"
+            ],
+            "type": "bar",
+            "marker": {
+              "autocolorscale": false,
+              "color": "rgba(27,158,119,1)",
+              "line": {
+                "width": 1.88976377952756,
+                "color": "transparent"
+              }
+            },
+            "name": "default",
+            "legendgroup": "default",
+            "showlegend": true,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          },
+          {
+            "orientation": "v",
+            "width": [
+              0.9,
+              0.9,
+              0.9,
+              0.9,
+              0.9
+            ],
+            "base": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "x": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "y": [
+              0,
+              0,
+              1734,
+              1686,
+              31
+            ],
+            "text": [
+              "Mode: ancient<br />Percent_Identity: 80<br />Alignment_Count:    0",
+              "Mode: ancient<br />Percent_Identity: 85<br />Alignment_Count:    0",
+              "Mode: ancient<br />Percent_Identity: 90<br />Alignment_Count: 1734",
+              "Mode: ancient<br />Percent_Identity: 95<br />Alignment_Count: 1686",
+              "Mode: ancient<br />Percent_Identity: 100<br />Alignment_Count:   31"
+            ],
+            "type": "bar",
+            "marker": {
+              "autocolorscale": false,
+              "color": "rgba(117,112,179,1)",
+              "line": {
+                "width": 1.88976377952756,
+                "color": "transparent"
+              }
+            },
+            "name": "ancient",
+            "legendgroup": "ancient",
+            "showlegend": true,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          }
+        ],
+        "layout": {
+          "margin": {
+            "t": 54.9649923896499,
+            "r": 7.30593607305936,
+            "b": 39.6955859969559,
+            "l": 48.9497716894977
+          },
+          "font": {
+            "color": "rgba(0,0,0,1)",
+            "family": "",
+            "size": 14.6118721461187
+          },
+          "title": {
+            "text": "CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6",
+            "font": {
+              "color": "rgba(0,0,0,1)",
+              "family": "",
+              "size": 17.5342465753425
+            },
+            "x": 0,
+            "xref": "paper"
+          },
+          "xaxis": {
+            "domain": [
+              0,
+              1
+            ],
+            "automargin": true,
+            "type": "linear",
+            "autorange": false,
+            "range": [
+              0.4,
+              5.6
+            ],
+            "tickmode": "array",
+            "ticktext": [
+              "80",
+              "85",
+              "90",
+              "95",
+              "100"
+            ],
+            "tickvals": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "categoryorder": "array",
+            "categoryarray": [
+              "80",
+              "85",
+              "90",
+              "95",
+              "100"
+            ],
+            "nticks": null,
+            "ticks": "",
+            "tickcolor": null,
+            "ticklen": 3.65296803652968,
+            "tickwidth": 0,
+            "showticklabels": true,
+            "tickfont": {
+              "color": "rgba(77,77,77,1)",
+              "family": "",
+              "size": 11.689497716895
+            },
+            "tickangle": 0,
+            "showline": false,
+            "linecolor": null,
+            "linewidth": 0,
+            "showgrid": true,
+            "gridcolor": "rgba(235,235,235,1)",
+            "gridwidth": 0.66417600664176,
+            "zeroline": false,
+            "anchor": "y",
+            "title": "",
+            "hoverformat": ".2f"
+          },
+          "annotations": [
+            {
+              "text": "Sequence Identity (%)",
+              "x": 0.5,
+              "y": -0.0353881278538813,
+              "showarrow": false,
+              "ax": 0,
+              "ay": 0,
+              "font": {
+                "color": "rgba(0,0,0,1)",
+                "family": "",
+                "size": 14.6118721461187
+              },
+              "xref": "paper",
+              "yref": "paper",
+              "textangle": 0,
+              "xanchor": "center",
+              "yanchor": "top",
+              "annotationType": "axis"
+            },
+            {
+              "text": "Alignments (n)",
+              "x": -0.0402397260273973,
+              "y": 0.5,
+              "showarrow": false,
+              "ax": 0,
+              "ay": 0,
+              "font": {
+                "color": "rgba(0,0,0,1)",
+                "family": "",
+                "size": 14.6118721461187
+              },
+              "xref": "paper",
+              "yref": "paper",
+              "textangle": -90,
+              "xanchor": "right",
+              "yanchor": "center",
+              "annotationType": "axis"
+            },
+            {
+              "text": "CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6<br />Fretibacterium_fastidiosum",
+              "x": 0.5,
+              "y": 1,
+              "showarrow": false,
+              "ax": 0,
+              "ay": 0,
+              "font": {
+                "color": "rgba(26,26,26,1)",
+                "family": "",
+                "size": 11.689497716895
+              },
+              "xref": "paper",
+              "yref": "paper",
+              "textangle": 0,
+              "xanchor": "center",
+              "yanchor": "bottom"
+            },
+            {
+              "text": "Mode",
+              "x": 1.02,
+              "y": 1,
+              "showarrow": false,
+              "ax": 0,
+              "ay": 0,
+              "font": {
+                "color": "rgba(0,0,0,1)",
+                "family": "",
+                "size": 14.6118721461187
+              },
+              "xref": "paper",
+              "yref": "paper",
+              "textangle": 0,
+              "xanchor": "left",
+              "yanchor": "bottom",
+              "legendTitle": true
+            }
+          ],
+          "yaxis": {
+            "domain": [
+              0,
+              1
+            ],
+            "automargin": true,
+            "type": "linear",
+            "autorange": false,
+            "range": [
+              -347.85,
+              7304.85
+            ],
+            "tickmode": "array",
+            "ticktext": [
+              "0",
+              "2000",
+              "4000",
+              "6000"
+            ],
+            "tickvals": [
+              0,
+              2000,
+              4000,
+              6000
+            ],
+            "categoryorder": "array",
+            "categoryarray": [
+              "0",
+              "2000",
+              "4000",
+              "6000"
+            ],
+            "nticks": null,
+            "ticks": "",
+            "tickcolor": null,
+            "ticklen": 3.65296803652968,
+            "tickwidth": 0,
+            "showticklabels": true,
+            "tickfont": {
+              "color": "rgba(77,77,77,1)",
+              "family": "",
+              "size": 11.689497716895
+            },
+            "tickangle": 0,
+            "showline": false,
+            "linecolor": null,
+            "linewidth": 0,
+            "showgrid": true,
+            "gridcolor": "rgba(235,235,235,1)",
+            "gridwidth": 0.66417600664176,
+            "zeroline": false,
+            "anchor": "x",
+            "title": "",
+            "hoverformat": ".2f"
+          },
+          "shapes": [
+            {
+              "type": "rect",
+              "fillcolor": null,
+              "line": {
+                "color": null,
+                "width": 0,
+                "linetype": [
+
+                ]
+              },
+              "yref": "paper",
+              "xref": "paper",
+              "x0": 0,
+              "x1": 1,
+              "y0": 0,
+              "y1": 1
+            },
+            {
+              "type": "rect",
+              "fillcolor": null,
+              "line": {
+                "color": null,
+                "width": 0,
+                "linetype": [
+
+                ]
+              },
+              "yref": "paper",
+              "xref": "paper",
+              "x0": 0,
+              "x1": 1,
+              "y0": 0,
+              "y1": 23.37899543379,
+              "yanchor": 1,
+              "ysizemode": "pixel"
+            }
+          ],
+          "showlegend": true,
+          "legend": {
+            "bgcolor": null,
+            "bordercolor": null,
+            "borderwidth": 0,
+            "font": {
+              "color": "rgba(0,0,0,1)",
+              "family": "",
+              "size": 11.689497716895
+            },
+            "y": 0.93503937007874
+          },
+          "hovermode": "closest",
+          "barmode": "relative"
+        },
+        "config": {
+          "doubleClick": "reset",
+          "showSendToCloud": false
+        },
+        "source": "A",
+        "highlight": {
+          "on": "plotly_click",
+          "persistent": false,
+          "dynamic": false,
+          "selectize": false,
+          "opacityDim": 0.2,
+          "selected": {
+            "opacity": 1
+          },
+          "debounce": 0
+        },
+        "shinyEvents": [
+          "plotly_hover",
+          "plotly_click",
+          "plotly_selected",
+          "plotly_relayout",
+          "plotly_brushed",
+          "plotly_brushing",
+          "plotly_clickannotation",
+          "plotly_doubleclick",
+          "plotly_deselect",
+          "plotly_afterplot"
+        ],
+        "base_url": "https://plot.ly"
+      },
+      "evals": [
+
+      ],
+      "jsHooks": [
+
+      ],
+      "deps": [
+        {
+          "name": "typedarray",
+          "version": "0.1",
+          "src": {
+            "href": "typedarray-0.1"
+          },
+          "meta": null,
+          "script": "typedarray.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        },
+        {
+          "name": "jquery",
+          "version": "1.11.3",
+          "src": {
+            "href": "jquery-1.11.3"
+          },
+          "meta": null,
+          "script": "jquery.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": true
+        },
+        {
+          "name": "crosstalk",
+          "version": "1.0.0",
+          "src": {
+            "href": "crosstalk-1.0.0"
+          },
+          "meta": null,
+          "script": "js/crosstalk.min.js",
+          "stylesheet": "css/crosstalk.css",
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": true
+        },
+        {
+          "name": "plotly-htmlwidgets-css",
+          "version": "1.46.1",
+          "src": {
+            "href": "plotly-htmlwidgets-css-1.46.1"
+          },
+          "meta": null,
+          "script": null,
+          "stylesheet": "plotly-htmlwidgets.css",
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        },
+        {
+          "name": "plotly-main",
+          "version": "1.46.1",
+          "src": {
+            "href": "plotly-main-1.46.1"
+          },
+          "meta": null,
+          "script": "plotly-latest.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        }
+      ]
+    },
+    "out9f9c6c2d59726e49": {
+      "src": "[image data sha1: 0b1006322c34634ef2118637f177bab6b5876e71]",
+      "width": 331,
+      "height": 400,
+      "coordmap": {
+        "panels": [
+          {
+            "panel": 1,
+            "row": 1,
+            "col": 1,
+            "panel_vars": {
+              "panelvar1": "Ceratotherium",
+              "panelvar2": "CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": 0.305,
+              "right": 5.695,
+              "bottom": -0.05,
+              "top": 0.05
+            },
+            "mapping": {
+              "fill": "Mode",
+              "x": "Breadth",
+              "y": "Percentage",
+              "panelvar1": "Node",
+              "panelvar2": "File"
+            },
+            "range": {
+              "left": 49.1506849315068,
+              "right": 252.843287671233,
+              "bottom": 365.849315068493,
+              "top": 40.4383561643836
+            }
+          }
+        ],
+        "dims": {
+          "width": 331,
+          "height": 400
+        }
+      }
+    },
+    "outb37ffe8f163ae738": {
+      "src": "[image data sha1: f0e0a5891c1219864500fea7fbd590e979551a6b]",
+      "width": 331,
+      "height": 400,
+      "coordmap": {
+        "panels": [
+          {
+            "panel": 1,
+            "row": 1,
+            "col": 1,
+            "panel_vars": {
+              "panelvar1": "Fretibacterium_fastidiosum",
+              "panelvar2": "CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": 13.775,
+              "right": 211.225,
+              "bottom": -48.05,
+              "top": 1009.05
+            },
+            "mapping": {
+              "fill": "Mode",
+              "x": "Length_Bin",
+              "y": "Alignment_Count",
+              "panelvar1": "Node",
+              "panelvar2": "File"
+            },
+            "range": {
+              "left": 44.1506849315069,
+              "right": 252.843287671233,
+              "bottom": 365.849315068493,
+              "top": 40.4383561643836
+            }
+          }
+        ],
+        "dims": {
+          "width": 331,
+          "height": 400
+        }
+      }
+    },
+    "outc253ad682a8696af": {
+      "src": "[image data sha1: 41f6badf8d1004320ec531ccb8209434c5fc3a1a]",
+      "width": 331,
+      "height": 400,
+      "coordmap": {
+        "panels": [
+          {
+            "panel": 1,
+            "row": 1,
+            "col": 1,
+            "panel_vars": {
+              "panelvar1": "Ceratotherium",
+              "panelvar2": "CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": 0.4,
+              "right": 12.6,
+              "bottom": -0.05,
+              "top": 0.05
+            },
+            "mapping": {
+              "fill": "Mode",
+              "x": "Edit_Distance",
+              "y": "Alignment_Count",
+              "panelvar1": "Node",
+              "panelvar2": "File"
+            },
+            "range": {
+              "left": 49.1506849315068,
+              "right": 252.843287671233,
+              "bottom": 365.849315068493,
+              "top": 40.4383561643836
+            }
+          }
+        ],
+        "dims": {
+          "width": 331,
+          "height": 400
+        }
+      }
+    },
+    "outd39c4a6210e43920": {
+      "src": "[image data sha1: 88178572bdb86a45eb1e427bdc74b02d8caa55e7]",
+      "width": 331,
+      "height": 400,
+      "coordmap": {
+        "panels": [
+          {
+            "panel": 1,
+            "row": 1,
+            "col": 1,
+            "panel_vars": {
+              "panelvar1": "Ceratotherium",
+              "panelvar2": "CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": 0.4,
+              "right": 5.6,
+              "bottom": -0.05,
+              "top": 0.05
+            },
+            "mapping": {
+              "fill": "Mode",
+              "x": "Percent_Identity",
+              "y": "Alignment_Count",
+              "panelvar1": "Node",
+              "panelvar2": "File"
+            },
+            "range": {
+              "left": 49.1506849315068,
+              "right": 252.843287671233,
+              "bottom": 365.849315068493,
+              "top": 40.4383561643836
+            }
+          }
+        ],
+        "dims": {
+          "width": 331,
+          "height": 400
+        }
+      }
+    },
+    "outd4197c0a1078e1f2": {
+      "x": {
+        "filter": "none",
+        "extensions": [
+          "Buttons"
+        ],
+        "container": "<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Information<\/th>\n      <th>default<\/th>\n      <th>ancient<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>",
+        "options": {
+          "dom": "Bfrtip",
+          "buttons": [
+            "copy",
+            {
+              "extend": "collection",
+              "filename": "no",
+              "buttons": [
+                "csv",
+                "excel",
+                "pdf"
+              ],
+              "text": "Download Table"
+            }
+          ],
+          "order": [
+
+          ],
+          "autoWidth": false,
+          "orderClasses": false,
+          "columnDefs": [
+            {
+              "orderable": false,
+              "targets": 0
+            }
+          ],
+          "ajax": {
+            "type": "POST",
+            "data": "function(d) {\nd.search.caseInsensitive = true;\nd.search.smart = true;\nd.escape = true;\nvar encodeAmp = function(x) { x.value = x.value.replace(/&/g, \"%26\"); }\nencodeAmp(d.search);\n$.each(d.columns, function(i, v) {encodeAmp(v.search);});\n}"
+          },
+          "serverSide": true,
+          "processing": true
+        },
+        "selection": {
+          "mode": "multiple",
+          "selected": null,
+          "target": "row"
+        }
+      },
+      "evals": [
+        "options.ajax.data"
+      ],
+      "jsHooks": [
+
+      ],
+      "deps": [
+        {
+          "name": "dt-core",
+          "version": "1.10.16",
+          "src": {
+            "href": "dt-core-1.10.16"
+          },
+          "meta": null,
+          "script": "js/jquery.dataTables.min.js",
+          "stylesheet": [
+            "css/jquery.dataTables.min.css",
+            "css/jquery.dataTables.extra.css"
+          ],
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "jszip",
+          "version": "1.10.16",
+          "src": {
+            "href": "jszip-1.10.16"
+          },
+          "meta": null,
+          "script": "jszip.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "pdfmake",
+          "version": "1.10.16",
+          "src": {
+            "href": "pdfmake-1.10.16"
+          },
+          "meta": null,
+          "script": [
+            "pdfmake.min.js",
+            "vfs_fonts.js"
+          ],
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "dt-ext-buttons",
+          "version": "1.10.16",
+          "src": {
+            "href": "dt-ext-buttons-1.10.16"
+          },
+          "meta": null,
+          "script": [
+            "js/dataTables.buttons.min.js",
+            "js/buttons.flash.min.js",
+            "js/buttons.html5.min.js",
+            "js/buttons.colVis.min.js",
+            "js/buttons.print.min.js"
+          ],
+          "stylesheet": "css/buttons.dataTables.min.css",
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "jquery",
+          "version": "1.11.3",
+          "src": {
+            "href": "jquery-1.11.3"
+          },
+          "meta": null,
+          "script": "jquery.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": true
+        },
+        {
+          "name": "crosstalk",
+          "version": "1.0.0",
+          "src": {
+            "href": "crosstalk-1.0.0"
+          },
+          "meta": null,
+          "script": "js/crosstalk.min.js",
+          "stylesheet": "css/crosstalk.css",
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": true
+        }
+      ]
+    },
+    "outd54360d7bcb514f0": {
+      "x": {
+        "data": [
+          {
+            "orientation": "v",
+            "width": [
+              4.5,
+              4.5,
+              4.5,
+              4.5,
+              4.5,
+              4.5,
+              4.5,
+              4.5,
+              4.5,
+              4.5,
+              4.5,
+              4.5,
+              4.5,
+              4.5,
+              4.5,
+              4.5,
+              4.5,
+              4.5,
+              4.5,
+              4.5,
+              4.5,
+              4.5,
+              4.5,
+              4.5,
+              4.5,
+              4.5,
+              4.5,
+              4.5,
+              4.5,
+              4.5,
+              4.5,
+              4.5,
+              4.5,
+              4.5,
+              4.5,
+              4.5
+            ],
+            "base": [
+              0,
+              0,
+              1,
+              26,
+              83,
+              189,
+              217,
+              216,
+              246,
+              252,
+              199,
+              193,
+              190,
+              169,
+              134,
+              127,
+              126,
+              98,
+              87,
+              78,
+              72,
+              73,
+              63,
+              68,
+              47,
+              39,
+              31,
+              46,
+              48,
+              46,
+              26,
+              33,
+              23,
+              25,
+              21,
+              11
+            ],
+            "x": [
+              25,
+              30,
+              35,
+              40,
+              45,
+              50,
+              55,
+              60,
+              65,
+              70,
+              75,
+              80,
+              85,
+              90,
+              95,
+              100,
+              105,
+              110,
+              115,
+              120,
+              125,
+              130,
+              135,
+              140,
+              145,
+              150,
+              155,
+              160,
+              165,
+              170,
+              175,
+              180,
+              185,
+              190,
+              195,
+              200
+            ],
+            "y": [
+              0,
+              0,
+              4,
+              87,
+              273,
+              563,
+              659,
+              698,
+              715,
+              676,
+              558,
+              560,
+              539,
+              458,
+              392,
+              369,
+              333,
+              290,
+              265,
+              257,
+              211,
+              211,
+              196,
+              191,
+              142,
+              118,
+              116,
+              119,
+              115,
+              105,
+              78,
+              80,
+              68,
+              73,
+              59,
+              31
+            ],
+            "text": [
+              "Mode: default<br />Length_Bin:  25<br />Alignment_Count:   0",
+              "Mode: default<br />Length_Bin:  30<br />Alignment_Count:   0",
+              "Mode: default<br />Length_Bin:  35<br />Alignment_Count:   4",
+              "Mode: default<br />Length_Bin:  40<br />Alignment_Count:  87",
+              "Mode: default<br />Length_Bin:  45<br />Alignment_Count: 273",
+              "Mode: default<br />Length_Bin:  50<br />Alignment_Count: 563",
+              "Mode: default<br />Length_Bin:  55<br />Alignment_Count: 659",
+              "Mode: default<br />Length_Bin:  60<br />Alignment_Count: 698",
+              "Mode: default<br />Length_Bin:  65<br />Alignment_Count: 715",
+              "Mode: default<br />Length_Bin:  70<br />Alignment_Count: 676",
+              "Mode: default<br />Length_Bin:  75<br />Alignment_Count: 558",
+              "Mode: default<br />Length_Bin:  80<br />Alignment_Count: 560",
+              "Mode: default<br />Length_Bin:  85<br />Alignment_Count: 539",
+              "Mode: default<br />Length_Bin:  90<br />Alignment_Count: 458",
+              "Mode: default<br />Length_Bin:  95<br />Alignment_Count: 392",
+              "Mode: default<br />Length_Bin: 100<br />Alignment_Count: 369",
+              "Mode: default<br />Length_Bin: 105<br />Alignment_Count: 333",
+              "Mode: default<br />Length_Bin: 110<br />Alignment_Count: 290",
+              "Mode: default<br />Length_Bin: 115<br />Alignment_Count: 265",
+              "Mode: default<br />Length_Bin: 120<br />Alignment_Count: 257",
+              "Mode: default<br />Length_Bin: 125<br />Alignment_Count: 211",
+              "Mode: default<br />Length_Bin: 130<br />Alignment_Count: 211",
+              "Mode: default<br />Length_Bin: 135<br />Alignment_Count: 196",
+              "Mode: default<br />Length_Bin: 140<br />Alignment_Count: 191",
+              "Mode: default<br />Length_Bin: 145<br />Alignment_Count: 142",
+              "Mode: default<br />Length_Bin: 150<br />Alignment_Count: 118",
+              "Mode: default<br />Length_Bin: 155<br />Alignment_Count: 116",
+              "Mode: default<br />Length_Bin: 160<br />Alignment_Count: 119",
+              "Mode: default<br />Length_Bin: 165<br />Alignment_Count: 115",
+              "Mode: default<br />Length_Bin: 170<br />Alignment_Count: 105",
+              "Mode: default<br />Length_Bin: 175<br />Alignment_Count:  78",
+              "Mode: default<br />Length_Bin: 180<br />Alignment_Count:  80",
+              "Mode: default<br />Length_Bin: 185<br />Alignment_Count:  68",
+              "Mode: default<br />Length_Bin: 190<br />Alignment_Count:  73",
+              "Mode: default<br />Length_Bin: 195<br />Alignment_Count:  59",
+              "Mode: default<br />Length_Bin: 200<br />Alignment_Count:  31"
+            ],
+            "type": "bar",
+            "marker": {
+              "autocolorscale": false,
+              "color": "rgba(27,158,119,1)",
+              "line": {
+                "width": 1.88976377952756,
+                "color": "transparent"
+              }
+            },
+            "name": "default",
+            "legendgroup": "default",
+            "showlegend": true,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          },
+          {
+            "orientation": "v",
+            "width": [
+              4.5,
+              4.5,
+              4.5,
+              4.5,
+              4.5,
+              4.5,
+              4.5,
+              4.5,
+              4.5,
+              4.5,
+              4.5,
+              4.5,
+              4.5,
+              4.5,
+              4.5,
+              4.5,
+              4.5,
+              4.5,
+              4.5,
+              4.5,
+              4.5,
+              4.5,
+              4.5,
+              4.5,
+              4.5,
+              4.5,
+              4.5,
+              4.5,
+              4.5,
+              4.5,
+              4.5,
+              4.5,
+              4.5,
+              4.5,
+              4.5,
+              4.5
+            ],
+            "base": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "x": [
+              25,
+              30,
+              35,
+              40,
+              45,
+              50,
+              55,
+              60,
+              65,
+              70,
+              75,
+              80,
+              85,
+              90,
+              95,
+              100,
+              105,
+              110,
+              115,
+              120,
+              125,
+              130,
+              135,
+              140,
+              145,
+              150,
+              155,
+              160,
+              165,
+              170,
+              175,
+              180,
+              185,
+              190,
+              195,
+              200
+            ],
+            "y": [
+              0,
+              0,
+              1,
+              26,
+              83,
+              189,
+              217,
+              216,
+              246,
+              252,
+              199,
+              193,
+              190,
+              169,
+              134,
+              127,
+              126,
+              98,
+              87,
+              78,
+              72,
+              73,
+              63,
+              68,
+              47,
+              39,
+              31,
+              46,
+              48,
+              46,
+              26,
+              33,
+              23,
+              25,
+              21,
+              11
+            ],
+            "text": [
+              "Mode: ancient<br />Length_Bin:  25<br />Alignment_Count:   0",
+              "Mode: ancient<br />Length_Bin:  30<br />Alignment_Count:   0",
+              "Mode: ancient<br />Length_Bin:  35<br />Alignment_Count:   1",
+              "Mode: ancient<br />Length_Bin:  40<br />Alignment_Count:  26",
+              "Mode: ancient<br />Length_Bin:  45<br />Alignment_Count:  83",
+              "Mode: ancient<br />Length_Bin:  50<br />Alignment_Count: 189",
+              "Mode: ancient<br />Length_Bin:  55<br />Alignment_Count: 217",
+              "Mode: ancient<br />Length_Bin:  60<br />Alignment_Count: 216",
+              "Mode: ancient<br />Length_Bin:  65<br />Alignment_Count: 246",
+              "Mode: ancient<br />Length_Bin:  70<br />Alignment_Count: 252",
+              "Mode: ancient<br />Length_Bin:  75<br />Alignment_Count: 199",
+              "Mode: ancient<br />Length_Bin:  80<br />Alignment_Count: 193",
+              "Mode: ancient<br />Length_Bin:  85<br />Alignment_Count: 190",
+              "Mode: ancient<br />Length_Bin:  90<br />Alignment_Count: 169",
+              "Mode: ancient<br />Length_Bin:  95<br />Alignment_Count: 134",
+              "Mode: ancient<br />Length_Bin: 100<br />Alignment_Count: 127",
+              "Mode: ancient<br />Length_Bin: 105<br />Alignment_Count: 126",
+              "Mode: ancient<br />Length_Bin: 110<br />Alignment_Count:  98",
+              "Mode: ancient<br />Length_Bin: 115<br />Alignment_Count:  87",
+              "Mode: ancient<br />Length_Bin: 120<br />Alignment_Count:  78",
+              "Mode: ancient<br />Length_Bin: 125<br />Alignment_Count:  72",
+              "Mode: ancient<br />Length_Bin: 130<br />Alignment_Count:  73",
+              "Mode: ancient<br />Length_Bin: 135<br />Alignment_Count:  63",
+              "Mode: ancient<br />Length_Bin: 140<br />Alignment_Count:  68",
+              "Mode: ancient<br />Length_Bin: 145<br />Alignment_Count:  47",
+              "Mode: ancient<br />Length_Bin: 150<br />Alignment_Count:  39",
+              "Mode: ancient<br />Length_Bin: 155<br />Alignment_Count:  31",
+              "Mode: ancient<br />Length_Bin: 160<br />Alignment_Count:  46",
+              "Mode: ancient<br />Length_Bin: 165<br />Alignment_Count:  48",
+              "Mode: ancient<br />Length_Bin: 170<br />Alignment_Count:  46",
+              "Mode: ancient<br />Length_Bin: 175<br />Alignment_Count:  26",
+              "Mode: ancient<br />Length_Bin: 180<br />Alignment_Count:  33",
+              "Mode: ancient<br />Length_Bin: 185<br />Alignment_Count:  23",
+              "Mode: ancient<br />Length_Bin: 190<br />Alignment_Count:  25",
+              "Mode: ancient<br />Length_Bin: 195<br />Alignment_Count:  21",
+              "Mode: ancient<br />Length_Bin: 200<br />Alignment_Count:  11"
+            ],
+            "type": "bar",
+            "marker": {
+              "autocolorscale": false,
+              "color": "rgba(117,112,179,1)",
+              "line": {
+                "width": 1.88976377952756,
+                "color": "transparent"
+              }
+            },
+            "name": "ancient",
+            "legendgroup": "ancient",
+            "showlegend": true,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          }
+        ],
+        "layout": {
+          "margin": {
+            "t": 54.9649923896499,
+            "r": 7.30593607305936,
+            "b": 39.6955859969559,
+            "l": 48.9497716894977
+          },
+          "font": {
+            "color": "rgba(0,0,0,1)",
+            "family": "",
+            "size": 14.6118721461187
+          },
+          "title": {
+            "text": "CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6",
+            "font": {
+              "color": "rgba(0,0,0,1)",
+              "family": "",
+              "size": 17.5342465753425
+            },
+            "x": 0,
+            "xref": "paper"
+          },
+          "xaxis": {
+            "domain": [
+              0,
+              1
+            ],
+            "automargin": true,
+            "type": "linear",
+            "autorange": false,
+            "range": [
+              13.775,
+              211.225
+            ],
+            "tickmode": "array",
+            "ticktext": [
+              "50",
+              "100",
+              "150",
+              "200"
+            ],
+            "tickvals": [
+              50,
+              100,
+              150,
+              200
+            ],
+            "categoryorder": "array",
+            "categoryarray": [
+              "50",
+              "100",
+              "150",
+              "200"
+            ],
+            "nticks": null,
+            "ticks": "",
+            "tickcolor": null,
+            "ticklen": 3.65296803652968,
+            "tickwidth": 0,
+            "showticklabels": true,
+            "tickfont": {
+              "color": "rgba(77,77,77,1)",
+              "family": "",
+              "size": 11.689497716895
+            },
+            "tickangle": 0,
+            "showline": false,
+            "linecolor": null,
+            "linewidth": 0,
+            "showgrid": true,
+            "gridcolor": "rgba(235,235,235,1)",
+            "gridwidth": 0.66417600664176,
+            "zeroline": false,
+            "anchor": "y",
+            "title": "",
+            "hoverformat": ".2f"
+          },
+          "annotations": [
+            {
+              "text": "Read Length Bins (bp)",
+              "x": 0.5,
+              "y": -0.0353881278538813,
+              "showarrow": false,
+              "ax": 0,
+              "ay": 0,
+              "font": {
+                "color": "rgba(0,0,0,1)",
+                "family": "",
+                "size": 14.6118721461187
+              },
+              "xref": "paper",
+              "yref": "paper",
+              "textangle": 0,
+              "xanchor": "center",
+              "yanchor": "top",
+              "annotationType": "axis"
+            },
+            {
+              "text": "Alignments (n)",
+              "x": -0.0402397260273973,
+              "y": 0.5,
+              "showarrow": false,
+              "ax": 0,
+              "ay": 0,
+              "font": {
+                "color": "rgba(0,0,0,1)",
+                "family": "",
+                "size": 14.6118721461187
+              },
+              "xref": "paper",
+              "yref": "paper",
+              "textangle": -90,
+              "xanchor": "right",
+              "yanchor": "center",
+              "annotationType": "axis"
+            },
+            {
+              "text": "CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6<br />Fretibacterium_fastidiosum",
+              "x": 0.5,
+              "y": 1,
+              "showarrow": false,
+              "ax": 0,
+              "ay": 0,
+              "font": {
+                "color": "rgba(26,26,26,1)",
+                "family": "",
+                "size": 11.689497716895
+              },
+              "xref": "paper",
+              "yref": "paper",
+              "textangle": 0,
+              "xanchor": "center",
+              "yanchor": "bottom"
+            },
+            {
+              "text": "Mode",
+              "x": 1.02,
+              "y": 1,
+              "showarrow": false,
+              "ax": 0,
+              "ay": 0,
+              "font": {
+                "color": "rgba(0,0,0,1)",
+                "family": "",
+                "size": 14.6118721461187
+              },
+              "xref": "paper",
+              "yref": "paper",
+              "textangle": 0,
+              "xanchor": "left",
+              "yanchor": "bottom",
+              "legendTitle": true
+            }
+          ],
+          "yaxis": {
+            "domain": [
+              0,
+              1
+            ],
+            "automargin": true,
+            "type": "linear",
+            "autorange": false,
+            "range": [
+              -48.05,
+              1009.05
+            ],
+            "tickmode": "array",
+            "ticktext": [
+              "0",
+              "250",
+              "500",
+              "750",
+              "1000"
+            ],
+            "tickvals": [
+              0,
+              250,
+              500,
+              750,
+              1000
+            ],
+            "categoryorder": "array",
+            "categoryarray": [
+              "0",
+              "250",
+              "500",
+              "750",
+              "1000"
+            ],
+            "nticks": null,
+            "ticks": "",
+            "tickcolor": null,
+            "ticklen": 3.65296803652968,
+            "tickwidth": 0,
+            "showticklabels": true,
+            "tickfont": {
+              "color": "rgba(77,77,77,1)",
+              "family": "",
+              "size": 11.689497716895
+            },
+            "tickangle": 0,
+            "showline": false,
+            "linecolor": null,
+            "linewidth": 0,
+            "showgrid": true,
+            "gridcolor": "rgba(235,235,235,1)",
+            "gridwidth": 0.66417600664176,
+            "zeroline": false,
+            "anchor": "x",
+            "title": "",
+            "hoverformat": ".2f"
+          },
+          "shapes": [
+            {
+              "type": "rect",
+              "fillcolor": null,
+              "line": {
+                "color": null,
+                "width": 0,
+                "linetype": [
+
+                ]
+              },
+              "yref": "paper",
+              "xref": "paper",
+              "x0": 0,
+              "x1": 1,
+              "y0": 0,
+              "y1": 1
+            },
+            {
+              "type": "rect",
+              "fillcolor": null,
+              "line": {
+                "color": null,
+                "width": 0,
+                "linetype": [
+
+                ]
+              },
+              "yref": "paper",
+              "xref": "paper",
+              "x0": 0,
+              "x1": 1,
+              "y0": 0,
+              "y1": 23.37899543379,
+              "yanchor": 1,
+              "ysizemode": "pixel"
+            }
+          ],
+          "showlegend": true,
+          "legend": {
+            "bgcolor": null,
+            "bordercolor": null,
+            "borderwidth": 0,
+            "font": {
+              "color": "rgba(0,0,0,1)",
+              "family": "",
+              "size": 11.689497716895
+            },
+            "y": 0.93503937007874
+          },
+          "hovermode": "closest",
+          "barmode": "relative"
+        },
+        "config": {
+          "doubleClick": "reset",
+          "showSendToCloud": false
+        },
+        "source": "A",
+        "highlight": {
+          "on": "plotly_click",
+          "persistent": false,
+          "dynamic": false,
+          "selectize": false,
+          "opacityDim": 0.2,
+          "selected": {
+            "opacity": 1
+          },
+          "debounce": 0
+        },
+        "shinyEvents": [
+          "plotly_hover",
+          "plotly_click",
+          "plotly_selected",
+          "plotly_relayout",
+          "plotly_brushed",
+          "plotly_brushing",
+          "plotly_clickannotation",
+          "plotly_doubleclick",
+          "plotly_deselect",
+          "plotly_afterplot"
+        ],
+        "base_url": "https://plot.ly"
+      },
+      "evals": [
+
+      ],
+      "jsHooks": [
+
+      ],
+      "deps": [
+        {
+          "name": "typedarray",
+          "version": "0.1",
+          "src": {
+            "href": "typedarray-0.1"
+          },
+          "meta": null,
+          "script": "typedarray.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        },
+        {
+          "name": "jquery",
+          "version": "1.11.3",
+          "src": {
+            "href": "jquery-1.11.3"
+          },
+          "meta": null,
+          "script": "jquery.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": true
+        },
+        {
+          "name": "crosstalk",
+          "version": "1.0.0",
+          "src": {
+            "href": "crosstalk-1.0.0"
+          },
+          "meta": null,
+          "script": "js/crosstalk.min.js",
+          "stylesheet": "css/crosstalk.css",
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": true
+        },
+        {
+          "name": "plotly-htmlwidgets-css",
+          "version": "1.46.1",
+          "src": {
+            "href": "plotly-htmlwidgets-css-1.46.1"
+          },
+          "meta": null,
+          "script": null,
+          "stylesheet": "plotly-htmlwidgets.css",
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        },
+        {
+          "name": "plotly-main",
+          "version": "1.46.1",
+          "src": {
+            "href": "plotly-main-1.46.1"
+          },
+          "meta": null,
+          "script": "plotly-latest.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        }
+      ]
+    },
+    "outf1fc0028c88044c3": {
+      "src": "[image data sha1: df0caaf909a548e3c20c9651111b28b9451c05db]",
+      "width": 331,
+      "height": 400,
+      "coordmap": {
+        "panels": [
+          {
+            "panel": 1,
+            "row": 1,
+            "col": 1,
+            "panel_vars": {
+              "panelvar1": "Ceratotherium",
+              "panelvar2": "CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": 13.775,
+              "right": 211.225,
+              "bottom": -0.05,
+              "top": 0.05
+            },
+            "mapping": {
+              "fill": "Mode",
+              "x": "Length_Bin",
+              "y": "Alignment_Count",
+              "panelvar1": "Node",
+              "panelvar2": "File"
+            },
+            "range": {
+              "left": 49.1506849315068,
+              "right": 252.843287671233,
+              "bottom": 365.849315068493,
+              "top": 40.4383561643836
+            }
+          }
+        ],
+        "dims": {
+          "width": 331,
+          "height": 400
+        }
+      }
+    },
+    "outf42e815df51df7f4": {
+      "x": {
+        "data": [
+          {
+            "orientation": "v",
+            "width": [
+              0.9,
+              0.9,
+              0.9,
+              0.9,
+              0.9,
+              0.9,
+              0.9,
+              0.899999999999999,
+              0.899999999999999,
+              0.899999999999999,
+              0.899999999999999
+            ],
+            "base": [
+              272680,
+              53558,
+              9144,
+              1904,
+              835,
+              186,
+              168,
+              64,
+              171,
+              340,
+              154
+            ],
+            "x": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11
+            ],
+            "y": [
+              556271,
+              257578,
+              85353,
+              30296,
+              14735,
+              9570,
+              3633,
+              888,
+              801,
+              660,
+              7763
+            ],
+            "text": [
+              "Mode: default<br />Fold_Coverage: 1<br />Base_Pairs: 556271",
+              "Mode: default<br />Fold_Coverage: 2<br />Base_Pairs: 257578",
+              "Mode: default<br />Fold_Coverage: 3<br />Base_Pairs:  85353",
+              "Mode: default<br />Fold_Coverage: 4<br />Base_Pairs:  30296",
+              "Mode: default<br />Fold_Coverage: 5<br />Base_Pairs:  14735",
+              "Mode: default<br />Fold_Coverage: 6<br />Base_Pairs:   9570",
+              "Mode: default<br />Fold_Coverage: 7<br />Base_Pairs:   3633",
+              "Mode: default<br />Fold_Coverage: 8<br />Base_Pairs:    888",
+              "Mode: default<br />Fold_Coverage: 9<br />Base_Pairs:    801",
+              "Mode: default<br />Fold_Coverage: 10<br />Base_Pairs:    660",
+              "Mode: default<br />Fold_Coverage: higher<br />Base_Pairs:   7763"
+            ],
+            "type": "bar",
+            "marker": {
+              "autocolorscale": false,
+              "color": "rgba(27,158,119,1)",
+              "line": {
+                "width": 1.88976377952756,
+                "color": "transparent"
+              }
+            },
+            "name": "default",
+            "legendgroup": "default",
+            "showlegend": true,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          },
+          {
+            "orientation": "v",
+            "width": [
+              0.9,
+              0.9,
+              0.9,
+              0.9,
+              0.9,
+              0.9,
+              0.9,
+              0.899999999999999,
+              0.899999999999999,
+              0.899999999999999,
+              0.899999999999999
+            ],
+            "base": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "x": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11
+            ],
+            "y": [
+              272680,
+              53558,
+              9144,
+              1904,
+              835,
+              186,
+              168,
+              64,
+              171,
+              340,
+              154
+            ],
+            "text": [
+              "Mode: ancient<br />Fold_Coverage: 1<br />Base_Pairs: 272680",
+              "Mode: ancient<br />Fold_Coverage: 2<br />Base_Pairs:  53558",
+              "Mode: ancient<br />Fold_Coverage: 3<br />Base_Pairs:   9144",
+              "Mode: ancient<br />Fold_Coverage: 4<br />Base_Pairs:   1904",
+              "Mode: ancient<br />Fold_Coverage: 5<br />Base_Pairs:    835",
+              "Mode: ancient<br />Fold_Coverage: 6<br />Base_Pairs:    186",
+              "Mode: ancient<br />Fold_Coverage: 7<br />Base_Pairs:    168",
+              "Mode: ancient<br />Fold_Coverage: 8<br />Base_Pairs:     64",
+              "Mode: ancient<br />Fold_Coverage: 9<br />Base_Pairs:    171",
+              "Mode: ancient<br />Fold_Coverage: 10<br />Base_Pairs:    340",
+              "Mode: ancient<br />Fold_Coverage: higher<br />Base_Pairs:    154"
+            ],
+            "type": "bar",
+            "marker": {
+              "autocolorscale": false,
+              "color": "rgba(117,112,179,1)",
+              "line": {
+                "width": 1.88976377952756,
+                "color": "transparent"
+              }
+            },
+            "name": "ancient",
+            "legendgroup": "ancient",
+            "showlegend": true,
+            "xaxis": "x",
+            "yaxis": "y",
+            "hoverinfo": "text",
+            "frame": null
+          }
+        ],
+        "layout": {
+          "margin": {
+            "t": 54.9649923896499,
+            "r": 7.30593607305936,
+            "b": 39.6955859969559,
+            "l": 54.7945205479452
+          },
+          "font": {
+            "color": "rgba(0,0,0,1)",
+            "family": "",
+            "size": 14.6118721461187
+          },
+          "title": {
+            "text": "CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6",
+            "font": {
+              "color": "rgba(0,0,0,1)",
+              "family": "",
+              "size": 17.5342465753425
+            },
+            "x": 0,
+            "xref": "paper"
+          },
+          "xaxis": {
+            "domain": [
+              0,
+              1
+            ],
+            "automargin": true,
+            "type": "linear",
+            "autorange": false,
+            "range": [
+              0.4,
+              11.6
+            ],
+            "tickmode": "array",
+            "ticktext": [
+              "1",
+              "2",
+              "3",
+              "4",
+              "5",
+              "6",
+              "7",
+              "8",
+              "9",
+              "10",
+              "higher"
+            ],
+            "tickvals": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11
+            ],
+            "categoryorder": "array",
+            "categoryarray": [
+              "1",
+              "2",
+              "3",
+              "4",
+              "5",
+              "6",
+              "7",
+              "8",
+              "9",
+              "10",
+              "higher"
+            ],
+            "nticks": null,
+            "ticks": "",
+            "tickcolor": null,
+            "ticklen": 3.65296803652968,
+            "tickwidth": 0,
+            "showticklabels": true,
+            "tickfont": {
+              "color": "rgba(77,77,77,1)",
+              "family": "",
+              "size": 11.689497716895
+            },
+            "tickangle": 0,
+            "showline": false,
+            "linecolor": null,
+            "linewidth": 0,
+            "showgrid": true,
+            "gridcolor": "rgba(235,235,235,1)",
+            "gridwidth": 0.66417600664176,
+            "zeroline": false,
+            "anchor": "y",
+            "title": "",
+            "hoverformat": ".2f"
+          },
+          "annotations": [
+            {
+              "text": "Fold Coverage (X)",
+              "x": 0.5,
+              "y": -0.0353881278538813,
+              "showarrow": false,
+              "ax": 0,
+              "ay": 0,
+              "font": {
+                "color": "rgba(0,0,0,1)",
+                "family": "",
+                "size": 14.6118721461187
+              },
+              "xref": "paper",
+              "yref": "paper",
+              "textangle": 0,
+              "xanchor": "center",
+              "yanchor": "top",
+              "annotationType": "axis"
+            },
+            {
+              "text": "Base Pairs (n)",
+              "x": -0.0470890410958904,
+              "y": 0.5,
+              "showarrow": false,
+              "ax": 0,
+              "ay": 0,
+              "font": {
+                "color": "rgba(0,0,0,1)",
+                "family": "",
+                "size": 14.6118721461187
+              },
+              "xref": "paper",
+              "yref": "paper",
+              "textangle": -90,
+              "xanchor": "right",
+              "yanchor": "center",
+              "annotationType": "axis"
+            },
+            {
+              "text": "CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6<br />Fretibacterium_fastidiosum",
+              "x": 0.5,
+              "y": 1,
+              "showarrow": false,
+              "ax": 0,
+              "ay": 0,
+              "font": {
+                "color": "rgba(26,26,26,1)",
+                "family": "",
+                "size": 11.689497716895
+              },
+              "xref": "paper",
+              "yref": "paper",
+              "textangle": 0,
+              "xanchor": "center",
+              "yanchor": "bottom"
+            },
+            {
+              "text": "Mode",
+              "x": 1.02,
+              "y": 1,
+              "showarrow": false,
+              "ax": 0,
+              "ay": 0,
+              "font": {
+                "color": "rgba(0,0,0,1)",
+                "family": "",
+                "size": 14.6118721461187
+              },
+              "xref": "paper",
+              "yref": "paper",
+              "textangle": 0,
+              "xanchor": "left",
+              "yanchor": "bottom",
+              "legendTitle": true
+            }
+          ],
+          "yaxis": {
+            "domain": [
+              0,
+              1
+            ],
+            "automargin": true,
+            "type": "linear",
+            "autorange": false,
+            "range": [
+              -41447.55,
+              870398.55
+            ],
+            "tickmode": "array",
+            "ticktext": [
+              "0e+00",
+              "2e+05",
+              "4e+05",
+              "6e+05",
+              "8e+05"
+            ],
+            "tickvals": [
+              0,
+              200000,
+              400000,
+              600000,
+              800000
+            ],
+            "categoryorder": "array",
+            "categoryarray": [
+              "0e+00",
+              "2e+05",
+              "4e+05",
+              "6e+05",
+              "8e+05"
+            ],
+            "nticks": null,
+            "ticks": "",
+            "tickcolor": null,
+            "ticklen": 3.65296803652968,
+            "tickwidth": 0,
+            "showticklabels": true,
+            "tickfont": {
+              "color": "rgba(77,77,77,1)",
+              "family": "",
+              "size": 11.689497716895
+            },
+            "tickangle": 0,
+            "showline": false,
+            "linecolor": null,
+            "linewidth": 0,
+            "showgrid": true,
+            "gridcolor": "rgba(235,235,235,1)",
+            "gridwidth": 0.66417600664176,
+            "zeroline": false,
+            "anchor": "x",
+            "title": "",
+            "hoverformat": ".2f"
+          },
+          "shapes": [
+            {
+              "type": "rect",
+              "fillcolor": null,
+              "line": {
+                "color": null,
+                "width": 0,
+                "linetype": [
+
+                ]
+              },
+              "yref": "paper",
+              "xref": "paper",
+              "x0": 0,
+              "x1": 1,
+              "y0": 0,
+              "y1": 1
+            },
+            {
+              "type": "rect",
+              "fillcolor": null,
+              "line": {
+                "color": null,
+                "width": 0,
+                "linetype": [
+
+                ]
+              },
+              "yref": "paper",
+              "xref": "paper",
+              "x0": 0,
+              "x1": 1,
+              "y0": 0,
+              "y1": 23.37899543379,
+              "yanchor": 1,
+              "ysizemode": "pixel"
+            }
+          ],
+          "showlegend": true,
+          "legend": {
+            "bgcolor": null,
+            "bordercolor": null,
+            "borderwidth": 0,
+            "font": {
+              "color": "rgba(0,0,0,1)",
+              "family": "",
+              "size": 11.689497716895
+            },
+            "y": 0.93503937007874
+          },
+          "hovermode": "closest",
+          "barmode": "relative"
+        },
+        "config": {
+          "doubleClick": "reset",
+          "showSendToCloud": false
+        },
+        "source": "A",
+        "highlight": {
+          "on": "plotly_click",
+          "persistent": false,
+          "dynamic": false,
+          "selectize": false,
+          "opacityDim": 0.2,
+          "selected": {
+            "opacity": 1
+          },
+          "debounce": 0
+        },
+        "shinyEvents": [
+          "plotly_hover",
+          "plotly_click",
+          "plotly_selected",
+          "plotly_relayout",
+          "plotly_brushed",
+          "plotly_brushing",
+          "plotly_clickannotation",
+          "plotly_doubleclick",
+          "plotly_deselect",
+          "plotly_afterplot"
+        ],
+        "base_url": "https://plot.ly"
+      },
+      "evals": [
+
+      ],
+      "jsHooks": [
+
+      ],
+      "deps": [
+        {
+          "name": "typedarray",
+          "version": "0.1",
+          "src": {
+            "href": "typedarray-0.1"
+          },
+          "meta": null,
+          "script": "typedarray.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        },
+        {
+          "name": "jquery",
+          "version": "1.11.3",
+          "src": {
+            "href": "jquery-1.11.3"
+          },
+          "meta": null,
+          "script": "jquery.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": true
+        },
+        {
+          "name": "crosstalk",
+          "version": "1.0.0",
+          "src": {
+            "href": "crosstalk-1.0.0"
+          },
+          "meta": null,
+          "script": "js/crosstalk.min.js",
+          "stylesheet": "css/crosstalk.css",
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": true
+        },
+        {
+          "name": "plotly-htmlwidgets-css",
+          "version": "1.46.1",
+          "src": {
+            "href": "plotly-htmlwidgets-css-1.46.1"
+          },
+          "meta": null,
+          "script": null,
+          "stylesheet": "plotly-htmlwidgets.css",
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        },
+        {
+          "name": "plotly-main",
+          "version": "1.46.1",
+          "src": {
+            "href": "plotly-main-1.46.1"
+          },
+          "meta": null,
+          "script": "plotly-latest.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": false
+        }
+      ]
+    },
+    "outf51ebb950589e885": {
+      "src": "[image data sha1: 190c5e1f13aedc65fc101b232226143ffb2cd60f]",
+      "width": 331,
+      "height": 400,
+      "coordmap": {
+        "panels": [
+          {
+            "panel": 1,
+            "row": 1,
+            "col": 1,
+            "panel_vars": {
+              "panelvar1": "5 prime",
+              "panelvar2": "CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": 0.4,
+              "right": 10.6,
+              "bottom": -0.0478086731048712,
+              "top": 1.04413422645705
+            },
+            "mapping": {
+              "x": "Position",
+              "y": "Frequency",
+              "colour": "Mismatch",
+              "group": "Mismatch",
+              "panelvar1": "Strand",
+              "panelvar2": "File"
+            },
+            "range": {
+              "left": 41.1506849315069,
+              "right": 119.257260273973,
+              "bottom": 365.849315068493,
+              "top": 59.2054794520548
+            }
+          },
+          {
+            "panel": 2,
+            "row": 1,
+            "col": 2,
+            "panel_vars": {
+              "panelvar1": "3 prime",
+              "panelvar2": "CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": 0.4,
+              "right": 10.6,
+              "bottom": -0.0478086731048712,
+              "top": 1.04413422645705
+            },
+            "mapping": {
+              "x": "Position",
+              "y": "Frequency",
+              "colour": "Mismatch",
+              "group": "Mismatch",
+              "panelvar1": "Strand",
+              "panelvar2": "File"
+            },
+            "range": {
+              "left": 124.736712328767,
+              "right": 202.843287671233,
+              "bottom": 365.849315068493,
+              "top": 59.2054794520548
+            }
+          }
+        ],
+        "dims": {
+          "width": 331,
+          "height": 400
+        }
+      }
+    },
+    "percentidentity_plot": {
+      "html": "<div id=\"out3b114a4605799761\" class=\"shiny-plot-output\" style=\"width: 100% ; height: 400px\"><\/div>",
+      "deps": [
+
+      ]
+    },
+    "positionscovered_plot": {
+      "html": "<div id=\"out9941047286a45d93\" class=\"shiny-plot-output\" style=\"width: 100% ; height: 400px\"><\/div>",
+      "deps": [
+
+      ]
+    },
+    "report_dir": "Detected MaltExtract data!",
+    "run_button": {
+      "html": "<button id=\"submit\" type=\"button\" class=\"btn btn-default action-button\">Load data<\/button>",
+      "deps": [
+
+      ]
+    }
+  },
+  "export": {
+
+  }
+}

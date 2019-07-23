@@ -1,0 +1,10 @@
+app <- ShinyDriver$new("../", seed = 5)
+app$snapshotInit("loaddata_stringremove_switchpane")
+
+app$setInputs(select_dir = "/home/fellows/Documents/Scripts/shiny_web_apps/MEx-IPA/dev/test_data/maltExtract_v1.5_Weyrich2017Velsko2019")
+app$setInputs(submit = "click")
+app$setInputs(remove_string = "_S0_L001_R1_001.sorted.bam.unmapped.rma6")
+app$setInputs(out934a352b6151ef85_rows_current = c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10), allowInputNoBinding_ = TRUE)
+app$setInputs(out934a352b6151ef85_rows_all = c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17), allowInputNoBinding_ = TRUE)
+app$snapshot()
+app$snapshot()

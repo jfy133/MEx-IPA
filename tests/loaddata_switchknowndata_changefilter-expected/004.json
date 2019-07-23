@@ -1,0 +1,2780 @@
+{
+  "input": {
+    "characteristic": "damage",
+    "characteristic-selectized": "",
+    "interactive": false,
+    "out06333b91bb8e70fd_rows_all": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17
+    ],
+    "out06333b91bb8e70fd_rows_current": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "out518d56e8e9bae3a9_cell_clicked": {
+
+    },
+    "out518d56e8e9bae3a9_rows_all": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17
+    ],
+    "out518d56e8e9bae3a9_rows_current": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "out518d56e8e9bae3a9_rows_selected": null,
+    "out518d56e8e9bae3a9_search": "",
+    "out518d56e8e9bae3a9_state": null,
+    "out53100d652739d9cf_cell_clicked": {
+
+    },
+    "out53100d652739d9cf_rows_all": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17
+    ],
+    "out53100d652739d9cf_rows_current": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "out53100d652739d9cf_rows_selected": null,
+    "out53100d652739d9cf_search": "",
+    "out53100d652739d9cf_state": null,
+    "out6177be85d3f6beb7_cell_clicked": {
+
+    },
+    "out6177be85d3f6beb7_rows_all": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17
+    ],
+    "out6177be85d3f6beb7_rows_current": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "out6177be85d3f6beb7_rows_selected": null,
+    "out6177be85d3f6beb7_search": "",
+    "out6177be85d3f6beb7_state": null,
+    "out6db1b2d62da67d26_rows_all": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17
+    ],
+    "out6db1b2d62da67d26_rows_current": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "out82d98d4087427e0a_cell_clicked": {
+
+    },
+    "out82d98d4087427e0a_rows_all": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17
+    ],
+    "out82d98d4087427e0a_rows_current": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "out82d98d4087427e0a_rows_selected": null,
+    "out82d98d4087427e0a_search": "",
+    "out82d98d4087427e0a_state": null,
+    "out847cd9e0237e0609_rows_all": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17
+    ],
+    "out847cd9e0237e0609_rows_current": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "out85c3bfd752561606_rows_all": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17
+    ],
+    "out85c3bfd752561606_rows_current": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "outf42e815df51df7f4_cell_clicked": {
+
+    },
+    "outf42e815df51df7f4_rows_all": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17
+    ],
+    "outf42e815df51df7f4_rows_current": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "outf42e815df51df7f4_rows_selected": null,
+    "outf42e815df51df7f4_search": "",
+    "outf42e815df51df7f4_state": null,
+    "remove_string": "",
+    "select_dir": "/home/fellows/Documents/Scripts/shiny_web_apps/MEx-IPA/dev/test_data/maltExtract_v1.5_Weyrich2017Velsko2019",
+    "selected_file": "CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6",
+    "selected_file-selectized": "",
+    "selected_filter": "ancient",
+    "selected_filter-selectized": "",
+    "selected_node": "Methanobrevibacter_millerae",
+    "selected_node-selectized": "",
+    "submit": 1
+  },
+  "output": {
+    "coveragehist_plot": {
+      "html": "<div id=\"out1d4c75a0c1c702b3\" class=\"shiny-plot-output\" style=\"width: 100% ; height: 400px\"><\/div>",
+      "deps": [
+
+      ]
+    },
+    "damage_plot": {
+      "html": "<div id=\"outf4cd66d42c23e9fe\" class=\"shiny-plot-output\" style=\"width: 100% ; height: 400px\"><\/div>",
+      "deps": [
+
+      ]
+    },
+    "edit_plot": {
+      "html": "<div id=\"outf60d5c253acdebf2\" class=\"shiny-plot-output\" style=\"width: 100% ; height: 400px\"><\/div>",
+      "deps": [
+
+      ]
+    },
+    "file_options": {
+      "html": "<div class=\"form-group shiny-input-container\">\n  <label class=\"control-label\" for=\"selected_file\">Choose sample:<\/label>\n  <div>\n    <select id=\"selected_file\"><option value=\"CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6\" selected>CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6<\/option>\n<option value=\"CS21_S0_L001_R1_001.sorted.bam.unmapped.rma6\">CS21_S0_L001_R1_001.sorted.bam.unmapped.rma6<\/option>\n<option value=\"CS22_S0_L001_R1_001.sorted.bam.unmapped.rma6\">CS22_S0_L001_R1_001.sorted.bam.unmapped.rma6<\/option>\n<option value=\"CS23_S0_L001_R1_001.sorted.bam.unmapped.rma6\">CS23_S0_L001_R1_001.sorted.bam.unmapped.rma6<\/option>\n<option value=\"ELSIDRON1_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6\">ELSIDRON1_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6<\/option>\n<option value=\"ELSIDRON2_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6\">ELSIDRON2_S0_L001_R1_001.fastq.merged.combined.sorted.bam.unmapped.rma6<\/option>\n<option value=\"SPYNEW_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6\">SPYNEW_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6<\/option>\n<option value=\"SPYOLD_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6\">SPYOLD_S0_L001_R1_001.merged.sorted.bam.unmapped.rma6<\/option><\/select>\n    <script type=\"application/json\" data-for=\"selected_file\" data-nonempty=\"\">{}<\/script>\n  <\/div>\n<\/div>",
+      "deps": [
+        {
+          "name": "selectize",
+          "version": "0.11.2",
+          "src": {
+            "href": "shared/selectize"
+          },
+          "meta": null,
+          "script": null,
+          "stylesheet": "css/selectize.bootstrap3.css",
+          "head": "<!--[if lt IE 9]>\n<script src=\"shared/selectize/js/es5-shim.min.js\"><\/script>\n<![endif]-->\n<script src=\"shared/selectize/js/selectize.min.js\"><\/script>",
+          "attachment": null,
+          "package": null,
+          "all_files": true
+        }
+      ]
+    },
+    "filter_options": {
+      "html": "<div class=\"form-group shiny-input-container\">\n  <label class=\"control-label\" for=\"selected_filter\">Choose Filter:<\/label>\n  <div>\n    <select id=\"selected_filter\"><option value=\"all\" selected>all<\/option>\n<option value=\"default\">default<\/option>\n<option value=\"ancient\">ancient<\/option><\/select>\n    <script type=\"application/json\" data-for=\"selected_filter\" data-nonempty=\"\">{}<\/script>\n  <\/div>\n<\/div>",
+      "deps": [
+        {
+          "name": "selectize",
+          "version": "0.11.2",
+          "src": {
+            "href": "shared/selectize"
+          },
+          "meta": null,
+          "script": null,
+          "stylesheet": "css/selectize.bootstrap3.css",
+          "head": "<!--[if lt IE 9]>\n<script src=\"shared/selectize/js/es5-shim.min.js\"><\/script>\n<![endif]-->\n<script src=\"shared/selectize/js/selectize.min.js\"><\/script>",
+          "attachment": null,
+          "package": null,
+          "all_files": true
+        }
+      ]
+    },
+    "filterstats_plot": {
+      "html": "<div id=\"out53100d652739d9cf\" style=\"width:100%; height:auto; \" class=\"datatables html-widget html-widget-output\"><\/div>",
+      "deps": [
+        {
+          "name": "htmlwidgets",
+          "version": "1.3",
+          "src": {
+            "href": "htmlwidgets-1.3"
+          },
+          "meta": null,
+          "script": "htmlwidgets.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": true
+        },
+        {
+          "name": "jquery",
+          "version": "1.12.4",
+          "src": {
+            "href": "jquery-1.12.4"
+          },
+          "meta": null,
+          "script": "jquery.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": true
+        },
+        {
+          "name": "datatables-css",
+          "version": "0.0.0",
+          "src": {
+            "href": "datatables-css-0.0.0"
+          },
+          "meta": null,
+          "script": null,
+          "stylesheet": "datatables-crosstalk.css",
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": true
+        },
+        {
+          "name": "datatables-binding",
+          "version": "0.6",
+          "src": {
+            "href": "datatables-binding-0.6"
+          },
+          "meta": null,
+          "script": "datatables.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "crosstalk",
+          "version": "1.0.0",
+          "src": {
+            "href": "crosstalk-1.0.0"
+          },
+          "meta": null,
+          "script": "js/crosstalk.min.js",
+          "stylesheet": "css/crosstalk.css",
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": true
+        }
+      ]
+    },
+    "length_plot": {
+      "html": "<div id=\"out6cd27545ca6902fc\" class=\"shiny-plot-output\" style=\"width: 100% ; height: 400px\"><\/div>",
+      "deps": [
+
+      ]
+    },
+    "node_options": {
+      "html": "<div class=\"form-group shiny-input-container\">\n  <label class=\"control-label\" for=\"selected_node\">Choose taxon:<\/label>\n  <div>\n    <select id=\"selected_node\"><option value=\"Ceratotherium\" selected>Ceratotherium<\/option>\n<option value=\"Ceratotherium_simum_simum\">Ceratotherium_simum_simum<\/option>\n<option value=\"Coprinopsis\">Coprinopsis<\/option>\n<option value=\"Coprinopsis_cinerea_okayama7#130\">Coprinopsis_cinerea_okayama7#130<\/option>\n<option value=\"Enterocytozoon\">Enterocytozoon<\/option>\n<option value=\"Enterocytozoon_bieneusi_H348\">Enterocytozoon_bieneusi_H348<\/option>\n<option value=\"Eubacterium\">Eubacterium<\/option>\n<option value=\"Eubacterium_limosum\">Eubacterium_limosum<\/option>\n<option value=\"Eubacterium_limosum_KIST612\">Eubacterium_limosum_KIST612<\/option>\n<option value=\"Eubacterium_sp._oral_clone_23-90\">Eubacterium_sp._oral_clone_23-90<\/option>\n<option value=\"Eubacterium_sp._oral_clone_FX028\">Eubacterium_sp._oral_clone_FX028<\/option>\n<option value=\"Eubacterium_sp._oral_taxon_B60\">Eubacterium_sp._oral_taxon_B60<\/option>\n<option value=\"Fretibacterium\">Fretibacterium<\/option>\n<option value=\"Fretibacterium_fastidiosum\">Fretibacterium_fastidiosum<\/option>\n<option value=\"Fretibacterium_sp._feline_oral_taxon_215\">Fretibacterium_sp._feline_oral_taxon_215<\/option>\n<option value=\"Ixodes\">Ixodes<\/option>\n<option value=\"Malassezia\">Malassezia<\/option>\n<option value=\"Malassezia_globosa\">Malassezia_globosa<\/option>\n<option value=\"Malassezia_globosa_CBS_7966\">Malassezia_globosa_CBS_7966<\/option>\n<option value=\"Malassezia_pachydermatis\">Malassezia_pachydermatis<\/option>\n<option value=\"Malassezia_sympodialis\">Malassezia_sympodialis<\/option>\n<option value=\"Malassezia_sympodialis_ATCC_42132\">Malassezia_sympodialis_ATCC_42132<\/option>\n<option value=\"Methanobrevibacter\">Methanobrevibacter<\/option>\n<option value=\"Methanobrevibacter_arboriphilus\">Methanobrevibacter_arboriphilus<\/option>\n<option value=\"Methanobrevibacter_curvatus\">Methanobrevibacter_curvatus<\/option>\n<option value=\"Methanobrevibacter_millerae\">Methanobrevibacter_millerae<\/option>\n<option value=\"Methanobrevibacter_olleyae\">Methanobrevibacter_olleyae<\/option>\n<option value=\"Methanobrevibacter_oralis\">Methanobrevibacter_oralis<\/option>\n<option value=\"Methanobrevibacter_ruminantium_M1\">Methanobrevibacter_ruminantium_M1<\/option>\n<option value=\"Methanobrevibacter_smithii\">Methanobrevibacter_smithii<\/option>\n<option value=\"Methanobrevibacter_smithii_ATCC_35061\">Methanobrevibacter_smithii_ATCC_35061<\/option>\n<option value=\"Methanobrevibacter_smithii_DSM_11975\">Methanobrevibacter_smithii_DSM_11975<\/option>\n<option value=\"Methanobrevibacter_sp.\">Methanobrevibacter_sp.<\/option>\n<option value=\"Methanobrevibacter_sp._87.7\">Methanobrevibacter_sp._87.7<\/option>\n<option value=\"Methanobrevibacter_sp._AbM4\">Methanobrevibacter_sp._AbM4<\/option>\n<option value=\"Methanobrevibacter_sp._D5\">Methanobrevibacter_sp._D5<\/option>\n<option value=\"Methanobrevibacter_sp._MD103\">Methanobrevibacter_sp._MD103<\/option>\n<option value=\"Methanobrevibacter_sp._SM9\">Methanobrevibacter_sp._SM9<\/option>\n<option value=\"Methanobrevibacter_sp._YE315\">Methanobrevibacter_sp._YE315<\/option>\n<option value=\"Methanobrevibacter_sp._YLM1\">Methanobrevibacter_sp._YLM1<\/option>\n<option value=\"Methanobrevibacter_woesei\">Methanobrevibacter_woesei<\/option>\n<option value=\"Myceliophthora\">Myceliophthora<\/option>\n<option value=\"Ovis\">Ovis<\/option>\n<option value=\"Ovis_aries\">Ovis_aries<\/option>\n<option value=\"Ovis_aries_musimon\">Ovis_aries_musimon<\/option>\n<option value=\"Ovis_canadensis\">Ovis_canadensis<\/option>\n<option value=\"Ovis_canadensis_canadensis\">Ovis_canadensis_canadensis<\/option>\n<option value=\"Ovis_dalli\">Ovis_dalli<\/option>\n<option value=\"Ovis_sp.\">Ovis_sp.<\/option>\n<option value=\"Penicillium\">Penicillium<\/option>\n<option value=\"Penicillium_arizonense\">Penicillium_arizonense<\/option>\n<option value=\"Penicillium_brevicompactum\">Penicillium_brevicompactum<\/option>\n<option value=\"Penicillium_chrysogenum_species_complex\">Penicillium_chrysogenum_species_complex<\/option>\n<option value=\"Penicillium_digitatum_Pd1\">Penicillium_digitatum_Pd1<\/option>\n<option value=\"Penicillium_expansum\">Penicillium_expansum<\/option>\n<option value=\"Penicillium_rubens_Wisconsin_54-1255\">Penicillium_rubens_Wisconsin_54-1255<\/option>\n<option value=\"Phaeosphaeria\">Phaeosphaeria<\/option>\n<option value=\"Physcomitrella\">Physcomitrella<\/option>\n<option value=\"Physcomitrella_patens\">Physcomitrella_patens<\/option>\n<option value=\"Pinus\">Pinus<\/option>\n<option value=\"Pinus_&lt;subgenus&gt;\">Pinus_&lt;subgenus&gt;<\/option>\n<option value=\"Pinus_armandii\">Pinus_armandii<\/option>\n<option value=\"Pinus_brutia\">Pinus_brutia<\/option>\n<option value=\"Pinus_canariensis\">Pinus_canariensis<\/option>\n<option value=\"Pinus_densiflora\">Pinus_densiflora<\/option>\n<option value=\"Pinus_elliottii\">Pinus_elliottii<\/option>\n<option value=\"Pinus_halepensis\">Pinus_halepensis<\/option>\n<option value=\"Pinus_hwangshanensis\">Pinus_hwangshanensis<\/option>\n<option value=\"Pinus_koraiensis\">Pinus_koraiensis<\/option>\n<option value=\"Pinus_lambertiana\">Pinus_lambertiana<\/option>\n<option value=\"Pinus_luchuensis\">Pinus_luchuensis<\/option>\n<option value=\"Pinus_massoniana\">Pinus_massoniana<\/option>\n<option value=\"Pinus_mugo\">Pinus_mugo<\/option>\n<option value=\"Pinus_pinaster\">Pinus_pinaster<\/option>\n<option value=\"Pinus_radiata\">Pinus_radiata<\/option>\n<option value=\"Pinus_strobus\">Pinus_strobus<\/option>\n<option value=\"Pinus_sylvestris\">Pinus_sylvestris<\/option>\n<option value=\"Pinus_tabuliformis\">Pinus_tabuliformis<\/option>\n<option value=\"Pinus_tabuliformis_var._henryi\">Pinus_tabuliformis_var._henryi<\/option>\n<option value=\"Pinus_taeda\">Pinus_taeda<\/option>\n<option value=\"Pinus_thunbergii\">Pinus_thunbergii<\/option>\n<option value=\"Pinus_yunnanensis\">Pinus_yunnanensis<\/option>\n<option value=\"Populus\">Populus<\/option>\n<option value=\"Populus_euphratica\">Populus_euphratica<\/option>\n<option value=\"Populus_trichocarpa\">Populus_trichocarpa<\/option>\n<option value=\"Porphyromonas\">Porphyromonas<\/option>\n<option value=\"Porphyromonas_asaccharolytica\">Porphyromonas_asaccharolytica<\/option>\n<option value=\"Porphyromonas_asaccharolytica_DSM_20707\">Porphyromonas_asaccharolytica_DSM_20707<\/option>\n<option value=\"Porphyromonas_catoniae\">Porphyromonas_catoniae<\/option>\n<option value=\"Porphyromonas_catoniae_ATCC_51270\">Porphyromonas_catoniae_ATCC_51270<\/option>\n<option value=\"Porphyromonas_endodontalis\">Porphyromonas_endodontalis<\/option>\n<option value=\"Porphyromonas_gingivalis\">Porphyromonas_gingivalis<\/option>\n<option value=\"Porphyromonas_gingivalis_381\">Porphyromonas_gingivalis_381<\/option>\n<option value=\"Porphyromonas_gingivalis_A7A1-28\">Porphyromonas_gingivalis_A7A1-28<\/option>\n<option value=\"Porphyromonas_gingivalis_AJW4\">Porphyromonas_gingivalis_AJW4<\/option>\n<option value=\"Porphyromonas_gingivalis_ATCC_33277\">Porphyromonas_gingivalis_ATCC_33277<\/option>\n<option value=\"Porphyromonas_gingivalis_TDC60\">Porphyromonas_gingivalis_TDC60<\/option>\n<option value=\"Porphyromonas_gingivalis_W83\">Porphyromonas_gingivalis_W83<\/option>\n<option value=\"Porphyromonas_gulae\">Porphyromonas_gulae<\/option>\n<option value=\"Porphyromonas_pasteri\">Porphyromonas_pasteri<\/option>\n<option value=\"Propionibacterium\">Propionibacterium<\/option>\n<option value=\"Propionibacterium_freudenreichii\">Propionibacterium_freudenreichii<\/option>\n<option value=\"Propionibacterium_freudenreichii_subsp._freudenreichii\">Propionibacterium_freudenreichii_subsp._freudenreichii<\/option>\n<option value=\"Propionibacterium_freudenreichii_subsp._shermanii\">Propionibacterium_freudenreichii_subsp._shermanii<\/option>\n<option value=\"Propionibacterium_sp._oral_taxon_193\">Propionibacterium_sp._oral_taxon_193<\/option>\n<option value=\"Schizophyllum\">Schizophyllum<\/option>\n<option value=\"Schizophyllum_commune\">Schizophyllum_commune<\/option>\n<option value=\"Schizophyllum_commune_H4-8\">Schizophyllum_commune_H4-8<\/option>\n<option value=\"Strobus\">Strobus<\/option>\n<option value=\"Tannerella\">Tannerella<\/option>\n<option value=\"Tannerella_forsythia\">Tannerella_forsythia<\/option>\n<option value=\"Tannerella_forsythia_3313\">Tannerella_forsythia_3313<\/option>\n<option value=\"Tannerella_forsythia_92A2\">Tannerella_forsythia_92A2<\/option>\n<option value=\"Tannerella_forsythia_KS16\">Tannerella_forsythia_KS16<\/option>\n<option value=\"Tannerella_sp._oral_taxon_HOT-286\">Tannerella_sp._oral_taxon_HOT-286<\/option>\n<option value=\"Treponema\">Treponema<\/option>\n<option value=\"Treponema_azotonutricium\">Treponema_azotonutricium<\/option>\n<option value=\"Treponema_azotonutricium_ZAS-9\">Treponema_azotonutricium_ZAS-9<\/option>\n<option value=\"Treponema_brennaborense\">Treponema_brennaborense<\/option>\n<option value=\"Treponema_brennaborense_DSM_12168\">Treponema_brennaborense_DSM_12168<\/option>\n<option value=\"Treponema_caldarium\">Treponema_caldarium<\/option>\n<option value=\"Treponema_caldarium_DSM_7334\">Treponema_caldarium_DSM_7334<\/option>\n<option value=\"Treponema_denticola\">Treponema_denticola<\/option>\n<option value=\"Treponema_denticola_ASLM\">Treponema_denticola_ASLM<\/option>\n<option value=\"Treponema_denticola_ATCC_33520\">Treponema_denticola_ATCC_33520<\/option>\n<option value=\"Treponema_denticola_ATCC_33521\">Treponema_denticola_ATCC_33521<\/option>\n<option value=\"Treponema_denticola_ATCC_35405\">Treponema_denticola_ATCC_35405<\/option>\n<option value=\"Treponema_lecithinolyticum\">Treponema_lecithinolyticum<\/option>\n<option value=\"Treponema_maltophilum\">Treponema_maltophilum<\/option>\n<option value=\"Treponema_maltophilum_ATCC_51939\">Treponema_maltophilum_ATCC_51939<\/option>\n<option value=\"Treponema_medium\">Treponema_medium<\/option>\n<option value=\"Treponema_pallidum\">Treponema_pallidum<\/option>\n<option value=\"Treponema_pallidum_subsp._pallidum\">Treponema_pallidum_subsp._pallidum<\/option>\n<option value=\"Treponema_pedis\">Treponema_pedis<\/option>\n<option value=\"Treponema_pedis_str._T_A4\">Treponema_pedis_str._T_A4<\/option>\n<option value=\"Treponema_primitia_ZAS-2\">Treponema_primitia_ZAS-2<\/option>\n<option value=\"Treponema_putidum\">Treponema_putidum<\/option>\n<option value=\"Treponema_socranskii\">Treponema_socranskii<\/option>\n<option value=\"Treponema_socranskii_subsp._&#39;04&#39;\">Treponema_socranskii_subsp._'04'<\/option>\n<option value=\"Treponema_socranskii_subsp._socranskii\">Treponema_socranskii_subsp._socranskii<\/option>\n<option value=\"Treponema_sp._OMZ_838\">Treponema_sp._OMZ_838<\/option>\n<option value=\"Treponema_sp._OMZ_840\">Treponema_sp._OMZ_840<\/option>\n<option value=\"Treponema_sp._SO4A1\">Treponema_sp._SO4A1<\/option>\n<option value=\"Treponema_succinifaciens_DSM_2489\">Treponema_succinifaciens_DSM_2489<\/option>\n<option value=\"Treponema_vincentii\">Treponema_vincentii<\/option>\n<option value=\"Treponema_vincentii_ATCC_35580\">Treponema_vincentii_ATCC_35580<\/option>\n<option value=\"Zymoseptoria\">Zymoseptoria<\/option>\n<option value=\"Zymoseptoria_tritici\">Zymoseptoria_tritici<\/option>\n<option value=\"[Eubacterium]_eligens_ATCC_27750\">[Eubacterium]_eligens_ATCC_27750<\/option>\n<option value=\"environmental_samples_&lt;Eubacterium&gt;\">environmental_samples_&lt;Eubacterium&gt;<\/option>\n<option value=\"environmental_samples_&lt;Methanobrevibacter&gt;\">environmental_samples_&lt;Methanobrevibacter&gt;<\/option>\n<option value=\"environmental_samples_&lt;Porphyromonas&gt;\">environmental_samples_&lt;Porphyromonas&gt;<\/option>\n<option value=\"environmental_samples_&lt;Tannerella&gt;\">environmental_samples_&lt;Tannerella&gt;<\/option>\n<option value=\"environmental_samples_&lt;Treponema&gt;\">environmental_samples_&lt;Treponema&gt;<\/option>\n<option value=\"uncultured_Eubacterium_sp.\">uncultured_Eubacterium_sp.<\/option>\n<option value=\"uncultured_Fretibacterium_sp.\">uncultured_Fretibacterium_sp.<\/option>\n<option value=\"uncultured_Methanobrevibacter_sp.\">uncultured_Methanobrevibacter_sp.<\/option>\n<option value=\"uncultured_Porphyromonas_sp.\">uncultured_Porphyromonas_sp.<\/option>\n<option value=\"uncultured_Propionibacterium_sp.\">uncultured_Propionibacterium_sp.<\/option>\n<option value=\"uncultured_Tannerella_sp.\">uncultured_Tannerella_sp.<\/option>\n<option value=\"uncultured_Treponema_sp.\">uncultured_Treponema_sp.<\/option><\/select>\n    <script type=\"application/json\" data-for=\"selected_node\" data-nonempty=\"\">{}<\/script>\n  <\/div>\n<\/div>",
+      "deps": [
+        {
+          "name": "selectize",
+          "version": "0.11.2",
+          "src": {
+            "href": "shared/selectize"
+          },
+          "meta": null,
+          "script": null,
+          "stylesheet": "css/selectize.bootstrap3.css",
+          "head": "<!--[if lt IE 9]>\n<script src=\"shared/selectize/js/es5-shim.min.js\"><\/script>\n<![endif]-->\n<script src=\"shared/selectize/js/selectize.min.js\"><\/script>",
+          "attachment": null,
+          "package": null,
+          "all_files": true
+        }
+      ]
+    },
+    "out1d4c75a0c1c702b3": {
+      "src": "[image data sha1: ef21c019b36b943bfc38873b5fcad58d7aa475bc]",
+      "width": 331,
+      "height": 400,
+      "coordmap": {
+        "panels": [
+          {
+            "panel": 1,
+            "row": 1,
+            "col": 1,
+            "panel_vars": {
+              "panelvar1": "Methanobrevibacter_millerae",
+              "panelvar2": "CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": 0.4,
+              "right": 11.6,
+              "bottom": -729.65,
+              "top": 15322.65
+            },
+            "mapping": {
+              "fill": "Mode",
+              "x": "Fold_Coverage",
+              "y": "Base_Pairs",
+              "panelvar1": "Node",
+              "panelvar2": "File"
+            },
+            "range": {
+              "left": 49.1506849315068,
+              "right": 252.843287671233,
+              "bottom": 365.849315068493,
+              "top": 40.4383561643836
+            }
+          }
+        ],
+        "dims": {
+          "width": 331,
+          "height": 400
+        }
+      }
+    },
+    "out399d192121284b53": {
+      "src": "[image data sha1: 190c5e1f13aedc65fc101b232226143ffb2cd60f]",
+      "width": 331,
+      "height": 400,
+      "coordmap": {
+        "panels": [
+          {
+            "panel": 1,
+            "row": 1,
+            "col": 1,
+            "panel_vars": {
+              "panelvar1": "5 prime",
+              "panelvar2": "CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": 0.4,
+              "right": 10.6,
+              "bottom": -0.0478086731048712,
+              "top": 1.04413422645705
+            },
+            "mapping": {
+              "x": "Position",
+              "y": "Frequency",
+              "colour": "Mismatch",
+              "group": "Mismatch",
+              "panelvar1": "Strand",
+              "panelvar2": "File"
+            },
+            "range": {
+              "left": 41.1506849315069,
+              "right": 119.257260273973,
+              "bottom": 365.849315068493,
+              "top": 59.2054794520548
+            }
+          },
+          {
+            "panel": 2,
+            "row": 1,
+            "col": 2,
+            "panel_vars": {
+              "panelvar1": "3 prime",
+              "panelvar2": "CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": 0.4,
+              "right": 10.6,
+              "bottom": -0.0478086731048712,
+              "top": 1.04413422645705
+            },
+            "mapping": {
+              "x": "Position",
+              "y": "Frequency",
+              "colour": "Mismatch",
+              "group": "Mismatch",
+              "panelvar1": "Strand",
+              "panelvar2": "File"
+            },
+            "range": {
+              "left": 124.736712328767,
+              "right": 202.843287671233,
+              "bottom": 365.849315068493,
+              "top": 59.2054794520548
+            }
+          }
+        ],
+        "dims": {
+          "width": 331,
+          "height": 400
+        }
+      }
+    },
+    "out434ef02ad6c81970": {
+      "src": "[image data sha1: cce02dd93752a8d3925fda27981558f6add5c7f6]",
+      "width": 331,
+      "height": 400,
+      "coordmap": {
+        "panels": [
+          {
+            "panel": 1,
+            "row": 1,
+            "col": 1,
+            "panel_vars": {
+              "panelvar1": "Methanobrevibacter_millerae",
+              "panelvar2": "CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": 0.4,
+              "right": 11.6,
+              "bottom": -11927.55,
+              "top": 250478.55
+            },
+            "mapping": {
+              "fill": "Mode",
+              "x": "Fold_Coverage",
+              "y": "Base_Pairs",
+              "panelvar1": "Node",
+              "panelvar2": "File"
+            },
+            "range": {
+              "left": 54.1506849315068,
+              "right": 252.843287671233,
+              "bottom": 365.849315068493,
+              "top": 40.4383561643836
+            }
+          }
+        ],
+        "dims": {
+          "width": 331,
+          "height": 400
+        }
+      }
+    },
+    "out437c675beb86b87f": {
+      "src": "[image data sha1: 424618bb8459745c8f155a0bbdae402875a91212]",
+      "width": 331,
+      "height": 400,
+      "coordmap": {
+        "panels": [
+          {
+            "panel": 1,
+            "row": 1,
+            "col": 1,
+            "panel_vars": {
+              "panelvar1": "Methanobrevibacter_millerae",
+              "panelvar2": "CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": 13.775,
+              "right": 211.225,
+              "bottom": -16.75,
+              "top": 351.75
+            },
+            "mapping": {
+              "fill": "Mode",
+              "x": "Length_Bin",
+              "y": "Alignment_Count",
+              "panelvar1": "Node",
+              "panelvar2": "File"
+            },
+            "range": {
+              "left": 39.1506849315069,
+              "right": 252.843287671233,
+              "bottom": 365.849315068493,
+              "top": 40.4383561643836
+            }
+          }
+        ],
+        "dims": {
+          "width": 331,
+          "height": 400
+        }
+      }
+    },
+    "out4417a8ecb0f674cf": {
+      "src": "[image data sha1: 9a6b1c2dcd73651e7b12a48af882093051484de1]",
+      "width": 331,
+      "height": 400,
+      "coordmap": {
+        "panels": [
+          {
+            "panel": 1,
+            "row": 1,
+            "col": 1,
+            "panel_vars": {
+              "panelvar1": "Methanobrevibacter_millerae",
+              "panelvar2": "CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": 0.4,
+              "right": 5.6,
+              "bottom": -192.9,
+              "top": 4050.9
+            },
+            "mapping": {
+              "fill": "Mode",
+              "x": "Percent_Identity",
+              "y": "Alignment_Count",
+              "panelvar1": "Node",
+              "panelvar2": "File"
+            },
+            "range": {
+              "left": 44.1506849315069,
+              "right": 252.843287671233,
+              "bottom": 365.849315068493,
+              "top": 40.4383561643836
+            }
+          }
+        ],
+        "dims": {
+          "width": 331,
+          "height": 400
+        }
+      }
+    },
+    "out44c2d99619b5f404": {
+      "src": "[image data sha1: 09fe627de4cecd5f13e8b2e217378ede36bfdd00]",
+      "width": 331,
+      "height": 400,
+      "coordmap": {
+        "panels": [
+          {
+            "panel": 1,
+            "row": 1,
+            "col": 1,
+            "panel_vars": {
+              "panelvar1": "Methanobrevibacter_millerae",
+              "panelvar2": "CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": 0.4,
+              "right": 5.6,
+              "bottom": -28.9,
+              "top": 606.9
+            },
+            "mapping": {
+              "fill": "Mode",
+              "x": "Percent_Identity",
+              "y": "Alignment_Count",
+              "panelvar1": "Node",
+              "panelvar2": "File"
+            },
+            "range": {
+              "left": 39.1506849315069,
+              "right": 252.843287671233,
+              "bottom": 365.849315068493,
+              "top": 40.4383561643836
+            }
+          }
+        ],
+        "dims": {
+          "width": 331,
+          "height": 400
+        }
+      }
+    },
+    "out518d56e8e9bae3a9": {
+      "x": {
+        "filter": "none",
+        "extensions": [
+          "Buttons"
+        ],
+        "container": "<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Information<\/th>\n      <th>default<\/th>\n      <th>ancient<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>",
+        "options": {
+          "dom": "Bfrtip",
+          "buttons": [
+            "copy",
+            {
+              "extend": "collection",
+              "filename": "no",
+              "buttons": [
+                "csv",
+                "excel",
+                "pdf"
+              ],
+              "text": "Download Table"
+            }
+          ],
+          "order": [
+
+          ],
+          "autoWidth": false,
+          "orderClasses": false,
+          "columnDefs": [
+            {
+              "orderable": false,
+              "targets": 0
+            }
+          ],
+          "ajax": {
+            "type": "POST",
+            "data": "function(d) {\nd.search.caseInsensitive = true;\nd.search.smart = true;\nd.escape = true;\nvar encodeAmp = function(x) { x.value = x.value.replace(/&/g, \"%26\"); }\nencodeAmp(d.search);\n$.each(d.columns, function(i, v) {encodeAmp(v.search);});\n}"
+          },
+          "serverSide": true,
+          "processing": true
+        },
+        "selection": {
+          "mode": "multiple",
+          "selected": null,
+          "target": "row"
+        }
+      },
+      "evals": [
+        "options.ajax.data"
+      ],
+      "jsHooks": [
+
+      ],
+      "deps": [
+        {
+          "name": "dt-core",
+          "version": "1.10.16",
+          "src": {
+            "href": "dt-core-1.10.16"
+          },
+          "meta": null,
+          "script": "js/jquery.dataTables.min.js",
+          "stylesheet": [
+            "css/jquery.dataTables.min.css",
+            "css/jquery.dataTables.extra.css"
+          ],
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "jszip",
+          "version": "1.10.16",
+          "src": {
+            "href": "jszip-1.10.16"
+          },
+          "meta": null,
+          "script": "jszip.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "pdfmake",
+          "version": "1.10.16",
+          "src": {
+            "href": "pdfmake-1.10.16"
+          },
+          "meta": null,
+          "script": [
+            "pdfmake.min.js",
+            "vfs_fonts.js"
+          ],
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "dt-ext-buttons",
+          "version": "1.10.16",
+          "src": {
+            "href": "dt-ext-buttons-1.10.16"
+          },
+          "meta": null,
+          "script": [
+            "js/dataTables.buttons.min.js",
+            "js/buttons.flash.min.js",
+            "js/buttons.html5.min.js",
+            "js/buttons.colVis.min.js",
+            "js/buttons.print.min.js"
+          ],
+          "stylesheet": "css/buttons.dataTables.min.css",
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "jquery",
+          "version": "1.11.3",
+          "src": {
+            "href": "jquery-1.11.3"
+          },
+          "meta": null,
+          "script": "jquery.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": true
+        },
+        {
+          "name": "crosstalk",
+          "version": "1.0.0",
+          "src": {
+            "href": "crosstalk-1.0.0"
+          },
+          "meta": null,
+          "script": "js/crosstalk.min.js",
+          "stylesheet": "css/crosstalk.css",
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": true
+        }
+      ]
+    },
+    "out53100d652739d9cf": {
+      "x": {
+        "filter": "none",
+        "extensions": [
+          "Buttons"
+        ],
+        "container": "<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Information<\/th>\n      <th>ancient<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>",
+        "options": {
+          "dom": "Bfrtip",
+          "buttons": [
+            "copy",
+            {
+              "extend": "collection",
+              "filename": "no",
+              "buttons": [
+                "csv",
+                "excel",
+                "pdf"
+              ],
+              "text": "Download Table"
+            }
+          ],
+          "order": [
+
+          ],
+          "autoWidth": false,
+          "orderClasses": false,
+          "columnDefs": [
+            {
+              "orderable": false,
+              "targets": 0
+            }
+          ],
+          "ajax": {
+            "type": "POST",
+            "data": "function(d) {\nd.search.caseInsensitive = true;\nd.search.smart = true;\nd.escape = true;\nvar encodeAmp = function(x) { x.value = x.value.replace(/&/g, \"%26\"); }\nencodeAmp(d.search);\n$.each(d.columns, function(i, v) {encodeAmp(v.search);});\n}"
+          },
+          "serverSide": true,
+          "processing": true
+        },
+        "selection": {
+          "mode": "multiple",
+          "selected": null,
+          "target": "row"
+        }
+      },
+      "evals": [
+        "options.ajax.data"
+      ],
+      "jsHooks": [
+
+      ],
+      "deps": [
+        {
+          "name": "dt-core",
+          "version": "1.10.16",
+          "src": {
+            "href": "dt-core-1.10.16"
+          },
+          "meta": null,
+          "script": "js/jquery.dataTables.min.js",
+          "stylesheet": [
+            "css/jquery.dataTables.min.css",
+            "css/jquery.dataTables.extra.css"
+          ],
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "jszip",
+          "version": "1.10.16",
+          "src": {
+            "href": "jszip-1.10.16"
+          },
+          "meta": null,
+          "script": "jszip.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "pdfmake",
+          "version": "1.10.16",
+          "src": {
+            "href": "pdfmake-1.10.16"
+          },
+          "meta": null,
+          "script": [
+            "pdfmake.min.js",
+            "vfs_fonts.js"
+          ],
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "dt-ext-buttons",
+          "version": "1.10.16",
+          "src": {
+            "href": "dt-ext-buttons-1.10.16"
+          },
+          "meta": null,
+          "script": [
+            "js/dataTables.buttons.min.js",
+            "js/buttons.flash.min.js",
+            "js/buttons.html5.min.js",
+            "js/buttons.colVis.min.js",
+            "js/buttons.print.min.js"
+          ],
+          "stylesheet": "css/buttons.dataTables.min.css",
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "jquery",
+          "version": "1.11.3",
+          "src": {
+            "href": "jquery-1.11.3"
+          },
+          "meta": null,
+          "script": "jquery.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": true
+        },
+        {
+          "name": "crosstalk",
+          "version": "1.0.0",
+          "src": {
+            "href": "crosstalk-1.0.0"
+          },
+          "meta": null,
+          "script": "js/crosstalk.min.js",
+          "stylesheet": "css/crosstalk.css",
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": true
+        }
+      ]
+    },
+    "out60068b6a87d63eaf": {
+      "src": "[image data sha1: a772235c11d0fe2827f859fa7b08aa5481890097]",
+      "width": 331,
+      "height": 400,
+      "coordmap": {
+        "panels": [
+          {
+            "panel": 1,
+            "row": 1,
+            "col": 1,
+            "panel_vars": {
+              "panelvar1": "Methanobrevibacter_millerae",
+              "panelvar2": "CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": 13.775,
+              "right": 211.225,
+              "bottom": -14.4,
+              "top": 302.4
+            },
+            "mapping": {
+              "fill": "Mode",
+              "x": "Length_Bin",
+              "y": "Alignment_Count",
+              "panelvar1": "Node",
+              "panelvar2": "File"
+            },
+            "range": {
+              "left": 39.1506849315069,
+              "right": 254.843287671233,
+              "bottom": 365.849315068493,
+              "top": 40.4383561643836
+            }
+          }
+        ],
+        "dims": {
+          "width": 331,
+          "height": 400
+        }
+      }
+    },
+    "out6177be85d3f6beb7": {
+      "x": {
+        "filter": "none",
+        "extensions": [
+          "Buttons"
+        ],
+        "container": "<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Information<\/th>\n      <th>default<\/th>\n      <th>ancient<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>",
+        "options": {
+          "dom": "Bfrtip",
+          "buttons": [
+            "copy",
+            {
+              "extend": "collection",
+              "filename": "no",
+              "buttons": [
+                "csv",
+                "excel",
+                "pdf"
+              ],
+              "text": "Download Table"
+            }
+          ],
+          "order": [
+
+          ],
+          "autoWidth": false,
+          "orderClasses": false,
+          "columnDefs": [
+            {
+              "orderable": false,
+              "targets": 0
+            }
+          ],
+          "ajax": {
+            "type": "POST",
+            "data": "function(d) {\nd.search.caseInsensitive = true;\nd.search.smart = true;\nd.escape = true;\nvar encodeAmp = function(x) { x.value = x.value.replace(/&/g, \"%26\"); }\nencodeAmp(d.search);\n$.each(d.columns, function(i, v) {encodeAmp(v.search);});\n}"
+          },
+          "serverSide": true,
+          "processing": true
+        },
+        "selection": {
+          "mode": "multiple",
+          "selected": null,
+          "target": "row"
+        }
+      },
+      "evals": [
+        "options.ajax.data"
+      ],
+      "jsHooks": [
+
+      ],
+      "deps": [
+        {
+          "name": "dt-core",
+          "version": "1.10.16",
+          "src": {
+            "href": "dt-core-1.10.16"
+          },
+          "meta": null,
+          "script": "js/jquery.dataTables.min.js",
+          "stylesheet": [
+            "css/jquery.dataTables.min.css",
+            "css/jquery.dataTables.extra.css"
+          ],
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "jszip",
+          "version": "1.10.16",
+          "src": {
+            "href": "jszip-1.10.16"
+          },
+          "meta": null,
+          "script": "jszip.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "pdfmake",
+          "version": "1.10.16",
+          "src": {
+            "href": "pdfmake-1.10.16"
+          },
+          "meta": null,
+          "script": [
+            "pdfmake.min.js",
+            "vfs_fonts.js"
+          ],
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "dt-ext-buttons",
+          "version": "1.10.16",
+          "src": {
+            "href": "dt-ext-buttons-1.10.16"
+          },
+          "meta": null,
+          "script": [
+            "js/dataTables.buttons.min.js",
+            "js/buttons.flash.min.js",
+            "js/buttons.html5.min.js",
+            "js/buttons.colVis.min.js",
+            "js/buttons.print.min.js"
+          ],
+          "stylesheet": "css/buttons.dataTables.min.css",
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "jquery",
+          "version": "1.11.3",
+          "src": {
+            "href": "jquery-1.11.3"
+          },
+          "meta": null,
+          "script": "jquery.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": true
+        },
+        {
+          "name": "crosstalk",
+          "version": "1.0.0",
+          "src": {
+            "href": "crosstalk-1.0.0"
+          },
+          "meta": null,
+          "script": "js/crosstalk.min.js",
+          "stylesheet": "css/crosstalk.css",
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": true
+        }
+      ]
+    },
+    "out62e25b9897809a46": {
+      "src": "[image data sha1: 5b03dea0b29ea43f7f82a5f33bbec71a512ab752]",
+      "width": 331,
+      "height": 400,
+      "coordmap": {
+        "panels": [
+          {
+            "panel": 1,
+            "row": 1,
+            "col": 1,
+            "panel_vars": {
+              "panelvar1": "Fretibacterium_fastidiosum",
+              "panelvar2": "CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": 0.4,
+              "right": 11.6,
+              "bottom": -41447.55,
+              "top": 870398.55
+            },
+            "mapping": {
+              "fill": "Mode",
+              "x": "Fold_Coverage",
+              "y": "Base_Pairs",
+              "panelvar1": "Node",
+              "panelvar2": "File"
+            },
+            "range": {
+              "left": 49.1506849315068,
+              "right": 252.843287671233,
+              "bottom": 365.849315068493,
+              "top": 40.4383561643836
+            }
+          }
+        ],
+        "dims": {
+          "width": 331,
+          "height": 400
+        }
+      }
+    },
+    "out6722cd9684275eec": {
+      "src": "[image data sha1: b3edbabea137e73fa43089d3715b13911402ec70]",
+      "width": 331,
+      "height": 400,
+      "coordmap": {
+        "panels": [
+          {
+            "panel": 1,
+            "row": 1,
+            "col": 1,
+            "panel_vars": {
+              "panelvar1": "Fretibacterium_fastidiosum",
+              "panelvar2": "CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": 0.305,
+              "right": 5.695,
+              "bottom": -0.01885,
+              "top": 0.39585
+            },
+            "mapping": {
+              "fill": "Mode",
+              "x": "Breadth",
+              "y": "Percentage",
+              "panelvar1": "Node",
+              "panelvar2": "File"
+            },
+            "range": {
+              "left": 36.1506849315069,
+              "right": 252.843287671233,
+              "bottom": 365.849315068493,
+              "top": 40.4383561643836
+            }
+          }
+        ],
+        "dims": {
+          "width": 331,
+          "height": 400
+        }
+      }
+    },
+    "out6cd27545ca6902fc": {
+      "src": "[image data sha1: fb825878f4e8a56adba3a6b525dfca259ff89c78]",
+      "width": 331,
+      "height": 400,
+      "coordmap": {
+        "panels": [
+          {
+            "panel": 1,
+            "row": 1,
+            "col": 1,
+            "panel_vars": {
+              "panelvar1": "Methanobrevibacter_millerae",
+              "panelvar2": "CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": 13.775,
+              "right": 211.225,
+              "bottom": -2.45,
+              "top": 51.45
+            },
+            "mapping": {
+              "fill": "Mode",
+              "x": "Length_Bin",
+              "y": "Alignment_Count",
+              "panelvar1": "Node",
+              "panelvar2": "File"
+            },
+            "range": {
+              "left": 34.1506849315069,
+              "right": 252.843287671233,
+              "bottom": 365.849315068493,
+              "top": 40.4383561643836
+            }
+          }
+        ],
+        "dims": {
+          "width": 331,
+          "height": 400
+        }
+      }
+    },
+    "out76f7ea461643dd60": {
+      "src": "[image data sha1: c95417c8c06516c0201bfcef8ba7375ab67ec7ae]",
+      "width": 331,
+      "height": 400,
+      "coordmap": {
+        "panels": [
+          {
+            "panel": 1,
+            "row": 1,
+            "col": 1,
+            "panel_vars": {
+              "panelvar1": "Methanobrevibacter_millerae",
+              "panelvar2": "CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": 0.305,
+              "right": 5.695,
+              "bottom": -0.0006,
+              "top": 0.0126
+            },
+            "mapping": {
+              "fill": "Mode",
+              "x": "Breadth",
+              "y": "Percentage",
+              "panelvar1": "Node",
+              "panelvar2": "File"
+            },
+            "range": {
+              "left": 51.1506849315069,
+              "right": 252.843287671233,
+              "bottom": 365.849315068493,
+              "top": 40.4383561643836
+            }
+          }
+        ],
+        "dims": {
+          "width": 331,
+          "height": 400
+        }
+      }
+    },
+    "out79589c5b879500e0": {
+      "src": "[image data sha1: a6cc77c34e9068981e57da1b51eba5db26a1adc2]",
+      "width": 331,
+      "height": 400,
+      "coordmap": {
+        "panels": [
+          {
+            "panel": 1,
+            "row": 1,
+            "col": 1,
+            "panel_vars": {
+              "panelvar1": "5 prime",
+              "panelvar2": "CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": 0.4,
+              "right": 10.6,
+              "bottom": -0.0473812645687646,
+              "top": 1.0389625999001
+            },
+            "mapping": {
+              "x": "Position",
+              "y": "Frequency",
+              "colour": "Mismatch",
+              "group": "Mismatch",
+              "panelvar1": "Strand",
+              "panelvar2": "File"
+            },
+            "range": {
+              "left": 41.1506849315069,
+              "right": 119.257260273973,
+              "bottom": 365.849315068493,
+              "top": 59.2054794520548
+            }
+          },
+          {
+            "panel": 2,
+            "row": 1,
+            "col": 2,
+            "panel_vars": {
+              "panelvar1": "3 prime",
+              "panelvar2": "CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": 0.4,
+              "right": 10.6,
+              "bottom": -0.0473812645687646,
+              "top": 1.0389625999001
+            },
+            "mapping": {
+              "x": "Position",
+              "y": "Frequency",
+              "colour": "Mismatch",
+              "group": "Mismatch",
+              "panelvar1": "Strand",
+              "panelvar2": "File"
+            },
+            "range": {
+              "left": 124.736712328767,
+              "right": 202.843287671233,
+              "bottom": 365.849315068493,
+              "top": 59.2054794520548
+            }
+          }
+        ],
+        "dims": {
+          "width": 331,
+          "height": 400
+        }
+      }
+    },
+    "out82d98d4087427e0a": {
+      "x": {
+        "filter": "none",
+        "extensions": [
+          "Buttons"
+        ],
+        "container": "<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Information<\/th>\n      <th>default<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>",
+        "options": {
+          "dom": "Bfrtip",
+          "buttons": [
+            "copy",
+            {
+              "extend": "collection",
+              "filename": "no",
+              "buttons": [
+                "csv",
+                "excel",
+                "pdf"
+              ],
+              "text": "Download Table"
+            }
+          ],
+          "order": [
+
+          ],
+          "autoWidth": false,
+          "orderClasses": false,
+          "columnDefs": [
+            {
+              "orderable": false,
+              "targets": 0
+            }
+          ],
+          "ajax": {
+            "type": "POST",
+            "data": "function(d) {\nd.search.caseInsensitive = true;\nd.search.smart = true;\nd.escape = true;\nvar encodeAmp = function(x) { x.value = x.value.replace(/&/g, \"%26\"); }\nencodeAmp(d.search);\n$.each(d.columns, function(i, v) {encodeAmp(v.search);});\n}"
+          },
+          "serverSide": true,
+          "processing": true
+        },
+        "selection": {
+          "mode": "multiple",
+          "selected": null,
+          "target": "row"
+        }
+      },
+      "evals": [
+        "options.ajax.data"
+      ],
+      "jsHooks": [
+
+      ],
+      "deps": [
+        {
+          "name": "dt-core",
+          "version": "1.10.16",
+          "src": {
+            "href": "dt-core-1.10.16"
+          },
+          "meta": null,
+          "script": "js/jquery.dataTables.min.js",
+          "stylesheet": [
+            "css/jquery.dataTables.min.css",
+            "css/jquery.dataTables.extra.css"
+          ],
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "jszip",
+          "version": "1.10.16",
+          "src": {
+            "href": "jszip-1.10.16"
+          },
+          "meta": null,
+          "script": "jszip.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "pdfmake",
+          "version": "1.10.16",
+          "src": {
+            "href": "pdfmake-1.10.16"
+          },
+          "meta": null,
+          "script": [
+            "pdfmake.min.js",
+            "vfs_fonts.js"
+          ],
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "dt-ext-buttons",
+          "version": "1.10.16",
+          "src": {
+            "href": "dt-ext-buttons-1.10.16"
+          },
+          "meta": null,
+          "script": [
+            "js/dataTables.buttons.min.js",
+            "js/buttons.flash.min.js",
+            "js/buttons.html5.min.js",
+            "js/buttons.colVis.min.js",
+            "js/buttons.print.min.js"
+          ],
+          "stylesheet": "css/buttons.dataTables.min.css",
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "jquery",
+          "version": "1.11.3",
+          "src": {
+            "href": "jquery-1.11.3"
+          },
+          "meta": null,
+          "script": "jquery.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": true
+        },
+        {
+          "name": "crosstalk",
+          "version": "1.0.0",
+          "src": {
+            "href": "crosstalk-1.0.0"
+          },
+          "meta": null,
+          "script": "js/crosstalk.min.js",
+          "stylesheet": "css/crosstalk.css",
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": true
+        }
+      ]
+    },
+    "out9013925f728b0970": {
+      "src": "[image data sha1: 1442168c0c4bac5e36c6258696b874a10be5d3a4]",
+      "width": 331,
+      "height": 400,
+      "coordmap": {
+        "panels": [
+          {
+            "panel": 1,
+            "row": 1,
+            "col": 1,
+            "panel_vars": {
+              "panelvar1": "Methanobrevibacter_millerae",
+              "panelvar2": "CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": 0.4,
+              "right": 5.6,
+              "bottom": -164,
+              "top": 3444
+            },
+            "mapping": {
+              "fill": "Mode",
+              "x": "Percent_Identity",
+              "y": "Alignment_Count",
+              "panelvar1": "Node",
+              "panelvar2": "File"
+            },
+            "range": {
+              "left": 44.1506849315069,
+              "right": 254.843287671233,
+              "bottom": 365.849315068493,
+              "top": 40.4383561643836
+            }
+          }
+        ],
+        "dims": {
+          "width": 331,
+          "height": 400
+        }
+      }
+    },
+    "out976fe572b8e55b7a": {
+      "src": "[image data sha1: 41f6badf8d1004320ec531ccb8209434c5fc3a1a]",
+      "width": 331,
+      "height": 400,
+      "coordmap": {
+        "panels": [
+          {
+            "panel": 1,
+            "row": 1,
+            "col": 1,
+            "panel_vars": {
+              "panelvar1": "Ceratotherium",
+              "panelvar2": "CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": 0.4,
+              "right": 12.6,
+              "bottom": -0.05,
+              "top": 0.05
+            },
+            "mapping": {
+              "fill": "Mode",
+              "x": "Edit_Distance",
+              "y": "Alignment_Count",
+              "panelvar1": "Node",
+              "panelvar2": "File"
+            },
+            "range": {
+              "left": 49.1506849315068,
+              "right": 252.843287671233,
+              "bottom": 365.849315068493,
+              "top": 40.4383561643836
+            }
+          }
+        ],
+        "dims": {
+          "width": 331,
+          "height": 400
+        }
+      }
+    },
+    "out9c89c16185a03afe": {
+      "src": "[image data sha1: f0e0a5891c1219864500fea7fbd590e979551a6b]",
+      "width": 331,
+      "height": 400,
+      "coordmap": {
+        "panels": [
+          {
+            "panel": 1,
+            "row": 1,
+            "col": 1,
+            "panel_vars": {
+              "panelvar1": "Fretibacterium_fastidiosum",
+              "panelvar2": "CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": 13.775,
+              "right": 211.225,
+              "bottom": -48.05,
+              "top": 1009.05
+            },
+            "mapping": {
+              "fill": "Mode",
+              "x": "Length_Bin",
+              "y": "Alignment_Count",
+              "panelvar1": "Node",
+              "panelvar2": "File"
+            },
+            "range": {
+              "left": 44.1506849315069,
+              "right": 252.843287671233,
+              "bottom": 365.849315068493,
+              "top": 40.4383561643836
+            }
+          }
+        ],
+        "dims": {
+          "width": 331,
+          "height": 400
+        }
+      }
+    },
+    "out9f634206152d6d6b": {
+      "src": "[image data sha1: 8e77bccd9324c44d294fb3055e537ee58aec5d4f]",
+      "width": 331,
+      "height": 400,
+      "coordmap": {
+        "panels": [
+          {
+            "panel": 1,
+            "row": 1,
+            "col": 1,
+            "panel_vars": {
+              "panelvar1": "Methanobrevibacter_millerae",
+              "panelvar2": "CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": 0.305,
+              "right": 5.695,
+              "bottom": -0.0019,
+              "top": 0.0399
+            },
+            "mapping": {
+              "fill": "Mode",
+              "x": "Breadth",
+              "y": "Percentage",
+              "panelvar1": "Node",
+              "panelvar2": "File"
+            },
+            "range": {
+              "left": 41.1506849315069,
+              "right": 252.843287671233,
+              "bottom": 365.849315068493,
+              "top": 40.4383561643836
+            }
+          }
+        ],
+        "dims": {
+          "width": 331,
+          "height": 400
+        }
+      }
+    },
+    "out9f9c6c2d59726e49": {
+      "src": "[image data sha1: 40380b0ba1cadf005adc60d94d33a0bb9b16bb6f]",
+      "width": 331,
+      "height": 400,
+      "coordmap": {
+        "panels": [
+          {
+            "panel": 1,
+            "row": 1,
+            "col": 1,
+            "panel_vars": {
+              "panelvar1": "5 prime",
+              "panelvar2": "CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": 0.4,
+              "right": 10.6,
+              "bottom": -0.05,
+              "top": 0.05
+            },
+            "mapping": {
+              "x": "Position",
+              "y": "Frequency",
+              "colour": "Mismatch",
+              "group": "Mismatch",
+              "panelvar1": "Strand",
+              "panelvar2": "File"
+            },
+            "range": {
+              "left": 49.1506849315068,
+              "right": 123.257260273973,
+              "bottom": 365.849315068493,
+              "top": 59.2054794520548
+            }
+          },
+          {
+            "panel": 2,
+            "row": 1,
+            "col": 2,
+            "panel_vars": {
+              "panelvar1": "3 prime",
+              "panelvar2": "CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": 0.4,
+              "right": 10.6,
+              "bottom": -0.05,
+              "top": 0.05
+            },
+            "mapping": {
+              "x": "Position",
+              "y": "Frequency",
+              "colour": "Mismatch",
+              "group": "Mismatch",
+              "panelvar1": "Strand",
+              "panelvar2": "File"
+            },
+            "range": {
+              "left": 128.736712328767,
+              "right": 202.843287671233,
+              "bottom": 365.849315068493,
+              "top": 59.2054794520548
+            }
+          }
+        ],
+        "dims": {
+          "width": 331,
+          "height": 400
+        }
+      }
+    },
+    "outa4de22bf139f22da": {
+      "src": "[image data sha1: a6cc77c34e9068981e57da1b51eba5db26a1adc2]",
+      "width": 331,
+      "height": 400,
+      "coordmap": {
+        "panels": [
+          {
+            "panel": 1,
+            "row": 1,
+            "col": 1,
+            "panel_vars": {
+              "panelvar1": "5 prime",
+              "panelvar2": "CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": 0.4,
+              "right": 10.6,
+              "bottom": -0.0473812645687646,
+              "top": 1.0389625999001
+            },
+            "mapping": {
+              "x": "Position",
+              "y": "Frequency",
+              "colour": "Mismatch",
+              "group": "Mismatch",
+              "panelvar1": "Strand",
+              "panelvar2": "File"
+            },
+            "range": {
+              "left": 41.1506849315069,
+              "right": 119.257260273973,
+              "bottom": 365.849315068493,
+              "top": 59.2054794520548
+            }
+          },
+          {
+            "panel": 2,
+            "row": 1,
+            "col": 2,
+            "panel_vars": {
+              "panelvar1": "3 prime",
+              "panelvar2": "CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": 0.4,
+              "right": 10.6,
+              "bottom": -0.0473812645687646,
+              "top": 1.0389625999001
+            },
+            "mapping": {
+              "x": "Position",
+              "y": "Frequency",
+              "colour": "Mismatch",
+              "group": "Mismatch",
+              "panelvar1": "Strand",
+              "panelvar2": "File"
+            },
+            "range": {
+              "left": 124.736712328767,
+              "right": 202.843287671233,
+              "bottom": 365.849315068493,
+              "top": 59.2054794520548
+            }
+          }
+        ],
+        "dims": {
+          "width": 331,
+          "height": 400
+        }
+      }
+    },
+    "outb37ffe8f163ae738": {
+      "src": "[image data sha1: 269f7e3902ca3f0081f9d08a403d3a58dad33e4d]",
+      "width": 331,
+      "height": 400,
+      "coordmap": {
+        "panels": [
+          {
+            "panel": 1,
+            "row": 1,
+            "col": 1,
+            "panel_vars": {
+              "panelvar1": "Fretibacterium_fastidiosum",
+              "panelvar2": "CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": 0.4,
+              "right": 5.6,
+              "bottom": -347.85,
+              "top": 7304.85
+            },
+            "mapping": {
+              "fill": "Mode",
+              "x": "Percent_Identity",
+              "y": "Alignment_Count",
+              "panelvar1": "Node",
+              "panelvar2": "File"
+            },
+            "range": {
+              "left": 44.1506849315069,
+              "right": 252.843287671233,
+              "bottom": 365.849315068493,
+              "top": 40.4383561643836
+            }
+          }
+        ],
+        "dims": {
+          "width": 331,
+          "height": 400
+        }
+      }
+    },
+    "outc253ad682a8696af": {
+      "src": "[image data sha1: 0b1006322c34634ef2118637f177bab6b5876e71]",
+      "width": 331,
+      "height": 400,
+      "coordmap": {
+        "panels": [
+          {
+            "panel": 1,
+            "row": 1,
+            "col": 1,
+            "panel_vars": {
+              "panelvar1": "Ceratotherium",
+              "panelvar2": "CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": 0.305,
+              "right": 5.695,
+              "bottom": -0.05,
+              "top": 0.05
+            },
+            "mapping": {
+              "fill": "Mode",
+              "x": "Breadth",
+              "y": "Percentage",
+              "panelvar1": "Node",
+              "panelvar2": "File"
+            },
+            "range": {
+              "left": 49.1506849315068,
+              "right": 252.843287671233,
+              "bottom": 365.849315068493,
+              "top": 40.4383561643836
+            }
+          }
+        ],
+        "dims": {
+          "width": 331,
+          "height": 400
+        }
+      }
+    },
+    "outd39c4a6210e43920": {
+      "src": "[image data sha1: 88b5768b0697360c205bad4aeb3ab8dc880a5382]",
+      "width": 331,
+      "height": 400,
+      "coordmap": {
+        "panels": [
+          {
+            "panel": 1,
+            "row": 1,
+            "col": 1,
+            "panel_vars": {
+              "panelvar1": "Ceratotherium",
+              "panelvar2": "CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": 0.4,
+              "right": 11.6,
+              "bottom": -0.05,
+              "top": 0.05
+            },
+            "mapping": {
+              "fill": "Mode",
+              "x": "Fold_Coverage",
+              "y": "Base_Pairs",
+              "panelvar1": "Node",
+              "panelvar2": "File"
+            },
+            "range": {
+              "left": 49.1506849315068,
+              "right": 252.843287671233,
+              "bottom": 365.849315068493,
+              "top": 40.4383561643836
+            }
+          }
+        ],
+        "dims": {
+          "width": 331,
+          "height": 400
+        }
+      }
+    },
+    "outd4197c0a1078e1f2": {
+      "src": "[image data sha1: df0caaf909a548e3c20c9651111b28b9451c05db]",
+      "width": 331,
+      "height": 400,
+      "coordmap": {
+        "panels": [
+          {
+            "panel": 1,
+            "row": 1,
+            "col": 1,
+            "panel_vars": {
+              "panelvar1": "Ceratotherium",
+              "panelvar2": "CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": 13.775,
+              "right": 211.225,
+              "bottom": -0.05,
+              "top": 0.05
+            },
+            "mapping": {
+              "fill": "Mode",
+              "x": "Length_Bin",
+              "y": "Alignment_Count",
+              "panelvar1": "Node",
+              "panelvar2": "File"
+            },
+            "range": {
+              "left": 49.1506849315068,
+              "right": 252.843287671233,
+              "bottom": 365.849315068493,
+              "top": 40.4383561643836
+            }
+          }
+        ],
+        "dims": {
+          "width": 331,
+          "height": 400
+        }
+      }
+    },
+    "outd54360d7bcb514f0": {
+      "src": "[image data sha1: 590e9a9ff534d0f52c3a660ab58212de5f66c41b]",
+      "width": 331,
+      "height": 400,
+      "coordmap": {
+        "panels": [
+          {
+            "panel": 1,
+            "row": 1,
+            "col": 1,
+            "panel_vars": {
+              "panelvar1": "Methanobrevibacter_millerae",
+              "panelvar2": "CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": 0.4,
+              "right": 12.6,
+              "bottom": -52.7,
+              "top": 1106.7
+            },
+            "mapping": {
+              "fill": "Mode",
+              "x": "Edit_Distance",
+              "y": "Alignment_Count",
+              "panelvar1": "Node",
+              "panelvar2": "File"
+            },
+            "range": {
+              "left": 44.1506849315069,
+              "right": 252.843287671233,
+              "bottom": 365.849315068493,
+              "top": 40.4383561643836
+            }
+          }
+        ],
+        "dims": {
+          "width": 331,
+          "height": 400
+        }
+      }
+    },
+    "oute41f666948aab115": {
+      "src": "[image data sha1: 9a1b0fc36e1a769db09ae3e23d1df0f7247b5f54]",
+      "width": 331,
+      "height": 400,
+      "coordmap": {
+        "panels": [
+          {
+            "panel": 1,
+            "row": 1,
+            "col": 1,
+            "panel_vars": {
+              "panelvar1": "Methanobrevibacter_millerae",
+              "panelvar2": "CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": 0.305,
+              "right": 5.695,
+              "bottom": -0.0013,
+              "top": 0.0273
+            },
+            "mapping": {
+              "fill": "Mode",
+              "x": "Breadth",
+              "y": "Percentage",
+              "panelvar1": "Node",
+              "panelvar2": "File"
+            },
+            "range": {
+              "left": 41.1506849315069,
+              "right": 254.843287671233,
+              "bottom": 365.849315068493,
+              "top": 40.4383561643836
+            }
+          }
+        ],
+        "dims": {
+          "width": 331,
+          "height": 400
+        }
+      }
+    },
+    "outf1fc0028c88044c3": {
+      "src": "[image data sha1: 88178572bdb86a45eb1e427bdc74b02d8caa55e7]",
+      "width": 331,
+      "height": 400,
+      "coordmap": {
+        "panels": [
+          {
+            "panel": 1,
+            "row": 1,
+            "col": 1,
+            "panel_vars": {
+              "panelvar1": "Ceratotherium",
+              "panelvar2": "CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": 0.4,
+              "right": 5.6,
+              "bottom": -0.05,
+              "top": 0.05
+            },
+            "mapping": {
+              "fill": "Mode",
+              "x": "Percent_Identity",
+              "y": "Alignment_Count",
+              "panelvar1": "Node",
+              "panelvar2": "File"
+            },
+            "range": {
+              "left": 49.1506849315068,
+              "right": 252.843287671233,
+              "bottom": 365.849315068493,
+              "top": 40.4383561643836
+            }
+          }
+        ],
+        "dims": {
+          "width": 331,
+          "height": 400
+        }
+      }
+    },
+    "outf38d918d9eead154": {
+      "src": "[image data sha1: 59967c9cb74aae6b0e3747a8076f3f55735d3812]",
+      "width": 331,
+      "height": 400,
+      "coordmap": {
+        "panels": [
+          {
+            "panel": 1,
+            "row": 1,
+            "col": 1,
+            "panel_vars": {
+              "panelvar1": "Methanobrevibacter_millerae",
+              "panelvar2": "CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": 0.4,
+              "right": 11.6,
+              "bottom": -11765.75,
+              "top": 247080.75
+            },
+            "mapping": {
+              "fill": "Mode",
+              "x": "Fold_Coverage",
+              "y": "Base_Pairs",
+              "panelvar1": "Node",
+              "panelvar2": "File"
+            },
+            "range": {
+              "left": 54.1506849315068,
+              "right": 254.843287671233,
+              "bottom": 365.849315068493,
+              "top": 40.4383561643836
+            }
+          }
+        ],
+        "dims": {
+          "width": 331,
+          "height": 400
+        }
+      }
+    },
+    "outf42e815df51df7f4": {
+      "x": {
+        "filter": "none",
+        "extensions": [
+          "Buttons"
+        ],
+        "container": "<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Information<\/th>\n      <th>default<\/th>\n      <th>ancient<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>",
+        "options": {
+          "dom": "Bfrtip",
+          "buttons": [
+            "copy",
+            {
+              "extend": "collection",
+              "filename": "no",
+              "buttons": [
+                "csv",
+                "excel",
+                "pdf"
+              ],
+              "text": "Download Table"
+            }
+          ],
+          "order": [
+
+          ],
+          "autoWidth": false,
+          "orderClasses": false,
+          "columnDefs": [
+            {
+              "orderable": false,
+              "targets": 0
+            }
+          ],
+          "ajax": {
+            "type": "POST",
+            "data": "function(d) {\nd.search.caseInsensitive = true;\nd.search.smart = true;\nd.escape = true;\nvar encodeAmp = function(x) { x.value = x.value.replace(/&/g, \"%26\"); }\nencodeAmp(d.search);\n$.each(d.columns, function(i, v) {encodeAmp(v.search);});\n}"
+          },
+          "serverSide": true,
+          "processing": true
+        },
+        "selection": {
+          "mode": "multiple",
+          "selected": null,
+          "target": "row"
+        }
+      },
+      "evals": [
+        "options.ajax.data"
+      ],
+      "jsHooks": [
+
+      ],
+      "deps": [
+        {
+          "name": "dt-core",
+          "version": "1.10.16",
+          "src": {
+            "href": "dt-core-1.10.16"
+          },
+          "meta": null,
+          "script": "js/jquery.dataTables.min.js",
+          "stylesheet": [
+            "css/jquery.dataTables.min.css",
+            "css/jquery.dataTables.extra.css"
+          ],
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "jszip",
+          "version": "1.10.16",
+          "src": {
+            "href": "jszip-1.10.16"
+          },
+          "meta": null,
+          "script": "jszip.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "pdfmake",
+          "version": "1.10.16",
+          "src": {
+            "href": "pdfmake-1.10.16"
+          },
+          "meta": null,
+          "script": [
+            "pdfmake.min.js",
+            "vfs_fonts.js"
+          ],
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "dt-ext-buttons",
+          "version": "1.10.16",
+          "src": {
+            "href": "dt-ext-buttons-1.10.16"
+          },
+          "meta": null,
+          "script": [
+            "js/dataTables.buttons.min.js",
+            "js/buttons.flash.min.js",
+            "js/buttons.html5.min.js",
+            "js/buttons.colVis.min.js",
+            "js/buttons.print.min.js"
+          ],
+          "stylesheet": "css/buttons.dataTables.min.css",
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "jquery",
+          "version": "1.11.3",
+          "src": {
+            "href": "jquery-1.11.3"
+          },
+          "meta": null,
+          "script": "jquery.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": true
+        },
+        {
+          "name": "crosstalk",
+          "version": "1.0.0",
+          "src": {
+            "href": "crosstalk-1.0.0"
+          },
+          "meta": null,
+          "script": "js/crosstalk.min.js",
+          "stylesheet": "css/crosstalk.css",
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": true
+        }
+      ]
+    },
+    "outf4cd66d42c23e9fe": {
+      "src": "[image data sha1: b61a19d58494e67ddc5212d6ecd486a926babdeb]",
+      "width": 331,
+      "height": 400,
+      "coordmap": {
+        "panels": [
+          {
+            "panel": 1,
+            "row": 1,
+            "col": 1,
+            "panel_vars": {
+              "panelvar1": "5 prime",
+              "panelvar2": "CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": 0.4,
+              "right": 10.6,
+              "bottom": -0.0465498357064622,
+              "top": 1.04983570646221
+            },
+            "mapping": {
+              "x": "Position",
+              "y": "Frequency",
+              "colour": "Mismatch",
+              "group": "Mismatch",
+              "panelvar1": "Strand",
+              "panelvar2": "File"
+            },
+            "range": {
+              "left": 41.1506849315069,
+              "right": 119.257260273973,
+              "bottom": 365.849315068493,
+              "top": 59.2054794520548
+            }
+          },
+          {
+            "panel": 2,
+            "row": 1,
+            "col": 2,
+            "panel_vars": {
+              "panelvar1": "3 prime",
+              "panelvar2": "CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": 0.4,
+              "right": 10.6,
+              "bottom": -0.0465498357064622,
+              "top": 1.04983570646221
+            },
+            "mapping": {
+              "x": "Position",
+              "y": "Frequency",
+              "colour": "Mismatch",
+              "group": "Mismatch",
+              "panelvar1": "Strand",
+              "panelvar2": "File"
+            },
+            "range": {
+              "left": 124.736712328767,
+              "right": 202.843287671233,
+              "bottom": 365.849315068493,
+              "top": 59.2054794520548
+            }
+          }
+        ],
+        "dims": {
+          "width": 331,
+          "height": 400
+        }
+      }
+    },
+    "outf51ebb950589e885": {
+      "src": "[image data sha1: 74cbc46de8b73538db9119ce3e8100cdf88e9dbd]",
+      "width": 331,
+      "height": 400,
+      "coordmap": {
+        "panels": [
+          {
+            "panel": 1,
+            "row": 1,
+            "col": 1,
+            "panel_vars": {
+              "panelvar1": "Fretibacterium_fastidiosum",
+              "panelvar2": "CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": 0.4,
+              "right": 12.6,
+              "bottom": -137.5,
+              "top": 2887.5
+            },
+            "mapping": {
+              "fill": "Mode",
+              "x": "Edit_Distance",
+              "y": "Alignment_Count",
+              "panelvar1": "Node",
+              "panelvar2": "File"
+            },
+            "range": {
+              "left": 44.1506849315069,
+              "right": 252.843287671233,
+              "bottom": 365.849315068493,
+              "top": 40.4383561643836
+            }
+          }
+        ],
+        "dims": {
+          "width": 331,
+          "height": 400
+        }
+      }
+    },
+    "outf60d5c253acdebf2": {
+      "src": "[image data sha1: 82a6a975b240a9499dcbe1cd446ec95061143be7]",
+      "width": 331,
+      "height": 400,
+      "coordmap": {
+        "panels": [
+          {
+            "panel": 1,
+            "row": 1,
+            "col": 1,
+            "panel_vars": {
+              "panelvar1": "Methanobrevibacter_millerae",
+              "panelvar2": "CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": 0.4,
+              "right": 12.6,
+              "bottom": -8.75,
+              "top": 183.75
+            },
+            "mapping": {
+              "fill": "Mode",
+              "x": "Edit_Distance",
+              "y": "Alignment_Count",
+              "panelvar1": "Node",
+              "panelvar2": "File"
+            },
+            "range": {
+              "left": 39.1506849315069,
+              "right": 252.843287671233,
+              "bottom": 365.849315068493,
+              "top": 40.4383561643836
+            }
+          }
+        ],
+        "dims": {
+          "width": 331,
+          "height": 400
+        }
+      }
+    },
+    "outff46c0e1d005d760": {
+      "src": "[image data sha1: cc341b3d55c92780bea5257a1c2561233841cd8e]",
+      "width": 331,
+      "height": 400,
+      "coordmap": {
+        "panels": [
+          {
+            "panel": 1,
+            "row": 1,
+            "col": 1,
+            "panel_vars": {
+              "panelvar1": "Methanobrevibacter_millerae",
+              "panelvar2": "CS11_S0_L001_R1_001.sorted.bam.unmapped.rma6"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": 0.4,
+              "right": 12.6,
+              "bottom": -43.95,
+              "top": 922.95
+            },
+            "mapping": {
+              "fill": "Mode",
+              "x": "Edit_Distance",
+              "y": "Alignment_Count",
+              "panelvar1": "Node",
+              "panelvar2": "File"
+            },
+            "range": {
+              "left": 39.1506849315069,
+              "right": 254.843287671233,
+              "bottom": 365.849315068493,
+              "top": 40.4383561643836
+            }
+          }
+        ],
+        "dims": {
+          "width": 331,
+          "height": 400
+        }
+      }
+    },
+    "percentidentity_plot": {
+      "html": "<div id=\"out44c2d99619b5f404\" class=\"shiny-plot-output\" style=\"width: 100% ; height: 400px\"><\/div>",
+      "deps": [
+
+      ]
+    },
+    "positionscovered_plot": {
+      "html": "<div id=\"out76f7ea461643dd60\" class=\"shiny-plot-output\" style=\"width: 100% ; height: 400px\"><\/div>",
+      "deps": [
+
+      ]
+    },
+    "report_dir": "Detected MaltExtract data!",
+    "run_button": {
+      "html": "<button id=\"submit\" type=\"button\" class=\"btn btn-default action-button\">Load data<\/button>",
+      "deps": [
+
+      ]
+    }
+  },
+  "export": {
+
+  }
+}
