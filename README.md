@@ -38,6 +38,7 @@ given sample, plots for every node. This allows for fast detection of potential
 samples or taxa of interest from large datasets.  
 
 ![Example display of MEx-IPA](assets/images/01-MExIPA_example.gif)
+**Demo of MEx-IPA Functionality**
 
 ## Installation
 This shiny app has been tested on `R` version 3.6, and requires the following 
@@ -142,6 +143,10 @@ The `plotly` package is unfortunately not fully compatible with all `ggplot`
 functions. I tried different ways of hacking around it but failed. However,
 this does not remove from the utility of being able to get fine resolution
 statistics of each characteristic.
+
+### I don't get the same results as with the HOPS post-processing scripts!
+
+This is likely related to small differences in the way data is summarised. I take a simpler approach and report the exact statistics a given node (e.g. just species), whereas HOPS' post-processing scripts additionally summarises all taxonomic levels under a given node (e.g. a species + related subspecies).
 
 ## References
 
