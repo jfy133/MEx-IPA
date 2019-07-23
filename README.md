@@ -121,6 +121,9 @@ vector-based image software such as [inkscape](https://inkscape.org/).
 7) Single interactive plots can be saved in png format via the camera button
 of a given plot.
 
+8) To finish: if running on your own machine - press 'Close app' to shut the 
+viewer and stop the shiny app instance in R.
+
 ## FAQs
 
 ### I just see a white screen where the plots should be!
@@ -151,6 +154,10 @@ Velsko, I. M. et al. Microbial differences between dental plaque and historic de
 Weyrich, L. S. et al. Neanderthal behaviour, diet, and disease inferred from ancient DNA in dental calculus. Nature 544, 357–361 (2017). doi:[10.1038/nature21674](http://dx.doi.org/10.1038/nature21674)
 
 ## Change Log
+**0.4.3 (dev)**
+  * Added `shinytest` tests
+  * Added 'close app' button - when running on own machine/Rstudio
+
 **0.4.2**
   * Fixed missing data message for multi-sample comparison
   * Temporarily deactivated multiple-taxa comparison due to missing data resulting in empty divs

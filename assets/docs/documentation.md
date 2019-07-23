@@ -60,6 +60,9 @@ vector-based image software such as [inkscape](https://inkscape.org/).
 5) Single interactive plots can be saved in png format via the camera button
 of a given plot.
 
+6) To finish: if running on your own machine - press 'Close app' to shut the 
+viewer and stop the shiny app instance in R.
+
 ## FAQs
 
 ### I just see a white screen where the plots should be!

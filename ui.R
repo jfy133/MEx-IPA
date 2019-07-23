@@ -48,7 +48,15 @@ shinyUI(fluidPage(
                              `Percent Identity` = "percentidentity",
                              `Positions Covered` = "positionscovered",
                              `Depth Coverage` = "coveragehist"),
-                        selected = "damage")
+                        selected = "damage"),
+            br(),
+            ##from https://www.r-bloggers.com/stop-shiny-and-close-browser-together/
+            tags$button(
+                id = "close",
+                type = "button",
+                class = "btn action-button",
+                onclick = "setTimeout(function(){window.close();},500);", #CloseBrowser
+                "Close app")
         ),
         
         # Show a plots

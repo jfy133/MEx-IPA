@@ -11,6 +11,8 @@ library(shinycustomloader)
 ## Functions 
 ## ## Data loading
 
+## _S0_L001_R1_001.sorted.bam.unmapped.rma6
+
 load_runsummary <- function(in_dir, result_path) {
     fread(paste0(in_dir, result_path, "RunSummary.txt")) %>% 
         as_tibble
@@ -1130,6 +1132,10 @@ shinyServer(function(input, output) {
     #   })
     # 
     # })
-    
+
+    ## Close button
+    observe({
+      if (input$close > 0) stopApp()  # stop shiny
+    })
 })
 
