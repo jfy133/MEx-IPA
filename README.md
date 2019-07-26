@@ -66,12 +66,16 @@ packages:
 
 To install the app's dependecies, you have two methods
 
-<details><summary>1) Try with your current R and associated package versions (but this may not work)
+<details><summary> 1. Try with your current R and associated package versions (but this may not work)
 </summary>
 
 ### Local Installation
 
-Load your local version of R in your terminal
+Load your local version of R in your terminal.
+
+```bash
+R
+```
 
 Install versions of packages associated with your version of R:
 
@@ -80,15 +84,23 @@ install.packages(c("shiny", "tidyverse", "data.table", "plotly", "DT",
   "patchwork", "shinycustomloader", "shinyWidgets"))
 ```
 
+Once installed, you can exit R, pressing `n` when it asks to save your 
+workspace.
+
+```r
+quit()
+```
+
 </details>
 
 or
 
 
-<details><summary>2) Use conda to install the specific R version and packages listed above</summary>
-Changed into the cloned MEx-IPA Directory
+<details><summary> 2. Use conda to install the specific R version and packages listed above</summary>
 
 ## Conda Environment Installation
+
+Changed into the cloned MEx-IPA Directory
 
 ```bash
 cd MEx-IPA
