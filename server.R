@@ -1,5 +1,9 @@
 ######## MEx-IPA VERSION 0.4.3 #################
 
+## To prioritise conda packages directory, when installed by conda
+if ( any(grepl("envs/MEx-IPA/lib/R/library", .libPaths())) ) 
+  .libPaths(.libPaths()[grep("envs/MEx-IPA/lib/R/library", .libPaths())])
+
 library(shiny)
 library(tidyverse)
 library(data.table)
@@ -11,6 +15,7 @@ library(shinycustomloader)
 ## Functions 
 ## ## Data loading
 
+## String removal test string
 ## _S0_L001_R1_001.sorted.bam.unmapped.rma6
 
 load_runsummary <- function(in_dir, result_path) {

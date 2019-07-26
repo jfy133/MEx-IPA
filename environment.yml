@@ -1,0 +1,16 @@
+name: MEx-IPA
+channels: 
+  - defaults
+  - conda-forge
+dependencies:
+  - r-base=3.6.1
+  - r-shiny=1.3.2
+  - r-tidyverse=1.2.1
+  - r-data.table=1.12.2
+  - r-plotly=4.9.0
+  - r-shinyWidgets=0.4.8
+  - r-dt=0.7
+
+## Not avaliable via conda's R channel - must be manually installed
+#  - r-patchwork=0.0.1
+#  - r-shinycustomloader=0.9.0

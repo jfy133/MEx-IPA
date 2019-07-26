@@ -40,24 +40,6 @@ samples or taxa of interest from large datasets.
 ![Example display of MEx-IPA](assets/images/01-MExIPA_example.gif)
 
 ## Installation
-This shiny app has been tested on `R` version 3.6, and requires the following 
-packages:
-
- * shinyWidgets (tested v0.4.8)
- * shinycustomloader (tested v0.9.0)
- * patchwork (tested v0.0.1)
- * DT (tested v0.6)
- * plotly (tested v4.9.0)
- * data.table (tested v1.12.2)
- * tidyverse (tested v1.2.1)
- * shiny (tested v1.3.2)
-
-To install these packages in R:
-
-```r
-install.packages(c("shiny", "tidyverse", "data.table", "plotly", "DT", 
-	"patchwork", "shinycustomloader", "shinyWidgets"))
-```
 
 To download the app, change to a directory where you wish to install the 
 app, and run the following in your terminal
@@ -69,11 +51,104 @@ git clone https://github.com/jfy133/MEx-IPA.git
 This will download all the app files from this github repository to a
 directory named MEX-IPA.
 
+This shiny app has been tested on `R` version 3.6.1, and requires the following 
+packages:
+
+ * shinyWidgets (tested v0.4.8)
+ * shinycustomloader (tested v0.9.0)
+ * patchwork (tested v0.0.1)
+ * DT (tested v0.7)
+ * plotly (tested v4.9.0)
+ * data.table (tested v1.12.2)
+ * tidyverse (tested v1.2.1)
+ * shiny (tested v1.3.2)
+
+To install the app's dependecies, you have two methods
+
+<details><summary>1) Try with your current R and associated package versions (but this may not work)
+</summary>
+
+Load your local version of R in your terminal
+
+Install versions of packages associated with your version of R:
+
+```r
+install.packages(c("shiny", "tidyverse", "data.table", "plotly", "DT", 
+  "patchwork", "shinycustomloader", "shinyWidgets"))
+```
+
+</details>
+
+or
+
+
+<details><summary>2) Use conda to install the specific R version and packages listed above</summary>
+Changed into the cloned MEx-IPA Directory
+
+```bash
+cd MEx-IPA
+```
+
+Create a conda environment, and follow instructions as displayed in your 
+terminal.
+
+```bash
+conda env create -f environment.yaml
+```
+
+Activate the newly created environment
+
+```bash
+conda activate MEx-IPA
+```
+
+Check you've loaded the correct version of R (it should say 3.6.1)
+
+```bash
+which R
+```
+
+Now load R 
+
+```bash
+R
+```
+
+Now we need to make sure you install the missing MEx-IPA to the conda 
+environment's Rlibs path and not computers default ones. This is an issue with 
+the R versions in conda and will be fixed soon.
+
+```r
+.libPaths(.libPaths()[grep("envs/MEx-IPA/lib/R/library", .libPaths())])
+```
+
+Now we can install the packages not in the conda channels.
+
+```r
+devtools::install_github("thomasp85/patchwork")
+install.packages("shinycustomloader")
+```
+
+Once installed, you can exit R, pressing `n` when it asks to save your 
+workspace.
+
+```r
+quit()
+```
+
+To finish, deactivate the conda environment with
+
+```bash
+conda deactivate
+```
+</details>
+
 ## Running
 
 Once installed there are two methods of running the app. 
 
-1) Run the following command from your terminal
+1) Run the following command from your terminal (if you want to use your conda
+environment make sure to activate your conda environment first)
 
 ```bash
 R -e "shiny::runApp('/<path>/<to>/MEx-IPA')"
