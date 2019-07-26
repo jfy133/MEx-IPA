@@ -69,6 +69,8 @@ To install the app's dependecies, you have two methods
 <details><summary>1) Try with your current R and associated package versions (but this may not work)
 </summary>
 
+### Local Installation
+
 Load your local version of R in your terminal
 
 Install versions of packages associated with your version of R:
@@ -85,6 +87,8 @@ or
 
 <details><summary>2) Use conda to install the specific R version and packages listed above</summary>
 Changed into the cloned MEx-IPA Directory
+
+## Conda Environment Installation
 
 ```bash
 cd MEx-IPA
