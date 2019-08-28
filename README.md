@@ -1,6 +1,7 @@
-# MEx-IPA
+# MEx-IPA 
+[![DOI](https://zenodo.org/badge/114811368.svg)](https://zenodo.org/badge/latestdoi/114811368)
 
-**M**(alt)**Ex**(tract)-**I**(nteractive)**P**(lotting)A(pp)
+**M**(alt)**Ex**(tract)-**I**(nteractive)**P**(lotting)**A**(pp)
 
 Interactive viewer of MaltExtract results. Written by James A. Fellows Yates.
 
