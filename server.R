@@ -1,4 +1,4 @@
-######## MEx-IPA VERSION 0.4.3 #################
+######## MEx-IPA VERSION 0.4.5 #################
 
 ## To prioritise conda packages directory, when installed by conda
 if ( any(grepl("envs/MEx-IPA/lib/R/library", .libPaths())) ) 

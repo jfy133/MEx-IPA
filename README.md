@@ -256,11 +256,17 @@ Weyrich, L. S. et al. Neanderthal behaviour, diet, and disease inferred from anc
 
 ## Change Log
 
-### 0.4.4
+### 0.4.5
 
 * Updated environment and README to reflect `patchwork` and `shinycustomloader` being on CRAN
 * Fixed environment file name
 * Cleaned up README a bit
+* Add missing 0.4.4 from change-log
+
+### 0.4.4
+
+* Documentation update
+* Zenodo DOI creation
 
 ### 0.4.3
 
