@@ -10,7 +10,5 @@ dependencies:
   - r-plotly=4.9.0
   - r-shinyWidgets=0.4.8
   - r-dt=0.7
-
-## Not avaliable via conda's R channel - must be manually installed
-#  - r-patchwork=0.0.1
-#  - r-shinycustomloader=0.9.0
+  - r-patchwork=1.0.0
+  - r-shinycustomloader=0.9.0
