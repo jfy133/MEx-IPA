@@ -10,6 +10,7 @@ Interactive viewer of MaltExtract results. Written by James A. Fellows Yates.
 * [Description](#description)  
 * [Installation](#installation)
 * [Running](#running)
+* [Citation](#citation)
 * [FAQs](#faqs)
 * [References](#references)
 * [Change Log](#change-log)
@@ -217,6 +218,12 @@ of a given plot.
 
 8) To finish: if running on your own machine - press 'Close app' to shut the
 viewer and stop the shiny app instance in R.
+
+## Citation
+
+If you use MEx-IPA, please use the following citation:
+
+> Fellows Yates, J. A. et al. (2021) ‘The evolution and changing ecology of the African hominid oral microbiome’, Proceedings of the National Academy of Sciences of the United States of America, 118(20), p. e2021655118. doi: [10.1073/pnas.2021655118](http://dx.doi.org/10.1073/pnas.2021655118).
 
 ## FAQs
 
